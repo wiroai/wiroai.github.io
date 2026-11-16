@@ -50,7 +50,9 @@ a:hover { text-decoration-thickness: 2px; }
 .card .meta { color: var(--muted); font-size: 13px; }
 .tags { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0 0 12px; }
 .tags li { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--chip); color: var(--muted); }
-.card .links { margin-top: auto; display: flex; gap: 14px; font-size: 14px; font-weight: 600; }
+.card .links { margin-top: auto; display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; font-weight: 600; }
+.card .links a.install { color: #fff; background: var(--ink); padding: 3px 10px; border-radius: 999px; text-decoration: none; }
+.card .links a.install:hover { background: #333; }
 
 .crumbs { margin: 28px 0 0; font-size: 14px; color: var(--muted); }
 .crumbs a { color: var(--muted); }

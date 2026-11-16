@@ -49,6 +49,18 @@ GROUPS = [
 ]
 SKIP = {f"{ORG}.github.io"}
 
+# Live store listings. Only add a store once its public page is live.
+CWS = "https://chromewebstore.google.com/detail/wiro-ai-tools-for-images/cehkhdmppbnfeahegjjkdhangjelehab"
+AMO = "https://addons.mozilla.org/firefox/addon/wiro-ai/"
+WHALE = "https://store.whale.naver.com/detail/elgobhnkemhlhfakdmpijbknhehnkgle"
+STORES = {
+    "Wiro-Chromium-Extension": [("Install Chrome Extension", CWS), ("Install on Naver Whale", WHALE)],
+    "Wiro-Firefox-Extension": [("Install Firefox Add-on", AMO)],
+}
+GROUP_LINKS = {
+    "browser": [("Install Chrome Extension", CWS), ("Install Firefox Add-on", AMO), ("Install on Naver Whale", WHALE)],
+}
+
 NAV = [
     ("Models", "https://wiro.ai/models"),
     ("Agents", "https://wiro.ai/agents"),
@@ -176,8 +188,9 @@ def page(title, description, canonical, body, jsonld):
 
 
 def card(r):
-    links = [f'<a href="/projects/{slug(r["name"])}/">Project page</a>',
-             f'<a href="{esc(r["html_url"])}">GitHub</a>']
+    links = [f'<a class="install" href="{esc(u)}">{esc(t)}</a>' for t, u in STORES.get(r["name"], [])]
+    links += [f'<a href="/projects/{slug(r["name"])}/">Project page</a>',
+              f'<a href="{esc(r["html_url"])}">GitHub</a>']
     home = r.get("homepage") or ""
     if home and home.rstrip("/") != "https://wiro.ai":
         links.append(f'<a href="{esc(home)}">Docs</a>')
@@ -209,9 +222,11 @@ def main():
     for gid, title, intro, rs in grouped:
         if not rs:
             continue
+        group_cta = "".join(f'<a class="btn" href="{esc(u)}">{esc(t)}</a> ' for t, u in GROUP_LINKS.get(gid, []))
         sections.append(f"""<section id="{gid}" class="group">
   <h2>{esc(title)}</h2>
   <p class="intro">{esc(intro)}</p>
+  {f'<p class="cta">{group_cta.strip()}</p>' if group_cta else ''}
   <div class="grid">{"".join(card(r) for r in rs)}</div>
 </section>""")
     body = f"""<section class="hero">
@@ -250,7 +265,9 @@ def main():
                 os.unlink(payload)
             siblings = [x for x in rs if x["name"] != name] + [x for _, _, _, xs in grouped for x in xs if x not in rs]
             more = "".join(f'<li><a href="/projects/{slug(x["name"])}/">{esc(x["name"])}</a></li>' for x in siblings[:12])
-            buttons = [f'<a class="btn" href="{esc(r["html_url"])}">View on GitHub</a>']
+            stores = STORES.get(name, [])
+            buttons = [f'<a class="btn" href="{esc(u)}">{esc(t)}</a>' for t, u in stores]
+            buttons.append(f'<a class="btn{" ghost" if stores else ""}" href="{esc(r["html_url"])}">View on GitHub</a>')
             home = r.get("homepage") or ""
             if home:
                 label = "Website" if home.rstrip("/") == "https://wiro.ai" else "Docs"
