@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiro-Raycast: Wiro AI open source</title>
+<meta name="description" content="Wiro AI extension for Raycast: generate images and videos, chat with LLMs and search 1,000+ AI models from your launcher.">
+<link rel="canonical" href="https://wiroai.github.io/projects/wiro-raycast/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="Wiro-Raycast: Wiro AI open source">
+<meta property="og:description" content="Wiro AI extension for Raycast: generate images and videos, chat with LLMs and search 1,000+ AI models from your launcher.">
+<meta property="og:url" content="https://wiroai.github.io/projects/wiro-raycast/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "Wiro-Raycast", "description": "Wiro AI extension for Raycast: generate images and videos, chat with LLMs and search 1,000+ AI models from your launcher.", "codeRepository": "https://github.com/wiroai/Wiro-Raycast", "url": "https://wiroai.github.io/projects/wiro-raycast/", "programmingLanguage": "TypeScript", "license": "https://api.github.com/licenses/mit", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#apps">Productivity apps</a></p>
+<section class="project-head">
+  <h1>Wiro-Raycast</h1>
+  <p class="lead">Wiro AI extension for Raycast: generate images and videos, chat with LLMs and search 1,000+ AI models from your launcher.</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/Wiro-Raycast">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai">Website</a></p>
+</section>
+<article class="markdown">
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Raycast/main/.github/assets/wiro-logo.png"><img src="https://raw.githubusercontent.com/wiroai/Wiro-Raycast/main/.github/assets/wiro-logo.png" alt="Wiro AI" width="240" style="max-width: 100%;"></a>
+<h2 dir="auto" id="wiro-ai-for-raycast">Wiro AI for Raycast</h2>
+<p dir="auto">Generate images, video, speech and music, edit images, transcribe audio, chat with LLMs, run workflows and agents, and search 1,000+ AI models on Wiro AI from Raycast.</p>
+<p dir="auto"><a href="https://www.raycast.com/"><img loading="lazy" src="https://camo.githubusercontent.com/4fc463c17b876b5d05d9a1101b25226002aa5726bdf94a2b6ae0777962178166/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f526179636173742d657874656e73696f6e2d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="Raycast extension" data-canonical-src="https://img.shields.io/badge/Raycast-extension-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="#install"><img loading="lazy" src="https://camo.githubusercontent.com/d9a5e78b5fc9a7d250b599a479af26e4bb5d59ccf989f2600398add5bf9d567e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f706c6174666f726d2d6d61634f532d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="macOS" data-canonical-src="https://img.shields.io/badge/platform-macOS-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Raycast/actions/workflows/ci.yml"><img loading="lazy" src="https://camo.githubusercontent.com/90fc5f89123909037fd794e2f4799a306edd90a1fcb07c85c025b72818496121/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f7769726f61692f5769726f2d526179636173742f63692e796d6c3f6272616e63683d6d61696e267374796c653d666f722d7468652d6261646765266c6162656c3d434926636f6c6f723d313131313131" alt="CI" data-canonical-src="https://img.shields.io/github/actions/workflow/status/wiroai/Wiro-Raycast/ci.yml?branch=main&amp;style=for-the-badge&amp;label=CI&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Raycast/blob/main/LICENSE"><img loading="lazy" src="https://camo.githubusercontent.com/9b0dcc545c9e697315b8d16f4363715f0cc54941456ba778cbc802bb0ef11275/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="License: MIT" data-canonical-src="https://img.shields.io/badge/license-MIT-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a></p>
+<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67"><img loading="lazy" src="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67" alt="Wiro AI koala mascot" width="60" data-canonical-src="https://wiro.ai/images/koala/accent-heavy-koala.png" style="max-width: 100%;"></a>
+</div>
+<p dir="auto">This <a href="https://www.raycast.com">Raycast</a> extension puts the <a href="https://wiro.ai">Wiro AI</a> API in your launcher. Each command lists the models of its category straight from the Wiro AI catalog, builds its form from the chosen model's own inputs and shows the price for your settings before you run it. Results come back into Raycast, where you can copy them, save them to Downloads, show them in Finder or preview them with Quick Look. New models show up without an update to the extension.</p>
+<h2 dir="auto" id="commands">Commands</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Generate Image</strong></td>
+<td>Pick a text-to-image model, write a prompt and set the model's options, such as resolution, ratio or quality.</td>
+</tr>
+<tr>
+<td><strong>Edit Image</strong></td>
+<td>Starts from the image selected in Finder or an image file on the clipboard. Edit it with a prompt, upscale it, remove its background or restore an old photo, each with the models of that category.</td>
+</tr>
+<tr>
+<td><strong>Generate Video</strong></td>
+<td>Make a video from a prompt or from an image. Raycast follows the task while the model works, and you can cancel it.</td>
+</tr>
+<tr>
+<td><strong>Generate Speech</strong></td>
+<td>Reads the text selected in the frontmost app aloud, with the text-to-speech model and the voice you pick.</td>
+</tr>
+<tr>
+<td><strong>Generate Music</strong></td>
+<td>Make music or a song from a prompt, with lyrics when the model takes them.</td>
+</tr>
+<tr>
+<td><strong>Transcribe Audio</strong></td>
+<td>Turns an audio file, such as the one selected in Finder, into text you can copy, paste or save.</td>
+</tr>
+<tr>
+<td><strong>Ask AI</strong></td>
+<td>Chat with LLMs from OpenAI, Anthropic, Google, DeepSeek, xAI, Qwen and others through the Wiro AI LLM gateway. Pick the model in the dropdown and ask follow-up questions in the same conversation. Type a question after the command name to start a new conversation right away.</td>
+</tr>
+<tr>
+<td><strong>Search Models</strong></td>
+<td>Search the catalog by name, owner or task and filter it by category. Each model shows its cover, description, typical run time and starting price, and opens in the form that fits it.</td>
+</tr>
+<tr>
+<td><strong>Run Any Model</strong></td>
+<td>Search the whole catalog and run any model with a form built from its inputs: text, choices, numbers, switches and file pickers.</td>
+</tr>
+<tr>
+<td><strong>Run Workflow</strong></td>
+<td>Lists your Wiro AI workflows and runs one with its inputs. Files you pick are uploaded for the run, and every output of the workflow comes back as its own result.</td>
+</tr>
+<tr>
+<td><strong>Message Agent</strong></td>
+<td>Lists the agents deployed in your workspace with their status and credits, and lets you message a running one and read its replies.</td>
+</tr>
+<tr>
+<td><strong>Task History</strong></td>
+<td>Your recent tasks with their status, prompt, run time and cost. Open any of them to get its results again.</td>
+</tr>
+<tr>
+<td><strong>Wallet Balance</strong></td>
+<td>Shows your balance in the menu bar, with links to add funds, your task history and the dashboard.</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">Settings the catalog shows by default, settings that change the price and key settings such as voice or duration come first in each form. The rest wait behind <strong>Show advanced settings</strong>, and required settings you leave there are sent with the model's default.</p>
+<h2 dir="auto" id="results">Results</h2>
+<p dir="auto">Every output is a row with a preview beside it.</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Output</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image</td>
+<td>Copy Image (<code class="notranslate">↵</code>), Save to Downloads (<code class="notranslate">⌘S</code>), Show in Finder (<code class="notranslate">⌘⇧F</code>), Quick Look (<code class="notranslate">⌘Y</code>), Open (<code class="notranslate">⌘O</code>), Open in Browser, Copy URL (<code class="notranslate">⌘⇧C</code>)</td>
+</tr>
+<tr>
+<td>Video and audio</td>
+<td>Open (<code class="notranslate">↵</code>), Quick Look (<code class="notranslate">⌘Y</code>), Save to Downloads (<code class="notranslate">⌘S</code>), Show in Finder (<code class="notranslate">⌘⇧F</code>), Copy Video or Copy Audio (<code class="notranslate">⌘⇧V</code>), Open in Browser, Copy URL (<code class="notranslate">⌘⇧C</code>)</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>Copy Text (<code class="notranslate">↵</code>), Paste Text (<code class="notranslate">⌘⇧↵</code>), Save to Downloads (<code class="notranslate">⌘S</code>), Show in Finder (<code class="notranslate">⌘⇧F</code>)</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">While a task runs you can open your task history on wiro.ai or cancel the task (<code class="notranslate">⌃X</code>). Closing Raycast does not stop a task; its result is in Task History.</p>
+<h2 dir="auto" id="install">Install</h2>
+<p dir="auto">To run the extension from this repository:</p>
+<ol dir="auto">
+<li>
+<p dir="auto">Install <a href="https://www.raycast.com">Raycast</a> and <a href="https://nodejs.org">Node.js</a> 22.</p>
+</li>
+<li>
+<p dir="auto">Clone the repository and install its dependencies:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">git clone https://github.com/wiroai/Wiro-Raycast.git
+<span class="pl-c1">cd</span> Wiro-Raycast
+npm install</pre></div>
+</li>
+<li>
+<p dir="auto">Run <code class="notranslate">npm run dev</code>. Raycast loads the extension, and its commands stay in Raycast after you stop the command with <code class="notranslate">Ctrl+C</code>.</p>
+</li>
+</ol>
+<h2 dir="auto" id="set-up">Set up</h2>
+<p dir="auto">Raycast asks for your API key the first time you open one of the commands.</p>
+<ol dir="auto">
+<li>Sign up at <a href="https://wiro.ai">wiro.ai</a> and create a project at <a href="https://wiro.ai/panel/project/new">wiro.ai/panel/project/new</a>. Your projects and their keys are listed at <a href="https://wiro.ai/panel/project">wiro.ai/panel/project</a>.</li>
+<li>Paste the project's API key into <strong>API Key</strong>.</li>
+<li>If you created the project with signature-based authentication, paste its API secret into <strong>API Secret</strong> as well. Leave it empty for an <strong>API Key Only</strong> project.</li>
+</ol>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Preference</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API Key</td>
+<td>Yes</td>
+<td>API key of your Wiro AI project</td>
+</tr>
+<tr>
+<td>API Secret</td>
+<td>For signature-based projects</td>
+<td>API secret of the same project</td>
+</tr>
+<tr>
+<td>Save Folder</td>
+<td>No</td>
+<td>Where Save puts files. Your Downloads folder is used when it is empty</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">To change them later, open Raycast Settings, then <strong>Extensions → Wiro AI</strong>. Edit Image and Transcribe Audio read the Finder selection, and Generate Speech reads the selected text; macOS may ask you to let Raycast do that the first time.</p>
+<h2 dir="auto" id="how-it-works">How it works</h2>
+<ul dir="auto">
+<li>Each command maps to catalog categories, never to fixed models: Edit Image uses <code class="notranslate">image-editing</code>, <code class="notranslate">upscale</code>, <code class="notranslate">background-removal</code> and <code class="notranslate">restoration</code>, Generate Music uses <code class="notranslate">text-to-music</code> and <code class="notranslate">text-to-song</code>, Transcribe Audio uses <code class="notranslate">speech-to-text</code>, and so on. The forms read the models with <code class="notranslate">POST /Tool/List</code> and a model's inputs and price list with <code class="notranslate">POST /Tool/Detail</code>.</li>
+<li>File inputs are found by their type and name, so a model that calls its image <code class="notranslate">inputImage</code> and one that calls it <code class="notranslate">firstFrame</code> both get the file you picked. Models that cannot take that kind of file are left out of the picker.</li>
+<li>A run is <code class="notranslate">POST /Run/{owner}/{model}</code> on <code class="notranslate">https://api.wiro.ai/v1</code>: JSON for text-only runs, multipart form data with your files otherwise (<a href="https://wiro.ai/docs/run-a-model">Run a Model</a>). The extension polls <code class="notranslate">POST /Task/Detail</code> until the task reaches <code class="notranslate">task_postprocess_end</code> or <code class="notranslate">task_cancel</code>, and a finished task failed only when its <code class="notranslate">pexit</code> is set and is not <code class="notranslate">"0"</code> (<a href="https://wiro.ai/docs/tasks">Tasks</a>).</li>
+<li>The price line follows how Wiro bills: the price list row that matches your settings, per run, per output, per character, per second of audio or video, or by run time when there is no list. A discount on your account shows on the same line.</li>
+<li>Workflows run with <code class="notranslate">POST /Workflow/Run</code> and are followed with <code class="notranslate">POST /Workflow/RunDetail</code>; files you pick for a workflow are uploaded with <code class="notranslate">POST /File/Upload</code> first. Agents are messaged with <code class="notranslate">POST /UserAgent/Message/Send</code> and read with <code class="notranslate">POST /UserAgent/Message/Detail</code>.</li>
+<li>Ask AI sends the conversation to <code class="notranslate">POST /v1/chat/completions</code> on the OpenAI-compatible gateway at <code class="notranslate">https://llm.wiro.ai/v1</code> (<a href="https://wiro.ai/docs/completions-api">LLM gateway</a>).</li>
+<li>Signature-based projects sign every Run API request with <code class="notranslate">x-nonce</code> and <code class="notranslate">x-signature</code>, an HMAC-SHA256 of the secret and the nonce keyed with the API key; the gateway takes <code class="notranslate">key:secret</code> as its Bearer token (<a href="https://wiro.ai/docs/authentication">Authentication</a>). Your key and secret stay in Raycast's encrypted preferences and go only to <code class="notranslate">api.wiro.ai</code> and <code class="notranslate">llm.wiro.ai</code>.</li>
+</ul>
+<h2 dir="auto" id="pricing">Pricing</h2>
+<p dir="auto">Searching models and reading their settings is free. Model runs, workflow steps and chat messages are charged to your project's wallet at each model's price on wiro.ai, and failed tasks are not charged. Each form shows the price for your settings before you run it, and each result shows what the task cost. Messages to your own agents use the agent's credits.</p>
+<h2 dir="auto" id="development">Development</h2>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npm install
+npm run dev     <span class="pl-c"><span class="pl-c">#</span> load the extension in Raycast in development mode</span>
+npm run lint    <span class="pl-c"><span class="pl-c">#</span> ESLint, Prettier and Raycast's manifest checks</span>
+npm <span class="pl-c1">test</span>        <span class="pl-c"><span class="pl-c">#</span> unit tests</span>
+npm run build   <span class="pl-c"><span class="pl-c">#</span> distribution build</span></pre></div>
+<p dir="auto">The unit tests cover request signing, schema reading (prompts, file inputs, input fit, settings and defaults), the price engine, task outputs, workflow inputs and outputs, agent replies and stream parsing, without calling the API.</p>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
+<td>Official MCP server for Wiro AI, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>Vercel AI SDK provider for chat, images, speech, transcription and video, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-llm"><code class="notranslate">@wiro-ai/wiro-llm</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Cursor, Claude Code, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills">Wiro-Skills</a></td>
+<td>Agent skills for images, image edits, video, music, speech, transcripts, 3D and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Wiro AI extension for Safari on the Mac</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Wiro AI SDK for Dart and Flutter, <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>Wiro AI SDK for React Native and Expo, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><code class="notranslate">@wiro-ai/wiro-react-native</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-Realtime">Swift-Realtime</a></td>
+<td>Realtime voice AI example for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin-Realtime</a></td>
+<td>Realtime voice AI example for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-Realtime">Dart-Realtime</a></td>
+<td>Realtime voice AI example for Flutter</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-Realtime">ReactNative-Realtime</a></td>
+<td>Realtime voice AI example for React Native</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>One Wiro AI node for n8n with a searchable model picker, <a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><code class="notranslate">@wiro-ai/n8n-nodes-wiro</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI plugins for Dify: the LLM gateway as a model provider, plus image, video, speech and music tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI">Wiro-ComfyUI</a></td>
+<td>Wiro AI nodes for ComfyUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Zed">Wiro-Zed</a></td>
+<td>Wiro AI MCP server extension for Zed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Action for Wiro AI models and the LLM gateway, <a href="https://github.com/marketplace/actions/wiro-ai-action">on the GitHub Marketplace</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress: featured images, image edits, alt text, narration and SEO suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Obsidian">Wiro-Obsidian</a></td>
+<td>Wiro AI plugin for Obsidian: images, video, speech, music, transcription and text tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Blender">Wiro-Blender</a></td>
+<td>Wiro AI add-on for Blender: text to 3D, image to 3D and textures</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Figma">Wiro-Figma</a></td>
+<td>Wiro AI plugin for Figma: images, vectors, image edits and text</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js starter for Wiro AI: Playground, image, video and audio tools, and LLM chat, ready for Vercel and Railway</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Docs">Wiro-Docs</a></td>
+<td>Source of the Wiro AI API docs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto">MIT, see <a href="https://github.com/wiroai/Wiro-Raycast/blob/main/LICENSE">LICENSE</a>.</p>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/wiro-obsidian/">Wiro-Obsidian</a></li><li><a href="/projects/wiro-mcp/">Wiro-MCP</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li><li><a href="/projects/dart-quickstart/">Dart-QuickStart</a></li><li><a href="/projects/reactnative-quickstart/">ReactNative-QuickStart</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

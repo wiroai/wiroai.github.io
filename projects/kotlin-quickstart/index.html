@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kotlin-QuickStart: Wiro AI open source</title>
+<meta name="description" content="Official Kotlin SDK for the Wiro AI API (WiroKit): run image, video, audio and LLM models from Android apps with coroutines and live task tracking.">
+<link rel="canonical" href="https://wiroai.github.io/projects/kotlin-quickstart/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="Kotlin-QuickStart: Wiro AI open source">
+<meta property="og:description" content="Official Kotlin SDK for the Wiro AI API (WiroKit): run image, video, audio and LLM models from Android apps with coroutines and live task tracking.">
+<meta property="og:url" content="https://wiroai.github.io/projects/kotlin-quickstart/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "Kotlin-QuickStart", "description": "Official Kotlin SDK for the Wiro AI API (WiroKit): run image, video, audio and LLM models from Android apps with coroutines and live task tracking.", "codeRepository": "https://github.com/wiroai/Kotlin-QuickStart", "url": "https://wiroai.github.io/projects/kotlin-quickstart/", "programmingLanguage": "Kotlin", "license": "https://api.github.com/licenses/mit", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#sdks">LLM gateway and SDKs</a></p>
+<section class="project-head">
+  <h1>Kotlin-QuickStart</h1>
+  <p class="lead">Official Kotlin SDK for the Wiro AI API (WiroKit): run image, video, audio and LLM models from Android apps with coroutines and live task tracking.</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/Kotlin-QuickStart">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai/docs/code-examples">Docs</a></p>
+</section>
+<article class="markdown">
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Kotlin-QuickStart/main/.github/assets/wiro-logo.png"><img src="https://raw.githubusercontent.com/wiroai/Kotlin-QuickStart/main/.github/assets/wiro-logo.png" alt="Wiro AI" width="240" style="max-width: 100%;"></a>
+<h2 dir="auto" id="wirokit-for-android-kotlin-sdk-for-the-wiro-ai-api">WiroKit for Android: Kotlin SDK for the Wiro AI API</h2>
+<p dir="auto">Run image, video, audio and LLM models from Android apps in Kotlin with the Wiro AI API: typed requests, live task tracking and file uploads.</p>
+<p dir="auto"><a href="https://kotlinlang.org"><img loading="lazy" src="https://camo.githubusercontent.com/955096a8fc319a47671cee432aebb2dc4e19a32863e7611aa818f0391ef65bea/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4b6f746c696e2d322e342532422d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131266c6f676f3d6b6f746c696e266c6f676f436f6c6f723d7768697465" alt="Kotlin 2.4+" data-canonical-src="https://img.shields.io/badge/Kotlin-2.4%2B-111111?style=for-the-badge&amp;color=111111&amp;logo=kotlin&amp;logoColor=white" style="max-width: 100%;"></a> <a href="https://developer.android.com"><img loading="lazy" src="https://camo.githubusercontent.com/97b5107fb8f3d64caa01b60346d06e6f9581e6b42fdb8785248f3c58397c2253/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f416e64726f69642d41504925323032362532422d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131266c6f676f3d616e64726f6964266c6f676f436f6c6f723d7768697465" alt="Android API 26+" data-canonical-src="https://img.shields.io/badge/Android-API%2026%2B-111111?style=for-the-badge&amp;color=111111&amp;logo=android&amp;logoColor=white" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Kotlin-QuickStart/actions/workflows/ci.yml"><img loading="lazy" src="https://camo.githubusercontent.com/87e651bff08ce2b1dc8da73c8356616d30f5632b864652fe80f0e8da91a49abf/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f7769726f61692f4b6f746c696e2d517569636b53746172742f63692e796d6c3f6272616e63683d6d61696e267374796c653d666f722d7468652d626164676526636f6c6f723d313131313131266c6162656c3d4349266c6f676f3d676974687562616374696f6e73266c6f676f436f6c6f723d7768697465" alt="CI" data-canonical-src="https://img.shields.io/github/actions/workflow/status/wiroai/Kotlin-QuickStart/ci.yml?branch=main&amp;style=for-the-badge&amp;color=111111&amp;label=CI&amp;logo=githubactions&amp;logoColor=white" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Kotlin-QuickStart/blob/main/LICENSE"><img loading="lazy" src="https://camo.githubusercontent.com/9b0dcc545c9e697315b8d16f4363715f0cc54941456ba778cbc802bb0ef11275/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="License: MIT" data-canonical-src="https://img.shields.io/badge/license-MIT-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs/code-examples">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a></p>
+</div>
+<p dir="auto">WiroKit for Android is the official Kotlin library for calling the<br>
+<a href="https://wiro.ai">Wiro AI</a> model API from Android apps (API 26+). It runs any<br>
+model in the Wiro AI catalog, through typed request factories for popular<br>
+image, video and music models or through <code class="notranslate">Wiro.model</code> with a parameter map,<br>
+and follows each task by polling or over a WebSocket with coroutines and<br>
+Flows. The repo also contains a Jetpack Compose example app that generates<br>
+images with FLUX.2 Pro.</p>
+<h2 dir="auto" id="features">Features</h2>
+<ul dir="auto">
+<li>Typed request factories for popular image, video, and audio models</li>
+<li>Dynamic model requests with <code class="notranslate">Wiro.model("owner/project", parameters)</code></li>
+<li>Model search, explore, and schema validation</li>
+<li><code class="notranslate">subscribe</code> / <code class="notranslate">run</code> / <code class="notranslate">subscribeStream</code> task lifecycle APIs</li>
+<li>Automatic file uploads for bytes and <code class="notranslate">ContentUri</code> inputs</li>
+<li>Polling and WebSocket task tracking</li>
+<li>Task cancel / kill</li>
+<li>Retry with exponential backoff, timeouts, and structured logging</li>
+<li>API key, HMAC signature, and proxy authentication</li>
+<li>Coroutine-native cancellation and lifecycle-friendly Flows</li>
+</ul>
+<h2 dir="auto" id="requirements">Requirements</h2>
+<ul dir="auto">
+<li>Android <code class="notranslate">minSdk</code> 26+</li>
+<li>Kotlin 2.4+</li>
+<li>JDK 17+ for builds</li>
+<li>A <a href="https://wiro.ai/panel/project/new">Wiro AI project and API key</a></li>
+</ul>
+<h2 dir="auto" id="installation">Installation</h2>
+<p dir="auto">The first public artifact has not been published to Maven Central yet. To<br>
+validate a local build:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">./gradlew :wirokit:publishToMavenLocal</pre></div>
+<p dir="auto">Add <code class="notranslate">mavenLocal()</code> before <code class="notranslate">mavenCentral()</code> in the consuming project, then use<br>
+the release candidate coordinates:</p>
+<div class="highlight highlight-source-kotlin" dir="auto"><pre class="notranslate">repositories {
+    mavenLocal()
+    mavenCentral()
+}</pre></div>
+<p dir="auto">After the first Maven Central release, remove <code class="notranslate">mavenLocal()</code> and use one of the<br>
+following dependency declarations.</p>
+<h3 dir="auto" id="gradle-version-catalog">Gradle (version catalog)</h3>
+<div class="highlight highlight-source-kotlin" dir="auto"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span> libs.versions.toml</span>
+[libraries]
+wirokit <span class="pl-k">=</span> { module <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>ai.wiro:wirokit<span class="pl-pds">"</span></span>, version <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>0.1.0<span class="pl-pds">"</span></span> }
+
+<span class="pl-c"><span class="pl-c">//</span> module build.gradle.kts</span>
+dependencies {
+    implementation(libs.wirokit)
+}</pre></div>
+<h3 dir="auto" id="gradle-kotlin-dsl">Gradle (Kotlin DSL)</h3>
+<div class="highlight highlight-source-kotlin" dir="auto"><pre class="notranslate">repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(<span class="pl-s"><span class="pl-pds">"</span>ai.wiro:wirokit:0.1.0<span class="pl-pds">"</span></span>)
+}</pre></div>
+<h2 dir="auto" id="quick-start">Quick start</h2>
+<div class="highlight highlight-source-kotlin" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-smi">ai.wiro.wirokit.Wiro</span>
+<span class="pl-k">import</span> <span class="pl-smi">ai.wiro.wirokit.WiroClient</span>
+<span class="pl-k">import</span> <span class="pl-smi">ai.wiro.wirokit.WiroTaskResult</span>
+<span class="pl-k">import</span> <span class="pl-smi">ai.wiro.wirokit.subscribe</span>
+
+<span class="pl-k">public</span> <span class="pl-k">suspend</span> <span class="pl-k">fun</span> <span class="pl-en">generateImage</span>() {
+    <span class="pl-k">val</span> client <span class="pl-k">=</span> <span class="pl-en">WiroClient</span>(apiKey <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>your-api-key<span class="pl-pds">"</span></span>)
+    <span class="pl-k">try</span> {
+        <span class="pl-k">val</span> result <span class="pl-k">=</span> client.subscribe(
+            <span class="pl-en">Wiro</span>.flux2Pro(
+                prompt <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>A cinematic mountain lake<span class="pl-pds">"</span></span>,
+                width <span class="pl-k">=</span> <span class="pl-c1">1024</span>,
+                height <span class="pl-k">=</span> <span class="pl-c1">1024</span>,
+            ),
+        )
+
+        <span class="pl-k">when</span> (result) {
+            <span class="pl-k">is</span> <span class="pl-en">WiroTaskResult</span>.<span class="pl-en">Success</span> <span class="pl-k">-&gt;</span>
+                <span class="pl-c1">println</span>(result.task.outputs.firstOrNull()?.url)
+            <span class="pl-k">is</span> <span class="pl-en">WiroTaskResult</span>.<span class="pl-en">Failure</span> <span class="pl-k">-&gt;</span>
+                <span class="pl-c1">println</span>(<span class="pl-s"><span class="pl-pds">"</span>Failed: <span class="pl-e">${result.reason}</span><span class="pl-pds">"</span></span>)
+        }
+    } <span class="pl-k">finally</span> {
+        client.close()
+    }
+}</pre></div>
+<blockquote>
+<p dir="auto"><strong>Mobile tip:</strong> Prefer <code class="notranslate">WiroClient(proxyUrl = ..., headers = ...)</code> in shipped<br>
+apps so long-lived API secrets never ship inside the binary.</p>
+</blockquote>
+<h2 dir="auto" id="authentication">Authentication</h2>
+<h3 dir="auto" id="api-key">API key</h3>
+<div class="highlight highlight-source-kotlin" dir="auto"><pre class="notranslate"><span class="pl-k">val</span> client <span class="pl-k">=</span> <span class="pl-en">WiroClient</span>(apiKey <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>your-api-key<span class="pl-pds">"</span></span>)</pre></div>
+<h3 dir="auto" id="api-key--hmac-signature">API key + HMAC signature</h3>
+<div class="highlight highlight-source-kotlin" dir="auto"><pre class="notranslate"><span class="pl-k">val</span> client <span class="pl-k">=</span> <span class="pl-en">WiroClient</span>(
+    apiKey <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>your-api-key<span class="pl-pds">"</span></span>,
+    apiSecret <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>your-api-secret<span class="pl-pds">"</span></span>,
+)</pre></div>
+<h3 dir="auto" id="proxy-recommended-for-production">Proxy (recommended for production)</h3>
+<div class="highlight highlight-source-kotlin" dir="auto"><pre class="notranslate"><span class="pl-k">val</span> client <span class="pl-k">=</span> <span class="pl-en">WiroClient</span>(
+    proxyUrl <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>https://api.myapp.com/wiro/v1<span class="pl-pds">"</span></span>,
+    headers <span class="pl-k">=</span> <span class="pl-c1">mapOf</span>(<span class="pl-s"><span class="pl-pds">"</span>Authorization<span class="pl-pds">"</span></span> to <span class="pl-s"><span class="pl-pds">"</span>Bearer app-token<span class="pl-pds">"</span></span>),
+)</pre></div>
+<p dir="auto">Your backend attaches Wiro AI credentials server-side. The SDK never stores an<br>
+API key in proxy mode.</p>
+<h2 dir="auto" id="which-call-do-i-need">Which call do I need?</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>I want to...</th>
+<th>Call</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generate with a supported model</td>
+<td><code class="notranslate">client.subscribe(Wiro.flux2Pro(...))</code></td>
+</tr>
+<tr>
+<td>Run any other model</td>
+<td><code class="notranslate">client.subscribe(Wiro.model("owner/project", ...))</code></td>
+</tr>
+<tr>
+<td>Fire-and-forget then wait</td>
+<td><code class="notranslate">run</code> / <code class="notranslate">runModel</code> then <code class="notranslate">waitForTask</code></td>
+</tr>
+<tr>
+<td>Stream live status updates</td>
+<td><code class="notranslate">subscribeStream(...)</code></td>
+</tr>
+<tr>
+<td>Find a model</td>
+<td><code class="notranslate">searchModels</code> / <code class="notranslate">explore</code></td>
+</tr>
+<tr>
+<td>Inspect parameters</td>
+<td><code class="notranslate">getModelSchema</code> then <code class="notranslate">schema.validate</code></td>
+</tr>
+<tr>
+<td>Send bytes</td>
+<td><code class="notranslate">WiroFileInput.Bytes(...)</code></td>
+</tr>
+<tr>
+<td>Send a content URI</td>
+<td><code class="notranslate">WiroFileInput.ContentUri(...)</code> + content source</td>
+</tr>
+<tr>
+<td>Stop work</td>
+<td>Cancel the coroutine, or <code class="notranslate">cancelTask</code> / <code class="notranslate">killTask</code></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2 dir="auto" id="typed-and-dynamic-requests">Typed and dynamic requests</h2>
+<p dir="auto">Typed factories are available for these models. Any other model runs through<br>
+<code class="notranslate">Wiro.model</code>.</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Category</th>
+<th>Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image</td>
+<td>FLUX.2 Pro, GPT Image 2, Nano Banana Pro, Seedream v4, Grok Imagine Image</td>
+</tr>
+<tr>
+<td>Video</td>
+<td>Runway Gen-4.5, Seedance 2.0, Kling V3, Veo 3.1, Sora 2 Pro, Hailuo 2.3 Fast, Grok Imagine Video</td>
+</tr>
+<tr>
+<td>Music</td>
+<td>Lyria 3</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<div class="highlight highlight-source-kotlin" dir="auto"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span> Typed</span>
+<span class="pl-k">val</span> request <span class="pl-k">=</span> <span class="pl-en">Wiro</span>.flux2Pro(
+    prompt <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>Sunset over the bay<span class="pl-pds">"</span></span>,
+    width <span class="pl-k">=</span> <span class="pl-c1">1024</span>,
+    height <span class="pl-k">=</span> <span class="pl-c1">1024</span>,
+)
+
+<span class="pl-c"><span class="pl-c">//</span> Dynamic model request</span>
+<span class="pl-k">val</span> <span class="pl-c1">dynamic</span> <span class="pl-k">=</span> <span class="pl-en">Wiro</span>.model(
+    slug <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>black-forest-labs/flux-2-pro<span class="pl-pds">"</span></span>,
+    parameters <span class="pl-k">=</span> <span class="pl-c1">mapOf</span>(
+        <span class="pl-s"><span class="pl-pds">"</span>prompt<span class="pl-pds">"</span></span> to <span class="pl-en">WiroValue</span>.<span class="pl-en">StringValue</span>(<span class="pl-s"><span class="pl-pds">"</span>Sunset over the bay<span class="pl-pds">"</span></span>),
+        <span class="pl-s"><span class="pl-pds">"</span>width<span class="pl-pds">"</span></span> to <span class="pl-en">WiroValue</span>.number(<span class="pl-c1">1024</span>),
+        <span class="pl-s"><span class="pl-pds">"</span>height<span class="pl-pds">"</span></span> to <span class="pl-en">WiroValue</span>.number(<span class="pl-c1">1024</span>),
+    ),
+)</pre></div>
+<h2 dir="auto" id="polling-and-websocket-tracking">Polling and WebSocket tracking</h2>
+<div class="highlight highlight-source-kotlin" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-smi">ai.wiro.wirokit.WiroTaskTrackingMode</span>
+<span class="pl-k">import</span> <span class="pl-smi">ai.wiro.wirokit.subscribeStream</span>
+<span class="pl-k">import</span> <span class="pl-smi">kotlinx.coroutines.flow.collect</span>
+
+<span class="pl-c"><span class="pl-c">//</span> Default: polling `/Task/Detail`</span>
+client.subscribeStream(request).collect { update <span class="pl-k">-&gt;</span>
+    <span class="pl-c1">println</span>(update.status?.apiValue)
+}
+
+<span class="pl-c"><span class="pl-c">//</span> WebSocket with detail + polling fallback on early close</span>
+client.subscribeStream(
+    request <span class="pl-k">=</span> request,
+    trackingMode <span class="pl-k">=</span> <span class="pl-en">WiroTaskTrackingMode</span>.<span class="pl-en">WEB_SOCKET</span>,
+).collect { update <span class="pl-k">-&gt;</span>
+    <span class="pl-c1">println</span>(update.status?.apiValue)
+}</pre></div>
+<p dir="auto"><code class="notranslate">subscribeStream</code> is <code class="notranslate">suspend</code> and completes the billable <code class="notranslate">/Run</code> <strong>before</strong><br>
+returning the <code class="notranslate">Flow</code>, so collecting (or re-collecting) never repeats the run.</p>
+<h2 dir="auto" id="uploads">Uploads</h2>
+<div class="highlight highlight-source-kotlin" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-smi">ai.wiro.wirokit.WiroFileInput</span>
+<span class="pl-k">import</span> <span class="pl-smi">ai.wiro.wirokit.WiroUriContentSource</span>
+
+<span class="pl-c"><span class="pl-c">//</span> In-memory bytes</span>
+<span class="pl-k">val</span> bytes <span class="pl-k">=</span> <span class="pl-en">WiroFileInput</span>.<span class="pl-en">Bytes</span>(
+    bytes <span class="pl-k">=</span> imageBytes,
+    fileName <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>photo.png<span class="pl-pds">"</span></span>,
+)
+
+<span class="pl-c"><span class="pl-c">//</span> Content URI (streamed; not fully buffered by default)</span>
+<span class="pl-k">val</span> uriInput <span class="pl-k">=</span> <span class="pl-en">WiroFileInput</span>.<span class="pl-en">ContentUri</span>(
+    uri <span class="pl-k">=</span> contentUri,
+    fileName <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>photo.png<span class="pl-pds">"</span></span>,
+)
+<span class="pl-k">val</span> source <span class="pl-k">=</span> <span class="pl-en">WiroUriContentSource</span>.from(contentResolver)
+client.uploadFile(uriInput, source)
+<span class="pl-c"><span class="pl-c">//</span> or ContentResolver overload: client.uploadFile(uriInput, contentResolver)</span></pre></div>
+<p dir="auto">Unresolved file inputs inside run parameters are uploaded automatically before<br>
+<code class="notranslate">/Run</code>.</p>
+<h2 dir="auto" id="coroutine-cancellation-and-lifecycle">Coroutine cancellation and lifecycle</h2>
+<ul dir="auto">
+<li>Cancel the coroutine / <code class="notranslate">Job</code> that is collecting a Flow to stop local work<br>
+immediately (<code class="notranslate">CancellationException</code> is preserved).</li>
+<li>Call <code class="notranslate">cancelTask(taskId)</code> when a queued task id is known.</li>
+<li>Call <code class="notranslate">killTask(token)</code> or <code class="notranslate">killTask(id)</code> to stop a remote worker.</li>
+<li>Tie collection to <code class="notranslate">viewModelScope</code> or <code class="notranslate">lifecycleScope</code> so configuration<br>
+changes do not leak work. Do <strong>not</strong> auto-restart a billable run after<br>
+process death unless the user explicitly taps Generate again.</li>
+<li>Always <code class="notranslate">close()</code> the client when you own it (or use a single app-scoped<br>
+instance).</li>
+</ul>
+<h2 dir="auto" id="security-guidance">Security guidance</h2>
+<ul dir="auto">
+<li>Use proxy mode in release builds. The example app's minified release build<br>
+accepts only a backend proxy URL.</li>
+<li>Never log API keys, secrets, proxy bearer tokens, or raw response bodies.</li>
+<li>SDK exceptions redact sensitive values from <code class="notranslate">toString()</code> / messages where<br>
+applicable; use <code class="notranslate">rawResponseBody</code> only for local diagnostics.</li>
+<li>The example app encrypts local development credentials with Android<br>
+Keystore-backed AES-GCM. Do not commit credentials.</li>
+<li>Keep <code class="notranslate">allowBackup=false</code> for apps that store secrets locally.</li>
+</ul>
+<h2 dir="auto" id="example-app">Example app</h2>
+<p dir="auto">Open the <code class="notranslate">app</code> run configuration in Android Studio, or:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">./gradlew :app:assembleDebug</pre></div>
+<p dir="auto">Configure an API key or proxy URL in <strong>Settings</strong> for a debug build. Minified<br>
+release builds only accept a backend proxy URL. The demo generates a Flux 2<br>
+Pro image with live status, Coil rendering, and local/API cancel/kill.</p>
+<h2 dir="auto" id="agent-skill">Agent skill</h2>
+<p dir="auto">This repository includes an agent skill, <code class="notranslate">wiro-kotlin</code>, in <a href="https://github.com/wiroai/Kotlin-QuickStart/blob/main/skills/wiro-kotlin/SKILL.md"><code class="notranslate">skills/wiro-kotlin/SKILL.md</code></a>. It shows coding agents such as Claude Code, Codex and Cursor how to use WiroKit in Android and Kotlin apps. Add it to your agent with:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npx skills add wiroai/Kotlin-QuickStart --skill wiro-kotlin</pre></div>
+<h2 dir="auto" id="documentation">Documentation</h2>
+<ul dir="auto">
+<li>Product docs: <a href="https://wiro.ai/docs">https://wiro.ai/docs</a></li>
+<li>Available models: <a href="https://wiro.ai/models">https://wiro.ai/models</a></li>
+<li>Generated API docs (Dokka): <code class="notranslate">./gradlew :wirokit:dokkaGenerate</code><br>
+→ <code class="notranslate">wirokit/build/dokka/html/index.html</code></li>
+<li>Changelog: <a href="https://github.com/wiroai/Kotlin-QuickStart/blob/main/CHANGELOG.md"><code class="notranslate">CHANGELOG.md</code></a></li>
+<li>Security policy: <a href="https://github.com/wiroai/Kotlin-QuickStart/blob/main/SECURITY.md"><code class="notranslate">SECURITY.md</code></a></li>
+<li>Contributing guide: <a href="https://github.com/wiroai/Kotlin-QuickStart/blob/main/CONTRIBUTING.md"><code class="notranslate">CONTRIBUTING.md</code></a></li>
+<li>Local consumer fixture: <a href="https://github.com/wiroai/Kotlin-QuickStart/blob/main/consumer-fixture/"><code class="notranslate">consumer-fixture/</code></a></li>
+</ul>
+<h2 dir="auto" id="development">Development</h2>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">./gradlew :wirokit:testDebugUnitTest :wirokit:verifyCoverageGate
+./gradlew :app:testDebugUnitTest
+./gradlew :wirokit:assembleRelease
+./gradlew spotlessCheck detekt
+./gradlew :wirokit:lintRelease :app:lintRelease
+./gradlew :wirokit:releaseApiCheck
+./gradlew :wirokit:publishToMavenLocal
+./gradlew :consumer-fixture:testDebugUnitTest</pre></div>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
+<td>Official MCP server for Wiro AI, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>Vercel AI SDK provider for chat, images, speech, transcription and video, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-llm"><code class="notranslate">@wiro-ai/wiro-llm</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Wiro AI extension for Safari on the Mac</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Cursor, Claude Code, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills">Wiro-Skills</a></td>
+<td>Agent skills for images, image edits, video, music, speech, transcripts, 3D and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Wiro AI SDK for Dart and Flutter, <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>Wiro AI SDK for React Native and Expo, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><code class="notranslate">@wiro-ai/wiro-react-native</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-Realtime">Swift-Realtime</a></td>
+<td>Realtime voice AI example for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin-Realtime</a></td>
+<td>Realtime voice AI example for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-Realtime">Dart-Realtime</a></td>
+<td>Realtime voice AI example for Flutter</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-Realtime">ReactNative-Realtime</a></td>
+<td>Realtime voice AI example for React Native</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>One Wiro AI node for n8n with a searchable model picker, <a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><code class="notranslate">@wiro-ai/n8n-nodes-wiro</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI plugins for Dify: the LLM gateway as a model provider, plus image, video, speech and music tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI">Wiro-ComfyUI</a></td>
+<td>Wiro AI nodes for ComfyUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Zed">Wiro-Zed</a></td>
+<td>Wiro AI MCP server extension for Zed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Action for Wiro AI models and the LLM gateway, <a href="https://github.com/marketplace/actions/wiro-ai-action">on the GitHub Marketplace</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Raycast">Wiro-Raycast</a></td>
+<td>Wiro AI extension for Raycast: image and video generation, LLM chat and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress: featured images, image edits, alt text, narration and SEO suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Obsidian">Wiro-Obsidian</a></td>
+<td>Wiro AI plugin for Obsidian: images, video, speech, music, transcription and text tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Blender">Wiro-Blender</a></td>
+<td>Wiro AI add-on for Blender: text to 3D, image to 3D and textures</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Figma">Wiro-Figma</a></td>
+<td>Wiro AI plugin for Figma: images, vectors, image edits and text</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js starter for Wiro AI: Playground, image, video and audio tools, and LLM chat, ready for Vercel and Railway</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Docs">Wiro-Docs</a></td>
+<td>Source of the Wiro AI API docs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto">MIT. See <a href="https://github.com/wiroai/Kotlin-QuickStart/blob/main/LICENSE">LICENSE</a>.</p>
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67"><img loading="lazy" src="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67" alt="Wiro AI koala mascot" width="80" data-canonical-src="https://wiro.ai/images/koala/accent-heavy-koala.png" style="max-width: 100%;"></a>
+</div>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/dart-quickstart/">Dart-QuickStart</a></li><li><a href="/projects/reactnative-quickstart/">ReactNative-QuickStart</a></li><li><a href="/projects/wiro-mcp/">Wiro-MCP</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/swift-realtime/">Swift-Realtime</a></li><li><a href="/projects/kotlin-realtime/">Kotlin-Realtime</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

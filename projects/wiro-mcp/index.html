@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiro-MCP: Wiro AI open source</title>
+<meta name="description" content="Official MCP server for Wiro AI. Search, price and run image, video, audio and LLM models from Cursor, Claude Code, Windsurf and other MCP clients.">
+<link rel="canonical" href="https://wiroai.github.io/projects/wiro-mcp/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="Wiro-MCP: Wiro AI open source">
+<meta property="og:description" content="Official MCP server for Wiro AI. Search, price and run image, video, audio and LLM models from Cursor, Claude Code, Windsurf and other MCP clients.">
+<meta property="og:url" content="https://wiroai.github.io/projects/wiro-mcp/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "Wiro-MCP", "description": "Official MCP server for Wiro AI. Search, price and run image, video, audio and LLM models from Cursor, Claude Code, Windsurf and other MCP clients.", "codeRepository": "https://github.com/wiroai/Wiro-MCP", "url": "https://wiroai.github.io/projects/wiro-mcp/", "programmingLanguage": "JavaScript", "license": "https://api.github.com/licenses/mit", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#assistants">Coding assistants and agents</a></p>
+<section class="project-head">
+  <h1>Wiro-MCP</h1>
+  <p class="lead">Official MCP server for Wiro AI. Search, price and run image, video, audio and LLM models from Cursor, Claude Code, Windsurf and other MCP clients.</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/Wiro-MCP">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai/docs/wiro-mcp-server">Docs</a></p>
+</section>
+<article class="markdown">
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-MCP/main/.github/assets/wiro-logo.png"><img src="https://raw.githubusercontent.com/wiroai/Wiro-MCP/main/.github/assets/wiro-logo.png" alt="Wiro AI" width="240" style="max-width: 100%;"></a>
+<h2 dir="auto" id="wiro-mcp-server">Wiro MCP Server</h2>
+<p dir="auto">Official MCP server for Wiro AI: run image, video, audio and LLM models, build and run workflows, and deploy and talk to AI agents from Cursor, Claude Code, Claude Desktop, Windsurf and any other MCP client.</p>
+<p dir="auto"><a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><img loading="lazy" src="https://camo.githubusercontent.com/09079512a2c83e6f7b7190757430c51eccb5d831cc2a52035c1ccc4409f7d80d/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f407769726f2d61692f7769726f2d6d63703f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="npm" data-canonical-src="https://img.shields.io/npm/v/@wiro-ai/wiro-mcp?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="#quick-start"><img loading="lazy" src="https://camo.githubusercontent.com/23d3a8b197368c8254606747e836f86693410e0a869bc031fa1211613a358155/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e6f64652e6a732d32302532422d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="Node.js 20+" data-canonical-src="https://img.shields.io/badge/Node.js-20%2B-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://modelcontextprotocol.io/"><img loading="lazy" src="https://camo.githubusercontent.com/43ff641495c9c5fa6470c7daa2e450641c8508025832b9347f0069895d956a83/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d43502d7365727665722d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="MCP server" data-canonical-src="https://img.shields.io/badge/MCP-server-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-MCP/blob/main/LICENSE"><img loading="lazy" src="https://camo.githubusercontent.com/9b0dcc545c9e697315b8d16f4363715f0cc54941456ba778cbc802bb0ef11275/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="License: MIT" data-canonical-src="https://img.shields.io/badge/license-MIT-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs/wiro-mcp-server">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a></p>
+<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67"><img loading="lazy" src="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67" alt="Wiro AI koala mascot" width="60" data-canonical-src="https://wiro.ai/images/koala/accent-heavy-koala.png" style="max-width: 100%;"></a>
+</div>
+<p dir="auto"><code class="notranslate">@wiro-ai/wiro-mcp</code> is a TypeScript <a href="https://modelcontextprotocol.io/">Model Context Protocol</a> server that runs locally over stdio, with <code class="notranslate">npx</code> or <a href="#docker">Docker</a>. Its tools are grouped in three sets:</p>
+<ul dir="auto">
+<li><strong>Models</strong>: search the Wiro AI model catalog, read a model's parameters and price, run it and wait for the result, upload input files and browse past tasks.</li>
+<li><strong>Workflows</strong>: build multi-step workflows that chain models, run them, resume failed runs, browse the public gallery, and design workflows together with the Workflow Agent.</li>
+<li><strong>Agents</strong>: talk to Studio, the creative agent that runs models for you, and deploy, configure, run and message your own agents built from templates or from scratch.</li>
+</ul>
+<p dir="auto">Playbooks explain each job step by step, so the assistant knows the order of calls, what costs money and what needs your approval. The hosted server at <code class="notranslate">https://mcp.wiro.ai/v1</code> serves the same tools with nothing to install.</p>
+<h2 dir="auto" id="quick-start">Quick Start</h2>
+<p dir="auto">Local <code class="notranslate">npx</code> and library usage require Node.js 20 or later. The hosted MCP<br>
+endpoint and the <a href="#docker">Docker image</a> do not require a local Node.js<br>
+installation.</p>
+<h3 dir="auto" id="1-get-api-keys">1. Get API Keys</h3>
+<p dir="auto">Sign up at <a href="https://wiro.ai/">wiro.ai</a> and create a project at <a href="https://wiro.ai/panel/project/new">wiro.ai/panel/project/new</a> to get your API key and secret.</p>
+<h3 dir="auto" id="2-add-to-your-ai-assistant">2. Add to Your AI Assistant</h3>
+<p dir="auto"><strong>Cursor</strong>: open MCP settings (<code class="notranslate">Cmd+Shift+P</code> → "Open MCP settings") and add:</p>
+<div class="highlight highlight-source-json" dir="auto"><pre class="notranslate">{
+  <span class="pl-ent">"mcpServers"</span>: {
+    <span class="pl-ent">"wiro"</span>: {
+      <span class="pl-ent">"command"</span>: <span class="pl-s"><span class="pl-pds">"</span>npx<span class="pl-pds">"</span></span>,
+      <span class="pl-ent">"args"</span>: [<span class="pl-s"><span class="pl-pds">"</span>-y<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>@wiro-ai/wiro-mcp<span class="pl-pds">"</span></span>],
+      <span class="pl-ent">"env"</span>: {
+        <span class="pl-ent">"WIRO_API_KEY"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-key<span class="pl-pds">"</span></span>,
+        <span class="pl-ent">"WIRO_API_SECRET"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-secret<span class="pl-pds">"</span></span>
+      }
+    }
+  }
+}</pre></div>
+<p dir="auto"><strong>Claude Code:</strong></p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">claude mcp add wiro -- npx -y @wiro-ai/wiro-mcp</pre></div>
+<p dir="auto">Then set environment variables <code class="notranslate">WIRO_API_KEY</code> and <code class="notranslate">WIRO_API_SECRET</code>.</p>
+<p dir="auto"><strong>Claude Desktop</strong>: add to <code class="notranslate">claude_desktop_config.json</code>:</p>
+<div class="highlight highlight-source-json" dir="auto"><pre class="notranslate">{
+  <span class="pl-ent">"mcpServers"</span>: {
+    <span class="pl-ent">"wiro"</span>: {
+      <span class="pl-ent">"type"</span>: <span class="pl-s"><span class="pl-pds">"</span>stdio<span class="pl-pds">"</span></span>,
+      <span class="pl-ent">"command"</span>: <span class="pl-s"><span class="pl-pds">"</span>npx<span class="pl-pds">"</span></span>,
+      <span class="pl-ent">"args"</span>: [<span class="pl-s"><span class="pl-pds">"</span>-y<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>@wiro-ai/wiro-mcp<span class="pl-pds">"</span></span>],
+      <span class="pl-ent">"env"</span>: {
+        <span class="pl-ent">"WIRO_API_KEY"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-key<span class="pl-pds">"</span></span>,
+        <span class="pl-ent">"WIRO_API_SECRET"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-secret<span class="pl-pds">"</span></span>
+      }
+    }
+  }
+}</pre></div>
+<p dir="auto"><strong>Windsurf</strong>: add to MCP settings:</p>
+<div class="highlight highlight-source-json" dir="auto"><pre class="notranslate">{
+  <span class="pl-ent">"mcpServers"</span>: {
+    <span class="pl-ent">"wiro"</span>: {
+      <span class="pl-ent">"command"</span>: <span class="pl-s"><span class="pl-pds">"</span>npx<span class="pl-pds">"</span></span>,
+      <span class="pl-ent">"args"</span>: [<span class="pl-s"><span class="pl-pds">"</span>-y<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>@wiro-ai/wiro-mcp<span class="pl-pds">"</span></span>],
+      <span class="pl-ent">"env"</span>: {
+        <span class="pl-ent">"WIRO_API_KEY"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-key<span class="pl-pds">"</span></span>,
+        <span class="pl-ent">"WIRO_API_SECRET"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-secret<span class="pl-pds">"</span></span>
+      }
+    }
+  }
+}</pre></div>
+<p dir="auto"><strong>OpenClaw</strong>: configure a remote server under <code class="notranslate">mcp.servers</code>:</p>
+<div class="highlight highlight-source-json" dir="auto"><pre class="notranslate">{
+  <span class="pl-ent">"mcp"</span>: {
+    <span class="pl-ent">"servers"</span>: {
+      <span class="pl-ent">"wiro"</span>: {
+        <span class="pl-ent">"url"</span>: <span class="pl-s"><span class="pl-pds">"</span>https://mcp.wiro.ai/v1<span class="pl-pds">"</span></span>,
+        <span class="pl-ent">"transport"</span>: <span class="pl-s"><span class="pl-pds">"</span>streamable-http<span class="pl-pds">"</span></span>,
+        <span class="pl-ent">"connectionTimeoutMs"</span>: <span class="pl-c1">10000</span>,
+        <span class="pl-ent">"headers"</span>: {
+          <span class="pl-ent">"Authorization"</span>: <span class="pl-s"><span class="pl-pds">"</span>Bearer ${WIRO_MCP_AUTH}<span class="pl-pds">"</span></span>
+        }
+      }
+    }
+  }
+}</pre></div>
+<p dir="auto">Set <code class="notranslate">WIRO_MCP_AUTH</code> in OpenClaw's environment to your API key, or to<br>
+<code class="notranslate">API_KEY:API_SECRET</code> for a project with signature-based auth. Then verify with<br>
+<code class="notranslate">openclaw mcp doctor wiro --probe</code>. On older OpenClaw releases without that<br>
+probe command, use <code class="notranslate">openclaw mcp show wiro</code>, restart OpenClaw, and run<br>
+<code class="notranslate">/tools verbose</code>.</p>
+<p dir="auto"><strong>Hermes</strong>: add to <code class="notranslate">~/.hermes/config.yaml</code>:</p>
+<div class="highlight highlight-source-yaml" dir="auto"><pre class="notranslate"><span class="pl-ent">mcp_servers</span>:
+  <span class="pl-ent">wiro</span>:
+    <span class="pl-ent">url</span>: <span class="pl-s"><span class="pl-pds">"</span>https://mcp.wiro.ai/v1<span class="pl-pds">"</span></span>
+    <span class="pl-ent">headers</span>:
+      <span class="pl-ent">Authorization</span>: <span class="pl-s"><span class="pl-pds">"</span>Bearer ${WIRO_MCP_AUTH}<span class="pl-pds">"</span></span>
+    <span class="pl-ent">timeout</span>: <span class="pl-c1">60</span>
+    <span class="pl-ent">connect_timeout</span>: <span class="pl-c1">10</span></pre></div>
+<p dir="auto">Store <code class="notranslate">WIRO_MCP_AUTH</code> (your API key, or <code class="notranslate">API_KEY:API_SECRET</code>) in <code class="notranslate">~/.hermes/.env</code>, then run <code class="notranslate">/reload-mcp</code> and <code class="notranslate">/tools</code>.</p>
+<h3 dir="auto" id="3-start-using">3. Start Using</h3>
+<p dir="auto">Ask your AI assistant:</p>
+<p dir="auto"><strong>Models</strong></p>
+<ul dir="auto">
+<li><em>"Generate a photorealistic image of a mountain lake at sunset"</em></li>
+<li><em>"What video generation models are available on Wiro?"</em></li>
+<li><em>"Show me the parameters for google/veo3-1"</em></li>
+<li><em>"Create a 5-second video with Kling V3: a drone shot over mountains"</em></li>
+<li><em>"Check the status of my last task"</em></li>
+<li><em>"Show my latest productions and open the newest result"</em></li>
+</ul>
+<p dir="auto"><strong>Workflows</strong></p>
+<ul dir="auto">
+<li><em>"Build a workflow that turns a product photo into a short ad video, then run it on this photo"</em></li>
+<li><em>"Find a public workflow for podcast covers and run it with my show's name"</em></li>
+<li><em>"Ask the Workflow Agent to add an upscale step to my product ad workflow and save it"</em></li>
+<li><em>"Why did my last workflow run fail? Resume it if it can be resumed"</em></li>
+</ul>
+<p dir="auto"><strong>Agents</strong></p>
+<ul dir="auto">
+<li><em>"Ask Studio for three logo ideas for a coffee shop"</em></li>
+<li><em>"Which agent templates can manage Instagram? What does each plan cost?"</em></li>
+<li><em>"Deploy the Instagram manager agent on the Starter plan and tell me what it still needs"</em></li>
+<li><em>"Tell my support agent to summarise today's tickets"</em></li>
+</ul>
+<h2 dir="auto" id="docker">Docker</h2>
+<p dir="auto">Every release is also published on Docker Hub as<br>
+<a href="https://hub.docker.com/r/wiroai/wiro-mcp"><code class="notranslate">wiroai/wiro-mcp</code></a>, for<br>
+<code class="notranslate">linux/amd64</code> and <code class="notranslate">linux/arm64</code>. The image runs the same stdio server, so you<br>
+need Docker but not Node.js:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">docker run -i --rm -e WIRO_API_KEY wiroai/wiro-mcp</pre></div>
+<p dir="auto"><code class="notranslate">-e WIRO_API_KEY</code> hands the variable from your environment to the container.<br>
+For a project with signature-based auth, add <code class="notranslate">-e WIRO_API_SECRET</code> as well.<br>
+<code class="notranslate">WIRO_TOOLSETS</code> passes through the same way. Keep <code class="notranslate">-i</code>, since the server reads<br>
+its requests from stdin, and leave out <code class="notranslate">-t</code>.</p>
+<p dir="auto">In a client config, <code class="notranslate">docker</code> is the command and the credentials go in <code class="notranslate">env</code>.<br>
+This works in Cursor, Claude Desktop and Windsurf:</p>
+<div class="highlight highlight-source-json" dir="auto"><pre class="notranslate">{
+  <span class="pl-ent">"mcpServers"</span>: {
+    <span class="pl-ent">"wiro"</span>: {
+      <span class="pl-ent">"command"</span>: <span class="pl-s"><span class="pl-pds">"</span>docker<span class="pl-pds">"</span></span>,
+      <span class="pl-ent">"args"</span>: [<span class="pl-s"><span class="pl-pds">"</span>run<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>-i<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>--rm<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>-e<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>WIRO_API_KEY<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>-e<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>WIRO_API_SECRET<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>wiroai/wiro-mcp<span class="pl-pds">"</span></span>],
+      <span class="pl-ent">"env"</span>: {
+        <span class="pl-ent">"WIRO_API_KEY"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-key<span class="pl-pds">"</span></span>,
+        <span class="pl-ent">"WIRO_API_SECRET"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-secret<span class="pl-pds">"</span></span>
+      }
+    }
+  }
+}</pre></div>
+<p dir="auto"><strong>Claude Code:</strong></p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">claude mcp add wiro -e WIRO_API_KEY=your-api-key -e WIRO_API_SECRET=your-api-secret -- docker run -i --rm -e WIRO_API_KEY -e WIRO_API_SECRET wiroai/wiro-mcp</pre></div>
+<p dir="auto">For an API Key Only project, leave out the <code class="notranslate">WIRO_API_SECRET</code> value. Docker only<br>
+passes variables that are set, so the <code class="notranslate">-e WIRO_API_SECRET</code> argument can stay.</p>
+<p dir="auto">Image tags follow the npm versions: <code class="notranslate">wiroai/wiro-mcp:&lt;version&gt;</code> pins a release<br>
+and <code class="notranslate">latest</code> is the newest one. A client does not fetch a newer <code class="notranslate">latest</code> by<br>
+itself, so run <code class="notranslate">docker pull wiroai/wiro-mcp</code> to update. Pulling once before the<br>
+first start also means the client does not wait for the download.</p>
+<h2 dir="auto" id="authentication">Authentication</h2>
+<p dir="auto">Wiro AI supports two authentication types, chosen when you create a project:</p>
+<h3 dir="auto" id="signature-based-recommended">Signature-Based (Recommended)</h3>
+<p dir="auto">More secure. Requires both API key and API secret.</p>
+<pre class="notranslate"><code class="notranslate">WIRO_API_KEY=your-api-key
+WIRO_API_SECRET=your-api-secret
+</code></pre>
+<h3 dir="auto" id="api-key-only">API Key Only</h3>
+<p dir="auto">Simpler. Only requires the API key. Omit <code class="notranslate">WIRO_API_SECRET</code> from your config.</p>
+<pre class="notranslate"><code class="notranslate">WIRO_API_KEY=your-api-key
+</code></pre>
+<p dir="auto">The hosted server takes the same credentials as a bearer token:<br>
+<code class="notranslate">Authorization: Bearer API_KEY:API_SECRET</code> for a signature-based project, or<br>
+<code class="notranslate">Authorization: Bearer API_KEY</code> for an API Key Only project.</p>
+<h2 dir="auto" id="available-tools">Available Tools</h2>
+<h3 dir="auto" id="models">Models</h3>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Tool</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">search_models</code></td>
+<td>Search and browse AI models by keyword, category, or owner</td>
+</tr>
+<tr>
+<td><code class="notranslate">get_model_schema</code></td>
+<td>Get full parameter schema and pricing for any model, or the parameters and output ports of a workflow utility</td>
+</tr>
+<tr>
+<td><code class="notranslate">recommend_model</code></td>
+<td>Find models for a goal from two or three key words, best matches first</td>
+</tr>
+<tr>
+<td><code class="notranslate">explore</code></td>
+<td>Browse curated models grouped by category, no parameters needed</td>
+</tr>
+<tr>
+<td><code class="notranslate">run_model</code></td>
+<td>Run any model, waiting up to 45s by default (up to an hour with <code class="notranslate">timeout_seconds</code>) before it returns a recoverable task token</td>
+</tr>
+<tr>
+<td><code class="notranslate">wait_for_task</code></td>
+<td>Continue waiting for an existing task without submitting or billing a duplicate run</td>
+</tr>
+<tr>
+<td><code class="notranslate">get_task</code></td>
+<td>Check task status immediately or wait up to 45s with <code class="notranslate">wait_seconds</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">list_tasks</code></td>
+<td>Browse authenticated task history across conversations, then continue with <code class="notranslate">get_task</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">get_task_price</code></td>
+<td>Get the cost of a completed task</td>
+</tr>
+<tr>
+<td><code class="notranslate">cancel_task</code></td>
+<td>Cancel a queued task</td>
+</tr>
+<tr>
+<td><code class="notranslate">kill_task</code></td>
+<td>Stop a queued or running task</td>
+</tr>
+<tr>
+<td><code class="notranslate">upload_file</code></td>
+<td>Upload a file from a public http(s) URL (up to about 100 MB) for use as model input</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">For long generations, <code class="notranslate">run_model</code> returns the existing task ID and token when its<br>
+wait budget expires. The assistant must continue with <code class="notranslate">wait_for_task</code>; retrying<br>
+<code class="notranslate">run_model</code> creates a separate billable task.</p>
+<h3 dir="auto" id="workflows">Workflows</h3>
+<p dir="auto">A workflow chains models and built-in utility steps into one graph with its own<br>
+inputs and outputs. Every model step is charged like a normal model run when it<br>
+finishes. Wiro fills a model input you leave out with the model's default, so the<br>
+save result lists what it filled, and a graph can be at most 40 KB of JSON.</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Tool</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">list_workflows</code></td>
+<td>List the workflows in your workspace, or search the public gallery by text, tag or model</td>
+</tr>
+<tr>
+<td><code class="notranslate">get_workflow</code></td>
+<td>Read a workflow's inputs, outputs and step graph</td>
+</tr>
+<tr>
+<td><code class="notranslate">create_workflow</code></td>
+<td>Save a new workflow from a step graph. Wiro checks it against the live model catalog and returns every problem it finds at once</td>
+</tr>
+<tr>
+<td><code class="notranslate">update_workflow</code></td>
+<td>Edit a workflow's title, description, tags or graph without overwriting newer changes; a new graph is saved only after you confirm a summary of the change</td>
+</tr>
+<tr>
+<td><code class="notranslate">clone_workflow</code></td>
+<td>Copy a public workflow into your workspace</td>
+</tr>
+<tr>
+<td><code class="notranslate">delete_workflow</code></td>
+<td>Delete a workflow, after your confirmation</td>
+</tr>
+<tr>
+<td><code class="notranslate">run_workflow</code></td>
+<td>Run a workflow and wait for its outputs; can stop after a chosen step to test the first steps</td>
+</tr>
+<tr>
+<td><code class="notranslate">wait_for_workflow_run</code></td>
+<td>Keep waiting on a run, read its outputs, or see why a step failed</td>
+</tr>
+<tr>
+<td><code class="notranslate">resume_workflow_run</code></td>
+<td>Continue a failed or stopped run without paying again for finished steps</td>
+</tr>
+<tr>
+<td><code class="notranslate">list_workflow_runs</code></td>
+<td>Browse past and current runs, including runs started on wiro.ai</td>
+</tr>
+<tr>
+<td><code class="notranslate">save_workflow_from_agent</code></td>
+<td>Save a workflow the Workflow Agent proposed, as a new workflow, or onto an existing one after you confirm a summary of the change</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">The <strong>Workflow Agent</strong> designs workflows with you in plain language: talk to it<br>
+with <code class="notranslate">send_agent_message</code> and <code class="notranslate">agent: "workflow-agent"</code>, attach an existing<br>
+workflow to edit, then save its proposal with <code class="notranslate">save_workflow_from_agent</code>.<br>
+Conversations started through this server belong to the connected project and<br>
+are separate from your Workflow Agent chats on wiro.ai.</p>
+<h3 dir="auto" id="agents">Agents</h3>
+<p dir="auto">Talk to any Wiro agent with one set of tools. <code class="notranslate">agent</code> is <code class="notranslate">"studio"</code>, <code class="notranslate">"workflow-agent"</code><br>
+or the id of one of your own agents. Session names use letters, digits, dots, dashes,<br>
+underscores and colons, up to 128 characters (100 for the Workflow Agent), and cannot end in<br>
+"-r" followed by a number. Studio refuses a message under any other name; a session it has<br>
+under another name can be read and deleted, and to go on with it you start a new session.</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Tool</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">send_agent_message</code></td>
+<td>Send a message and wait for the reply, with any media, workflows or model runs it produced</td>
+</tr>
+<tr>
+<td><code class="notranslate">get_agent_message</code></td>
+<td>Keep waiting on a reply, or read one again</td>
+</tr>
+<tr>
+<td><code class="notranslate">get_agent_conversation</code></td>
+<td>List conversations, or read one conversation's history</td>
+</tr>
+<tr>
+<td><code class="notranslate">cancel_agent_message</code></td>
+<td>Stop a reply that is still being written</td>
+</tr>
+<tr>
+<td><code class="notranslate">delete_agent_session</code></td>
+<td>Delete a conversation and the agent's memory of it, after your confirmation</td>
+</tr>
+<tr>
+<td><code class="notranslate">list_studio_results</code></td>
+<td>List the images, videos and other results Studio generated for you</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><strong>Studio</strong> is Wiro's creative agent: it picks and runs models for you and charges<br>
+your wallet after each reply. Your own agents run on a monthly plan with credits.</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Tool</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">list_agent_templates</code></td>
+<td>Browse ready-made agent templates and the three monthly plans</td>
+</tr>
+<tr>
+<td><code class="notranslate">get_agent_template</code></td>
+<td>Read a template's skills, plans, and the accounts and keys it needs</td>
+</tr>
+<tr>
+<td><code class="notranslate">list_agent_skills</code></td>
+<td>Browse the skills an agent can have, and what each one needs to work</td>
+</tr>
+<tr>
+<td><code class="notranslate">deploy_agent</code></td>
+<td>Deploy an agent from a template or build one from skills, on the Starter, Pro or Max plan; shows the plan's price, the wallet it charges and the other plans' prices, and asks before charging</td>
+</tr>
+<tr>
+<td><code class="notranslate">list_my_agents</code></td>
+<td>List your agents with their status, plan and credits</td>
+</tr>
+<tr>
+<td><code class="notranslate">get_my_agent</code></td>
+<td>Read one agent's setup, plan and credits; can wait until it is running</td>
+</tr>
+<tr>
+<td><code class="notranslate">control_agent</code></td>
+<td>Start, stop or restart an agent</td>
+</tr>
+<tr>
+<td><code class="notranslate">update_agent</code></td>
+<td>Change an agent's name, description, time zone, models, chat commands and setup from chat</td>
+</tr>
+<tr>
+<td><code class="notranslate">apply_agent_skills</code></td>
+<td>Turn skills on or off; every plan includes every skill, so a change costs nothing</td>
+</tr>
+<tr>
+<td><code class="notranslate">set_agent_credentials</code></td>
+<td>Save the keys, tokens and settings an agent's skills and channels need, such as a Telegram bot token or a Gmail app password</td>
+</tr>
+<tr>
+<td><code class="notranslate">connect_agent_oauth</code></td>
+<td>Connect sign-in accounts such as HubSpot or X for the services an agent's skills use; you approve the connection in your browser. Some services need your own app keys or a token first</td>
+</tr>
+<tr>
+<td><code class="notranslate">disconnect_agent_oauth</code></td>
+<td>Disconnect a connected account, after your confirmation</td>
+</tr>
+<tr>
+<td><code class="notranslate">list_projects</code></td>
+<td>List the projects of the connected project's workspace, to pick one for an agent; no keys are shown</td>
+</tr>
+<tr>
+<td><code class="notranslate">bind_agent_project</code></td>
+<td>Connect an agent to a Wiro project so it can run models, with no key in the chat; shows the project first, then asks for your confirmation</td>
+</tr>
+<tr>
+<td><code class="notranslate">manage_agent_custom_skill</code></td>
+<td>Add, edit, schedule, restore or remove an agent's own instructions and scheduled tasks; turning off its approval policy or changing its rules needs your confirmation</td>
+</tr>
+<tr>
+<td><code class="notranslate">manage_agent_billing</code></td>
+<td>Subscribe, move to another plan, cancel, renew or buy extra credits from your wallet, after your confirmation</td>
+</tr>
+<tr>
+<td><code class="notranslate">get_agent_activity</code></td>
+<td>Read an agent's credit usage and activity logs, including who changed what on it</td>
+</tr>
+<tr>
+<td><code class="notranslate">delete_agent</code></td>
+<td>Delete an agent, after your confirmation</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h3 dir="auto" id="account-and-guides">Account and guides</h3>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Tool</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">get_account</code></td>
+<td>Show which workspace the connected project belongs to, its wallet balance and, when you ask, the wallet's recent transactions</td>
+</tr>
+<tr>
+<td><code class="notranslate">get_playbook</code></td>
+<td>Step-by-step guides: getting started, models, workflows, workflow graphs, the Workflow Agent, Studio, agents and billing</td>
+</tr>
+<tr>
+<td><code class="notranslate">search_docs</code></td>
+<td>Search the Wiro documentation for guides and API references</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">The server also offers prompts for common jobs (<code class="notranslate">build_workflow</code>, <code class="notranslate">deploy_agent</code>,<br>
+<code class="notranslate">create_with_studio</code>, <code class="notranslate">talk_to_my_agent</code>). In clients that support MCP prompts<br>
+they appear as ready-made commands.</p>
+<h3 dir="auto" id="choosing-tool-groups">Choosing tool groups</h3>
+<p dir="auto">All groups are on by default. Some clients work best with fewer tools; set<br>
+<code class="notranslate">WIRO_TOOLSETS</code> to a comma-separated list of <code class="notranslate">models</code>, <code class="notranslate">workflows</code> and <code class="notranslate">agents</code><br>
+to load only those. <code class="notranslate">get_account</code>, <code class="notranslate">get_playbook</code> and <code class="notranslate">search_docs</code> are always<br>
+available, and <code class="notranslate">workflows</code> also brings the model search tools it needs. The<br>
+conversation tools for Studio and the Workflow Agent, with<br>
+<code class="notranslate">save_workflow_from_agent</code>, come with either <code class="notranslate">workflows</code> or <code class="notranslate">agents</code>, and each<br>
+prompt appears only when its tools are loaded. If a job needs a tool from a<br>
+group that is not loaded, the server instructions tell the assistant to say so.</p>
+<div class="highlight highlight-source-json" dir="auto"><pre class="notranslate"><span class="pl-ent">"env"</span>: {
+  <span class="pl-ent">"WIRO_API_KEY"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-key<span class="pl-pds">"</span></span>,
+  <span class="pl-ent">"WIRO_TOOLSETS"</span>: <span class="pl-s"><span class="pl-pds">"</span>models,workflows<span class="pl-pds">"</span></span>
+}</pre></div>
+<h3 dir="auto" id="paid-and-irreversible-actions">Paid and irreversible actions</h3>
+<p dir="auto">Running a model or workflow, sending a message to Studio or the Workflow Agent,<br>
+and messages to your own agents (which use the agent's credits) cost money. Agent<br>
+plans, moves to a larger plan and credit packs are charged to your wallet, so<br>
+those tools first return the price (for a move inside a billing period, the<br>
+amount Wiro works out for the time left) and only act when called again with<br>
+<code class="notranslate">confirm: true</code> and <code class="notranslate">confirm_charge_usd</code>, the approved amount, after you agree.<br>
+If the price changed in between, nothing is charged and you get a new quote.<br>
+Turning an agent's skills on or off costs nothing, since every plan includes<br>
+every skill. A move to a smaller plan starts with the next renewal, with<br>
+nothing charged or refunded, and waits for <code class="notranslate">confirm: true</code> too. Deleting a<br>
+workflow, an agent, a conversation or an account connection also waits for<br>
+<code class="notranslate">confirm: true</code>,<br>
+and so do connecting an agent to a Wiro project with <code class="notranslate">bind_agent_project</code> and<br>
+replacing a workflow's steps with <code class="notranslate">update_workflow</code> or<br>
+<code class="notranslate">save_workflow_from_agent</code>: you see a summary of the change first, with the old<br>
+and new value of each step input that changes. No tool adds<br>
+funds or takes a card payment: funds are added in the Wiro dashboard, and an<br>
+agent plan paid by card moves to a larger plan or is topped up there. The connected project<br>
+decides the workspace: a personal project uses your personal wallet, a team<br>
+project uses the team wallet.</p>
+<h3 dir="auto" id="llm-friendly-responses">LLM-friendly responses</h3>
+<p dir="auto">All tools publish typed MCP input and output schemas. Successful calls return<br>
+<code class="notranslate">structuredContent</code> for reliable chaining, concise text <code class="notranslate">content</code> for clients<br>
+that only render text, and MCP resource links for generated media.<br>
+Every tool that takes arguments refuses an argument it does not know and names<br>
+the right one where it can, such as <code class="notranslate">taskid</code> for <code class="notranslate">task_id</code>. The one exception is<br>
+a call that carries <code class="notranslate">toolCallId</code>, a key some clients add on their own: it reads<br>
+only the arguments the tool takes.<br>
+Model parameters remain catalog-driven: <code class="notranslate">json</code> and <code class="notranslate">json-array</code> fields are sent<br>
+as structured values in the same <code class="notranslate">run_model.params</code> object as all other inputs.<br>
+Use <code class="notranslate">get_model_schema</code> as the source of truth for continuation fields. A model<br>
+can continue a conversation only when its schema lists <code class="notranslate">session_id</code>: send the<br>
+same <code class="notranslate">session_id</code> on every turn, the first one included, with the next<br>
+<code class="notranslate">prompt</code>. A turn that ended with tool calls is continued with<br>
+<code class="notranslate">previousTaskToken</code>, that turn's task token, and <code class="notranslate">toolOutputs</code>, as the turn's<br>
+<code class="notranslate">nextAction</code> template shows.</p>
+<p dir="auto">LLM task outputs preserve the public Task Detail segment names and casing:<br>
+<code class="notranslate">thinking</code>, <code class="notranslate">answer</code>, <code class="notranslate">function_call</code>, and <code class="notranslate">custom_tool_call</code>, including<br>
+<code class="notranslate">call_id</code>, <code class="notranslate">finishreason</code>, and optional normalized token <code class="notranslate">usage</code>.<br>
+Only validated fields are projected into structured MCP output. When segments<br>
+are present, <code class="notranslate">response</code> is derived from ordered <code class="notranslate">answer</code> segments instead of<br>
+raw debug transport; tasks without a typed projection retain their normal<br>
+<code class="notranslate">debugoutput</code> response.</p>
+<p dir="auto">Completed tool calls return a continuation template in the existing<br>
+<code class="notranslate">nextAction</code>. Execute each call, replace the output placeholders, and pass the<br>
+same ordinary <code class="notranslate">run_model.params</code> object back:</p>
+<div class="highlight highlight-source-json" dir="auto"><pre class="notranslate">{
+  <span class="pl-ent">"tool"</span>: <span class="pl-s"><span class="pl-pds">"</span>run_model<span class="pl-pds">"</span></span>,
+  <span class="pl-ent">"arguments"</span>: {
+    <span class="pl-ent">"model"</span>: <span class="pl-s"><span class="pl-pds">"</span>owner/model<span class="pl-pds">"</span></span>,
+    <span class="pl-ent">"params"</span>: {
+      <span class="pl-ent">"previousTaskToken"</span>: <span class="pl-s"><span class="pl-pds">"</span>task-token<span class="pl-pds">"</span></span>,
+      <span class="pl-ent">"toolOutputs"</span>: [
+        {
+          <span class="pl-ent">"call_id"</span>: <span class="pl-s"><span class="pl-pds">"</span>call_01<span class="pl-pds">"</span></span>,
+          <span class="pl-ent">"output"</span>: <span class="pl-s"><span class="pl-pds">"</span>&lt;tool result&gt;<span class="pl-pds">"</span></span>
+        }
+      ],
+      <span class="pl-ent">"session_id"</span>: <span class="pl-s"><span class="pl-pds">"</span>launch-taglines<span class="pl-pds">"</span></span>
+    }
+  }
+}</pre></div>
+<p dir="auto">Function calls carry JSON-string <code class="notranslate">arguments</code>; custom tool calls carry free-form<br>
+<code class="notranslate">input</code>. Tool results are request values in <code class="notranslate">toolOutputs</code>, not response<br>
+segments.</p>
+<p dir="auto">Completed media responses also include an assistant-audience delivery<br>
+instruction. Some MCP clients expose a <code class="notranslate">resource_link</code> as tool metadata instead<br>
+of previewing it inside the tool card, so the assistant is explicitly told to<br>
+render images and preserve clickable media links in its user-facing response.<br>
+The standard resource link and full-resolution URL remain available to every<br>
+client; no base64 media payload is required. Only files on Wiro's own hosts are<br>
+returned this way. Other links in an agent's reply stay plain links in the text,<br>
+without the delivery instruction.</p>
+<p dir="auto">In the text of a result, an agent's reply, the file and link addresses taken from<br>
+it and a model's answer sit in fenced blocks under fixed labels, and the server's<br>
+own guidance (<code class="notranslate">**Next:**</code> lines and notes) stays outside them, so an assistant can<br>
+treat that text as content and act only on that guidance and <code class="notranslate">nextAction</code>.<br>
+<code class="notranslate">structuredContent</code> keeps the text unchanged in its own fields. A workflow run's<br>
+text outputs and step errors show the same way, each under a fixed label. A saved<br>
+workflow's title, description and input list are shown as data too, in every<br>
+result, since an agent or another person can have written them.</p>
+<p dir="auto">Task responses use the stable states <code class="notranslate">submitted</code>, <code class="notranslate">running</code>, <code class="notranslate">completed</code>,<br>
+<code class="notranslate">failed</code>, and <code class="notranslate">cancelled</code>. When more work is required, the response includes an<br>
+executable <code class="notranslate">nextAction</code>:</p>
+<div class="highlight highlight-source-json" dir="auto"><pre class="notranslate">{
+  <span class="pl-ent">"state"</span>: <span class="pl-s"><span class="pl-pds">"</span>running<span class="pl-pds">"</span></span>,
+  <span class="pl-ent">"task"</span>: {
+    <span class="pl-ent">"id"</span>: <span class="pl-s"><span class="pl-pds">"</span>123<span class="pl-pds">"</span></span>,
+    <span class="pl-ent">"token"</span>: <span class="pl-s"><span class="pl-pds">"</span>task-token<span class="pl-pds">"</span></span>,
+    <span class="pl-ent">"status"</span>: <span class="pl-s"><span class="pl-pds">"</span>task_start<span class="pl-pds">"</span></span>
+  },
+  <span class="pl-ent">"outputs"</span>: [],
+  <span class="pl-ent">"nextAction"</span>: {
+    <span class="pl-ent">"tool"</span>: <span class="pl-s"><span class="pl-pds">"</span>wait_for_task<span class="pl-pds">"</span></span>,
+    <span class="pl-ent">"arguments"</span>: { <span class="pl-ent">"tasktoken"</span>: <span class="pl-s"><span class="pl-pds">"</span>task-token<span class="pl-pds">"</span></span> },
+    <span class="pl-ent">"reason"</span>: <span class="pl-s"><span class="pl-pds">"</span>Continue this exact task. Do not call run_model again.<span class="pl-pds">"</span></span>
+  }
+}</pre></div>
+<p dir="auto">Generation chain:<br>
+<code class="notranslate">search_models → get_model_schema → run_model → wait_for_task</code></p>
+<p dir="auto">Cross-conversation history:<br>
+<code class="notranslate">list_tasks → get_task</code></p>
+<p dir="auto">Workflow chain:<br>
+<code class="notranslate">search_models → get_model_schema → create_workflow → run_workflow → wait_for_workflow_run</code></p>
+<p dir="auto">Workflow Agent chain:<br>
+<code class="notranslate">send_agent_message (agent "workflow-agent") → get_agent_message → save_workflow_from_agent → run_workflow</code></p>
+<p dir="auto">Agent chain:<br>
+<code class="notranslate">list_agent_templates → get_agent_template → deploy_agent → set_agent_credentials / connect_agent_oauth / bind_agent_project → control_agent → send_agent_message</code></p>
+<h2 dir="auto" id="hosted-mcp-server">Hosted MCP Server</h2>
+<p dir="auto">Wiro AI also hosts the same tools at <code class="notranslate">https://mcp.wiro.ai/v1</code> over streamable HTTP, so nothing has to be installed locally. Send your credentials in the <code class="notranslate">Authorization</code> header as shown under <a href="#authentication">Authentication</a>. The <a href="https://wiro.ai/docs/wiro-mcp-server">MCP Server documentation</a> has setup instructions for each client.</p>
+<h3 dir="auto" id="install-as-a-plugin">Install as a plugin</h3>
+<p dir="auto"><a href="https://github.com/wiroai/Wiro-Plugin">wiroai/Wiro-Plugin</a> packages the hosted server as a plugin for Cursor, Claude Code, Gemini CLI and Devin. Its README has the install command for each of them.</p>
+<h2 dir="auto" id="documentation">Documentation</h2>
+<ul dir="auto">
+<li><a href="https://wiro.ai/docs/wiro-mcp-server">MCP Server (Hosted)</a>: setup guides for Cursor, Claude Code, Claude Desktop, Windsurf, Gemini CLI, Devin, OpenClaw, and Hermes</li>
+<li><a href="https://wiro.ai/docs/mcp-self-hosted">Self-Hosted MCP</a>: run locally with npx, environment variables, library usage</li>
+<li><a href="https://wiro.ai/docs/nodejs-library">Node.js Library</a>: use <code class="notranslate">WiroClient</code> from this package in your own Node.js or TypeScript code</li>
+<li><a href="https://wiro.ai/docs/authentication">Authentication</a>: signature-based vs API Key Only</li>
+<li><a href="https://wiro.ai/docs/run-a-model">Run a Model</a>: how the Run endpoint works</li>
+<li><a href="https://wiro.ai/docs/tasks">Tasks</a>: task lifecycle, statuses, determining success</li>
+<li><a href="https://wiro.ai/docs/concurrency-limits">Concurrency Limits</a>: concurrent task limits based on balance</li>
+<li><a href="https://wiro.ai/docs/error-reference">Error Reference</a>: error codes and handling</li>
+<li><a href="https://wiro.ai/docs/agent-overview">Agents Overview</a>: templates, plans, credits and the agent lifecycle</li>
+<li><a href="https://wiro.ai/docs/agent-builder">Agent Builder</a>: build an agent from skills instead of a template</li>
+<li><a href="https://wiro.ai/docs/agent-skills">Agent Skills</a> and <a href="https://wiro.ai/docs/agent-credentials">Agent Credentials</a>: what each skill needs and how accounts are connected</li>
+<li><a href="https://wiro.ai/docs/agent-messaging">Agent Messaging</a>: conversations, sessions and replies</li>
+</ul>
+<h2 dir="auto" id="using-as-a-library">Using as a Library</h2>
+<p dir="auto">This package exports its core components for use in custom MCP servers:</p>
+<div class="highlight highlight-source-ts" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-v">WiroClient</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'@wiro-ai/wiro-mcp/client'</span><span class="pl-kos">;</span>
+<span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">createMcpServer</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'@wiro-ai/wiro-mcp/server'</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">WiroClient</span><span class="pl-kos">(</span><span class="pl-s">'your-api-key'</span><span class="pl-kos">,</span> <span class="pl-s">'your-api-secret'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-k">const</span> <span class="pl-s1">server</span> <span class="pl-c1">=</span> <span class="pl-en">createMcpServer</span><span class="pl-kos">(</span><span class="pl-s1">client</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<p dir="auto">If a project uses signature-based auth and no API secret was given, tool errors say that the secret is missing. When your server takes credentials in its own way, tell users where the secret goes:</p>
+<div class="highlight highlight-source-ts" dir="auto"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">WiroClient</span><span class="pl-kos">(</span><span class="pl-s1">apiKey</span><span class="pl-kos">,</span> <span class="pl-s1">apiSecret</span><span class="pl-kos">,</span> <span class="pl-c1">undefined</span><span class="pl-kos">,</span> <span class="pl-kos">{</span>
+  <span class="pl-c1">missingSecretHint</span>: <span class="pl-s">'This project uses signature-based auth. Enter API_KEY:API_SECRET as the API key.'</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<p dir="auto">To send headers of your own with every API request, pass <code class="notranslate">requestHeaders</code>: a function that gets one object, <code class="notranslate">{ pathname, apiKey }</code>, for each request (<code class="notranslate">pathname</code> such as <code class="notranslate">/v1/Tool/List</code>) and returns a plain object of string values. The headers it returns are sent after the client's own. If they include <code class="notranslate">x-api-key</code>, <code class="notranslate">x-signature</code>, <code class="notranslate">x-nonce</code> or <code class="notranslate">Content-Type</code>, in any letter case, the request fails before it is sent.</p>
+<h3 dir="auto" id="exports">Exports</h3>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Export</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">createMcpServer(client, options?)</code></td>
+<td>Creates an McpServer with the tools, prompts and server instructions registered. <code class="notranslate">options.toolsets</code> picks tool groups and the prompts that use them; <code class="notranslate">options.instructions</code> replaces the instructions; <code class="notranslate">options.wrapTool(tool, handler)</code> returns the handler to register for each tool, for your own logging or permission checks; <code class="notranslate">options.maxToolInputElements</code> caps the array elements and object members one tool call may carry (default 10000, <code class="notranslate">Infinity</code> turns the check off)</td>
+</tr>
+<tr>
+<td><code class="notranslate">WiroClient</code></td>
+<td>API client with both auth types; <code class="notranslate">post(path, body)</code> calls any Wiro API endpoint with the same credentials, and <code class="notranslate">isOwnApiKey(value)</code> says whether a value is this client's key</td>
+</tr>
+<tr>
+<td><code class="notranslate">registerTools(server, client, options?)</code></td>
+<td>Registers the tools on an McpServer you already have, with the same <code class="notranslate">toolsets</code> and <code class="notranslate">wrapTool</code> options. That server then lists every tool schema, its own tools included, as JSON Schema 2020-12</td>
+</tr>
+<tr>
+<td><code class="notranslate">advertiseJsonSchema2020_12(server)</code></td>
+<td>Makes an McpServer list its tool schemas as JSON Schema 2020-12. Call it when you register single tools from <code class="notranslate">@wiro-ai/wiro-mcp/tools</code> instead of using <code class="notranslate">registerTools</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">withJsonSchema2020_12(transport)</code></td>
+<td>The same for one transport: <code class="notranslate">await server.connect(withJsonSchema2020_12(transport))</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">parseToolsets(value)</code></td>
+<td>Parse a <code class="notranslate">WIRO_TOOLSETS</code>-style list such as <code class="notranslate">"models,agents"</code></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<div class="highlight highlight-source-ts" dir="auto"><pre class="notranslate"><span class="pl-c">// Import specific components</span>
+<span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-v">McpServer</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'@modelcontextprotocol/sdk/server/mcp.js'</span><span class="pl-kos">;</span>
+<span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-v">WiroClient</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'@wiro-ai/wiro-mcp/client'</span><span class="pl-kos">;</span>
+<span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">createMcpServer</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'@wiro-ai/wiro-mcp/server'</span><span class="pl-kos">;</span>
+<span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">registerTools</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'@wiro-ai/wiro-mcp/tools'</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">WiroClient</span><span class="pl-kos">(</span><span class="pl-s">'your-api-key'</span><span class="pl-kos">,</span> <span class="pl-s">'your-api-secret'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-c">// Only the model and workflow tools</span>
+<span class="pl-k">const</span> <span class="pl-s1">server</span> <span class="pl-c1">=</span> <span class="pl-en">createMcpServer</span><span class="pl-kos">(</span><span class="pl-s1">client</span><span class="pl-kos">,</span> <span class="pl-kos">{</span> <span class="pl-c1">toolsets</span>: <span class="pl-kos">[</span><span class="pl-s">'models'</span><span class="pl-kos">,</span> <span class="pl-s">'workflows'</span><span class="pl-kos">]</span> <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-c">// Or add the model tools to an McpServer you already have</span>
+<span class="pl-k">const</span> <span class="pl-s1">myServer</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">McpServer</span><span class="pl-kos">(</span><span class="pl-kos">{</span> <span class="pl-c1">name</span>: <span class="pl-s">'my-server'</span><span class="pl-kos">,</span> <span class="pl-c1">version</span>: <span class="pl-s">'1.0.0'</span> <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-en">registerTools</span><span class="pl-kos">(</span><span class="pl-s1">myServer</span><span class="pl-kos">,</span> <span class="pl-s1">client</span><span class="pl-kos">,</span> <span class="pl-kos">{</span> <span class="pl-c1">toolsets</span>: <span class="pl-kos">[</span><span class="pl-s">'models'</span><span class="pl-kos">]</span> <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<h2 dir="auto" id="environment-variables">Environment Variables</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">WIRO_API_KEY</code></td>
+<td>Yes</td>
+<td>Your Wiro project API key</td>
+</tr>
+<tr>
+<td><code class="notranslate">WIRO_API_SECRET</code></td>
+<td>No</td>
+<td>Your Wiro project API secret (for signature auth)</td>
+</tr>
+<tr>
+<td><code class="notranslate">WIRO_API_BASE_URL</code></td>
+<td>No</td>
+<td>Override API base URL (default: <code class="notranslate">https://api.wiro.ai/v1</code>)</td>
+</tr>
+<tr>
+<td><code class="notranslate">WIRO_TOOLSETS</code></td>
+<td>No</td>
+<td>Comma-separated tool groups to load: <code class="notranslate">models</code>, <code class="notranslate">workflows</code>, <code class="notranslate">agents</code> (default: all)</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Cursor, Claude Code, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills">Wiro-Skills</a></td>
+<td>Agent skills for images, image edits, video, music, speech, transcripts, 3D and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>Vercel AI SDK provider for chat, images, speech, transcription and video, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-llm"><code class="notranslate">@wiro-ai/wiro-llm</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Wiro AI extension for Safari on the Mac</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Wiro AI SDK for Dart and Flutter, <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>Wiro AI SDK for React Native and Expo, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><code class="notranslate">@wiro-ai/wiro-react-native</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-Realtime">Swift-Realtime</a></td>
+<td>Realtime voice AI example for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin-Realtime</a></td>
+<td>Realtime voice AI example for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-Realtime">Dart-Realtime</a></td>
+<td>Realtime voice AI example for Flutter</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-Realtime">ReactNative-Realtime</a></td>
+<td>Realtime voice AI example for React Native</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>One Wiro AI node for n8n with a searchable model picker, <a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><code class="notranslate">@wiro-ai/n8n-nodes-wiro</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI plugins for Dify: the LLM gateway as a model provider, plus image, video, speech and music tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI">Wiro-ComfyUI</a></td>
+<td>Wiro AI nodes for ComfyUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Zed">Wiro-Zed</a></td>
+<td>Wiro AI MCP server extension for Zed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Action for Wiro AI models and the LLM gateway, <a href="https://github.com/marketplace/actions/wiro-ai-action">on the GitHub Marketplace</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Raycast">Wiro-Raycast</a></td>
+<td>Wiro AI extension for Raycast: image and video generation, LLM chat and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress: featured images, image edits, alt text, narration and SEO suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Obsidian">Wiro-Obsidian</a></td>
+<td>Wiro AI plugin for Obsidian: images, video, speech, music, transcription and text tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Blender">Wiro-Blender</a></td>
+<td>Wiro AI add-on for Blender: text to 3D, image to 3D and textures</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Figma">Wiro-Figma</a></td>
+<td>Wiro AI plugin for Figma: images, vectors, image edits and text</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js starter for Wiro AI: Playground, image, video and audio tools, and LLM chat, ready for Vercel and Railway</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Docs">Wiro-Docs</a></td>
+<td>Source of the Wiro AI API docs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto">MIT, see <a href="https://github.com/wiroai/Wiro-MCP/blob/main/LICENSE">LICENSE</a>.</p>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li><li><a href="/projects/dart-quickstart/">Dart-QuickStart</a></li><li><a href="/projects/reactnative-quickstart/">ReactNative-QuickStart</a></li><li><a href="/projects/swift-realtime/">Swift-Realtime</a></li><li><a href="/projects/kotlin-realtime/">Kotlin-Realtime</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

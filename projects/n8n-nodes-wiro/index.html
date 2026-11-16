@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>n8n-nodes-wiro: Wiro AI open source</title>
+<meta name="description" content="Wiro AI node for n8n: run 1,000+ AI models for video, images, audio, text and 3D from one node">
+<link rel="canonical" href="https://wiroai.github.io/projects/n8n-nodes-wiro/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="n8n-nodes-wiro: Wiro AI open source">
+<meta property="og:description" content="Wiro AI node for n8n: run 1,000+ AI models for video, images, audio, text and 3D from one node">
+<meta property="og:url" content="https://wiroai.github.io/projects/n8n-nodes-wiro/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "n8n-nodes-wiro", "description": "Wiro AI node for n8n: run 1,000+ AI models for video, images, audio, text and 3D from one node", "codeRepository": "https://github.com/wiroai/n8n-nodes-wiro", "url": "https://wiroai.github.io/projects/n8n-nodes-wiro/", "programmingLanguage": "TypeScript", "license": "https://api.github.com/licenses/mit", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#automation">Automation and no-code</a></p>
+<section class="project-head">
+  <h1>n8n-nodes-wiro</h1>
+  <p class="lead">Wiro AI node for n8n: run 1,000+ AI models for video, images, audio, text and 3D from one node</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/n8n-nodes-wiro">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai">Website</a></p>
+</section>
+<article class="markdown">
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/n8n-nodes-wiro/main/.github/assets/wiro-logo.png"><img src="https://raw.githubusercontent.com/wiroai/n8n-nodes-wiro/main/.github/assets/wiro-logo.png" alt="Wiro AI" width="240" style="max-width: 100%;"></a>
+<h2 dir="auto" id="n8n-nodes-wiro-wiro-ai-for-n8n">n8n-nodes-wiro: Wiro AI for n8n</h2>
+<p dir="auto">One n8n node for every Wiro AI model: generate video, images, speech and music, chat with LLMs, edit and upscale images, and create 3D models inside your <a href="https://n8n.io">n8n</a> workflows.</p>
+<p dir="auto"><a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><img loading="lazy" src="https://camo.githubusercontent.com/f2606af13d357ba04fc4c0679e6ae22c23da6d376c30d76aab5da2fd438c6441/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f407769726f2d61692f6e386e2d6e6f6465732d7769726f3f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="npm" data-canonical-src="https://img.shields.io/npm/v/@wiro-ai/n8n-nodes-wiro?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://docs.n8n.io/integrations/community-nodes/"><img loading="lazy" src="https://camo.githubusercontent.com/b1078abeafa097eb346a0f3dd2e189b0e5b69d450d641f7f2a54013ec028c22f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6e386e2d636f6d6d756e6974792532306e6f64652d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="n8n community node" data-canonical-src="https://img.shields.io/badge/n8n-community%20node-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/n8n-nodes-wiro/blob/main/LICENSE.md"><img loading="lazy" src="https://camo.githubusercontent.com/9b0dcc545c9e697315b8d16f4363715f0cc54941456ba778cbc802bb0ef11275/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="License: MIT" data-canonical-src="https://img.shields.io/badge/license-MIT-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a></p>
+<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/f45573a87386c1e6cfcf495fcecc9c459a47309c7eb9e6b66acf6e2cbfe3dcfc/68747470733a2f2f7769726f2e61692f696d616765732f696c6c757374726174696f6e732f6b6f616c612d3430342e706e67"><img loading="lazy" src="https://camo.githubusercontent.com/f45573a87386c1e6cfcf495fcecc9c459a47309c7eb9e6b66acf6e2cbfe3dcfc/68747470733a2f2f7769726f2e61692f696d616765732f696c6c757374726174696f6e732f6b6f616c612d3430342e706e67" alt="Wiro AI koala mascot" width="50" data-canonical-src="https://wiro.ai/images/illustrations/koala-404.png" style="max-width: 100%;"></a>
+</div>
+<p dir="auto">The <strong>Wiro AI</strong> node runs any of the 1,000+ models on <a href="https://wiro.ai/models">Wiro AI</a> through the Wiro REST API. Pick a model from a searchable list and its inputs load into the node with their default values, so the same node handles text to video, image editing, speech, music, LLM chat, upscaling and 3D. It also works as a tool for the n8n AI Agent.</p>
+<hr>
+<h2 dir="auto" id="demo">Demo</h2>
+<p dir="auto"><a href="https://cdn.jsdelivr.net/gh/wiroai/n8n-nodes-wiro@22a1593/.github/assets/wiro-ai-n8n-demo.mp4"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/n8n-nodes-wiro/main/.github/assets/demo-thumbnail.png" alt="The demo video: an n8n workflow where an AI Agent uses the Wiro AI node as a tool" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://cdn.jsdelivr.net/gh/wiroai/n8n-nodes-wiro@22a1593/.github/assets/wiro-ai-n8n-demo.mp4">Watch the two-and-a-half-minute demo</a>. It installs the package from npm in n8n, adds a Wiro AI API credential and tests it, runs <code class="notranslate">pruna/p-image</code> with the Wiro AI node, then has an AI Agent call the same node as a tool.</p>
+<hr>
+<h2 dir="auto" id="screenshots">Screenshots</h2>
+<p dir="auto">The node and its actions in the n8n node panel:</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/n8n-nodes-wiro/main/.github/assets/screenshots/n8n-actions.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/n8n-nodes-wiro/main/.github/assets/screenshots/n8n-actions.png" alt="The Wiro AI node in the n8n node panel with its actions: Run a model, Get a task and Wait for a task" style="max-width: 100%;"></a></p>
+<p dir="auto">A workflow where three Wiro AI nodes write a prompt, create the image and upscale it:</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/n8n-nodes-wiro/main/.github/assets/screenshots/n8n-workflow.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/n8n-nodes-wiro/main/.github/assets/screenshots/n8n-workflow.png" alt="An n8n workflow with Wiro AI nodes running openai/gpt-5-mini, pruna/p-image and wiro/image-restoration, all run successfully" style="max-width: 100%;"></a></p>
+<p dir="auto">The image step: the prompt from the step before, the model's inputs and the output with the image URL:</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/n8n-nodes-wiro/main/.github/assets/screenshots/n8n-node.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/n8n-nodes-wiro/main/.github/assets/screenshots/n8n-node.png" alt="The Wiro AI node running pruna/p-image with the prompt mapped from the previous step, the aspect ratio input and the output image URL" style="max-width: 100%;"></a></p>
+<hr>
+<h2 dir="auto" id="installation">Installation</h2>
+<p dir="auto">On a self-hosted n8n instance, an Owner or Admin can go to <strong>Settings &gt; Community Nodes</strong>, select <strong>Install</strong>, enter <code class="notranslate">@wiro-ai/n8n-nodes-wiro</code>, accept the risk notice and select <strong>Install</strong>. The <a href="https://docs.n8n.io/integrations/community-nodes/installation/">n8n community nodes guide</a> covers the other install methods.</p>
+<p dir="auto">For a manual install (for example inside a Docker container), run this in <code class="notranslate">~/.n8n/nodes</code> and restart n8n:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npm install @wiro-ai/n8n-nodes-wiro</pre></div>
+<hr>
+<h2 dir="auto" id="credentials">Credentials</h2>
+<ol dir="auto">
+<li>Sign up at <a href="https://wiro.ai">wiro.ai</a> and create a project at <a href="https://wiro.ai/panel/project/new">wiro.ai/panel/project/new</a>.</li>
+<li>In n8n, go to <strong>Credentials &gt; Add new &gt; Wiro AI API</strong>.</li>
+<li>Enter the project's <strong>API Key</strong>. If the project uses signature authentication, also enter its <strong>API Secret</strong>: the node then signs every request with HMAC-SHA256, so the secret itself is never sent.</li>
+</ol>
+<p dir="auto">Runs are billed to the wallet of the project's workspace. See <a href="https://wiro.ai/docs/authentication">Authentication</a> in the Wiro docs.</p>
+<hr>
+<h2 dir="auto" id="operations">Operations</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Resource</th>
+<th>Operation</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model</td>
+<td>Run</td>
+<td>Runs a model with your inputs, waits for the task and returns its outputs</td>
+</tr>
+<tr>
+<td>Task</td>
+<td>Get</td>
+<td>Reads a task by its ID, with its status and outputs</td>
+</tr>
+<tr>
+<td>Task</td>
+<td>Wait</td>
+<td>Waits until a task finishes, then returns its outputs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h3 dir="auto" id="model--run">Model &gt; Run</h3>
+<ul dir="auto">
+<li><strong>Model:</strong> pick it <strong>From List</strong> (search by name), paste its wiro.ai link (<strong>By URL</strong>, for example <code class="notranslate">https://wiro.ai/models/pruna/p-image</code>) or enter it <strong>By Slug</strong> (<code class="notranslate">pruna/p-image</code>).</li>
+<li><strong>Inputs:</strong> the model's inputs load with their defaults. Required inputs are always shown. Advanced ones start hidden; add them with <strong>Add input to send</strong>. Inputs you leave out use the model's defaults.
+<ul dir="auto">
+<li>File inputs take public URLs. When an input takes several files, separate the URLs with commas.</li>
+<li>To feed one step into the next, map a field from the step before, for example <code class="notranslate">{{ $json.url }}</code> or <code class="notranslate">{{ $json.text }}</code>.</li>
+</ul>
+</li>
+<li><strong>Wait for Completion</strong> (on by default) waits for the task and returns its outputs. Turn it off to get the task ID at once and read the task later with <strong>Task &gt; Get</strong> or <strong>Task &gt; Wait</strong>.</li>
+<li><strong>Max Wait Time (Minutes)</strong> (20 by default, up to 120): a task still running after this time comes back with status <code class="notranslate">running</code>. Read it later with <strong>Task &gt; Wait</strong> and the same task ID instead of starting it again.</li>
+</ul>
+<h3 dir="auto" id="task--get-and-task--wait">Task &gt; Get and Task &gt; Wait</h3>
+<p dir="auto">Both take a <strong>Task ID</strong>, the <code class="notranslate">taskId</code> field of a Wiro AI node's output.</p>
+<hr>
+<h2 dir="auto" id="output">Output</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Field</th>
+<th>What it holds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">taskId</code></td>
+<td>The ID of the Wiro task</td>
+</tr>
+<tr>
+<td><code class="notranslate">status</code></td>
+<td><code class="notranslate">queued</code>, <code class="notranslate">running</code>, <code class="notranslate">completed</code>, <code class="notranslate">failed</code> or <code class="notranslate">cancelled</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">model</code></td>
+<td>The model, as <code class="notranslate">owner/model</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">url</code></td>
+<td>The first output file</td>
+</tr>
+<tr>
+<td><code class="notranslate">urls</code></td>
+<td>Every output file</td>
+</tr>
+<tr>
+<td><code class="notranslate">text</code></td>
+<td>The reply of a text model</td>
+</tr>
+<tr>
+<td><code class="notranslate">costUsd</code></td>
+<td>What the task cost, in US dollars</td>
+</tr>
+<tr>
+<td><code class="notranslate">elapsedSeconds</code></td>
+<td>How long the task ran</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">A task that fails or is cancelled stops the node with an error. To handle it in its own branch, set the node's <strong>On Error</strong> setting to <strong>Continue (using error output)</strong>.</p>
+<hr>
+<h2 dir="auto" id="example-workflow">Example workflow</h2>
+<p dir="auto">Copy this JSON and paste it into an n8n workflow. Then select your Wiro AI API credential on the two Wiro AI nodes.</p>
+<div class="highlight highlight-source-json" dir="auto"><pre class="notranslate">{
+  <span class="pl-ent">"nodes"</span>: [
+    {
+      <span class="pl-ent">"name"</span>: <span class="pl-s"><span class="pl-pds">"</span>When clicking ‘Execute workflow’<span class="pl-pds">"</span></span>,
+      <span class="pl-ent">"type"</span>: <span class="pl-s"><span class="pl-pds">"</span>n8n-nodes-base.manualTrigger<span class="pl-pds">"</span></span>,
+      <span class="pl-ent">"typeVersion"</span>: <span class="pl-c1">1</span>,
+      <span class="pl-ent">"position"</span>: [<span class="pl-c1">0</span>, <span class="pl-c1">0</span>],
+      <span class="pl-ent">"parameters"</span>: {}
+    },
+    {
+      <span class="pl-ent">"name"</span>: <span class="pl-s"><span class="pl-pds">"</span>Write a prompt<span class="pl-pds">"</span></span>,
+      <span class="pl-ent">"type"</span>: <span class="pl-s"><span class="pl-pds">"</span>@wiro-ai/n8n-nodes-wiro.wiro<span class="pl-pds">"</span></span>,
+      <span class="pl-ent">"typeVersion"</span>: <span class="pl-c1">1</span>,
+      <span class="pl-ent">"position"</span>: [<span class="pl-c1">260</span>, <span class="pl-c1">0</span>],
+      <span class="pl-ent">"parameters"</span>: {
+        <span class="pl-ent">"resource"</span>: <span class="pl-s"><span class="pl-pds">"</span>model<span class="pl-pds">"</span></span>,
+        <span class="pl-ent">"operation"</span>: <span class="pl-s"><span class="pl-pds">"</span>run<span class="pl-pds">"</span></span>,
+        <span class="pl-ent">"model"</span>: { <span class="pl-ent">"__rl"</span>: <span class="pl-c1">true</span>, <span class="pl-ent">"mode"</span>: <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>, <span class="pl-ent">"value"</span>: <span class="pl-s"><span class="pl-pds">"</span>openai/gpt-5-mini<span class="pl-pds">"</span></span> },
+        <span class="pl-ent">"inputs"</span>: {
+          <span class="pl-ent">"mappingMode"</span>: <span class="pl-s"><span class="pl-pds">"</span>defineBelow<span class="pl-pds">"</span></span>,
+          <span class="pl-ent">"value"</span>: { <span class="pl-ent">"prompt"</span>: <span class="pl-s"><span class="pl-pds">"</span>Write one image prompt for a product photo of a ceramic coffee mug. Reply with the prompt only.<span class="pl-pds">"</span></span> },
+          <span class="pl-ent">"matchingColumns"</span>: [],
+          <span class="pl-ent">"schema"</span>: []
+        }
+      }
+    },
+    {
+      <span class="pl-ent">"name"</span>: <span class="pl-s"><span class="pl-pds">"</span>Create the image<span class="pl-pds">"</span></span>,
+      <span class="pl-ent">"type"</span>: <span class="pl-s"><span class="pl-pds">"</span>@wiro-ai/n8n-nodes-wiro.wiro<span class="pl-pds">"</span></span>,
+      <span class="pl-ent">"typeVersion"</span>: <span class="pl-c1">1</span>,
+      <span class="pl-ent">"position"</span>: [<span class="pl-c1">520</span>, <span class="pl-c1">0</span>],
+      <span class="pl-ent">"parameters"</span>: {
+        <span class="pl-ent">"resource"</span>: <span class="pl-s"><span class="pl-pds">"</span>model<span class="pl-pds">"</span></span>,
+        <span class="pl-ent">"operation"</span>: <span class="pl-s"><span class="pl-pds">"</span>run<span class="pl-pds">"</span></span>,
+        <span class="pl-ent">"model"</span>: { <span class="pl-ent">"__rl"</span>: <span class="pl-c1">true</span>, <span class="pl-ent">"mode"</span>: <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>, <span class="pl-ent">"value"</span>: <span class="pl-s"><span class="pl-pds">"</span>pruna/p-image<span class="pl-pds">"</span></span> },
+        <span class="pl-ent">"inputs"</span>: {
+          <span class="pl-ent">"mappingMode"</span>: <span class="pl-s"><span class="pl-pds">"</span>defineBelow<span class="pl-pds">"</span></span>,
+          <span class="pl-ent">"value"</span>: { <span class="pl-ent">"prompt"</span>: <span class="pl-s"><span class="pl-pds">"</span>={{ $json.text }}<span class="pl-pds">"</span></span>, <span class="pl-ent">"aspectRatio"</span>: <span class="pl-s"><span class="pl-pds">"</span>16:9<span class="pl-pds">"</span></span> },
+          <span class="pl-ent">"matchingColumns"</span>: [],
+          <span class="pl-ent">"schema"</span>: []
+        }
+      }
+    }
+  ],
+  <span class="pl-ent">"connections"</span>: {
+    <span class="pl-ent">"When clicking ‘Execute workflow’"</span>: { <span class="pl-ent">"main"</span>: [[{ <span class="pl-ent">"node"</span>: <span class="pl-s"><span class="pl-pds">"</span>Write a prompt<span class="pl-pds">"</span></span>, <span class="pl-ent">"type"</span>: <span class="pl-s"><span class="pl-pds">"</span>main<span class="pl-pds">"</span></span>, <span class="pl-ent">"index"</span>: <span class="pl-c1">0</span> }]] },
+    <span class="pl-ent">"Write a prompt"</span>: { <span class="pl-ent">"main"</span>: [[{ <span class="pl-ent">"node"</span>: <span class="pl-s"><span class="pl-pds">"</span>Create the image<span class="pl-pds">"</span></span>, <span class="pl-ent">"type"</span>: <span class="pl-s"><span class="pl-pds">"</span>main<span class="pl-pds">"</span></span>, <span class="pl-ent">"index"</span>: <span class="pl-c1">0</span> }]] }
+  }
+}</pre></div>
+<hr>
+<h2 dir="auto" id="use-with-the-ai-agent">Use with the AI Agent</h2>
+<p dir="auto">The node is marked <code class="notranslate">usableAsTool</code>, so you can attach it to an n8n <strong>AI Agent</strong> as a tool and let the agent run the model you set.</p>
+<hr>
+<h2 dir="auto" id="agent-skill">Agent skill</h2>
+<p dir="auto">This repository includes an agent skill, <code class="notranslate">wiro-n8n</code>, in <a href="https://github.com/wiroai/n8n-nodes-wiro/blob/main/skills/wiro-n8n/SKILL.md"><code class="notranslate">skills/wiro-n8n/SKILL.md</code></a>. It shows coding agents such as Claude Code, Codex and Cursor how to build n8n workflows with the Wiro AI node: install, credentials, picking a model, outputs, errors and cost control. Install it with:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npx skills add wiroai/n8n-nodes-wiro --skill wiro-n8n</pre></div>
+<hr>
+<h2 dir="auto" id="compatibility">Compatibility</h2>
+<p dir="auto">Needs n8n 1.85.0 or later, the first release with <code class="notranslate">NodeConnectionTypes</code>, which the node imports. Tested on n8n 2.46.7. The package has no runtime dependencies.</p>
+<hr>
+<h2 dir="auto" id="resources">Resources</h2>
+<ul dir="auto">
+<li><a href="https://wiro.ai/models">Wiro AI models</a></li>
+<li><a href="https://wiro.ai/docs/run-a-model">Run a model</a>, <a href="https://wiro.ai/docs/tasks">Tasks</a> and <a href="https://wiro.ai/docs/model-parameters">Model parameters</a> in the Wiro docs</li>
+<li><a href="https://docs.n8n.io/integrations/community-nodes/">n8n community nodes</a></li>
+<li>Support: <a href="mailto:support@wiro.ai">support@wiro.ai</a></li>
+</ul>
+<hr>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
+<td>Official MCP server for Wiro AI, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>Vercel AI SDK provider for chat, images, speech, transcription and video, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-llm"><code class="notranslate">@wiro-ai/wiro-llm</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Wiro AI extension for Safari on the Mac</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Cursor, Claude Code, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills">Wiro-Skills</a></td>
+<td>Agent skills for images, image edits, video, music, speech, transcripts, 3D and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Wiro AI SDK for Dart and Flutter, <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>Wiro AI SDK for React Native and Expo, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><code class="notranslate">@wiro-ai/wiro-react-native</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-Realtime">Swift-Realtime</a></td>
+<td>Realtime voice AI example for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin-Realtime</a></td>
+<td>Realtime voice AI example for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-Realtime">Dart-Realtime</a></td>
+<td>Realtime voice AI example for Flutter</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-Realtime">ReactNative-Realtime</a></td>
+<td>Realtime voice AI example for React Native</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI plugins for Dify: the LLM gateway as a model provider, plus image, video, speech and music tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI">Wiro-ComfyUI</a></td>
+<td>Wiro AI nodes for ComfyUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Zed">Wiro-Zed</a></td>
+<td>Wiro AI MCP server extension for Zed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Action for Wiro AI models and the LLM gateway, <a href="https://github.com/marketplace/actions/wiro-ai-action">on the GitHub Marketplace</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Raycast">Wiro-Raycast</a></td>
+<td>Wiro AI extension for Raycast: image and video generation, LLM chat and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress: featured images, image edits, alt text, narration and SEO suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Obsidian">Wiro-Obsidian</a></td>
+<td>Wiro AI plugin for Obsidian: images, video, speech, music, transcription and text tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Blender">Wiro-Blender</a></td>
+<td>Wiro AI add-on for Blender: text to 3D, image to 3D and textures</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Figma">Wiro-Figma</a></td>
+<td>Wiro AI plugin for Figma: images, vectors, image edits and text</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js starter for Wiro AI: Playground, image, video and audio tools, and LLM chat, ready for Vercel and Railway</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Docs">Wiro-Docs</a></td>
+<td>Source of the Wiro AI API docs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<hr>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto"><a href="https://github.com/wiroai/n8n-nodes-wiro/blob/main/LICENSE.md">MIT</a></p>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/wiro-dify-plugin/">Wiro-Dify-Plugin</a></li><li><a href="/projects/wiro-wordpress/">Wiro-WordPress</a></li><li><a href="/projects/wiro-mcp/">Wiro-MCP</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li><li><a href="/projects/dart-quickstart/">Dart-QuickStart</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

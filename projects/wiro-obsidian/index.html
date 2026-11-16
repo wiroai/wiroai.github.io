@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiro-Obsidian: Wiro AI open source</title>
+<meta name="description" content="Wiro AI plugin for Obsidian: generate, edit and upscale images, make videos, speech and music, transcribe voice notes, and summarize, rewrite or translate text, with models from the Wiro AI catalog of 1,000+. Results are saved to your vault and embedded in the note.">
+<link rel="canonical" href="https://wiroai.github.io/projects/wiro-obsidian/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="Wiro-Obsidian: Wiro AI open source">
+<meta property="og:description" content="Wiro AI plugin for Obsidian: generate, edit and upscale images, make videos, speech and music, transcribe voice notes, and summarize, rewrite or translate text, with models from the Wiro AI catalog of 1,000+. Results are saved to your vault and embedded in the note.">
+<meta property="og:url" content="https://wiroai.github.io/projects/wiro-obsidian/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "Wiro-Obsidian", "description": "Wiro AI plugin for Obsidian: generate, edit and upscale images, make videos, speech and music, transcribe voice notes, and summarize, rewrite or translate text, with models from the Wiro AI catalog of 1,000+. Results are saved to your vault and embedded in the note.", "codeRepository": "https://github.com/wiroai/Wiro-Obsidian", "url": "https://wiroai.github.io/projects/wiro-obsidian/", "programmingLanguage": "TypeScript", "license": "https://api.github.com/licenses/mit", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#apps">Productivity apps</a></p>
+<section class="project-head">
+  <h1>Wiro-Obsidian</h1>
+  <p class="lead">Wiro AI plugin for Obsidian: generate, edit and upscale images, make videos, speech and music, transcribe voice notes, and summarize, rewrite or translate text, with models from the Wiro AI catalog of 1,000+. Results are saved to your vault and embedded in the note.</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/Wiro-Obsidian">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai">Website</a></p>
+</section>
+<article class="markdown">
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/.github/assets/wiro-logo.png"><img src="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/.github/assets/wiro-logo.png" alt="Wiro AI" width="240" style="max-width: 100%;"></a>
+<h2 dir="auto" id="wiro-ai-for-obsidian">Wiro AI for Obsidian</h2>
+<p dir="auto">Generate, edit and upscale images, make videos, speech and music, transcribe voice notes, and summarize, rewrite, translate or continue your writing, with models from the Wiro AI catalog of 1,000+ models. Every result is saved in your vault and placed in the note.</p>
+<p dir="auto"><a href="https://obsidian.md"><img loading="lazy" src="https://camo.githubusercontent.com/f2ff367b95ec187497fade55b7a29ce07ac8aa018ea5ee23cf028cfa491d1119/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4f6273696469616e2d312e31332e322532422d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="Obsidian 1.13.2+" data-canonical-src="https://img.shields.io/badge/Obsidian-1.13.2%2B-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Obsidian/actions/workflows/ci.yml"><img loading="lazy" src="https://camo.githubusercontent.com/b1f2c68b89a8e0bb19931ad4f38ffb56c8a9cb3139431a703ae536ff2746d1e8/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f7769726f61692f5769726f2d4f6273696469616e2f63692e796d6c3f6272616e63683d6d61696e267374796c653d666f722d7468652d626164676526636f6c6f723d313131313131266c6162656c3d4349" alt="CI" data-canonical-src="https://img.shields.io/github/actions/workflow/status/wiroai/Wiro-Obsidian/ci.yml?branch=main&amp;style=for-the-badge&amp;color=111111&amp;label=CI" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Obsidian/blob/main/LICENSE"><img loading="lazy" src="https://camo.githubusercontent.com/9b0dcc545c9e697315b8d16f4363715f0cc54941456ba778cbc802bb0ef11275/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="License: MIT" data-canonical-src="https://img.shields.io/badge/license-MIT-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a></p>
+</div>
+<p dir="auto">Select a paragraph and turn it into an image, a narration or a short video. Edit or upscale an image that is already in the note, put the transcript of a voice memo under its audio file, or ask an LLM to summarize, rewrite, translate or continue your text. Anything else in the <a href="https://wiro.ai/models">Wiro AI catalog</a>, and the workflows in your Wiro AI project, run from a form inside Obsidian. Each dialog shows the price before anything runs, and the history panel keeps track of what each run made and cost.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/image-dialog.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/image-dialog.png" alt="The Generate an image dialog with the prompt from the note, the model options and the price" style="max-width: 100%;"></a></p>
+<h2 dir="auto" id="what-you-can-do">What you can do</h2>
+<h3 dir="auto" id="images">Images</h3>
+<p dir="auto"><strong>Generate image</strong> turns a prompt, or the selected text, into an image and embeds it after the current line. <strong>Edit image</strong> takes an image that is already in the note, shows it above a text box for your instruction, and saves the edited copy under the original: "make it a watercolor painting", "remove the people in the background". <strong>Upscale image</strong> saves a larger, sharper copy the same way. The image on the cursor line is used; with several images in the note, you pick one from a list.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/edit-image.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/edit-image.png" alt="Edit image with a preview of the embedded image and the price" style="max-width: 100%;"></a></p>
+<h3 dir="auto" id="video">Video</h3>
+<p dir="auto"><strong>Generate video</strong> turns a description of the scene, the motion and the camera into an MP4 file, embedded in the note so it plays in place. The dialog has the duration, aspect ratio and resolution of the chosen model.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/video.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/video.png" alt="A video generated from a prompt, embedded in the note" style="max-width: 100%;"></a></p>
+<h3 dir="auto" id="speech-music-and-transcription">Speech, music and transcription</h3>
+<p dir="auto"><strong>Generate speech</strong> reads the selection or any text aloud into an audio file, with the voice and language pickers of the model. <strong>Read note aloud</strong> does it for the whole note and puts the player at the top. By default, Markdown is read as plain text: link text instead of URLs, without formatting marks, embeds or code.</p>
+<p dir="auto"><strong>Transcribe audio</strong> writes down what is said in an audio file of the note, such as a voice memo from Obsidian's audio recorder, and puts the transcript under it as a callout, a quote or a plain paragraph. <strong>Generate music</strong> makes a track from a description of the genre, instruments, mood and tempo.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/speech-dialog.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/speech-dialog.png" alt="Generate speech with the voice and language of Eleven v4 and the price for the selected text" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/transcript.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/transcript.png" alt="A transcript callout under the audio file it came from" style="max-width: 100%;"></a></p>
+<h3 dir="auto" id="writing">Writing</h3>
+<p dir="auto"><strong>Summarize note or selection</strong>, <strong>Rewrite selection</strong>, <strong>Translate selection</strong>, <strong>Continue writing</strong> and <strong>Ask about this note</strong> send text to a model on the Wiro AI LLM gateway. The answer appears in a window as the model writes it (on mobile, when it is complete), and you choose what happens to it: <strong>Replace the selection</strong>, <strong>Insert below</strong> or <strong>Insert at the cursor</strong>. <strong>Stop</strong> ends it early. Pick the model under <strong>Settings → Wiro AI → Text</strong>; the list shows each model's price per million input and output tokens.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/continue-writing.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/continue-writing.png" alt="Continue writing, with the text appearing as the model writes it" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/summary.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/summary.png" alt="A summary of the note, ready to insert below" style="max-width: 100%;"></a></p>
+<h3 dir="auto" id="any-model-any-workflow">Any model, any workflow</h3>
+<p dir="auto"><strong>Run a model</strong> opens the catalog by kind (text to image, image to video, talking head, voice cloning, 3D generation and more), with a search box and the price of each model. Pick one and the plugin builds a form from the model's own inputs: text fields, dropdowns, numbers, switches and file fields that take a file from your vault or a URL. The selected text fills the prompt. Images, videos and audio files are saved and embedded; text answers go into the note.</p>
+<p dir="auto"><strong>Run a workflow</strong> lists the workflows of your Wiro AI project, or takes a link from <a href="https://wiro.ai/workflows">wiro.ai/workflows</a>, and shows a form for the workflow's inputs. While it runs, the notice shows the step it is on, and the outputs go into the note under their names.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/catalog.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/catalog.png" alt="The catalog, searched for Nano Banana, with the price of each model" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/run-model.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/run-model.png" alt="The form of P-Image, built from the model's inputs, with the price" style="max-width: 100%;"></a></p>
+<h3 dir="auto" id="price-first-history-after">Price first, history after</h3>
+<p dir="auto">Every dialog and form shows the price for the current options in one line, such as <code class="notranslate">$0.034 per run</code> or <code class="notranslate">$0.018 for 222 characters</code>, and the run dialogs repeat it on the button. The notice at the end of a run shows what it cost. <strong>Open history</strong> shows the runs from this vault, newest first, with the model, the cost, the saved files and the note, plus the latest tasks on your Wiro AI account.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/history.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/history.png" alt="The history panel next to a note" style="max-width: 100%;"></a></p>
+<h2 dir="auto" id="commands">Commands</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Generate image</strong></td>
+<td>Opens the image dialog, with the selection as the prompt if there is one, and embeds the image after the current line</td>
+</tr>
+<tr>
+<td><strong>Generate image from selection</strong></td>
+<td>Uses the selected text as the prompt and embeds the image under it</td>
+</tr>
+<tr>
+<td><strong>Edit image</strong></td>
+<td>Edits an embedded image from a text instruction and embeds the result under it</td>
+</tr>
+<tr>
+<td><strong>Upscale image</strong></td>
+<td>Embeds a larger copy of an embedded image under it</td>
+</tr>
+<tr>
+<td><strong>Generate video</strong></td>
+<td>Generates a video from a prompt and embeds the MP4 file</td>
+</tr>
+<tr>
+<td><strong>Generate speech</strong></td>
+<td>Reads a text aloud into an audio file, embedded after the current line</td>
+</tr>
+<tr>
+<td><strong>Generate speech from selection</strong></td>
+<td>Reads the selected text aloud and embeds the audio under it</td>
+</tr>
+<tr>
+<td><strong>Read note aloud</strong></td>
+<td>Reads the whole note aloud and puts the audio at the top</td>
+</tr>
+<tr>
+<td><strong>Transcribe audio</strong></td>
+<td>Puts the transcript of an embedded audio file under it</td>
+</tr>
+<tr>
+<td><strong>Generate music</strong></td>
+<td>Makes a music track from a description</td>
+</tr>
+<tr>
+<td><strong>Summarize note or selection</strong></td>
+<td>Summarizes the selection, or the note when nothing is selected, in a few bullet points</td>
+</tr>
+<tr>
+<td><strong>Rewrite selection</strong></td>
+<td>Rewrites the selected text so it reads more clearly, keeping its meaning, language and tone</td>
+</tr>
+<tr>
+<td><strong>Translate selection</strong></td>
+<td>Translates the selection into the language you pick</td>
+</tr>
+<tr>
+<td><strong>Continue writing</strong></td>
+<td>Writes one or two paragraphs that carry on from the cursor</td>
+</tr>
+<tr>
+<td><strong>Ask about this note</strong></td>
+<td>Answers a question about the note</td>
+</tr>
+<tr>
+<td><strong>Run a model</strong></td>
+<td>Runs any model from the catalog through a form built from its inputs</td>
+</tr>
+<tr>
+<td><strong>Run a workflow</strong></td>
+<td>Runs one of your Wiro AI workflows through a form</td>
+</tr>
+<tr>
+<td><strong>Open history</strong></td>
+<td>Opens the history panel in the right sidebar</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">Right-click a selection for <strong>Generate image</strong>, <strong>Generate speech</strong>, <strong>Summarize</strong>, <strong>Rewrite</strong> and <strong>Translate</strong> with Wiro AI. Every command can get a hotkey in <strong>Settings → Hotkeys</strong>.</p>
+<p dir="auto">While an image, video, audio, model or workflow run is in progress, a notice shows its progress and a <strong>Cancel</strong> button, and a comment in the note marks where the result will go. When the run ends, the comment becomes the embed. Cancel stops the task on Wiro AI and removes the comment.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/editor-menu.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/editor-menu.png" alt="The editor menu on a selection" style="max-width: 100%;"></a></p>
+<h2 dir="auto" id="install">Install</h2>
+<p dir="auto"><strong>From Obsidian:</strong> open <strong>Settings → Community plugins</strong>, select <strong>Browse</strong>, search for <strong>Wiro AI</strong>, then select <strong>Install</strong> and <strong>Enable</strong>.</p>
+<p dir="auto"><strong>Manually:</strong> download <code class="notranslate">main.js</code>, <code class="notranslate">manifest.json</code> and <code class="notranslate">styles.css</code> from the <a href="https://github.com/wiroai/Wiro-Obsidian/releases/latest">latest release</a> into <code class="notranslate">&lt;your vault&gt;/.obsidian/plugins/wiro-ai/</code>, then enable <strong>Wiro AI</strong> under <strong>Settings → Community plugins</strong>.</p>
+<p dir="auto">The plugin works on desktop and mobile and needs Obsidian 1.13.2 or later.</p>
+<h2 dir="auto" id="set-your-api-key">Set your API key</h2>
+<ol dir="auto">
+<li>Sign up at <a href="https://wiro.ai">wiro.ai</a> and create a project at <a href="https://wiro.ai/panel/project/new">wiro.ai/panel/project/new</a>. The <strong>API Key Only</strong> authentication type is the simplest. For a <strong>Signature-based</strong> project you need the API secret as well.</li>
+<li>In Obsidian, open <strong>Settings → Wiro AI</strong>. Next to <strong>API key</strong>, select <strong>Link...</strong>, give the secret an ID such as <code class="notranslate">wiro-api-key</code>, paste the key and select <strong>Save</strong>. For a signature-based project, do the same for <strong>API secret</strong>.</li>
+<li>Select <strong>Check</strong> to make sure Wiro AI accepts the key. The check is free.</li>
+</ol>
+<p dir="auto">Obsidian keeps the key in its keychain (<strong>Settings → Keychain</strong>), outside the vault. The plugin's <code class="notranslate">data.json</code> stores only the ID of the secret.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/settings.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/settings.png" alt="The plugin settings: API key, API secret and one page per kind of model" style="max-width: 100%;"></a></p>
+<h2 dir="auto" id="models">Models</h2>
+<p dir="auto">Each kind of model has its own page in the settings, with a list to start from. The first model is the default.</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Kind</th>
+<th>Models in the list</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image generation</td>
+<td><a href="https://wiro.ai/models/google/nano-banana-2-1">Nano Banana 2.1</a>, <a href="https://wiro.ai/models/google/nano-banana-pro">Nano Banana Pro</a>, <a href="https://wiro.ai/models/openai/gpt-image-2">GPT Image 2</a>, <a href="https://wiro.ai/models/bytedance/seedream-v5-pro">Seedream 5 Pro</a>, <a href="https://wiro.ai/models/black-forest-labs/flux-2-pro">FLUX.2 Pro</a>, <a href="https://wiro.ai/models/wiro/flux-2-dev">FLUX.2 Dev</a>, <a href="https://wiro.ai/models/xai/grok-imagine-image">Grok Imagine Image</a>, <a href="https://wiro.ai/models/alibaba/qwen-image-3-0">Qwen Image 3.0</a>, <a href="https://wiro.ai/models/pruna/p-image">P-Image</a></td>
+</tr>
+<tr>
+<td>Image editing</td>
+<td><a href="https://wiro.ai/models/google/nano-banana-2-1">Nano Banana 2.1</a>, <a href="https://wiro.ai/models/openai/gpt-image-2">GPT Image 2</a>, <a href="https://wiro.ai/models/bytedance/seedream-v5-pro">Seedream 5 Pro</a>, <a href="https://wiro.ai/models/alibaba/qwen-image-3-0">Qwen Image 3.0</a>, <a href="https://wiro.ai/models/alibaba/wan-2-7-image">Wan 2.7 Image</a></td>
+</tr>
+<tr>
+<td>Upscaling</td>
+<td><a href="https://wiro.ai/models/wiro/image-restoration">Image Restoration</a>, <a href="https://wiro.ai/models/wiroai/flux-upscaler">Flux Upscaler</a></td>
+</tr>
+<tr>
+<td>Video</td>
+<td><a href="https://wiro.ai/models/bytedance/seedance-v1-pro-fast">Seedance 1 Pro Fast</a>, <a href="https://wiro.ai/models/minimax/h3-lite">MiniMax H3 Lite</a>, <a href="https://wiro.ai/models/pruna/p-video-2-pro">P-Video 2 Pro</a>, <a href="https://wiro.ai/models/klingai/kling-v4-flash">Kling 4.0 Flash</a>, <a href="https://wiro.ai/models/alibaba/wan-3-0">Wan 3.0</a>, <a href="https://wiro.ai/models/google/veo3-1">Veo 3.1</a></td>
+</tr>
+<tr>
+<td>Speech</td>
+<td><a href="https://wiro.ai/models/elevenlabs/eleven-v4">Eleven v4</a>, <a href="https://wiro.ai/models/elevenlabs/eleven-v4-turbo">Eleven v4 Turbo</a>, <a href="https://wiro.ai/models/google/gemini-3-1-tts">Gemini 3.1 Flash TTS</a>, <a href="https://wiro.ai/models/google/gemini-2-5-tts">Gemini 2.5 TTS</a>, <a href="https://wiro.ai/models/xiaomimimo/mimo-2-5-tts">MiMo 2.5 TTS</a></td>
+</tr>
+<tr>
+<td>Music</td>
+<td><a href="https://wiro.ai/models/elevenlabs/text-to-music-v2">ElevenLabs Music v2</a>, <a href="https://wiro.ai/models/elevenlabs/text-to-music-v2-5">ElevenLabs Music v2.5</a>, <a href="https://wiro.ai/models/stabilityai/stable-audio-3-small-music">Stable Audio 3 Small</a>, <a href="https://wiro.ai/models/stabilityai/stable-audio-3-medium">Stable Audio 3 Medium</a></td>
+</tr>
+<tr>
+<td>Transcription</td>
+<td><a href="https://wiro.ai/models/elevenlabs/speech-to-text">ElevenLabs Speech to Text</a>, <a href="https://wiro.ai/models/elevenlabs/scribe-v3">Scribe v3</a>, <a href="https://wiro.ai/models/xiaomimimo/mimo-v2-5-asr">MiMo 2.5 ASR</a>, <a href="https://wiro.ai/models/openai/whisper-large-v3">Whisper Large v3</a></td>
+</tr>
+<tr>
+<td>Text</td>
+<td>Any model on the LLM gateway, <a href="https://wiro.ai/models/google/gemini-3-flash">Gemini 3 Flash</a> by default</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><strong>Browse the catalog</strong> on each page lists every model of that kind on <a href="https://wiro.ai/models">wiro.ai/models</a>, with search and prices, and also takes a pasted model ID or model page URL, such as <code class="notranslate">google/nano-banana-pro</code> for <code class="notranslate">https://wiro.ai/models/google/nano-banana-pro</code>. The page then shows the model's price and one dropdown per option, with the defaults from its page on wiro.ai.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/settings-model.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Obsidian/main/docs/screenshots/settings-model.png" alt="The Image generation page: model, catalog, price and the options of Nano Banana 2.1" style="max-width: 100%;"></a></p>
+<h2 dir="auto" id="settings">Settings</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>API key</strong>, <strong>API secret</strong></td>
+<td>Links the key, and the secret for signature-based projects, from Obsidian's keychain</td>
+</tr>
+<tr>
+<td><strong>Check the key</strong></td>
+<td>Sends one free request to see if Wiro AI accepts the key</td>
+</tr>
+<tr>
+<td><strong>Model</strong></td>
+<td>The model for each kind: image generation, image editing, upscaling, video, speech, music, transcription and text</td>
+</tr>
+<tr>
+<td><strong>Browse the catalog</strong></td>
+<td>Picks any model of that kind from the catalog, or takes a pasted model ID</td>
+</tr>
+<tr>
+<td>Model options</td>
+<td>One dropdown per option of the chosen model, such as <strong>Aspect ratio</strong>, <strong>Resolution</strong>, <strong>Duration</strong> or <strong>Voice</strong>. The dialogs show the main ones too and remember your choice</td>
+</tr>
+<tr>
+<td><strong>Extra parameters</strong></td>
+<td>A JSON object sent with every run of that kind, for parameters without a dropdown, such as <code class="notranslate">{"seed": 42}</code></td>
+</tr>
+<tr>
+<td><strong>Read Markdown as plain text</strong></td>
+<td>For speech: reads link text instead of URLs and skips formatting marks, embeds and code. On by default</td>
+</tr>
+<tr>
+<td><strong>Transcript style</strong></td>
+<td>Callout, quote or plain paragraph</td>
+</tr>
+<tr>
+<td><strong>Translate into</strong></td>
+<td>The language listed first when you translate</td>
+</tr>
+<tr>
+<td><strong>Image folder</strong>, <strong>Video folder</strong>, <strong>Audio folder</strong></td>
+<td>Where new files go. Empty means the attachment folder from <strong>Settings → Files and links</strong></td>
+</tr>
+<tr>
+<td><strong>Show the price before running</strong></td>
+<td>Commands that work on the selection, the whole note or an embed open the dialog with the price first. Turn it off to run them right away. On by default</td>
+</tr>
+<tr>
+<td><strong>Editor menu</strong></td>
+<td>Shows the Wiro AI items when you right-click selected text. On by default</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">Files are named like Obsidian's pasted images, such as <code class="notranslate">Wiro image 20261111153012.png</code> or <code class="notranslate">Wiro speech 20261111153012.mp3</code>, and the embed follows your link format (wikilinks or Markdown links).</p>
+<h2 dir="auto" id="network-use-and-privacy">Network use and privacy</h2>
+<p dir="auto">Running a model needs a Wiro AI account and an API key, and each run is charged to that account (see <a href="#pricing">Pricing</a>). The plugin talks to Wiro AI only, and only when you run a command, open the history panel or open its settings:</p>
+<ul dir="auto">
+<li><strong><code class="notranslate">api.wiro.ai</code></strong>, with your API key (and a signature for signature-based projects):
+<ul dir="auto">
+<li>A run sends the text of the command, such as the prompt, the selection or the note for <strong>Read note aloud</strong>, with the model options, to the <a href="https://wiro.ai/docs/run-a-model">Run API</a>, then reads the task status until it ends (<a href="https://wiro.ai/docs/tasks">Tasks</a>). <strong>Cancel</strong> stops the task.</li>
+<li><strong>Edit image</strong>, <strong>Upscale image</strong>, <strong>Transcribe audio</strong> and the file fields of <strong>Run a model</strong> and <strong>Run a workflow</strong> upload the vault file you chose to Wiro AI's file storage, so the model can read it (<a href="https://wiro.ai/docs/files">Files</a>).</li>
+<li><strong>Run a workflow</strong> lists your project's workflows, reads the inputs of the one you pick, starts it and reads its progress (<a href="https://wiro.ai/docs/workflows">Workflows</a>).</li>
+<li><strong>Check</strong> and the history panel read the list of your recent tasks.</li>
+</ul>
+</li>
+<li><strong><code class="notranslate">api.wiro.ai</code></strong>, without your key: the model catalog, the inputs and options of a model and its price come from the public catalog when you browse it, when a dialog opens or a run starts (once per model and session), and when the settings show a model that is not in the built-in list.</li>
+<li><strong><code class="notranslate">llm.wiro.ai</code></strong>: the writing commands send the selected text, the note (up to 120,000 characters), your question with the note, or for <strong>Continue writing</strong> the last 6,000 characters before the cursor, to the <a href="https://wiro.ai/docs/completions-api">LLM gateway</a> with your API key. The list of gateway models and their prices loads without your key.</li>
+<li><strong><code class="notranslate">cdn1.wiro.ai</code></strong>: the result files are downloaded from Wiro AI's file host and saved in your vault. The plugin downloads files from <code class="notranslate">wiro.ai</code> hosts only.</li>
+</ul>
+<p dir="auto">Only what a command needs is sent: the text above and the files you choose. To offer files to choose from, the file fields of <strong>Run a model</strong> and <strong>Run a workflow</strong> list the vault's images, audio files or videos on your device; only the file you pick is read and uploaded. The rest of the vault stays on your device. The plugin has no telemetry or analytics and makes no requests in the background. See Wiro AI's <a href="https://wiro.ai/agreement/privacy-policy">privacy policy</a> and <a href="https://wiro.ai/agreement/terms-of-service">terms of service</a>.</p>
+<h2 dir="auto" id="how-it-works">How it works</h2>
+<ul dir="auto">
+<li>Requests go through Obsidian's <code class="notranslate">requestUrl</code>, which works on desktop and mobile. On desktop, the writing commands read the answer as a stream through Node's <code class="notranslate">https</code> module, so the text appears as it is written; the module is loaded only on desktop and only connects to <code class="notranslate">llm.wiro.ai</code>.</li>
+<li>A run is a <code class="notranslate">POST /Run/{owner}/{model}</code> request. The plugin polls <code class="notranslate">Task/Detail</code> every few seconds until the task reaches <code class="notranslate">task_postprocess_end</code>, checks that <code class="notranslate">pexit</code> is <code class="notranslate">"0"</code> and saves the output files.</li>
+<li>Required inputs you don't set get the defaults from the model's page, so a text-to-image or text-to-speech model needs only the prompt. Prices are worked out from the model's price table in the catalog and the options you set.</li>
+<li>A model run gives up after 15 minutes and stops the task. A workflow is checked every few seconds for up to 45 minutes; <strong>Cancel</strong> stops waiting, and the run keeps its results in your Wiro AI dashboard.</li>
+<li>The key is read from Obsidian's keychain at run time and is never written to the vault. The plugin ships as one bundled <code class="notranslate">main.js</code> and loads no code from the network.</li>
+</ul>
+<h2 dir="auto" id="development">Development</h2>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npm install
+npm run dev     <span class="pl-c"><span class="pl-c">#</span> rebuilds main.js on every change</span>
+npm run lint    <span class="pl-c"><span class="pl-c">#</span> ESLint with eslint-plugin-obsidianmd, the rules Obsidian's plugin review runs</span>
+npm <span class="pl-c1">test</span>        <span class="pl-c"><span class="pl-c">#</span> unit tests, no network</span>
+npm run build   <span class="pl-c"><span class="pl-c">#</span> type check and production build</span></pre></div>
+<p dir="auto">To try a build, copy <code class="notranslate">main.js</code>, <code class="notranslate">manifest.json</code> and <code class="notranslate">styles.css</code> into <code class="notranslate">&lt;vault&gt;/.obsidian/plugins/wiro-ai/</code> and reload Obsidian. <code class="notranslate">npm run models</code> refreshes the built-in model lists, options and prices in <code class="notranslate">src/models.json</code> from the public Wiro AI catalog.</p>
+<p dir="auto">Releases come from tags: <code class="notranslate">npm version 1.1.1</code> updates <code class="notranslate">manifest.json</code> and <code class="notranslate">versions.json</code>, and pushing the <code class="notranslate">1.1.1</code> tag runs the release workflow, which builds the plugin, attests <code class="notranslate">main.js</code>, <code class="notranslate">manifest.json</code> and <code class="notranslate">styles.css</code>, and drafts a GitHub release with them. See <a href="https://github.com/wiroai/Wiro-Obsidian/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+<h2 dir="auto" id="pricing">Pricing</h2>
+<p dir="auto">Each run is charged to your Wiro AI account at the model's price, listed on its model page. A few of the defaults: Nano Banana 2.1 costs $0.0336 per image at 1K, Seedance 1 Pro Fast $0.05 for a 5-second 480p video, Eleven v4 $0.08 per 1,000 characters, ElevenLabs Speech to Text $0.006 per minute of audio, and Gemini 3 Flash $0.50 per million input tokens and $3.00 per million output tokens. The dialogs show the price before a run, the notice at the end shows what it cost, and <a href="https://wiro.ai/panel">wiro.ai/panel</a> has your balance and usage.</p>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
+<td>Official MCP server for Wiro AI, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Cursor, Claude Code, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills">Wiro-Skills</a></td>
+<td>Agent skills for images, image edits, video, music, speech, transcripts, 3D and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>Vercel AI SDK provider for chat, images, speech, transcription and video, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-llm"><code class="notranslate">@wiro-ai/wiro-llm</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI">Wiro-ComfyUI</a></td>
+<td>Wiro AI nodes for ComfyUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI plugins for Dify: the LLM gateway as a model provider, plus image, video, speech and music tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Raycast">Wiro-Raycast</a></td>
+<td>Wiro AI extension for Raycast</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Blender">Wiro-Blender</a></td>
+<td>Wiro AI add-on for Blender</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Figma">Wiro-Figma</a></td>
+<td>Wiro AI plugin for Figma</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js starter for Wiro AI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Zed">Wiro-Zed</a></td>
+<td>Wiro AI MCP server for the Zed editor</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Action for Wiro AI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>One Wiro AI node for n8n with a searchable model picker, <a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><code class="notranslate">@wiro-ai/n8n-nodes-wiro</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Wiro AI extension for Safari on the Mac</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Wiro AI SDK for Dart and Flutter, <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>Wiro AI SDK for React Native and Expo, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><code class="notranslate">@wiro-ai/wiro-react-native</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-Realtime">Swift-Realtime</a></td>
+<td>Realtime voice AI example for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin-Realtime</a></td>
+<td>Realtime voice AI example for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-Realtime">Dart-Realtime</a></td>
+<td>Realtime voice AI example for Flutter</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-Realtime">ReactNative-Realtime</a></td>
+<td>Realtime voice AI example for React Native</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Docs">Wiro-Docs</a></td>
+<td>Source of the Wiro AI API docs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto">MIT, see <a href="https://github.com/wiroai/Wiro-Obsidian/blob/main/LICENSE">LICENSE</a>.</p>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/wiro-raycast/">Wiro-Raycast</a></li><li><a href="/projects/wiro-mcp/">Wiro-MCP</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li><li><a href="/projects/dart-quickstart/">Dart-QuickStart</a></li><li><a href="/projects/reactnative-quickstart/">ReactNative-QuickStart</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

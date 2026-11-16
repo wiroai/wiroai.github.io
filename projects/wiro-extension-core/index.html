@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiro-Extension-Core: Wiro AI open source</title>
+<meta name="description" content="Shared core of the Wiro AI browser extensions for Chrome, Edge, Opera, Whale, Firefox and Safari: sign-in, Wiro MCP client, action catalog, model gateway, pricing and the panel UI.">
+<link rel="canonical" href="https://wiroai.github.io/projects/wiro-extension-core/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="Wiro-Extension-Core: Wiro AI open source">
+<meta property="og:description" content="Shared core of the Wiro AI browser extensions for Chrome, Edge, Opera, Whale, Firefox and Safari: sign-in, Wiro MCP client, action catalog, model gateway, pricing and the panel UI.">
+<meta property="og:url" content="https://wiroai.github.io/projects/wiro-extension-core/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "Wiro-Extension-Core", "description": "Shared core of the Wiro AI browser extensions for Chrome, Edge, Opera, Whale, Firefox and Safari: sign-in, Wiro MCP client, action catalog, model gateway, pricing and the panel UI.", "codeRepository": "https://github.com/wiroai/Wiro-Extension-Core", "url": "https://wiroai.github.io/projects/wiro-extension-core/", "programmingLanguage": "TypeScript", "license": "https://api.github.com/licenses/mit", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#browser">Browser extensions</a></p>
+<section class="project-head">
+  <h1>Wiro-Extension-Core</h1>
+  <p class="lead">Shared core of the Wiro AI browser extensions for Chrome, Edge, Opera, Whale, Firefox and Safari: sign-in, Wiro MCP client, action catalog, model gateway, pricing and the panel UI.</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/Wiro-Extension-Core">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai">Website</a></p>
+</section>
+<article class="markdown">
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Extension-Core/main/.github/assets/wiro-logo.png"><img src="https://raw.githubusercontent.com/wiroai/Wiro-Extension-Core/main/.github/assets/wiro-logo.png" alt="Wiro AI" width="240" style="max-width: 100%;"></a>
+<h2 dir="auto" id="wiro-extension-core-shared-code-of-the-wiro-ai-browser-extensions">Wiro Extension Core: Shared Code of the Wiro AI Browser Extensions</h2>
+<p dir="auto">Sign-in, the Wiro MCP client, the right-click action catalog, the model gateway, pricing and the panel UI, shared by the Wiro AI extensions for Chrome, Edge, Opera, Whale, Firefox and Safari.</p>
+<p dir="auto"><a href="https://github.com/wiroai/Wiro-Extension-Core/blob/main/tsconfig.json"><img loading="lazy" src="https://camo.githubusercontent.com/9072f21c1334a7d6c2dbed432de2c2dbde32ad6db27420ecf38fd2ae31236d0c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f547970655363726970742d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="TypeScript" data-canonical-src="https://img.shields.io/badge/TypeScript-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Extension-Core/blob/main/src/ui"><img loading="lazy" src="https://camo.githubusercontent.com/7a6751d06b0b6b9cfe6fdfb671b9ffdf164550fab8a14d5add3f4fa8734b72c8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f55492d5072656163742d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="Preact" data-canonical-src="https://img.shields.io/badge/UI-Preact-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Extension-Core/blob/main/test"><img loading="lazy" src="https://camo.githubusercontent.com/f1a6c94564518a9e5fd7e8839dee096abcb11ffba0023ce9d1652c0e34371a3b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f746573746564253230776974682d5669746573742d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="Tested with Vitest" data-canonical-src="https://img.shields.io/badge/tested%20with-Vitest-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Extension-Core/blob/main/LICENSE"><img loading="lazy" src="https://camo.githubusercontent.com/9b0dcc545c9e697315b8d16f4363715f0cc54941456ba778cbc802bb0ef11275/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="License: MIT" data-canonical-src="https://img.shields.io/badge/license-MIT-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a></p>
+<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67"><img loading="lazy" src="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67" alt="Wiro AI koala mascot" width="60" data-canonical-src="https://wiro.ai/images/koala/accent-heavy-koala.png" style="max-width: 100%;"></a>
+</div>
+<p dir="auto">Wiro Extension Core is the part of the Wiro AI browser extensions that does not depend on the browser. Each browser repo includes it as the <code class="notranslate">core/</code> git submodule and adds a small platform adapter, so a fix or a new action reaches every browser at once.</p>
+<p align="center" dir="auto">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Extension-Core/blob/main/.github/assets/screenshots/01-photo-to-video.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Extension-Core/main/.github/assets/screenshots/01-photo-to-video.png" alt="The Wiro panel turning a photo of a dog into a video" width="49%" style="max-width: 100%;"></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Extension-Core/blob/main/.github/assets/screenshots/02-page-to-video.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Extension-Core/main/.github/assets/screenshots/02-page-to-video.png" alt="The Wiro panel sending a page to Wiro Studio to make a video" width="49%" style="max-width: 100%;"></a>
+</p>
+<p align="center" dir="auto">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Extension-Core/blob/main/.github/assets/screenshots/03-brief-to-image.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Extension-Core/main/.github/assets/screenshots/03-brief-to-image.png" alt="The Wiro panel turning selected text into a magazine cover image" width="49%" style="max-width: 100%;"></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Extension-Core/blob/main/.github/assets/screenshots/04-edit-video.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Extension-Core/main/.github/assets/screenshots/04-edit-video.png" alt="The Wiro panel editing a bike video so the trail is covered in snow" width="49%" style="max-width: 100%;"></a>
+</p>
+<p align="center" dir="auto">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Extension-Core/blob/main/.github/assets/screenshots/05-models.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Extension-Core/main/.github/assets/screenshots/05-models.png" alt="The models made for a job, sorted by price, popularity or date" width="49%" style="max-width: 100%;"></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Extension-Core/blob/main/.github/assets/screenshots/06-song.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Extension-Core/main/.github/assets/screenshots/06-song.png" alt="The Wiro panel turning selected lines into a song" width="49%" style="max-width: 100%;"></a>
+</p>
+<p align="center" dir="auto">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Extension-Core/blob/main/.github/assets/screenshots/07-read-aloud.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Extension-Core/main/.github/assets/screenshots/07-read-aloud.png" alt="The Wiro panel reading selected text aloud in a chosen voice" width="49%" style="max-width: 100%;"></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Extension-Core/blob/main/.github/assets/screenshots/08-every-action.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Extension-Core/main/.github/assets/screenshots/08-every-action.png" alt="Every Wiro action for an image, one right-click away" width="49%" style="max-width: 100%;"></a>
+</p>
+<p align="center" dir="auto">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Extension-Core/blob/main/.github/assets/screenshots/09-translate.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Extension-Core/main/.github/assets/screenshots/09-translate.png" alt="The Wiro panel translating selected Spanish text into English" width="49%" style="max-width: 100%;"></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Extension-Core/blob/main/.github/assets/screenshots/10-price.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Extension-Core/main/.github/assets/screenshots/10-price.png" alt="The Wiro panel showing the price of an image edit before the run" width="49%" style="max-width: 100%;"></a>
+</p>
+<h2 dir="auto" id="used-by">Used by</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>Browsers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Chrome, Edge, Opera, Whale, Brave and other Chromium browsers</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Firefox 140 and later</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Safari 16.4 and later on the Mac</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">Install Wiro AI from the <a href="https://chromewebstore.google.com/detail/wiro-ai-tools-for-images/cehkhdmppbnfeahegjjkdhangjelehab">Chrome Web Store</a> (Chrome, Brave, Vivaldi, Arc), the <a href="https://store.whale.naver.com/detail/elgobhnkemhlhfakdmpijbknhehnkgle">Naver Whale Store</a> (Whale) or <a href="https://addons.mozilla.org/firefox/addon/wiro-ai/">Firefox Add-ons</a> (Firefox).</p>
+<h2 dir="auto" id="what-is-inside">What is inside</h2>
+<ul dir="auto">
+<li><code class="notranslate">src/auth</code>: sign-in with a Wiro account through the OAuth 2.1 server at <code class="notranslate">mcp.wiro.ai</code> (PKCE, refresh, revoke). No API key in the browser.</li>
+<li><code class="notranslate">src/mcp</code>, <code class="notranslate">src/wiro</code>: a small client for the stateless MCP endpoint <code class="notranslate">https://mcp.wiro.ai/v1</code> and the Wiro tools the extension uses.</li>
+<li><code class="notranslate">src/catalog</code>: the right-click actions. Every action points at Wiro model categories, never at fixed models, and the models come live from each category. The extension ships with a built-in action list and uses the one on wiro.ai when that loads.</li>
+<li><code class="notranslate">src/gateway</code>: maps one set of inputs (the clicked file, the prompt, length, quality, shape) onto each model's own parameter names, so every model in a category works with the same panel.</li>
+<li><code class="notranslate">src/pricing</code>: the price on the run button, worked out from the model's price rows the way Wiro bills a run, or from its price summary.</li>
+<li><code class="notranslate">src/ui</code>: the panel (Preact). The browser repos show it in a side panel, a sidebar, a popup or a tab.</li>
+<li><code class="notranslate">src/platform.ts</code>: the interface each browser implements.</li>
+</ul>
+<h2 dir="auto" id="how-a-run-works">How a run works</h2>
+<ol dir="auto">
+<li>A right-click hands the background the clicked item: its address, the selected text or the page address.</li>
+<li>The action's categories load their models live from Wiro, sorted by price, popularity or date.</li>
+<li>The gateway fills the chosen model's parameters from the shared inputs and asks only for what is still missing.</li>
+<li>The panel shows the price for the settings chosen, before the run.</li>
+<li>The run goes through the Wiro MCP server; the panel follows it and shows the result, which you can download, copy or keep in the tray.</li>
+</ol>
+<h2 dir="auto" id="platform-adapter">Platform adapter</h2>
+<p dir="auto">A browser repo implements <code class="notranslate">Platform</code> from <code class="notranslate">src/platform.ts</code>:</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Member</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">storage</code>, <code class="notranslate">session</code></td>
+<td>key-value storage that lasts across restarts, and one that lasts while the browser runs</td>
+</tr>
+<tr>
+<td><code class="notranslate">redirectUri()</code></td>
+<td>the OAuth redirect address this browser can catch</td>
+</tr>
+<tr>
+<td><code class="notranslate">launchAuth(url)</code></td>
+<td>opens the sign-in window and returns the address the server redirected to; Safari finishes the sign-in in a tab instead</td>
+</tr>
+<tr>
+<td><code class="notranslate">openTab(url)</code></td>
+<td>opens a link in a new tab</td>
+</tr>
+<tr>
+<td><code class="notranslate">name</code>, <code class="notranslate">version</code>, <code class="notranslate">clientName</code></td>
+<td>the browser, the extension version and the name shown on the Wiro consent page</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2 dir="auto" id="development">Development</h2>
+<p dir="auto">Requires Node.js 22 or later.</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npm install
+npm <span class="pl-c1">test</span>
+npm run typecheck</pre></div>
+<p dir="auto"><code class="notranslate">test/harness/</code> renders the panel in headless Chrome against a local stand-in for the Wiro MCP server, using Wiro's public model catalog, and saves a screenshot per step. Usage is at the top of <code class="notranslate">drive.mjs</code> and <code class="notranslate">mock-mcp.mjs</code>.</p>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera, Whale and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Wiro AI extension for Safari on the Mac</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
+<td>Official MCP server for Wiro AI, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Cursor, Claude Code, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills">Wiro-Skills</a></td>
+<td>Agent skills for images, image edits, video, music, speech, transcripts, 3D and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>Vercel AI SDK provider for chat, images, speech, transcription and video</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Wiro AI SDK for Dart and Flutter, <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>Wiro AI SDK for React Native and Expo, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><code class="notranslate">@wiro-ai/wiro-react-native</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-Realtime">Swift-Realtime</a></td>
+<td>Realtime voice AI example for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin-Realtime</a></td>
+<td>Realtime voice AI example for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-Realtime">Dart-Realtime</a></td>
+<td>Realtime voice AI example for Flutter</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-Realtime">ReactNative-Realtime</a></td>
+<td>Realtime voice AI example for React Native</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>One Wiro AI node for n8n with a searchable model picker, <a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><code class="notranslate">@wiro-ai/n8n-nodes-wiro</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI plugins for Dify: the LLM gateway as a model provider, plus image, video, speech and music tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI">Wiro-ComfyUI</a></td>
+<td>Wiro AI nodes for ComfyUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Zed">Wiro-Zed</a></td>
+<td>Wiro AI MCP server extension for Zed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Action for Wiro AI models and the LLM gateway, <a href="https://github.com/marketplace/actions/wiro-ai-action">on the GitHub Marketplace</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Raycast">Wiro-Raycast</a></td>
+<td>Wiro AI extension for Raycast: image and video generation, LLM chat and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress: featured images, image edits, alt text, narration and SEO suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Obsidian">Wiro-Obsidian</a></td>
+<td>Wiro AI plugin for Obsidian: images, video, speech, music, transcription and text tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Blender">Wiro-Blender</a></td>
+<td>Wiro AI add-on for Blender: text to 3D, image to 3D and textures</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Figma">Wiro-Figma</a></td>
+<td>Wiro AI plugin for Figma: images, vectors, image edits and text</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js starter for Wiro AI: Playground, image, video and audio tools, and LLM chat, ready for Vercel and Railway</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Docs">Wiro-Docs</a></td>
+<td>Source of the Wiro AI API docs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto">MIT, see <a href="https://github.com/wiroai/Wiro-Extension-Core/blob/main/LICENSE">LICENSE</a>.</p>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/wiro-chromium-extension/">Wiro-Chromium-Extension</a></li><li><a href="/projects/wiro-firefox-extension/">Wiro-Firefox-Extension</a></li><li><a href="/projects/wiro-safari-extension/">Wiro-Safari-Extension</a></li><li><a href="/projects/wiro-mcp/">Wiro-MCP</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

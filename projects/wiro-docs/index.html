@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiro-Docs: Wiro AI open source</title>
+<meta name="description" content="Source of the Wiro AI API docs at wiro.ai/docs. Static HTML with per-page Markdown and llms.txt for models, tasks, LLM streaming, realtime voice and agents.">
+<link rel="canonical" href="https://wiroai.github.io/projects/wiro-docs/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="Wiro-Docs: Wiro AI open source">
+<meta property="og:description" content="Source of the Wiro AI API docs at wiro.ai/docs. Static HTML with per-page Markdown and llms.txt for models, tasks, LLM streaming, realtime voice and agents.">
+<meta property="og:url" content="https://wiroai.github.io/projects/wiro-docs/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "Wiro-Docs", "description": "Source of the Wiro AI API docs at wiro.ai/docs. Static HTML with per-page Markdown and llms.txt for models, tasks, LLM streaming, realtime voice and agents.", "codeRepository": "https://github.com/wiroai/Wiro-Docs", "url": "https://wiroai.github.io/projects/wiro-docs/", "programmingLanguage": "HTML", "license": "https://api.github.com/licenses/mit", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#templates">Templates and docs</a></p>
+<section class="project-head">
+  <h1>Wiro-Docs</h1>
+  <p class="lead">Source of the Wiro AI API docs at wiro.ai/docs. Static HTML with per-page Markdown and llms.txt for models, tasks, LLM streaming, realtime voice and agents.</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/Wiro-Docs">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai/docs">Docs</a></p>
+</section>
+<article class="markdown">
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Docs/main/.github/assets/wiro-logo.png"><img src="https://raw.githubusercontent.com/wiroai/Wiro-Docs/main/.github/assets/wiro-logo.png" alt="Wiro AI" width="240" style="max-width: 100%;"></a>
+<h2 dir="auto" id="wiro-api-documentation">Wiro API Documentation</h2>
+<p dir="auto">Source of the Wiro AI API docs at wiro.ai/docs: a static HTML site with per-page Markdown and llms.txt covering model runs, tasks, WebSocket, LLM streaming, realtime voice and the Agent API.</p>
+<p dir="auto"><a href="https://github.com/wiroai/Wiro-Docs/blob/main/LICENSE"><img loading="lazy" src="https://camo.githubusercontent.com/9b0dcc545c9e697315b8d16f4363715f0cc54941456ba778cbc802bb0ef11275/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="License: MIT" data-canonical-src="https://img.shields.io/badge/license-MIT-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Docs/blob/main/llms.txt"><img loading="lazy" src="https://camo.githubusercontent.com/dcfdbdcada4b787b0e9f308693b581ab9f846b23b907f802937903d9ca4a9526/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6c6d732e7478742d696e636c756465642d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="llms.txt included" data-canonical-src="https://img.shields.io/badge/llms.txt-included-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="#run-locally"><img loading="lazy" src="https://camo.githubusercontent.com/2bc2288d08b7299e81e94520b8018f402fe0343d63fa989be22af7c84d584791/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6275696c64253230737465702d6e6f6e652d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="No build step" data-canonical-src="https://img.shields.io/badge/build%20step-none-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a></p>
+</div>
+<p dir="auto">This repository is the source of <a href="https://wiro.ai/docs">wiro.ai/docs</a>, the reference for the Wiro AI API: authentication, running models, tasks, WebSocket and LLM streaming, realtime voice, files, the LLM gateway, the Agent API, organizations, and the MCP and n8n integrations. Every page lives inline in <code class="notranslate">index.html</code>, so the full text can be read without JavaScript, and each page also has a Markdown copy in <code class="notranslate">markdown/</code>, next to a full bundle and an <code class="notranslate">llms.txt</code> summary for LLMs and crawlers. <code class="notranslate">serve.js</code>, a small Node.js server with no dependencies, serves each page at its own <code class="notranslate">/docs/&lt;slug&gt;</code> path with its own meta tags.</p>
+<hr>
+<h2 dir="auto" id="why-this-repo">Why this repo?</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Goal</th>
+<th>What you get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>📖 <strong>Human readers</strong></td>
+<td>Pixel-aligned docs UI: navigation, dark mode, code panel with <strong>Shiki</strong> highlighting</td>
+</tr>
+<tr>
+<td>🤖 <strong>LLMs</strong></td>
+<td>All sections live in <strong><code class="notranslate">index.html</code></strong>, readable without JS; <strong><code class="notranslate">llms.txt</code></strong> + <strong>Markdown</strong> exports</td>
+</tr>
+<tr>
+<td>🔌 <strong>Integrators</strong></td>
+<td>Same content as the product docs: <strong>Run</strong>, <strong>Tasks</strong>, <strong>WebSocket</strong>, <strong>LLM streaming</strong>, <strong>Realtime voice</strong>, <strong>Files</strong></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<hr>
+<h2 dir="auto" id="features">Features</h2>
+<ul dir="auto">
+<li>🏠 <strong>One HTML source, no build step</strong>: every page lives in <code class="notranslate">index.html</code>, with <code class="notranslate">css/</code> and <code class="notranslate">js/</code> for the UI</li>
+<li>🌙 <strong>Dark / light theme</strong> with persistent toggle</li>
+<li>📱 <strong>Responsive</strong> sidebar + mobile drawer</li>
+<li>🔍 <strong>Full-text search</strong> with <code class="notranslate">⌘K</code> / <code class="notranslate">Ctrl+K</code> shortcut, recent searches (localStorage), and keyboard navigation</li>
+<li>📑 <strong>Table of contents</strong>: auto-generated "On this page" panel with scroll spy</li>
+<li>💻 <strong>Code examples</strong> panel in <strong>9 languages</strong> (curl, Python, Node.js, PHP, C#, Go, Swift, Kotlin, Dart)</li>
+<li>🧩 <strong>Model browser</strong> (list/search via API when deployed; CORS may limit localhost)</li>
+<li>📄 <strong>Markdown per section</strong> (<code class="notranslate">markdown/{slug}.md</code>) + full bundle: <strong><code class="notranslate">markdown/full-documentation.md</code></strong></li>
+<li>📋 <strong><code class="notranslate">llms.txt</code></strong>: machine-readable summary for crawlers and tools</li>
+<li>🔎 <strong>Per-page SEO</strong>: <code class="notranslate">serve.js</code> gives every page its own title, description, Open Graph and Twitter Card tags, canonical URL and JSON-LD; unknown paths get a <code class="notranslate">noindex</code> 404 page</li>
+<li>🗺️ <strong>Sitemap &amp; robots.txt</strong> for search engine crawlers</li>
+</ul>
+<hr>
+<h2 dir="auto" id="documentation-map">Documentation map</h2>
+<p dir="auto">One row per page, in sidebar order. Each path is live under <code class="notranslate">https://wiro.ai</code>.</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Section</th>
+<th>Path</th>
+<th>Markdown</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Getting Started</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Introduction</td>
+<td><code class="notranslate">/docs/introduction</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/introduction.md">introduction.md</a></td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td><code class="notranslate">/docs/authentication</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/authentication.md">authentication.md</a></td>
+</tr>
+<tr>
+<td>Projects</td>
+<td><code class="notranslate">/docs/projects</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/projects.md">projects.md</a></td>
+</tr>
+<tr>
+<td><strong>Model API Reference</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Models</td>
+<td><code class="notranslate">/docs/models</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/models.md">models.md</a></td>
+</tr>
+<tr>
+<td>Run a Model</td>
+<td><code class="notranslate">/docs/run-a-model</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/run-a-model.md">run-a-model.md</a></td>
+</tr>
+<tr>
+<td>Direct LLM Gateway</td>
+<td><code class="notranslate">/docs/completions-api</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/completions-api.md">completions-api.md</a></td>
+</tr>
+<tr>
+<td>Model Parameters</td>
+<td><code class="notranslate">/docs/model-parameters</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/model-parameters.md">model-parameters.md</a></td>
+</tr>
+<tr>
+<td>Tasks</td>
+<td><code class="notranslate">/docs/tasks</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/tasks.md">tasks.md</a></td>
+</tr>
+<tr>
+<td>LLM &amp; Chat Streaming</td>
+<td><code class="notranslate">/docs/llm-chat-streaming</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/llm-chat-streaming.md">llm-chat-streaming.md</a></td>
+</tr>
+<tr>
+<td>WebSocket</td>
+<td><code class="notranslate">/docs/websocket</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/websocket.md">websocket.md</a></td>
+</tr>
+<tr>
+<td>Realtime Voice Conversation</td>
+<td><code class="notranslate">/docs/realtime-voice-conversation</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/realtime-voice-conversation.md">realtime-voice-conversation.md</a></td>
+</tr>
+<tr>
+<td>Realtime Text to Speech</td>
+<td><code class="notranslate">/docs/realtime-text-to-speech</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/realtime-text-to-speech.md">realtime-text-to-speech.md</a></td>
+</tr>
+<tr>
+<td>Realtime Speech to Text</td>
+<td><code class="notranslate">/docs/realtime-speech-to-text</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/realtime-speech-to-text.md">realtime-speech-to-text.md</a></td>
+</tr>
+<tr>
+<td>Files</td>
+<td><code class="notranslate">/docs/files</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/files.md">files.md</a></td>
+</tr>
+<tr>
+<td>Pricing</td>
+<td><code class="notranslate">/docs/pricing</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/pricing.md">pricing.md</a></td>
+</tr>
+<tr>
+<td>Concurrency Limits</td>
+<td><code class="notranslate">/docs/concurrency-limits</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/concurrency-limits.md">concurrency-limits.md</a></td>
+</tr>
+<tr>
+<td>Error Reference</td>
+<td><code class="notranslate">/docs/error-reference</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/error-reference.md">error-reference.md</a></td>
+</tr>
+<tr>
+<td>FAQ</td>
+<td><code class="notranslate">/docs/faq</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/faq.md">faq.md</a></td>
+</tr>
+<tr>
+<td><strong>Workflow &amp; Studio API Reference</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Workflows</td>
+<td><code class="notranslate">/docs/workflows</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/workflows.md">workflows.md</a></td>
+</tr>
+<tr>
+<td>Workflow Agent</td>
+<td><code class="notranslate">/docs/workflow-agent</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/workflow-agent.md">workflow-agent.md</a></td>
+</tr>
+<tr>
+<td>Studio</td>
+<td><code class="notranslate">/docs/studio</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/studio.md">studio.md</a></td>
+</tr>
+<tr>
+<td><strong>Agent API Reference</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Agent Overview</td>
+<td><code class="notranslate">/docs/agent-overview</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/agent-overview.md">agent-overview.md</a></td>
+</tr>
+<tr>
+<td>Agent Builder</td>
+<td><code class="notranslate">/docs/agent-builder</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/agent-builder.md">agent-builder.md</a></td>
+</tr>
+<tr>
+<td>Agent Messaging</td>
+<td><code class="notranslate">/docs/agent-messaging</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/agent-messaging.md">agent-messaging.md</a></td>
+</tr>
+<tr>
+<td>Agent WebSocket</td>
+<td><code class="notranslate">/docs/agent-websocket</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/agent-websocket.md">agent-websocket.md</a></td>
+</tr>
+<tr>
+<td>Agent Webhooks</td>
+<td><code class="notranslate">/docs/agent-webhooks</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/agent-webhooks.md">agent-webhooks.md</a></td>
+</tr>
+<tr>
+<td>Agent Credentials &amp; OAuth</td>
+<td><code class="notranslate">/docs/agent-credentials</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/agent-credentials.md">agent-credentials.md</a></td>
+</tr>
+<tr>
+<td>Agent Chat Integration</td>
+<td><code class="notranslate">/docs/agent-chat-integration</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/agent-chat-integration.md">agent-chat-integration.md</a></td>
+</tr>
+<tr>
+<td>Agent Skills</td>
+<td><code class="notranslate">/docs/agent-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/agent-skills.md">agent-skills.md</a></td>
+</tr>
+<tr>
+<td>Agent Transactions</td>
+<td><code class="notranslate">/docs/agent-transactions</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/agent-transactions.md">agent-transactions.md</a></td>
+</tr>
+<tr>
+<td>Agent Logs</td>
+<td><code class="notranslate">/docs/agent-logs</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/agent-logs.md">agent-logs.md</a></td>
+</tr>
+<tr>
+<td>Agent Use Cases</td>
+<td><code class="notranslate">/docs/agent-use-cases</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/agent-use-cases.md">agent-use-cases.md</a></td>
+</tr>
+<tr>
+<td><strong>Skills Integration</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Meta Ads</td>
+<td><code class="notranslate">/docs/integration-metaads-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-metaads-skills.md">integration-metaads-skills.md</a></td>
+</tr>
+<tr>
+<td>TikTok Ads</td>
+<td><code class="notranslate">/docs/integration-tiktokads-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-tiktokads-skills.md">integration-tiktokads-skills.md</a></td>
+</tr>
+<tr>
+<td>Shopify</td>
+<td><code class="notranslate">/docs/integration-shopify-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-shopify-skills.md">integration-shopify-skills.md</a></td>
+</tr>
+<tr>
+<td>WooCommerce</td>
+<td><code class="notranslate">/docs/integration-woocommerce-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-woocommerce-skills.md">integration-woocommerce-skills.md</a></td>
+</tr>
+<tr>
+<td>Reddit</td>
+<td><code class="notranslate">/docs/integration-reddit-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-reddit-skills.md">integration-reddit-skills.md</a></td>
+</tr>
+<tr>
+<td>Facebook Page</td>
+<td><code class="notranslate">/docs/integration-facebook-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-facebook-skills.md">integration-facebook-skills.md</a></td>
+</tr>
+<tr>
+<td>Instagram</td>
+<td><code class="notranslate">/docs/integration-instagram-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-instagram-skills.md">integration-instagram-skills.md</a></td>
+</tr>
+<tr>
+<td>LinkedIn</td>
+<td><code class="notranslate">/docs/integration-linkedin-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-linkedin-skills.md">integration-linkedin-skills.md</a></td>
+</tr>
+<tr>
+<td>Twitter / X</td>
+<td><code class="notranslate">/docs/integration-twitter-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-twitter-skills.md">integration-twitter-skills.md</a></td>
+</tr>
+<tr>
+<td>TikTok</td>
+<td><code class="notranslate">/docs/integration-tiktok-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-tiktok-skills.md">integration-tiktok-skills.md</a></td>
+</tr>
+<tr>
+<td>Google Ads</td>
+<td><code class="notranslate">/docs/integration-googleads-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-googleads-skills.md">integration-googleads-skills.md</a></td>
+</tr>
+<tr>
+<td>YouTube</td>
+<td><code class="notranslate">/docs/integration-youtube-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-youtube-skills.md">integration-youtube-skills.md</a></td>
+</tr>
+<tr>
+<td>Google Analytics 4</td>
+<td><code class="notranslate">/docs/integration-ga4-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-ga4-skills.md">integration-ga4-skills.md</a></td>
+</tr>
+<tr>
+<td>Roasit</td>
+<td><code class="notranslate">/docs/integration-roasit-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-roasit-skills.md">integration-roasit-skills.md</a></td>
+</tr>
+<tr>
+<td>Merchant Center</td>
+<td><code class="notranslate">/docs/integration-merchantcenter-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-merchantcenter-skills.md">integration-merchantcenter-skills.md</a></td>
+</tr>
+<tr>
+<td>Google Business Profile</td>
+<td><code class="notranslate">/docs/integration-googlebusiness-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-googlebusiness-skills.md">integration-googlebusiness-skills.md</a></td>
+</tr>
+<tr>
+<td>HubSpot</td>
+<td><code class="notranslate">/docs/integration-hubspot-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-hubspot-skills.md">integration-hubspot-skills.md</a></td>
+</tr>
+<tr>
+<td>Mailchimp</td>
+<td><code class="notranslate">/docs/integration-mailchimp-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-mailchimp-skills.md">integration-mailchimp-skills.md</a></td>
+</tr>
+<tr>
+<td>Google Drive</td>
+<td><code class="notranslate">/docs/integration-googledrive-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-googledrive-skills.md">integration-googledrive-skills.md</a></td>
+</tr>
+<tr>
+<td>Google Calendar</td>
+<td><code class="notranslate">/docs/integration-google-calendar-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-google-calendar-skills.md">integration-google-calendar-skills.md</a></td>
+</tr>
+<tr>
+<td>Serper Web Search</td>
+<td><code class="notranslate">/docs/integration-serper-search-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-serper-search-skills.md">integration-serper-search-skills.md</a></td>
+</tr>
+<tr>
+<td>Gmail</td>
+<td><code class="notranslate">/docs/integration-gmail-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-gmail-skills.md">integration-gmail-skills.md</a></td>
+</tr>
+<tr>
+<td>Telegram</td>
+<td><code class="notranslate">/docs/integration-telegram-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-telegram-skills.md">integration-telegram-skills.md</a></td>
+</tr>
+<tr>
+<td>Firebase</td>
+<td><code class="notranslate">/docs/integration-firebase-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-firebase-skills.md">integration-firebase-skills.md</a></td>
+</tr>
+<tr>
+<td>WordPress</td>
+<td><code class="notranslate">/docs/integration-wordpress-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-wordpress-skills.md">integration-wordpress-skills.md</a></td>
+</tr>
+<tr>
+<td>App Store Connect</td>
+<td><code class="notranslate">/docs/integration-appstore-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-appstore-skills.md">integration-appstore-skills.md</a></td>
+</tr>
+<tr>
+<td>Google Play</td>
+<td><code class="notranslate">/docs/integration-googleplay-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-googleplay-skills.md">integration-googleplay-skills.md</a></td>
+</tr>
+<tr>
+<td>Apollo</td>
+<td><code class="notranslate">/docs/integration-apollo-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-apollo-skills.md">integration-apollo-skills.md</a></td>
+</tr>
+<tr>
+<td>Lemlist</td>
+<td><code class="notranslate">/docs/integration-lemlist-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-lemlist-skills.md">integration-lemlist-skills.md</a></td>
+</tr>
+<tr>
+<td>Brevo</td>
+<td><code class="notranslate">/docs/integration-brevo-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-brevo-skills.md">integration-brevo-skills.md</a></td>
+</tr>
+<tr>
+<td>SendGrid</td>
+<td><code class="notranslate">/docs/integration-sendgrid-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-sendgrid-skills.md">integration-sendgrid-skills.md</a></td>
+</tr>
+<tr>
+<td>Twilio Voice</td>
+<td><code class="notranslate">/docs/integration-twiliovoice-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-twiliovoice-skills.md">integration-twiliovoice-skills.md</a></td>
+</tr>
+<tr>
+<td>Web Voice</td>
+<td><code class="notranslate">/docs/integration-webvoice-skills</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/integration-webvoice-skills.md">integration-webvoice-skills.md</a></td>
+</tr>
+<tr>
+<td><strong>Organizations &amp; Teams</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Overview</td>
+<td><code class="notranslate">/docs/organizations-overview</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/organizations-overview.md">organizations-overview.md</a></td>
+</tr>
+<tr>
+<td>Managing Teams</td>
+<td><code class="notranslate">/docs/organizations-managing-teams</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/organizations-managing-teams.md">organizations-managing-teams.md</a></td>
+</tr>
+<tr>
+<td>Team Billing &amp; Spending</td>
+<td><code class="notranslate">/docs/organizations-billing</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/organizations-billing.md">organizations-billing.md</a></td>
+</tr>
+<tr>
+<td>Team API Access</td>
+<td><code class="notranslate">/docs/organizations-api-access</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/organizations-api-access.md">organizations-api-access.md</a></td>
+</tr>
+<tr>
+<td><strong>Integrations</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wiro MCP Server</td>
+<td><code class="notranslate">/docs/wiro-mcp-server</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/wiro-mcp-server.md">wiro-mcp-server.md</a></td>
+</tr>
+<tr>
+<td>Self-Hosted MCP</td>
+<td><code class="notranslate">/docs/mcp-self-hosted</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/mcp-self-hosted.md">mcp-self-hosted.md</a></td>
+</tr>
+<tr>
+<td>Node.js Library</td>
+<td><code class="notranslate">/docs/nodejs-library</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/nodejs-library.md">nodejs-library.md</a></td>
+</tr>
+<tr>
+<td>n8n Wiro Integration</td>
+<td><code class="notranslate">/docs/n8n-wiro-integration</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/n8n-wiro-integration.md">n8n-wiro-integration.md</a></td>
+</tr>
+<tr>
+<td><strong>Code Examples</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Code Examples</td>
+<td><code class="notranslate">/docs/code-examples</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/code-examples.md">code-examples.md</a></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<blockquote>
+<p dir="auto"><strong>Full export:</strong> <a href="https://github.com/wiroai/Wiro-Docs/blob/main/markdown/full-documentation.md">full-documentation.md</a></p>
+</blockquote>
+<hr>
+<h2 dir="auto" id="run-locally">Run locally</h2>
+<p dir="auto"><code class="notranslate">serve.js</code> only uses Node.js built-in modules, so there is nothing to install:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">node serve.js</pre></div>
+<p dir="auto">Open <strong><a href="http://localhost:8000/docs/">http://localhost:8000/docs/</a></strong> (set <code class="notranslate">PORT</code> to use another port). Each page is served at its own path, for example <code class="notranslate">/docs/files</code> or <code class="notranslate">/docs/tasks</code>, with its own meta tags. Unknown paths return a 404 page, and <code class="notranslate">/docs/index.html</code> returns the full file with every section inline.</p>
+<p dir="auto">Keep <code class="notranslate">data-base-path="/docs"</code> on the <code class="notranslate">&lt;html&gt;</code> tag of <code class="notranslate">index.html</code>: it matches the path <code class="notranslate">serve.js</code> serves under.</p>
+<hr>
+<h2 dir="auto" id="project-structure">Project structure</h2>
+<pre class="notranslate"><code class="notranslate">Wiro-Docs/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── index.html                  # Every doc page inline (readable without JS)
+├── serve.js                    # Node server: one document per page, per-page meta, search index
+├── llms.txt                    # Machine-readable API summary
+├── sitemap.xml                 # Sitemap with priorities and change frequencies
+├── robots.txt                  # Crawler directives with sitemap reference
+├── assets/                     # SVG logos for MCP clients and integrations
+├── css/
+│   ├── docs.css                # Layout, theme (light/dark), typography, components
+│   ├── wiro-foundation.css     # Design-system tokens and component styles
+│   ├── mcp-clients.css         # MCP client logos as CSS masks
+│   ├── lineicons-free.css      # Lineicons icon font
+│   └── cursor-custom-llm.png   # Screenshot used on the Direct LLM Gateway page
+├── js/
+│   ├── app.js                  # Navigation, search, TOC, code panel, Shiki
+│   └── helpers.js              # Model browser (Tool/List) + shared helpers
+├── licenses/
+│   └── lineicons-MIT.md        # Lineicons license
+└── markdown/                   # One {slug}.md per page + full-documentation.md, kept in sync with index.html (see Contributing)
+</code></pre>
+<hr>
+<h2 dir="auto" id="contributing">Contributing</h2>
+<p dir="auto">We follow <strong>conventional, changelog-friendly</strong> commits:</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Prefix</th>
+<th>Use for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">[docs]</code></td>
+<td>API text, examples, <code class="notranslate">index.html</code>, <code class="notranslate">llms.txt</code>, <code class="notranslate">markdown/*.md</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">[system]</code></td>
+<td>CSS, JS, layout, navigation, tooling</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><strong>Do not mix</strong> <code class="notranslate">[docs]</code> and <code class="notranslate">[system]</code> in one commit.</p>
+<p dir="auto">When you change <strong><code class="notranslate">index.html</code></strong> API content, update the matching <strong><code class="notranslate">markdown/{slug}.md</code></strong> and <strong><code class="notranslate">markdown/full-documentation.md</code></strong> in the same change.</p>
+<hr>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
+<td>Official MCP server for Wiro AI, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>Vercel AI SDK provider for chat, images, speech, transcription and video, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-llm"><code class="notranslate">@wiro-ai/wiro-llm</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Wiro AI extension for Safari on the Mac</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Cursor, Claude Code, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills">Wiro-Skills</a></td>
+<td>Agent skills for images, image edits, video, music, speech, transcripts, 3D and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Wiro AI SDK for Dart and Flutter, <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>Wiro AI SDK for React Native and Expo, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><code class="notranslate">@wiro-ai/wiro-react-native</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-Realtime">Swift-Realtime</a></td>
+<td>Realtime voice AI example for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin-Realtime</a></td>
+<td>Realtime voice AI example for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-Realtime">Dart-Realtime</a></td>
+<td>Realtime voice AI example for Flutter</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-Realtime">ReactNative-Realtime</a></td>
+<td>Realtime voice AI example for React Native</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>One Wiro AI node for n8n with a searchable model picker, <a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><code class="notranslate">@wiro-ai/n8n-nodes-wiro</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI plugins for Dify: the LLM gateway as a model provider, plus image, video, speech and music tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI">Wiro-ComfyUI</a></td>
+<td>Wiro AI nodes for ComfyUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Zed">Wiro-Zed</a></td>
+<td>Wiro AI MCP server extension for Zed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Action for Wiro AI models and the LLM gateway, <a href="https://github.com/marketplace/actions/wiro-ai-action">on the GitHub Marketplace</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Raycast">Wiro-Raycast</a></td>
+<td>Wiro AI extension for Raycast: image and video generation, LLM chat and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress: featured images, image edits, alt text, narration and SEO suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Obsidian">Wiro-Obsidian</a></td>
+<td>Wiro AI plugin for Obsidian: images, video, speech, music, transcription and text tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Blender">Wiro-Blender</a></td>
+<td>Wiro AI add-on for Blender: text to 3D, image to 3D and textures</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Figma">Wiro-Figma</a></td>
+<td>Wiro AI plugin for Figma: images, vectors, image edits and text</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js starter for Wiro AI: Playground, image, video and audio tools, and LLM chat, ready for Vercel and Railway</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<hr>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto">MIT, see <a href="https://github.com/wiroai/Wiro-Docs/blob/main/LICENSE">LICENSE</a>.</p>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/wiro-next-starter/">Wiro-Next-Starter</a></li><li><a href="/projects/wiro-mcp/">Wiro-MCP</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li><li><a href="/projects/dart-quickstart/">Dart-QuickStart</a></li><li><a href="/projects/reactnative-quickstart/">ReactNative-QuickStart</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

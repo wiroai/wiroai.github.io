@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dart-QuickStart: Wiro AI open source</title>
+<meta name="description" content="Official Dart and Flutter SDK for the Wiro AI API, published on pub.dev as wiro: run image, video, audio and LLM models with typed requests and live task tracking.">
+<link rel="canonical" href="https://wiroai.github.io/projects/dart-quickstart/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="Dart-QuickStart: Wiro AI open source">
+<meta property="og:description" content="Official Dart and Flutter SDK for the Wiro AI API, published on pub.dev as wiro: run image, video, audio and LLM models with typed requests and live task tracking.">
+<meta property="og:url" content="https://wiroai.github.io/projects/dart-quickstart/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "Dart-QuickStart", "description": "Official Dart and Flutter SDK for the Wiro AI API, published on pub.dev as wiro: run image, video, audio and LLM models with typed requests and live task tracking.", "codeRepository": "https://github.com/wiroai/Dart-QuickStart", "url": "https://wiroai.github.io/projects/dart-quickstart/", "programmingLanguage": "Dart", "license": "https://api.github.com/licenses/mit", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#sdks">LLM gateway and SDKs</a></p>
+<section class="project-head">
+  <h1>Dart-QuickStart</h1>
+  <p class="lead">Official Dart and Flutter SDK for the Wiro AI API, published on pub.dev as wiro: run image, video, audio and LLM models with typed requests and live task tracking.</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/Dart-QuickStart">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai/docs/code-examples">Docs</a></p>
+</section>
+<article class="markdown">
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Dart-QuickStart/main/.github/assets/wiro-logo.png"><img src="https://raw.githubusercontent.com/wiroai/Dart-QuickStart/main/.github/assets/wiro-logo.png" alt="Wiro AI" width="240" style="max-width: 100%;"></a>
+<h2 dir="auto" id="wiro-ai-sdk-for-dart-and-flutter">Wiro AI SDK for Dart and Flutter</h2>
+<p dir="auto">Run image, video, audio and LLM models from Dart and Flutter apps with the Wiro AI API: typed requests, live task tracking and file uploads.</p>
+<p dir="auto"><a href="https://pub.dev/packages/wiro"><img loading="lazy" src="https://camo.githubusercontent.com/bdfb2dfcaa38d257bc79de5605e7f8f653ac7476b61069f79f67581e6cbbc21a/68747470733a2f2f696d672e736869656c64732e696f2f7075622f762f7769726f3f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131266c6f676f3d64617274266c6f676f436f6c6f723d7768697465266c6162656c3d707562" alt="pub package" data-canonical-src="https://img.shields.io/pub/v/wiro?style=for-the-badge&amp;color=111111&amp;logo=dart&amp;logoColor=white&amp;label=pub" style="max-width: 100%;"></a> <a href="https://dart.dev"><img loading="lazy" src="https://camo.githubusercontent.com/1f76b5977e434465df44c91a65de03f380a96436bfa67ec6294e6c64d106ae03/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446172742d332e382532422d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131266c6f676f3d64617274266c6f676f436f6c6f723d7768697465" alt="Dart 3.8+" data-canonical-src="https://img.shields.io/badge/Dart-3.8%2B-111111?style=for-the-badge&amp;color=111111&amp;logo=dart&amp;logoColor=white" style="max-width: 100%;"></a> <a href="https://flutter.dev"><img loading="lazy" src="https://camo.githubusercontent.com/4ec76fa10590ff926b07f498011f9c0431b148e6d5dbaf5980fe94789f9fb1a1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f466c75747465722d332e33322e382532422d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131266c6f676f3d666c7574746572266c6f676f436f6c6f723d7768697465" alt="Flutter 3.32.8+" data-canonical-src="https://img.shields.io/badge/Flutter-3.32.8%2B-111111?style=for-the-badge&amp;color=111111&amp;logo=flutter&amp;logoColor=white" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Dart-QuickStart/actions/workflows/ci.yml"><img loading="lazy" src="https://camo.githubusercontent.com/464e8362f9b7175b434c5b534ad819f2fb384f91a2632f4b417972d9fdfbefdb/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f7769726f61692f446172742d517569636b53746172742f63692e796d6c3f6272616e63683d6d61696e267374796c653d666f722d7468652d626164676526636f6c6f723d313131313131266c6162656c3d4349266c6f676f3d676974687562616374696f6e73266c6f676f436f6c6f723d7768697465" alt="CI" data-canonical-src="https://img.shields.io/github/actions/workflow/status/wiroai/Dart-QuickStart/ci.yml?branch=main&amp;style=for-the-badge&amp;color=111111&amp;label=CI&amp;logo=githubactions&amp;logoColor=white" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Dart-QuickStart/blob/main/LICENSE"><img loading="lazy" src="https://camo.githubusercontent.com/9b0dcc545c9e697315b8d16f4363715f0cc54941456ba778cbc802bb0ef11275/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="License: MIT" data-canonical-src="https://img.shields.io/badge/license-MIT-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs/code-examples">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a> · <a href="https://pub.dev/packages/wiro">pub.dev</a></p>
+</div>
+<p dir="auto"><code class="notranslate">wiro</code> is the official Dart package for calling the<br>
+<a href="https://wiro.ai">Wiro AI</a> model API from Flutter apps, Dart servers and<br>
+command-line tools. It runs any model in the Wiro AI catalog, through typed<br>
+request classes for popular image, video and music models or through<br>
+<code class="notranslate">Wiro.model</code> with a parameter map, and follows each task by polling or over a<br>
+WebSocket. The <code class="notranslate">example</code> folder has a Flutter text-to-image app and four<br>
+command-line scripts.</p>
+<h2 dir="auto" id="features">Features</h2>
+<ul dir="auto">
+<li>Search and explore available AI models</li>
+<li>Run popular models with compile-time checked typed requests</li>
+<li>Read typed model input schemas</li>
+<li>Validate dynamic parameters against model schemas</li>
+<li>Run image, video, audio, and other generative models</li>
+<li>Use typed model IDs, task tokens, and task IDs</li>
+<li>Submit and await a sealed task result with one <code class="notranslate">subscribe</code> call</li>
+<li>Send device files as model inputs with automatic uploads</li>
+<li>Upload byte arrays or streams</li>
+<li>Poll tasks or stream typed progress over WebSocket</li>
+<li>Cancel queued tasks and stop running tasks</li>
+<li>Typed errors for authentication, validation, rate limits, and networking</li>
+<li>Request cancellation, timeouts, retry with exponential backoff, and logging</li>
+<li>API key and signature-based authentication</li>
+<li>Pure Dart core with Flutter, image, and video examples</li>
+</ul>
+<h2 dir="auto" id="requirements">Requirements</h2>
+<ul dir="auto">
+<li>Dart <code class="notranslate">3.8.0</code> or newer</li>
+<li>Flutter <code class="notranslate">3.32.8</code> or newer when used in a Flutter application</li>
+<li>A <a href="https://wiro.ai/panel/project/new">Wiro AI project and API key</a></li>
+</ul>
+<p dir="auto">The core package is pure Dart and supports Dart VM, Android, iOS, web,<br>
+macOS, Windows, and Linux. Version <code class="notranslate">0.x</code> may receive API refinements before<br>
+the first stable release.</p>
+<h2 dir="auto" id="installation">Installation</h2>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">dart pub add wiro</pre></div>
+<p dir="auto">For Flutter applications:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">flutter pub add wiro</pre></div>
+<h2 dir="auto" id="quick-start">Quick start</h2>
+<p dir="auto">Any model on Wiro AI runs through <code class="notranslate">Wiro.model</code>. Type <code class="notranslate">Wiro.</code> in your IDE<br>
+to discover typed factories for popular models as well:</p>
+<div class="highlight highlight-source-dart" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s">'package:wiro/wiro.dart'</span>;
+
+<span class="pl-c1">Future</span>&lt;<span class="pl-k">void</span>&gt; <span class="pl-en">main</span>() <span class="pl-k">async</span> {
+  <span class="pl-k">final</span> client <span class="pl-k">=</span> <span class="pl-c1">WiroClient</span>(apiKey<span class="pl-k">:</span> <span class="pl-s">'your-api-key'</span>);
+
+  <span class="pl-k">try</span> {
+    <span class="pl-k">final</span> result <span class="pl-k">=</span> <span class="pl-k">await</span> client.<span class="pl-en">subscribeRequest</span>(
+      <span class="pl-c1">Wiro</span>.<span class="pl-en">model</span>(
+        <span class="pl-s">'black-forest-labs/flux-2-pro'</span>,
+        parameters<span class="pl-k">:</span> {
+          <span class="pl-s">'prompt'</span><span class="pl-k">:</span> <span class="pl-s">'A cinematic mountain lake'</span>,
+          <span class="pl-s">'width'</span><span class="pl-k">:</span> <span class="pl-c1">1024</span>,
+          <span class="pl-s">'height'</span><span class="pl-k">:</span> <span class="pl-c1">1024</span>,
+        },
+      ),
+    );
+    <span class="pl-en">print</span>(result.task.outputs.first.url);
+  } <span class="pl-k">finally</span> {
+    client.<span class="pl-en">close</span>();
+  }
+}</pre></div>
+<h2 dir="auto" id="which-call-do-i-need">Which call do I need?</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>I want to...</th>
+<th>Call</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generate with a supported model</td>
+<td><code class="notranslate">client.subscribeRequest(Wiro.flux2Pro(...))</code></td>
+</tr>
+<tr>
+<td>Run any other model</td>
+<td><code class="notranslate">client.subscribeRequest(Wiro.model('owner/model', parameters: {...}))</code></td>
+</tr>
+<tr>
+<td>Find a model</td>
+<td><code class="notranslate">client.searchModels(search: '...')</code> or <code class="notranslate">client.explore()</code></td>
+</tr>
+<tr>
+<td>See what parameters a model takes</td>
+<td><code class="notranslate">client.getModelSchema(...)</code>, then <code class="notranslate">schema.validate(params)</code></td>
+</tr>
+<tr>
+<td>Watch progress</td>
+<td><code class="notranslate">onUpdate:</code> callback, or <code class="notranslate">client.subscribeStream(...)</code></td>
+</tr>
+<tr>
+<td>Send a device file to a model</td>
+<td><code class="notranslate">WiroFileInput.bytes(bytes, fileName: '...')</code>, uploaded automatically</td>
+</tr>
+<tr>
+<td>Cancel or stop a task</td>
+<td><code class="notranslate">client.cancelTask(...)</code> / <code class="notranslate">client.killTask(...)</code></td>
+</tr>
+<tr>
+<td>Keep API keys off the device</td>
+<td><code class="notranslate">WiroClient.proxied(proxyUri: ...)</code></td>
+</tr>
+<tr>
+<td>Handle failure</td>
+<td><code class="notranslate">switch</code> on <code class="notranslate">WiroTaskSuccess</code> / <code class="notranslate">WiroTaskFailure(:reason)</code></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2 dir="auto" id="run-a-model-with-a-typed-request">Run a model with a typed request</h2>
+<p dir="auto">Popular models ship with typed request classes, so required parameters and<br>
+select options are checked at compile time and value ranges are checked by<br>
+assertions in debug builds:</p>
+<p align="center" dir="auto">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Dart-QuickStart/blob/main/doc/images/carbon-typed-request.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Dart-QuickStart/main/doc/images/carbon-typed-request.png" alt="Compile-time checked typed request with Wiro.flux2Pro" width="720" style="max-width: 100%;"></a>
+</p>
+<div class="highlight highlight-source-dart" dir="auto"><pre class="notranslate"><span class="pl-k">final</span> result <span class="pl-k">=</span> <span class="pl-k">await</span> client.<span class="pl-en">subscribeRequest</span>(
+  <span class="pl-c1">Wiro</span>.<span class="pl-en">flux2Pro</span>(
+    prompt<span class="pl-k">:</span> <span class="pl-s">'A cinematic mountain lake at sunrise'</span>,
+    width<span class="pl-k">:</span> <span class="pl-c1">1024</span>,
+    height<span class="pl-k">:</span> <span class="pl-c1">1024</span>,
+    outputFormat<span class="pl-k">:</span> <span class="pl-c1">WiroFlux2ProOutputFormat</span>.png,
+  ),
+);
+
+<span class="pl-k">switch</span> (result) {
+  <span class="pl-k">case</span> <span class="pl-c1">WiroTaskSuccess</span>(<span class="pl-k">:</span><span class="pl-k">final</span> task)<span class="pl-k">:</span>
+    <span class="pl-en">print</span>(task.outputs.first.url);
+  <span class="pl-k">case</span> <span class="pl-c1">WiroTaskFailure</span>(<span class="pl-k">:</span><span class="pl-k">final</span> reason)<span class="pl-k">:</span>
+    <span class="pl-en">print</span>(<span class="pl-s">'Failed: ${<span class="pl-v">reason</span>.<span class="pl-v">name</span>}'</span>);
+}</pre></div>
+<p dir="auto">Type <code class="notranslate">Wiro.</code> in your IDE to list every model with a typed request;<br>
+each factory (such as <code class="notranslate">Wiro.flux2Pro</code>) returns the matching request<br>
+class. Typed requests generated from the live Wiro AI schemas are included for:</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Category</th>
+<th>Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image</td>
+<td>FLUX.2 Pro, GPT Image 2, Nano Banana Pro, Seedream v4, Grok Imagine Image</td>
+</tr>
+<tr>
+<td>Video</td>
+<td>Runway Gen-4.5, Seedance 2.0, Kling V3, Veo 3.1, Hailuo 2.3 Fast, Grok Imagine Video</td>
+</tr>
+<tr>
+<td>Music</td>
+<td>Lyria 3</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">Any other model runs through <code class="notranslate">Wiro.model</code> as shown below. <code class="notranslate">runRequest</code><br>
+is the non-tracking equivalent of <code class="notranslate">subscribeRequest</code>.</p>
+<p dir="auto">Typed requests are generated from the live Wiro AI model schemas with an<br>
+internal tool, so coverage grows with SDK releases. Missing a model?<br>
+<a href="https://github.com/wiroai/Dart-QuickStart/issues">Open an issue</a> to request a<br>
+typed binding, or implement <code class="notranslate">WiroModelRequest</code> yourself in the meantime.</p>
+<h2 dir="auto" id="run-any-model-with-wiromodel">Run any model with <code class="notranslate">Wiro.model</code></h2>
+<p dir="auto">Models without a typed factory run through <code class="notranslate">Wiro.model</code> with a dynamic<br>
+parameter map, so every model works even before the SDK ships a binding<br>
+for it. Responses are fully typed.</p>
+<div class="highlight highlight-source-dart" dir="auto"><pre class="notranslate"><span class="pl-k">final</span> result <span class="pl-k">=</span> <span class="pl-k">await</span> client.<span class="pl-en">subscribeRequest</span>(
+  <span class="pl-c1">Wiro</span>.<span class="pl-en">model</span>(
+    <span class="pl-s">'black-forest-labs/flux-2-pro'</span>,
+    parameters<span class="pl-k">:</span> {
+      <span class="pl-s">'prompt'</span><span class="pl-k">:</span> <span class="pl-s">'A cinematic mountain lake at sunrise'</span>,
+      <span class="pl-s">'width'</span><span class="pl-k">:</span> <span class="pl-c1">1024</span>,
+      <span class="pl-s">'height'</span><span class="pl-k">:</span> <span class="pl-c1">1024</span>,
+    },
+  ),
+  trackingMode<span class="pl-k">:</span> <span class="pl-c1">WiroTaskTrackingMode</span>.webSocket,
+  onUpdate<span class="pl-k">:</span> (update) {
+    <span class="pl-k">switch</span> (update) {
+      <span class="pl-k">case</span> <span class="pl-c1">WiroTaskEventUpdate</span>(
+        event<span class="pl-k">:</span> <span class="pl-c1">WiroSocketMessageEvent</span>(
+          payload<span class="pl-k">:</span> <span class="pl-c1">WiroProgressPayload</span>(<span class="pl-k">:</span><span class="pl-k">final</span> progress),
+        ),
+      )<span class="pl-k">:</span>
+        <span class="pl-en">print</span>(<span class="pl-s">'${<span class="pl-v">update</span>.<span class="pl-v">statusValue</span>}: ${<span class="pl-v">progress</span>.<span class="pl-v">percentage</span>}'</span>);
+      <span class="pl-k">case</span> _<span class="pl-k">:</span>
+        <span class="pl-en">print</span>(update.statusValue);
+    }
+  },
+);
+
+<span class="pl-k">for</span> (<span class="pl-k">final</span> output <span class="pl-k">in</span> result.task.outputs) {
+  <span class="pl-en">print</span>(output.url);
+}</pre></div>
+<p dir="auto"><code class="notranslate">subscribe</code> returns <code class="notranslate">WiroTaskSuccess</code> or <code class="notranslate">WiroTaskFailure</code>, both carrying the<br>
+terminal task. <code class="notranslate">trackingMode</code> can be <code class="notranslate">polling</code> or <code class="notranslate">webSocket</code>; polling is the<br>
+default. Both modes emit sealed <code class="notranslate">WiroTaskUpdate</code> variants. Failures expose a<br>
+typed <code class="notranslate">reason</code>, and <code class="notranslate">result.task.elapsed</code> reports fractional task duration as<br>
+a <code class="notranslate">Duration</code>.</p>
+<p dir="auto">Use the lower-level API when submission and tracking must be managed separately:</p>
+<div class="highlight highlight-source-dart" dir="auto"><pre class="notranslate"><span class="pl-k">final</span> run <span class="pl-k">=</span> <span class="pl-k">await</span> client.<span class="pl-en">runModel</span>(
+  <span class="pl-c1">WiroModelId</span>(<span class="pl-s">'google'</span>, <span class="pl-s">'veo3-1'</span>),
+  parameters<span class="pl-k">:</span> {
+    <span class="pl-s">'prompt'</span><span class="pl-k">:</span> <span class="pl-s">'A cinematic mountain lake'</span>,
+    <span class="pl-s">'durationSeconds'</span><span class="pl-k">:</span> <span class="pl-s">'4'</span>,
+  },
+  callbackUrl<span class="pl-k">:</span> <span class="pl-c1">Uri</span>.<span class="pl-en">parse</span>(<span class="pl-s">'https://example.com/wiro-webhook'</span>),
+);
+<span class="pl-k">final</span> taskToken <span class="pl-k">=</span> run.taskToken;
+<span class="pl-k">if</span> (taskToken <span class="pl-k">==</span> <span class="pl-c1">null</span>) {
+  <span class="pl-k">throw</span> <span class="pl-c1">StateError</span>(<span class="pl-s">'Wiro did not return a task token.'</span>);
+}
+<span class="pl-k">final</span> task <span class="pl-k">=</span> <span class="pl-k">await</span> client.<span class="pl-en">waitForTask</span>(taskToken);</pre></div>
+<p dir="auto">Server-derived model IDs, task IDs, task tokens, and socket event IDs are<br>
+nullable when the Wiro AI API omits or returns invalid identifier fields. Identifiers<br>
+created explicitly with <code class="notranslate">WiroModelId</code>, <code class="notranslate">WiroTaskId</code>, or <code class="notranslate">WiroTaskToken</code> remain<br>
+strictly validated.</p>
+<p dir="auto">Get the accepted parameters before running a model:</p>
+<div class="highlight highlight-source-dart" dir="auto"><pre class="notranslate"><span class="pl-k">final</span> schema <span class="pl-k">=</span> <span class="pl-k">await</span> client.<span class="pl-en">getModelSchema</span>(
+  <span class="pl-c1">WiroModelId</span>(<span class="pl-s">'google'</span>, <span class="pl-s">'veo3-1'</span>),
+);
+<span class="pl-k">for</span> (<span class="pl-k">final</span> parameter <span class="pl-k">in</span> schema.parameters) {
+  <span class="pl-en">print</span>(<span class="pl-s">'${<span class="pl-v">parameter</span>.<span class="pl-v">id</span>}: ${<span class="pl-v">parameter</span>.<span class="pl-v">runtimeType</span>}'</span>);
+}
+schema.<span class="pl-en">validate</span>({
+  <span class="pl-s">'prompt'</span><span class="pl-k">:</span> <span class="pl-s">'A cinematic mountain lake'</span>,
+  <span class="pl-s">'durationSeconds'</span><span class="pl-k">:</span> <span class="pl-s">'4'</span>,
+});</pre></div>
+<p dir="auto">Select, number, and text parameter variants expose typed <code class="notranslate">defaultValue</code><br>
+fields. Unknown variants preserve dynamic defaults, while file parameter<br>
+defaults remain available through <code class="notranslate">parameter.raw['default']</code>.</p>
+<h2 dir="auto" id="file-inputs-and-uploads">File inputs and uploads</h2>
+<p dir="auto">File parameters take <code class="notranslate">WiroFileInput</code> values. Wrap an already-hosted file<br>
+with <code class="notranslate">WiroFileInput.url</code>, or pass raw device bytes (a gallery pick, a<br>
+camera shot) with <code class="notranslate">WiroFileInput.bytes</code>. The client uploads the bytes<br>
+automatically and swaps in the URL before the model runs:</p>
+<div class="highlight highlight-source-dart" dir="auto"><pre class="notranslate"><span class="pl-k">final</span> result <span class="pl-k">=</span> <span class="pl-k">await</span> client.<span class="pl-en">subscribeRequest</span>(
+  <span class="pl-c1">Wiro</span>.<span class="pl-en">model</span>(
+    <span class="pl-s">'wiroai/flux-upscaler'</span>,
+    parameters<span class="pl-k">:</span> {
+      <span class="pl-s">'inputImage'</span><span class="pl-k">:</span> [
+        <span class="pl-c1">WiroFileInput</span>.<span class="pl-en">bytes</span>(
+          <span class="pl-k">await</span> image.<span class="pl-en">readAsBytes</span>(),
+          fileName<span class="pl-k">:</span> <span class="pl-s">'photo.jpg'</span>,
+        ),
+      ],
+    },
+  ),
+);
+
+<span class="pl-en">print</span>(result.task.outputs.first.url);</pre></div>
+<p dir="auto">The same works inside dynamic parameter maps:</p>
+<div class="highlight highlight-source-dart" dir="auto"><pre class="notranslate"><span class="pl-k">final</span> run <span class="pl-k">=</span> <span class="pl-k">await</span> client.<span class="pl-en">runModel</span>(
+  <span class="pl-c1">WiroModelId</span>(<span class="pl-s">'google'</span>, <span class="pl-s">'veo3-1'</span>),
+  parameters<span class="pl-k">:</span> {
+    <span class="pl-s">'prompt'</span><span class="pl-k">:</span> <span class="pl-s">'Animate this image'</span>,
+    <span class="pl-s">'inputImage'</span><span class="pl-k">:</span> [
+      <span class="pl-c1">WiroFileInput</span>.<span class="pl-en">url</span>(<span class="pl-c1">Uri</span>.<span class="pl-en">parse</span>(<span class="pl-s">'https://example.com/input.jpg'</span>)),
+    ],
+    <span class="pl-s">'durationSeconds'</span><span class="pl-k">:</span> <span class="pl-s">'4'</span>,
+  },
+);</pre></div>
+<p dir="auto">To manage uploads yourself, call <code class="notranslate">client.uploadFile(bytes, fileName: ...)</code><br>
+and pass the returned URL, or use <code class="notranslate">uploadStream</code> with an exact<br>
+<code class="notranslate">contentLength</code> for large files. Streaming avoids SDK-side buffering on<br>
+supported runtimes.</p>
+<h2 dir="auto" id="observe-task-progress">Observe task progress</h2>
+<p dir="auto">Pass <code class="notranslate">onUpdate</code> or use WebSocket tracking to watch a run live:</p>
+<div class="highlight highlight-source-dart" dir="auto"><pre class="notranslate"><span class="pl-k">final</span> result <span class="pl-k">=</span> <span class="pl-k">await</span> client.<span class="pl-en">subscribeRequest</span>(
+  <span class="pl-c1">Wiro</span>.<span class="pl-en">runwayGen45</span>(
+    prompt<span class="pl-k">:</span> <span class="pl-s">'A drone shot over misty mountains'</span>,
+    ratio<span class="pl-k">:</span> <span class="pl-c1">WiroRunwayGen45Ratio</span>.landscape16x9,
+    duration<span class="pl-k">:</span> <span class="pl-c1">2</span>,
+  ),
+  trackingMode<span class="pl-k">:</span> <span class="pl-c1">WiroTaskTrackingMode</span>.webSocket,
+  onUpdate<span class="pl-k">:</span> (update) {
+    <span class="pl-en">print</span>(update.statusValue);
+  },
+);</pre></div>
+<p dir="auto">Use <code class="notranslate">subscribeStream</code> when an <code class="notranslate">await for</code> loop is more convenient than a<br>
+callback:</p>
+<div class="highlight highlight-source-dart" dir="auto"><pre class="notranslate"><span class="pl-k">await</span> <span class="pl-k">for</span> (<span class="pl-k">final</span> update <span class="pl-k">in</span> client.<span class="pl-en">subscribeStream</span>(
+  <span class="pl-c1">WiroModelId</span>(<span class="pl-s">'black-forest-labs'</span>, <span class="pl-s">'flux-2-pro'</span>),
+  parameters<span class="pl-k">:</span> {<span class="pl-s">'prompt'</span><span class="pl-k">:</span> <span class="pl-s">'A cinematic mountain lake'</span>},
+)) {
+  <span class="pl-en">print</span>(update.statusValue);
+}</pre></div>
+<p dir="auto">Use WebSocket for realtime lifecycle, progress, LLM, and binary events:</p>
+<div class="highlight highlight-source-dart" dir="auto"><pre class="notranslate"><span class="pl-k">await</span> <span class="pl-k">for</span> (<span class="pl-k">final</span> event <span class="pl-k">in</span> client.<span class="pl-en">watchTaskSocket</span>(taskToken)) {
+  <span class="pl-k">switch</span> (event) {
+    <span class="pl-k">case</span> <span class="pl-c1">WiroSocketMessageEvent</span>(
+      <span class="pl-k">:</span><span class="pl-k">final</span> statusValue,
+      <span class="pl-k">:</span><span class="pl-k">final</span> payload,
+    )<span class="pl-k">:</span>
+      <span class="pl-k">switch</span> (payload) {
+        <span class="pl-k">case</span> <span class="pl-c1">WiroLogPayload</span>(<span class="pl-k">:</span><span class="pl-k">final</span> message)<span class="pl-k">:</span>
+          <span class="pl-en">print</span>(<span class="pl-s">'$<span class="pl-v">statusValue</span>: $<span class="pl-v">message</span>'</span>);
+        <span class="pl-k">case</span> <span class="pl-c1">WiroProgressPayload</span>(<span class="pl-k">:</span><span class="pl-k">final</span> progress)<span class="pl-k">:</span>
+          <span class="pl-en">print</span>(<span class="pl-s">'$<span class="pl-v">statusValue</span>: ${<span class="pl-v">progress</span>.<span class="pl-v">percentage</span>}'</span>);
+        <span class="pl-k">case</span> <span class="pl-c1">WiroOutputsPayload</span>(<span class="pl-k">:</span><span class="pl-k">final</span> outputs)<span class="pl-k">:</span>
+          <span class="pl-k">for</span> (<span class="pl-k">final</span> output <span class="pl-k">in</span> outputs) {
+            <span class="pl-en">print</span>(output.url);
+          }
+        <span class="pl-k">case</span> <span class="pl-c1">WiroUnknownPayload</span>()<span class="pl-k">:</span>
+          <span class="pl-en">print</span>(<span class="pl-s">'$<span class="pl-v">statusValue</span>: unknown payload'</span>);
+      }
+    <span class="pl-k">case</span> <span class="pl-c1">WiroSocketBinaryEvent</span>(<span class="pl-k">:</span><span class="pl-k">final</span> bytes)<span class="pl-k">:</span>
+      <span class="pl-en">print</span>(<span class="pl-s">'Received ${<span class="pl-v">bytes</span>.<span class="pl-v">length</span>} realtime bytes'</span>);
+  }
+}</pre></div>
+<p dir="auto">The socket uses the Wiro AI <code class="notranslate">task_info</code> protocol and closes after<br>
+<code class="notranslate">task_postprocess_end</code> or <code class="notranslate">task_cancel</code>. Binary frames are preserved for<br>
+realtime audio models.</p>
+<p dir="auto">Polling remains available as a fallback:</p>
+<div class="highlight highlight-source-dart" dir="auto"><pre class="notranslate"><span class="pl-k">await</span> <span class="pl-k">for</span> (<span class="pl-k">final</span> task <span class="pl-k">in</span> client.<span class="pl-en">watchTask</span>(
+  taskToken,
+  timeout<span class="pl-k">:</span> <span class="pl-k">const</span> <span class="pl-c1">Duration</span>(minutes<span class="pl-k">:</span> <span class="pl-c1">10</span>),
+)) {
+  <span class="pl-en">print</span>(task.statusValue);
+}</pre></div>
+<p dir="auto">For a definitive success check, fetch the terminal task and verify<br>
+<code class="notranslate">task.isSuccessful</code>.</p>
+<h2 dir="auto" id="cancellation">Cancellation</h2>
+<div class="highlight highlight-source-dart" dir="auto"><pre class="notranslate"><span class="pl-k">final</span> cancellationToken <span class="pl-k">=</span> <span class="pl-c1">WiroCancellationToken</span>();
+
+<span class="pl-k">final</span> request <span class="pl-k">=</span> client.<span class="pl-en">searchModels</span>(
+  search<span class="pl-k">:</span> <span class="pl-s">'image'</span>,
+  cancellationToken<span class="pl-k">:</span> cancellationToken,
+);
+
+cancellationToken.<span class="pl-en">cancel</span>();
+<span class="pl-k">await</span> request;</pre></div>
+<p dir="auto">Cancelled requests throw <code class="notranslate">WiroRequestCancelledException</code>.<br>
+Cancelling a <code class="notranslate">subscribeStream</code> subscription also stops its active polling or<br>
+WebSocket tracking without emitting a cancellation error.</p>
+<h2 dir="auto" id="retries-timeouts-and-logging">Retries, timeouts, and logging</h2>
+<div class="highlight highlight-source-dart" dir="auto"><pre class="notranslate"><span class="pl-k">final</span> client <span class="pl-k">=</span> <span class="pl-c1">WiroClient</span>(
+  apiKey<span class="pl-k">:</span> <span class="pl-s">'your-api-key'</span>,
+  requestTimeout<span class="pl-k">:</span> <span class="pl-k">const</span> <span class="pl-c1">Duration</span>(seconds<span class="pl-k">:</span> <span class="pl-c1">20</span>),
+  pollInterval<span class="pl-k">:</span> <span class="pl-k">const</span> <span class="pl-c1">Duration</span>(seconds<span class="pl-k">:</span> <span class="pl-c1">2</span>),
+  retryPolicy<span class="pl-k">:</span> <span class="pl-k">const</span> <span class="pl-c1">WiroRetryPolicy</span>(
+    maxRetries<span class="pl-k">:</span> <span class="pl-c1">3</span>,
+    initialDelay<span class="pl-k">:</span> <span class="pl-c1">Duration</span>(milliseconds<span class="pl-k">:</span> <span class="pl-c1">500</span>),
+  ),
+  logger<span class="pl-k">:</span> (event) {
+    <span class="pl-en">print</span>(<span class="pl-s">'${<span class="pl-v">event</span>.<span class="pl-v">level</span>.<span class="pl-v">name</span>}: ${<span class="pl-v">event</span>.<span class="pl-v">message</span>}'</span>);
+  },
+);</pre></div>
+<p dir="auto">Automatic retries apply only to safe read-like operations such as model and<br>
+task lookup. Model runs and file uploads are not retried because they can<br>
+create duplicate billable work. Rate-limit retries respect <code class="notranslate">Retry-After</code>.</p>
+<p dir="auto">Logs never contain API keys, secrets, headers, or request bodies.<br>
+Malformed nested JSON ignored during response parsing is reported as a debug<br>
+log event instead of through global diagnostics state.</p>
+<h2 dir="auto" id="error-handling">Error handling</h2>
+<div class="highlight highlight-source-dart" dir="auto"><pre class="notranslate"><span class="pl-k">try</span> {
+  <span class="pl-k">await</span> client.<span class="pl-en">explore</span>();
+} <span class="pl-k">on</span> <span class="pl-c1">WiroApiResultException</span> <span class="pl-k">catch</span> (error) {
+  <span class="pl-c">// HTTP succeeded, but Wiro rejected the operation.</span>
+  <span class="pl-en">print</span>(<span class="pl-s">'${<span class="pl-v">error</span>.<span class="pl-v">code</span>}: ${<span class="pl-v">error</span>.<span class="pl-v">message</span>}'</span>);
+} <span class="pl-k">on</span> <span class="pl-c1">WiroAuthenticationException</span> {
+  <span class="pl-c">// Invalid or expired credentials.</span>
+} <span class="pl-k">on</span> <span class="pl-c1">WiroRateLimitException</span> <span class="pl-k">catch</span> (error) {
+  <span class="pl-en">print</span>(<span class="pl-s">'Retry after: ${<span class="pl-v">error</span>.<span class="pl-v">retryAfter</span>}'</span>);
+} <span class="pl-k">on</span> <span class="pl-c1">WiroSchemaValidationException</span> <span class="pl-k">catch</span> (error) {
+  <span class="pl-en">print</span>(error.issues);
+} <span class="pl-k">on</span> <span class="pl-c1">WiroValidationException</span> <span class="pl-k">catch</span> (error) {
+  <span class="pl-en">print</span>(error.message);
+} <span class="pl-k">on</span> <span class="pl-c1">WiroTimeoutException</span> {
+  <span class="pl-c">// Request or task polling timed out.</span>
+} <span class="pl-k">on</span> <span class="pl-c1">WiroNetworkException</span> {
+  <span class="pl-c">// The API could not be reached.</span>
+} <span class="pl-k">on</span> <span class="pl-c1">WiroUnknownApiException</span> <span class="pl-k">catch</span> (error) {
+  <span class="pl-en">print</span>(<span class="pl-s">'${<span class="pl-v">error</span>.<span class="pl-v">statusCode</span>}: ${<span class="pl-v">error</span>.<span class="pl-v">message</span>}'</span>);
+}</pre></div>
+<p dir="auto">The Wiro AI API can report application-level failures with HTTP 2xx and<br>
+<code class="notranslate">result: false</code>.<br>
+The SDK converts these responses to <code class="notranslate">WiroApiResultException</code>.</p>
+<h2 dir="auto" id="authentication">Authentication</h2>
+<p dir="auto">API key authentication:</p>
+<div class="highlight highlight-source-dart" dir="auto"><pre class="notranslate"><span class="pl-k">final</span> client <span class="pl-k">=</span> <span class="pl-c1">WiroClient</span>(apiKey<span class="pl-k">:</span> <span class="pl-s">'your-api-key'</span>);</pre></div>
+<p dir="auto">Signature-based authentication:</p>
+<div class="highlight highlight-source-dart" dir="auto"><pre class="notranslate"><span class="pl-k">final</span> client <span class="pl-k">=</span> <span class="pl-c1">WiroClient</span>(
+  apiKey<span class="pl-k">:</span> <span class="pl-s">'your-api-key'</span>,
+  apiSecret<span class="pl-k">:</span> <span class="pl-s">'your-api-secret'</span>,
+);</pre></div>
+<p dir="auto">The configured credentials must match the authentication type selected for<br>
+the Wiro AI project.</p>
+<p dir="auto">Never embed long-lived Wiro AI credentials in a production mobile application.<br>
+Use a proxied client so credentials stay on your backend:</p>
+<div class="highlight highlight-source-dart" dir="auto"><pre class="notranslate"><span class="pl-k">final</span> client <span class="pl-k">=</span> <span class="pl-c1">WiroClient</span>.<span class="pl-en">proxied</span>(
+  proxyUri<span class="pl-k">:</span> <span class="pl-c1">Uri</span>.<span class="pl-en">parse</span>(<span class="pl-s">'https://your-backend.example.com/wiro'</span>),
+  headers<span class="pl-k">:</span> {<span class="pl-s">'Authorization'</span><span class="pl-k">:</span> <span class="pl-s">'Bearer $<span class="pl-v">sessionToken</span>'</span>},
+);</pre></div>
+<p dir="auto">The device sends requests to your proxy without any Wiro AI auth headers. The proxy<br>
+must accept the same REST paths as the Wiro AI API, attach <code class="notranslate">x-api-key</code> (and<br>
+signature headers when required), and forward the request to<br>
+<code class="notranslate">https://api.wiro.ai/v1</code>. Task WebSocket streams still connect directly to<br>
+Wiro AI because they authenticate with per-task tokens instead of API<br>
+credentials.</p>
+<h2 dir="auto" id="examples">Examples</h2>
+<p dir="auto">The <code class="notranslate">example</code> directory contains:</p>
+<ul dir="auto">
+<li>A Flutter iOS and Android text-to-image app built on <code class="notranslate">Wiro.flux2Pro</code></li>
+<li><code class="notranslate">bin/generate_image.dart</code> using Flux 2 Pro</li>
+<li><code class="notranslate">bin/generate_video.dart</code> using Runway Gen-4.5 with streamed task progress</li>
+<li><code class="notranslate">bin/generate_dynamic.dart</code> running a model through <code class="notranslate">Wiro.model</code> after<br>
+<code class="notranslate">schema.validate</code></li>
+<li><code class="notranslate">bin/upscale_image.dart</code> sending a file input from a public URL or local<br>
+bytes</li>
+</ul>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate"><span class="pl-c1">cd</span> example
+
+WIRO_API_KEY=your-api-key dart run bin/generate_image.dart
+WIRO_API_KEY=your-api-key dart run bin/generate_video.dart
+WIRO_API_KEY=your-api-key dart run bin/generate_dynamic.dart
+WIRO_API_KEY=your-api-key dart run bin/upscale_image.dart ./photo.jpg
+
+flutter run --dart-define=WIRO_API_KEY=your-api-key</pre></div>
+<p dir="auto">The <code class="notranslate">dart-define</code> approach is only for local demonstration. Build-time values<br>
+can be extracted from a distributed mobile application.</p>
+<h2 dir="auto" id="agent-skill">Agent skill</h2>
+<p dir="auto">This repository includes an agent skill, <code class="notranslate">wiro-flutter</code>, in <a href="https://github.com/wiroai/Dart-QuickStart/blob/main/skills/wiro-flutter/SKILL.md"><code class="notranslate">skills/wiro-flutter/SKILL.md</code></a>. It shows coding agents such as Claude Code, Codex and Cursor how to use this SDK in Flutter and Dart apps. Add it to your agent with:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npx skills add wiroai/Dart-QuickStart --skill wiro-flutter</pre></div>
+<h2 dir="auto" id="documentation">Documentation</h2>
+<ul dir="auto">
+<li>Product docs: <a href="https://wiro.ai/docs">https://wiro.ai/docs</a></li>
+<li>Available models: <a href="https://wiro.ai/models">https://wiro.ai/models</a></li>
+<li>Changelog: <a href="https://github.com/wiroai/Dart-QuickStart/blob/main/CHANGELOG.md"><code class="notranslate">CHANGELOG.md</code></a></li>
+<li>Security policy: <a href="https://github.com/wiroai/Dart-QuickStart/blob/main/SECURITY.md"><code class="notranslate">SECURITY.md</code></a></li>
+<li>Contributing guide: <a href="https://github.com/wiroai/Dart-QuickStart/blob/main/CONTRIBUTING.md"><code class="notranslate">CONTRIBUTING.md</code></a></li>
+</ul>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
+<td>Official MCP server for Wiro AI, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>Vercel AI SDK provider for chat, images, speech, transcription and video, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-llm"><code class="notranslate">@wiro-ai/wiro-llm</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Wiro AI extension for Safari on the Mac</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Cursor, Claude Code, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills">Wiro-Skills</a></td>
+<td>Agent skills for images, image edits, video, music, speech, transcripts, 3D and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>Wiro AI SDK for React Native and Expo, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><code class="notranslate">@wiro-ai/wiro-react-native</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-Realtime">Swift-Realtime</a></td>
+<td>Realtime voice AI example for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin-Realtime</a></td>
+<td>Realtime voice AI example for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-Realtime">Dart-Realtime</a></td>
+<td>Realtime voice AI example for Flutter</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-Realtime">ReactNative-Realtime</a></td>
+<td>Realtime voice AI example for React Native</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>One Wiro AI node for n8n with a searchable model picker, <a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><code class="notranslate">@wiro-ai/n8n-nodes-wiro</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI plugins for Dify: the LLM gateway as a model provider, plus image, video, speech and music tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI">Wiro-ComfyUI</a></td>
+<td>Wiro AI nodes for ComfyUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Zed">Wiro-Zed</a></td>
+<td>Wiro AI MCP server extension for Zed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Action for Wiro AI models and the LLM gateway, <a href="https://github.com/marketplace/actions/wiro-ai-action">on the GitHub Marketplace</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Raycast">Wiro-Raycast</a></td>
+<td>Wiro AI extension for Raycast: image and video generation, LLM chat and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress: featured images, image edits, alt text, narration and SEO suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Obsidian">Wiro-Obsidian</a></td>
+<td>Wiro AI plugin for Obsidian: images, video, speech, music, transcription and text tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Blender">Wiro-Blender</a></td>
+<td>Wiro AI add-on for Blender: text to 3D, image to 3D and textures</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Figma">Wiro-Figma</a></td>
+<td>Wiro AI plugin for Figma: images, vectors, image edits and text</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js starter for Wiro AI: Playground, image, video and audio tools, and LLM chat, ready for Vercel and Railway</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Docs">Wiro-Docs</a></td>
+<td>Source of the Wiro AI API docs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto">MIT. See <a href="https://github.com/wiroai/Dart-QuickStart/blob/main/LICENSE">LICENSE</a>.</p>
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67"><img loading="lazy" src="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67" alt="Wiro AI koala mascot" width="80" data-canonical-src="https://wiro.ai/images/koala/accent-heavy-koala.png" style="max-width: 100%;"></a>
+</div>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li><li><a href="/projects/reactnative-quickstart/">ReactNative-QuickStart</a></li><li><a href="/projects/wiro-mcp/">Wiro-MCP</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/swift-realtime/">Swift-Realtime</a></li><li><a href="/projects/kotlin-realtime/">Kotlin-Realtime</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

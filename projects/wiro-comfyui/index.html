@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiro-ComfyUI: Wiro AI open source</title>
+<meta name="description" content="Wiro AI nodes for ComfyUI: run 1,000+ image, video, audio and LLM models from your graphs, with native IMAGE, VIDEO and AUDIO outputs.">
+<link rel="canonical" href="https://wiroai.github.io/projects/wiro-comfyui/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="Wiro-ComfyUI: Wiro AI open source">
+<meta property="og:description" content="Wiro AI nodes for ComfyUI: run 1,000+ image, video, audio and LLM models from your graphs, with native IMAGE, VIDEO and AUDIO outputs.">
+<meta property="og:url" content="https://wiroai.github.io/projects/wiro-comfyui/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "Wiro-ComfyUI", "description": "Wiro AI nodes for ComfyUI: run 1,000+ image, video, audio and LLM models from your graphs, with native IMAGE, VIDEO and AUDIO outputs.", "codeRepository": "https://github.com/wiroai/Wiro-ComfyUI", "url": "https://wiroai.github.io/projects/wiro-comfyui/", "programmingLanguage": "Python", "license": "https://api.github.com/licenses/mit", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#creative">Creative and design tools</a></p>
+<section class="project-head">
+  <h1>Wiro-ComfyUI</h1>
+  <p class="lead">Wiro AI nodes for ComfyUI: run 1,000+ image, video, audio and LLM models from your graphs, with native IMAGE, VIDEO and AUDIO outputs.</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/Wiro-ComfyUI">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai">Website</a></p>
+</section>
+<article class="markdown">
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-ComfyUI/main/.github/assets/wiro-logo.png"><img src="https://raw.githubusercontent.com/wiroai/Wiro-ComfyUI/main/.github/assets/wiro-logo.png" alt="Wiro AI" width="240" style="max-width: 100%;"></a>
+<h2 dir="auto" id="wiro-ai-nodes-for-comfyui">Wiro AI Nodes for ComfyUI</h2>
+<p dir="auto">Run Wiro AI image, video, audio, 3D and LLM models inside ComfyUI: category nodes with model menus filled from the Wiro AI catalog of 1,000+ models, an LLM node, workflow runs, and ready nodes for Nano Banana Pro, GPT Image 2, Seedream 4.5, Veo 3.1, Kling 3, Seedance and ElevenLabs.</p>
+<p dir="auto"><a href="https://www.comfy.org/"><img loading="lazy" src="https://camo.githubusercontent.com/1815bab76a6f7e28b57572633313bd140622f2038009da9a458cb3a697a1eeeb/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f436f6d667955492d637573746f6d2532306e6f6465732d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="ComfyUI custom nodes" data-canonical-src="https://img.shields.io/badge/ComfyUI-custom%20nodes-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="#install"><img loading="lazy" src="https://camo.githubusercontent.com/8c3e24d10449da674ff6068f011127bc0cd009828164a44fa6eb7104f1a95c06/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f507974686f6e2d332e31302532422d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="Python 3.10+" data-canonical-src="https://img.shields.io/badge/Python-3.10%2B-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-ComfyUI/actions/workflows/tests.yml"><img loading="lazy" src="https://camo.githubusercontent.com/d9fbec603d32c58eb01e22e42503b33ba506bc1efd088cc32ce285e5d9982df4/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f7769726f61692f5769726f2d436f6d667955492f74657374732e796d6c3f6272616e63683d6d61696e267374796c653d666f722d7468652d626164676526636f6c6f723d313131313131266c6162656c3d7465737473" alt="Tests" data-canonical-src="https://img.shields.io/github/actions/workflow/status/wiroai/Wiro-ComfyUI/tests.yml?branch=main&amp;style=for-the-badge&amp;color=111111&amp;label=tests" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/LICENSE"><img loading="lazy" src="https://camo.githubusercontent.com/9b0dcc545c9e697315b8d16f4363715f0cc54941456ba778cbc802bb0ef11275/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="License: MIT" data-canonical-src="https://img.shields.io/badge/license-MIT-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a></p>
+<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67"><img loading="lazy" src="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67" alt="Wiro AI koala mascot" width="60" data-canonical-src="https://wiro.ai/images/koala/accent-heavy-koala.png" style="max-width: 100%;"></a>
+</div>
+<p dir="auto">Each node sends a task to the <a href="https://wiro.ai/docs/run-a-model">Wiro AI API</a>, waits for it, and hands the result back as a native ComfyUI value: <code class="notranslate">IMAGE</code>, <code class="notranslate">MASK</code>, <code class="notranslate">VIDEO</code>, <code class="notranslate">AUDIO</code>, a 3D model or text. Images, audio and video from your graph are uploaded to the model for you, so a Wiro node sits next to Load Image, Save Video, Preview Audio or Preview 3D (Advanced) like any other node. Each node shows the price of its current settings on its title bar, and what the last run cost once it has run. Nothing runs on your GPU, and each run is billed to your Wiro AI account at the model's price.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/docs/screenshots/image_nodes.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-ComfyUI/main/docs/screenshots/image_nodes.png" alt="Wiro category nodes: text to image, image edit, background removal and upscale" style="max-width: 100%;"></a></p>
+<h2 dir="auto" id="category-nodes">Category nodes</h2>
+<p dir="auto">Pick a model from the menu and the node shows that model's own settings, with the choices and defaults from its Wiro AI model page. The inputs every model of the category shares (prompt, reference images, frames, audio) stay at the top of the node, so links and text survive a model change.</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Node</th>
+<th>What it does</th>
+<th>Inputs</th>
+<th>Outputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Wiro Text to Image</strong></td>
+<td>Images from a prompt, with any text-to-image model in the catalog</td>
+<td>prompt</td>
+<td>images, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro Image Edit</strong></td>
+<td>Edits with reference images and an optional mask</td>
+<td>prompt, images, mask</td>
+<td>images, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro Upscale Image</strong></td>
+<td>Upscales and restores images</td>
+<td>image</td>
+<td>images, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro Remove Background</strong></td>
+<td>Cuts out the subject</td>
+<td>image</td>
+<td>images, mask, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro Text to Video</strong></td>
+<td>Video from a prompt</td>
+<td>prompt</td>
+<td>video, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro Image to Video</strong></td>
+<td>Animates a first frame, with a last frame on models that take one</td>
+<td>prompt, first_frame, last_frame</td>
+<td>video, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro Video Upscale</strong></td>
+<td>Upscales a video</td>
+<td>video</td>
+<td>video, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro Lipsync</strong></td>
+<td>Makes a portrait image or video speak along with an audio track</td>
+<td>image, video, audio</td>
+<td>video, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro Text to Speech</strong></td>
+<td>Speech from text; each model brings its own voices</td>
+<td>text</td>
+<td>audio, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro Music</strong></td>
+<td>Music and songs from a prompt</td>
+<td>prompt</td>
+<td>audio, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro Speech to Text</strong></td>
+<td>Transcripts from speech</td>
+<td>audio</td>
+<td>text, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro 3D</strong></td>
+<td>A 3D model (GLB) from an image, ready for Preview 3D (Advanced) and Save 3D Model</td>
+<td>image</td>
+<td>GLB, urls</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">The menus list every model of that category in the catalog: the node's default model first, then the most used. ComfyUI starts with the last saved copy of the catalog (or the copy that ships with the pack) and refreshes it in the background, so models added to Wiro AI show up after a page reload, without updating the pack. Category nodes need a ComfyUI recent enough to have dynamic combo inputs; on older versions the other nodes keep working.</p>
+<h2 dir="auto" id="more-nodes">More nodes</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Node</th>
+<th>What it does</th>
+<th>Inputs</th>
+<th>Outputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Wiro LLM</strong></td>
+<td>Asks an LLM through the <a href="https://wiro.ai/docs/completions-api">Wiro LLM gateway</a>; the menu lists the gateway's models</td>
+<td>prompt, system instructions, images</td>
+<td>text</td>
+</tr>
+<tr>
+<td><strong>Wiro Run Workflow</strong></td>
+<td>Runs one of your <a href="https://wiro.ai/docs/workflows">Wiro AI workflows</a> by its slug or link</td>
+<td>inputs as JSON, image, audio, video</td>
+<td>images, video, audio, text, urls</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2 dir="auto" id="model-nodes">Model nodes</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Node</th>
+<th>Model</th>
+<th>Inputs</th>
+<th>Outputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Wiro Run Model</strong></td>
+<td>Any model, by its <code class="notranslate">owner/project</code> slug</td>
+<td>prompt, JSON parameters, image, image_2, audio, video</td>
+<td>images, video, audio, text, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro API Key</strong></td>
+<td></td>
+<td>API key and optional secret</td>
+<td>wiro_auth</td>
+</tr>
+<tr>
+<td><strong>Wiro Nano Banana Pro</strong></td>
+<td><a href="https://wiro.ai/models/google/nano-banana-pro">google/nano-banana-pro</a></td>
+<td>prompt, up to 14 reference images</td>
+<td>images, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro Nano Banana 2</strong></td>
+<td><a href="https://wiro.ai/models/google/nano-banana-2">google/nano-banana-2</a></td>
+<td>prompt, up to 14 reference images</td>
+<td>images, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro GPT Image 2</strong></td>
+<td><a href="https://wiro.ai/models/openai/gpt-image-2">openai/gpt-image-2</a></td>
+<td>prompt, up to 16 input images, mask</td>
+<td>images, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro Seedream 4.5</strong></td>
+<td><a href="https://wiro.ai/models/bytedance/seedream-v4-5">bytedance/seedream-v4-5</a></td>
+<td>prompt, up to 14 reference images</td>
+<td>images, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro Veo 3.1</strong></td>
+<td><a href="https://wiro.ai/models/google/veo3-1">google/veo3-1</a></td>
+<td>prompt, first frame, last frame, reference images</td>
+<td>video, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro Kling 3</strong></td>
+<td><a href="https://wiro.ai/models/klingai/kling-v3">klingai/kling-v3</a></td>
+<td>prompt, first frame, last frame</td>
+<td>video, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro Seedance 1 Pro Fast</strong></td>
+<td><a href="https://wiro.ai/models/bytedance/seedance-v1-pro-fast">bytedance/seedance-v1-pro-fast</a></td>
+<td>prompt, image</td>
+<td>video, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro Eleven v4 Text to Speech</strong></td>
+<td><a href="https://wiro.ai/models/elevenlabs/eleven-v4">elevenlabs/eleven-v4</a></td>
+<td>text, voice, language</td>
+<td>audio, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro ElevenLabs Music v2</strong></td>
+<td><a href="https://wiro.ai/models/elevenlabs/text-to-music-v2">elevenlabs/text-to-music-v2</a></td>
+<td>prompt, duration</td>
+<td>audio, urls</td>
+</tr>
+<tr>
+<td><strong>Wiro ElevenLabs Speech to Text</strong></td>
+<td><a href="https://wiro.ai/models/elevenlabs/speech-to-text">elevenlabs/speech-to-text</a></td>
+<td>audio</td>
+<td>text, urls</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">The model nodes show each model's own settings (resolution, ratio, duration, voice and so on) as widgets, with the defaults and choices from its Wiro AI model page. All nodes live under <strong>Wiro AI</strong> in the node library; search for "Wiro".</p>
+<h2 dir="auto" id="prices-on-the-node">Prices on the node</h2>
+<p dir="auto">Every Wiro node shows a price badge on its title bar, worked out in the browser from the model's pricing on Wiro AI for the settings you picked: <code class="notranslate">$0.006/run</code>, <code class="notranslate">$0.039/output</code>, <code class="notranslate">~$0.0037</code> for 46 characters of speech, <code class="notranslate">~$0.0012/run</code> for models priced by processing time, or the gateway's token prices on Wiro LLM. Models billed by what they produce, such as tokens or seconds of output, show <code class="notranslate">priced by usage</code>. After a run the badge shows what the task cost, as Wiro reported it (<code class="notranslate">paid $0.006</code>), until you change a setting. The ComfyUI console also logs each task with its ID, time and cost.</p>
+<h2 dir="auto" id="install">Install</h2>
+<p dir="auto"><strong>ComfyUI Manager:</strong> open the Manager, choose <strong>Custom Nodes Manager</strong>, search for <strong>Wiro AI</strong>, install it and restart ComfyUI.</p>
+<p dir="auto"><strong>Comfy CLI:</strong></p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">comfy node install comfyui-wiro</pre></div>
+<p dir="auto"><strong>Manually:</strong> clone the repository into <code class="notranslate">ComfyUI/custom_nodes</code> and restart ComfyUI.</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate"><span class="pl-c1">cd</span> ComfyUI/custom_nodes
+git clone https://github.com/wiroai/Wiro-ComfyUI comfyui-wiro</pre></div>
+<p dir="auto">The only dependency is <code class="notranslate">requests</code>, which ComfyUI already installs. If your environment lacks it, run <code class="notranslate">pip install -r requirements.txt</code> with the Python that runs ComfyUI.</p>
+<h2 dir="auto" id="set-your-api-key">Set your API key</h2>
+<p dir="auto">Create a project at <a href="https://wiro.ai/panel/project/new">wiro.ai/panel/project/new</a> and copy its API key. If the project uses signature authentication, copy the API secret too. Then pick one of these:</p>
+<p dir="auto"><strong>Environment variable.</strong> Set <code class="notranslate">WIRO_API_KEY</code> (and <code class="notranslate">WIRO_API_SECRET</code> for signature projects) before you start ComfyUI. Every Wiro node uses it.</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate"><span class="pl-k">export</span> WIRO_API_KEY=<span class="pl-s"><span class="pl-pds">"</span>your-api-key<span class="pl-pds">"</span></span>
+python main.py</pre></div>
+<p dir="auto">On Windows, use <code class="notranslate">set WIRO_API_KEY=your-api-key</code> in Command Prompt or <code class="notranslate">$env:WIRO_API_KEY="your-api-key"</code> in PowerShell.</p>
+<p dir="auto"><strong>Wiro API Key node.</strong> Add the node, paste the key into it and connect its <code class="notranslate">wiro_auth</code> output to the <code class="notranslate">wiro_auth</code> input of your Wiro nodes. A connected key takes priority over the environment variable, and a node left empty falls back to it. The same key works for the LLM gateway and for workflow runs.</p>
+<p dir="auto">The key stays out of everything ComfyUI saves. The node is saved empty in workflow files and in the workflow stored inside images and videos, and the prompt that ComfyUI keeps in its history and in file metadata carries only a reference that works inside your running ComfyUI. The key itself lives in the ComfyUI server's memory, so type it again after you reload a workflow or restart ComfyUI. The environment variable avoids that step.</p>
+<h2 dir="auto" id="example-workflows">Example workflows</h2>
+<p dir="auto">The <code class="notranslate">example_workflows</code> folder has eleven workflows. They also show up in ComfyUI's template browser, under the folder name the pack was installed with (<code class="notranslate">comfyui-wiro</code> or <code class="notranslate">Wiro-ComfyUI</code>).</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Workflow</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/example_workflows/wiro_image_nodes.json">wiro_image_nodes.json</a></td>
+<td>Wiro Text to Image makes a fox, Wiro Image Edit gives it a scarf, Wiro Remove Background cuts it out with its mask, Wiro Upscale Image doubles its size</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/example_workflows/wiro_video_nodes.json">wiro_video_nodes.json</a></td>
+<td>A still from Wiro Text to Image goes through Wiro Image to Video and Wiro Video Upscale; Wiro Text to Video makes a second clip from a prompt</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/example_workflows/wiro_voice_nodes.json">wiro_voice_nodes.json</a></td>
+<td>Wiro Text to Speech reads a line, Wiro Lipsync makes a generated portrait say it, Wiro Speech to Text writes it back</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/example_workflows/wiro_music.json">wiro_music.json</a></td>
+<td>Wiro Music makes a ten second track</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/example_workflows/wiro_image_to_3d.json">wiro_image_to_3d.json</a></td>
+<td>Wiro Text to Image draws a teapot and Wiro 3D turns it into a GLB, shown in Preview 3D (Advanced); scroll in the viewer to zoom in</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/example_workflows/wiro_llm.json">wiro_llm.json</a></td>
+<td>Wiro LLM writes an image prompt, Wiro Text to Image draws it, a second Wiro LLM describes the picture</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/example_workflows/wiro_run_workflow.json">wiro_run_workflow.json</a></td>
+<td>Wiro Run Workflow runs one of your Wiro AI workflows on a generated image; put your workflow's slug in the node</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/example_workflows/wiro_text_to_image.json">wiro_text_to_image.json</a></td>
+<td>Wiro API Key and Wiro GPT Image 2, saved with Save Image</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/example_workflows/wiro_run_model_llm_to_image.json">wiro_run_model_llm_to_image.json</a></td>
+<td>One Wiro Run Model asks an LLM for an image prompt, a second one turns that prompt into an image</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/example_workflows/wiro_image_to_video.json">wiro_image_to_video.json</a></td>
+<td>Wiro GPT Image 2 makes a still, Wiro Seedance 1 Pro Fast animates it, Save Video keeps the clip</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/example_workflows/wiro_speech_and_transcript.json">wiro_speech_and_transcript.json</a></td>
+<td>Wiro Eleven v4 reads a line aloud, Wiro ElevenLabs Speech to Text writes it back as text</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/docs/screenshots/video_nodes.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-ComfyUI/main/docs/screenshots/video_nodes.png" alt="Image to video, video upscale and text to video" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/docs/screenshots/voice_nodes.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-ComfyUI/main/docs/screenshots/voice_nodes.png" alt="Text to speech, lipsync and speech to text" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/docs/screenshots/music.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-ComfyUI/main/docs/screenshots/music.png" alt="Wiro Music" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/docs/screenshots/image_to_3d.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-ComfyUI/main/docs/screenshots/image_to_3d.png" alt="Text to image, then image to 3D" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/docs/screenshots/llm.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-ComfyUI/main/docs/screenshots/llm.png" alt="Wiro LLM writes a prompt and describes the result" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/docs/screenshots/run_workflow.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-ComfyUI/main/docs/screenshots/run_workflow.png" alt="Wiro Run Workflow" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/docs/screenshots/text_to_image.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-ComfyUI/main/docs/screenshots/text_to_image.png" alt="Wiro GPT Image 2 with a Wiro API Key node" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/docs/screenshots/run_model_llm_to_image.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-ComfyUI/main/docs/screenshots/run_model_llm_to_image.png" alt="An LLM writes the prompt, then GPT Image 2 draws it" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/docs/screenshots/image_to_video.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-ComfyUI/main/docs/screenshots/image_to_video.png" alt="GPT Image 2 makes a still and Seedance animates it" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/docs/screenshots/speech_and_transcript.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-ComfyUI/main/docs/screenshots/speech_and_transcript.png" alt="Eleven v4 speaks a line and Speech to Text transcribes it" style="max-width: 100%;"></a></p>
+<h2 dir="auto" id="wiro-run-model">Wiro Run Model</h2>
+<p dir="auto"><strong>model</strong> is the slug from the model's page: <code class="notranslate">https://wiro.ai/models/google/nano-banana-pro</code> becomes <code class="notranslate">google/nano-banana-pro</code>. Pasting the whole URL works too.</p>
+<p dir="auto"><strong>prompt</strong> is sent as the <code class="notranslate">prompt</code> parameter when it is not empty. Connect a text output (for example from another Wiro Run Model running an LLM) to chain models.</p>
+<p dir="auto"><strong>parameters</strong> takes every other setting as a JSON object. The model page lists them, and the <a href="https://wiro.ai/docs/model-parameters">model parameters guide</a> explains the types. Required settings you leave out get the model's default, as on the model page. Some examples:</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Model</th>
+<th>parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">google/nano-banana-pro</code></td>
+<td><code class="notranslate">{"resolution": "2K", "aspectRatio": "16:9"}</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">klingai/kling-v3</code></td>
+<td><code class="notranslate">{"mode": "std", "duration": "5", "ratio": "16:9", "sound": "off"}</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">google/gemini-3-flash</code></td>
+<td><code class="notranslate">{"systemInstructions": "Answer in one sentence.", "maxOutputTokens": 200}</code></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><strong>image, image_2, audio and video</strong> are uploaded with the run. With the <code class="notranslate">*_field</code> settings left on <code class="notranslate">auto</code>, each one goes to the model's matching input: <code class="notranslate">image</code> to its first image input, <code class="notranslate">image_2</code> to its second one (a last frame, a garment, a second reference), <code class="notranslate">audio</code> and <code class="notranslate">video</code> to their own inputs. A batch of images goes in as several files when the input takes more than one. To choose the input yourself, type its parameter name, such as <code class="notranslate">inputImageHuman</code>, into the matching <code class="notranslate">*_field</code>. URLs work too: put them in the parameters JSON.</p>
+<p dir="auto"><strong>Outputs:</strong> <code class="notranslate">images</code> holds every image the model returned as one batch, <code class="notranslate">video</code> and <code class="notranslate">audio</code> the first video and audio file, <code class="notranslate">text</code> the answer of an LLM or the transcript of a speech model, and <code class="notranslate">urls</code> every output file URL, one per line. When a model does not produce one of these, the nodes connected to that output do not run and show a short message instead.</p>
+<h2 dir="auto" id="wiro-llm">Wiro LLM</h2>
+<p dir="auto">Pick a model from the menu, which lists the models on the <a href="https://wiro.ai/docs/completions-api">Wiro LLM gateway</a> (<code class="notranslate">llm.wiro.ai</code>), write a prompt and, if you like, a system instruction. Connect images to ask about them; the node checks that the model reads images. <code class="notranslate">max_tokens</code> and <code class="notranslate">temperature</code> sit under the advanced inputs, where <code class="notranslate">0</code> and <code class="notranslate">-1</code> keep the model's defaults. The answer comes out as text, ready for a prompt input or Preview as Text.</p>
+<h2 dir="auto" id="wiro-run-workflow">Wiro Run Workflow</h2>
+<p dir="auto">Paste a workflow's slug (<code class="notranslate">product-ad-a1B2c</code>) or its <code class="notranslate">wiro.ai/workflows/...</code> link. You can run your own workflows and the ones listed in the public gallery. Put the values for its Start fields in <code class="notranslate">inputs</code> as JSON, keyed by field name. A connected image, audio or video is uploaded to your Wiro AI storage and passed to the workflow's matching Start field (set <code class="notranslate">image_field</code>, <code class="notranslate">audio_field</code> or <code class="notranslate">video_field</code> to pick a field by name). The node waits for the run and returns the files and text its End node shows; each step is billed at its model's price.</p>
+<h2 dir="auto" id="how-it-works">How it works</h2>
+<ul dir="auto">
+<li>A run is a <code class="notranslate">POST /Run/{owner}/{project}</code> request: JSON for text-only runs, multipart form data when files are attached (<a href="https://wiro.ai/docs/run-a-model">Run a Model</a>).</li>
+<li>The node polls <code class="notranslate">Task/Detail</code> every few seconds until the task reaches <code class="notranslate">task_postprocess_end</code>, then checks <code class="notranslate">pexit</code> (<code class="notranslate">"0"</code> means success) and downloads the outputs (<a href="https://wiro.ai/docs/tasks">Tasks</a>). LLM answers come from <code class="notranslate">debugoutput</code>.</li>
+<li>While it waits, the node shows the task's status. The ComfyUI console logs one line per task with its ID, time and cost.</li>
+<li>Stopping the queue in ComfyUI also cancels the Wiro task.</li>
+<li>ComfyUI does not run a node again when none of its inputs changed, so queueing the same graph twice reuses the first result. Change any input, or turn on <code class="notranslate">force_rerun</code> (under the advanced inputs), to start a new run.</li>
+<li><code class="notranslate">timeout</code> (30 to 7200 seconds, 1800 by default) sets how long a node waits for its task.</li>
+<li>The model menus come from the public catalog endpoint <code class="notranslate">Tool/List</code>, the LLM menu from <code class="notranslate">llm.wiro.ai/v1/models</code>. Both are saved in ComfyUI's user folder and refreshed every few hours.</li>
+<li>Wiro LLM calls <code class="notranslate">POST https://llm.wiro.ai/v1/chat/completions</code>; Wiro Run Workflow uses <code class="notranslate">Workflow/Run</code> and polls <code class="notranslate">Workflow/RunDetail</code> (<a href="https://wiro.ai/docs/workflows">Workflows</a>).</li>
+</ul>
+<h2 dir="auto" id="development">Development</h2>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">pip install torch numpy pillow av requests pytest
+python -m pytest</pre></div>
+<p dir="auto">The unit tests cover request building, authentication headers, task polling, output handling, the catalog, model menus, the LLM and workflow nodes and the key handling, without calling the API. The category node schemas need ComfyUI's node API: point <code class="notranslate">COMFYUI_PATH</code> at a ComfyUI checkout to run those tests too (<code class="notranslate">COMFYUI_PATH=../ComfyUI python -m pytest</code>).</p>
+<p dir="auto">The fixed model nodes are generated when ComfyUI starts from <code class="notranslate">wiro_comfyui/models.json</code>, so loading them needs no network. <code class="notranslate">scripts/update_models.py</code> rebuilds that file from the public Wiro AI catalog; edit the list at the top of the script to add a model node. <code class="notranslate">scripts/update_catalog.py</code> refreshes the catalog snapshots the menus start from.</p>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
+<td>Official MCP server for Wiro AI, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Cursor, Claude Code, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills">Wiro-Skills</a></td>
+<td>Agent skills for images, image edits, video, music, speech, transcripts, 3D and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>Vercel AI SDK provider for chat, images, speech, transcription and video, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-llm"><code class="notranslate">@wiro-ai/wiro-llm</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Zed">Wiro-Zed</a></td>
+<td>Wiro AI MCP server for the Zed editor</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Action for Wiro AI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>One Wiro AI node for n8n with a searchable model picker, <a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><code class="notranslate">@wiro-ai/n8n-nodes-wiro</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Wiro AI extension for Safari on the Mac</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Wiro AI SDK for Dart and Flutter, <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>Wiro AI SDK for React Native and Expo, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><code class="notranslate">@wiro-ai/wiro-react-native</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-Realtime">Swift-Realtime</a></td>
+<td>Realtime voice AI example for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin-Realtime</a></td>
+<td>Realtime voice AI example for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-Realtime">Dart-Realtime</a></td>
+<td>Realtime voice AI example for Flutter</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-Realtime">ReactNative-Realtime</a></td>
+<td>Realtime voice AI example for React Native</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI plugins for Dify: the LLM gateway as a model provider, plus image, video, speech and music tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Raycast">Wiro-Raycast</a></td>
+<td>Wiro AI extension for Raycast: image and video generation, LLM chat and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress: featured images, image edits, alt text, narration and SEO suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Obsidian">Wiro-Obsidian</a></td>
+<td>Wiro AI plugin for Obsidian: images, video, speech, music, transcription and text tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Blender">Wiro-Blender</a></td>
+<td>Wiro AI add-on for Blender: text to 3D, image to 3D and textures</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Figma">Wiro-Figma</a></td>
+<td>Wiro AI plugin for Figma: images, vectors, image edits and text</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js starter for Wiro AI: Playground, image, video and audio tools, and LLM chat, ready for Vercel and Railway</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Docs">Wiro-Docs</a></td>
+<td>Source of the Wiro AI API docs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto">MIT, see <a href="https://github.com/wiroai/Wiro-ComfyUI/blob/main/LICENSE">LICENSE</a>.</p>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/wiro-blender/">Wiro-Blender</a></li><li><a href="/projects/wiro-figma/">Wiro-Figma</a></li><li><a href="/projects/wiro-mcp/">Wiro-MCP</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li><li><a href="/projects/dart-quickstart/">Dart-QuickStart</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

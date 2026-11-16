@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiro-Action: Wiro AI open source</title>
+<meta name="description" content="GitHub Action for Wiro AI: run any of 1,000+ image, video, audio, 3D and LLM models, or ask an LLM, from your workflows.">
+<link rel="canonical" href="https://wiroai.github.io/projects/wiro-action/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="Wiro-Action: Wiro AI open source">
+<meta property="og:description" content="GitHub Action for Wiro AI: run any of 1,000+ image, video, audio, 3D and LLM models, or ask an LLM, from your workflows.">
+<meta property="og:url" content="https://wiroai.github.io/projects/wiro-action/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "Wiro-Action", "description": "GitHub Action for Wiro AI: run any of 1,000+ image, video, audio, 3D and LLM models, or ask an LLM, from your workflows.", "codeRepository": "https://github.com/wiroai/Wiro-Action", "url": "https://wiroai.github.io/projects/wiro-action/", "programmingLanguage": "JavaScript", "license": "https://api.github.com/licenses/mit", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#assistants">Coding assistants and agents</a></p>
+<section class="project-head">
+  <h1>Wiro-Action</h1>
+  <p class="lead">GitHub Action for Wiro AI: run any of 1,000+ image, video, audio, 3D and LLM models, or ask an LLM, from your workflows.</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/Wiro-Action">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai">Website</a></p>
+</section>
+<article class="markdown">
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Action/main/.github/assets/wiro-logo.png"><img src="https://raw.githubusercontent.com/wiroai/Wiro-Action/main/.github/assets/wiro-logo.png" alt="Wiro AI" width="240" style="max-width: 100%;"></a>
+<h2 dir="auto" id="wiro-ai-action">Wiro AI Action</h2>
+<p dir="auto">Run Wiro AI models in GitHub Actions: generate images, video, audio and 3D with any of 1,000+ models, or ask an LLM about your code, and use the results in the next steps of your workflow.</p>
+<p dir="auto"><a href="https://github.com/wiroai/Wiro-Action/actions/workflows/ci.yml"><img loading="lazy" src="https://camo.githubusercontent.com/f7b9bd2d9503597f930a4c8620a072a5bbffbff2ae4ab6eba9a086734bbc8e8b/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f7769726f61692f5769726f2d416374696f6e2f63692e796d6c3f6272616e63683d6d61696e267374796c653d666f722d7468652d6261646765266c6162656c3d434926636f6c6f723d313131313131" alt="CI" data-canonical-src="https://img.shields.io/github/actions/workflow/status/wiroai/Wiro-Action/ci.yml?branch=main&amp;style=for-the-badge&amp;label=CI&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Action/blob/main/action.yml"><img loading="lazy" src="https://camo.githubusercontent.com/d4aeb7f48b4698806f1d12524a48d9294b8adb3624dbb111653981d5de3123b9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e6f64652e6a732d32342d3131313131313f7374796c653d666f722d7468652d6261646765" alt="Node.js 24" data-canonical-src="https://img.shields.io/badge/Node.js-24-111111?style=for-the-badge" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Action/blob/main/LICENSE"><img loading="lazy" src="https://camo.githubusercontent.com/e116285286de49ca54d5e9a8fb873cf33313ed2873cf1e0ebf71f00e27c09230/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d3131313131313f7374796c653d666f722d7468652d6261646765" alt="License: MIT" data-canonical-src="https://img.shields.io/badge/license-MIT-111111?style=for-the-badge" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a></p>
+<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67"><img loading="lazy" src="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67" alt="Wiro AI koala mascot" width="60" data-canonical-src="https://wiro.ai/images/koala/accent-heavy-koala.png" style="max-width: 100%;"></a>
+</div>
+<p dir="auto"><code class="notranslate">wiroai/Wiro-Action</code> calls the <a href="https://wiro.ai">Wiro AI</a> API from a workflow step. It has three modes:</p>
+<ul dir="auto">
+<li><strong>model</strong> runs any model in the catalog, waits for the task to finish and gives you the output URLs, the text and the cost. It can upload files from the workspace as inputs and download the outputs.</li>
+<li><strong>workflow</strong> runs one of your Wiro AI workflows, the chains of models you build on wiro.ai, with the inputs you give it, and returns what the workflow's End node shows.</li>
+<li><strong>llm</strong> sends a prompt, with files if you like, to the Wiro AI LLM gateway and gives you the answer. The gateway speaks the OpenAI Chat Completions protocol.</li>
+</ul>
+<p dir="auto">In every mode the action estimates the price before it starts, and <code class="notranslate">max-cost</code> keeps a run from starting when the estimate is above your limit.</p>
+<h2 dir="auto" id="quick-start">Quick start</h2>
+<ol dir="auto">
+<li>Create a project at <a href="https://wiro.ai/panel/project/new">wiro.ai/panel/project/new</a> and copy its API key. If the project uses signature authentication, copy the API secret too.</li>
+<li>In your repository, open <strong>Settings → Secrets and variables → Actions</strong> and add the key as <code class="notranslate">WIRO_API_KEY</code> (and the secret as <code class="notranslate">WIRO_API_SECRET</code>).</li>
+<li>Add a step to a workflow:</li>
+</ol>
+<div class="highlight highlight-source-yaml" dir="auto"><pre class="notranslate">- <span class="pl-ent">uses</span>: <span class="pl-s">wiroai/Wiro-Action@v1</span>
+  <span class="pl-ent">id</span>: <span class="pl-s">image</span>
+  <span class="pl-ent">with</span>:
+    <span class="pl-ent">api-key</span>: <span class="pl-s">${{ secrets.WIRO_API_KEY }}</span>
+    <span class="pl-ent">model</span>: <span class="pl-s">pruna/p-image</span>
+    <span class="pl-ent">prompt</span>: <span class="pl-s">A small paper boat on a calm lake at sunrise, soft light</span>
+    <span class="pl-ent">params</span>: <span class="pl-s">|</span>
+<span class="pl-s">      aspectRatio: "16:9"</span>
+<span class="pl-s"></span>    <span class="pl-ent">download</span>: <span class="pl-c1">true</span></pre></div>
+<p dir="auto">The image lands in <code class="notranslate">wiro-output/</code>, and <code class="notranslate">steps.image.outputs.url</code> holds its URL.</p>
+<h2 dir="auto" id="model-mode">Model mode</h2>
+<p dir="auto">Each model page on <a href="https://wiro.ai/models">wiro.ai/models</a> shows the model ID (<code class="notranslate">owner/model</code>) and its parameters. Put the parameters in <code class="notranslate">params</code>, as YAML or JSON. <code class="notranslate">prompt</code> is a shortcut for the <code class="notranslate">prompt</code> parameter. A required parameter you leave out, such as an output format, gets the default the model's form on wiro.ai starts with, and the log says which ones; file inputs and the prompt are never filled in for you.</p>
+<p dir="auto">The action starts the run, checks the task every <code class="notranslate">poll-interval</code> seconds until it ends, and fails the step if the run fails. If <code class="notranslate">timeout</code> runs out or the workflow run is cancelled, it stops the task, so you don't pay for a result nobody reads. Set <code class="notranslate">cancel-on-timeout: false</code> to let it finish anyway. Only successful runs are billed, and the <code class="notranslate">cost</code> output tells you what a run cost.</p>
+<p dir="auto">LLMs run in model mode too, and their answer is in the <code class="notranslate">text</code> output. So is the text of models that return a text file, such as the transcript of a speech-to-text model.</p>
+<h3 dir="auto" id="local-files-as-model-inputs">Local files as model inputs</h3>
+<p dir="auto">Models that take images, audio, video or documents accept a public URL in <code class="notranslate">params</code>, or a file from the workspace through <code class="notranslate">files</code>. <code class="notranslate">files</code> maps each file parameter to a path:</p>
+<div class="highlight highlight-source-yaml" dir="auto"><pre class="notranslate">- <span class="pl-ent">uses</span>: <span class="pl-s">wiroai/Wiro-Action@v1</span>
+  <span class="pl-ent">with</span>:
+    <span class="pl-ent">api-key</span>: <span class="pl-s">${{ secrets.WIRO_API_KEY }}</span>
+    <span class="pl-ent">model</span>: <span class="pl-s">wiro/remove-background</span>
+    <span class="pl-ent">files</span>: <span class="pl-s">|</span>
+<span class="pl-s">      inputImage: assets/product.png</span>
+<span class="pl-s"></span>    <span class="pl-ent">download</span>: <span class="pl-c1">true</span></pre></div>
+<p dir="auto">The action reads the model's parameter list and uploads each file in the form that parameter expects. A parameter that takes several files accepts a list or a glob pattern.</p>
+<h2 dir="auto" id="workflow-mode">Workflow mode</h2>
+<p dir="auto">Build a workflow on <a href="https://wiro.ai/workflows">wiro.ai/workflows</a>, then pass its link, or its full slug such as <code class="notranslate">product-ad-a1B2c</code>, in <code class="notranslate">workflow</code>. With <code class="notranslate">workflow</code> set, <code class="notranslate">mode</code> can be left out.</p>
+<div class="highlight highlight-source-yaml" dir="auto"><pre class="notranslate">- <span class="pl-ent">uses</span>: <span class="pl-s">wiroai/Wiro-Action@v1</span>
+  <span class="pl-ent">id</span>: <span class="pl-s">ad</span>
+  <span class="pl-ent">with</span>:
+    <span class="pl-ent">api-key</span>: <span class="pl-s">${{ secrets.WIRO_API_KEY }}</span>
+    <span class="pl-ent">workflow</span>: <span class="pl-s">https://wiro.ai/workflows/product-ad-a1B2c</span>
+    <span class="pl-ent">params</span>: <span class="pl-s">|</span>
+<span class="pl-s">      brief: A short ad for a reusable water bottle</span>
+<span class="pl-s"></span>    <span class="pl-ent">files</span>: <span class="pl-s">|</span>
+<span class="pl-s">      product_photo: assets/bottle.png</span>
+<span class="pl-s"></span>    <span class="pl-ent">max-cost</span>: <span class="pl-s"><span class="pl-pds">'</span>1.00<span class="pl-pds">'</span></span>
+    <span class="pl-ent">download</span>: <span class="pl-c1">true</span></pre></div>
+<ul dir="auto">
+<li><code class="notranslate">params</code> sets the workflow's inputs by the names its Start node shows. An input you leave out uses its saved value, then its default. The action checks the names and the required inputs before it starts.</li>
+<li><code class="notranslate">files</code> uploads files from the workspace to your Wiro AI storage and passes their URLs as inputs.</li>
+<li>The action waits for the run and logs each step as it starts and ends. If a step fails, the action fails and names the step and the reason. When <code class="notranslate">timeout</code> runs out, the action stops waiting and fails; the run itself goes on, and its results appear on wiro.ai when it ends. Give long workflows a generous <code class="notranslate">timeout</code>.</li>
+<li>The <code class="notranslate">outputs</code> output is a JSON object with each result of the End node, by name. Files are also in <code class="notranslate">urls</code> and can be downloaded with <code class="notranslate">download: true</code>; texts, such as an LLM's answer, are in <code class="notranslate">text</code>.</li>
+</ul>
+<p dir="auto">The log of a real run of a three-step workflow:</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Action/main/.github/assets/screenshots/workflow-mode-log.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Action/main/.github/assets/screenshots/workflow-mode-log.png" alt="GitHub Actions log of a workflow run: the estimated cost, each step as it runs and completes, the final cost and the saved image" style="max-width: 100%;"></a></p>
+<h2 dir="auto" id="llm-mode">LLM mode</h2>
+<p dir="auto">Set <code class="notranslate">mode: llm</code> and pick a model from the <a href="https://wiro.ai/models?categories=llm-tool-call">LLM catalog</a>. <code class="notranslate">files</code> takes paths or glob patterns, one per line:</p>
+<ul dir="auto">
+<li>text files (code, diffs, Markdown, logs) are added to the message as text,</li>
+<li>PNG, JPEG, GIF and WebP images are sent as images,</li>
+<li>PDF documents are sent as files,</li>
+</ul>
+<p dir="auto">for models that read images and documents. <code class="notranslate">params</code> adds Chat Completions fields such as <code class="notranslate">max_tokens</code>, <code class="notranslate">reasoning_effort</code> or <code class="notranslate">response_format</code>.</p>
+<div class="highlight highlight-source-yaml" dir="auto"><pre class="notranslate">- <span class="pl-ent">uses</span>: <span class="pl-s">wiroai/Wiro-Action@v1</span>
+  <span class="pl-ent">id</span>: <span class="pl-s">review</span>
+  <span class="pl-ent">with</span>:
+    <span class="pl-ent">mode</span>: <span class="pl-s">llm</span>
+    <span class="pl-ent">api-key</span>: <span class="pl-s">${{ secrets.WIRO_API_KEY }}</span>
+    <span class="pl-ent">model</span>: <span class="pl-s">openai/gpt-5-4-mini</span>
+    <span class="pl-ent">system</span>: <span class="pl-s">You are a careful code reviewer.</span>
+    <span class="pl-ent">prompt</span>: <span class="pl-s">List the three riskiest changes in this diff.</span>
+    <span class="pl-ent">files</span>: <span class="pl-s">pr.diff</span></pre></div>
+<h2 dir="auto" id="cost-limit">Cost limit</h2>
+<p dir="auto">Before it starts, the action estimates the price, logs it and sets the <code class="notranslate">estimated-cost</code> output:</p>
+<ul dir="auto">
+<li><strong>model mode:</strong> the model's price for the settings you send, defaults included, as its page on wiro.ai shows it.</li>
+<li><strong>workflow mode:</strong> the sum of those prices over the steps that lead to the End node, plus the creator's fee of a priced gallery workflow. For a workflow whose steps are hidden from you, the estimate Wiro AI gives.</li>
+<li><strong>llm mode:</strong> an upper estimate from the model's prices per token, with the input counted from the prompt and files and the output from <code class="notranslate">max_tokens</code>, or from the model's output limit when <code class="notranslate">max_tokens</code> is not set.</li>
+</ul>
+<p dir="auto">Set <code class="notranslate">max-cost</code> to the most a run may cost, in USD. A run whose estimate is higher does not start. Neither does a run whose price is only known after it ends, such as a model billed by run time, because the action can't confirm it stays under the limit. LLM token use inside a model or workflow run is billed when the run ends: the action leaves it out of the estimate and says so in the log.</p>
+<div class="highlight highlight-source-yaml" dir="auto"><pre class="notranslate">- <span class="pl-ent">uses</span>: <span class="pl-s">wiroai/Wiro-Action@v1</span>
+  <span class="pl-ent">with</span>:
+    <span class="pl-ent">api-key</span>: <span class="pl-s">${{ secrets.WIRO_API_KEY }}</span>
+    <span class="pl-ent">model</span>: <span class="pl-s">pruna/p-video-2</span>
+    <span class="pl-ent">prompt</span>: <span class="pl-s">The paper boat drifts across the lake as the sun comes up</span>
+    <span class="pl-ent">params</span>: <span class="pl-s">|</span>
+<span class="pl-s">      duration: "10"</span>
+<span class="pl-s">      resolution: 720p</span>
+<span class="pl-s"></span>    <span class="pl-ent">max-cost</span>: <span class="pl-s"><span class="pl-pds">'</span>0.20<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> this run is estimated at $0.25, so it does not start</span></pre></div>
+<p dir="auto">The log of that run:</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Action/main/.github/assets/screenshots/cost-limit-log.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Action/main/.github/assets/screenshots/cost-limit-log.png" alt="GitHub Actions log: the estimated cost is $0.25, so the run does not start because it is above max-cost $0.20" style="max-width: 100%;"></a></p>
+<h2 dir="auto" id="examples">Examples</h2>
+<p dir="auto">Each example is a complete workflow file: copy it to <code class="notranslate">.github/workflows/</code> and add the <code class="notranslate">WIRO_API_KEY</code> secret.</p>
+<h3 dir="auto" id="summarize-a-pull-request">Summarize a pull request</h3>
+<div class="highlight highlight-source-yaml" dir="auto"><pre class="notranslate"><span class="pl-ent">name</span>: <span class="pl-s">Pull request summary</span>
+
+<span class="pl-ent">on</span>:
+  <span class="pl-ent">pull_request</span>:
+    <span class="pl-ent">types</span>: <span class="pl-s">[opened, ready_for_review]</span>
+
+<span class="pl-ent">permissions</span>:
+  <span class="pl-ent">contents</span>: <span class="pl-s">read</span>
+  <span class="pl-ent">pull-requests</span>: <span class="pl-s">write</span>
+
+<span class="pl-ent">jobs</span>:
+  <span class="pl-ent">summary</span>:
+    <span class="pl-c"><span class="pl-c">#</span> Pull requests from forks and from Dependabot don't receive repository secrets.</span>
+    <span class="pl-ent">if</span>: <span class="pl-s">github.event.pull_request.head.repo.full_name == github.repository &amp;&amp; github.actor != 'dependabot[bot]'</span>
+    <span class="pl-ent">runs-on</span>: <span class="pl-s">ubuntu-latest</span>
+    <span class="pl-ent">steps</span>:
+      - <span class="pl-ent">uses</span>: <span class="pl-s">actions/checkout@v7</span>
+        <span class="pl-ent">with</span>:
+          <span class="pl-ent">fetch-depth</span>: <span class="pl-c1">0</span>
+
+      - <span class="pl-ent">name</span>: <span class="pl-s">Save the diff</span>
+        <span class="pl-ent">env</span>:
+          <span class="pl-ent">BASE</span>: <span class="pl-s">${{ github.event.pull_request.base.sha }}</span>
+        <span class="pl-ent">run</span>: <span class="pl-s">git diff "$BASE" HEAD -- . ':!package-lock.json' &gt; pr.diff</span>
+
+      - <span class="pl-ent">uses</span>: <span class="pl-s">wiroai/Wiro-Action@v1</span>
+        <span class="pl-ent">id</span>: <span class="pl-s">summary</span>
+        <span class="pl-ent">with</span>:
+          <span class="pl-ent">mode</span>: <span class="pl-s">llm</span>
+          <span class="pl-ent">api-key</span>: <span class="pl-s">${{ secrets.WIRO_API_KEY }}</span>
+          <span class="pl-ent">model</span>: <span class="pl-s">openai/gpt-5-4-mini</span>
+          <span class="pl-ent">system</span>: <span class="pl-s">You write short, factual pull request summaries for reviewers.</span>
+          <span class="pl-ent">prompt</span>: <span class="pl-s">&gt;-</span>
+<span class="pl-s">            Summarize this pull request in at most five bullet points.</span>
+<span class="pl-s">            Then list anything a reviewer should look at closely.</span>
+<span class="pl-s"></span>          <span class="pl-ent">files</span>: <span class="pl-s">pr.diff</span>
+          <span class="pl-ent">params</span>: <span class="pl-s">|</span>
+<span class="pl-s">            reasoning_effort: low</span>
+<span class="pl-s"></span>
+<span class="pl-s"></span>      - <span class="pl-ent">name</span>: <span class="pl-s">Comment on the pull request</span>
+        <span class="pl-ent">env</span>:
+          <span class="pl-ent">GH_TOKEN</span>: <span class="pl-s">${{ github.token }}</span>
+          <span class="pl-ent">PR</span>: <span class="pl-s">${{ github.event.pull_request.number }}</span>
+          <span class="pl-ent">SUMMARY</span>: <span class="pl-s">${{ steps.summary.outputs.text }}</span>
+        <span class="pl-ent">run</span>: <span class="pl-s">printf '%s\n' "$SUMMARY" | gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --body-file -</span></pre></div>
+<p dir="auto">The comment it posted on a pull request in a real run:</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Action/main/.github/assets/screenshots/pr-summary-comment.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Action/main/.github/assets/screenshots/pr-summary-comment.png" alt="A pull request comment from github-actions with a short summary of the changes and the points a reviewer should look at" style="max-width: 100%;"></a></p>
+<h3 dir="auto" id="write-alt-text-for-changed-images">Write alt text for changed images</h3>
+<div class="highlight highlight-source-yaml" dir="auto"><pre class="notranslate"><span class="pl-ent">name</span>: <span class="pl-s">Alt text</span>
+
+<span class="pl-ent">on</span>:
+  <span class="pl-ent">pull_request</span>:
+    <span class="pl-ent">paths</span>: <span class="pl-s">['**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp']</span>
+
+<span class="pl-ent">permissions</span>:
+  <span class="pl-ent">contents</span>: <span class="pl-s">read</span>
+  <span class="pl-ent">pull-requests</span>: <span class="pl-s">write</span>
+
+<span class="pl-ent">jobs</span>:
+  <span class="pl-ent">alt-text</span>:
+    <span class="pl-c"><span class="pl-c">#</span> Pull requests from forks and from Dependabot don't receive repository secrets.</span>
+    <span class="pl-ent">if</span>: <span class="pl-s">github.event.pull_request.head.repo.full_name == github.repository &amp;&amp; github.actor != 'dependabot[bot]'</span>
+    <span class="pl-ent">runs-on</span>: <span class="pl-s">ubuntu-latest</span>
+    <span class="pl-ent">steps</span>:
+      - <span class="pl-ent">uses</span>: <span class="pl-s">actions/checkout@v7</span>
+        <span class="pl-ent">with</span>:
+          <span class="pl-ent">fetch-depth</span>: <span class="pl-c1">0</span>
+
+      - <span class="pl-ent">name</span>: <span class="pl-s">Find the added and changed images</span>
+        <span class="pl-ent">id</span>: <span class="pl-s">changed</span>
+        <span class="pl-ent">env</span>:
+          <span class="pl-ent">BASE</span>: <span class="pl-s">${{ github.event.pull_request.base.sha }}</span>
+        <span class="pl-ent">run</span>: <span class="pl-s">|</span>
+<span class="pl-s">          {</span>
+<span class="pl-s">            echo 'images&lt;&lt;EOF'</span>
+<span class="pl-s">            git -c core.quotePath=false diff --name-only --diff-filter=AM "$BASE" HEAD -- \</span>
+<span class="pl-s">              '*.png' '*.jpg' '*.jpeg' '*.gif' '*.webp'</span>
+<span class="pl-s">            echo 'EOF'</span>
+<span class="pl-s">          } &gt;&gt; "$GITHUB_OUTPUT"</span>
+<span class="pl-s"></span>
+<span class="pl-s"></span>      - <span class="pl-ent">uses</span>: <span class="pl-s">wiroai/Wiro-Action@v1</span>
+        <span class="pl-ent">id</span>: <span class="pl-s">alt</span>
+        <span class="pl-ent">if</span>: <span class="pl-s">steps.changed.outputs.images != ''</span>
+        <span class="pl-ent">with</span>:
+          <span class="pl-ent">mode</span>: <span class="pl-s">llm</span>
+          <span class="pl-ent">api-key</span>: <span class="pl-s">${{ secrets.WIRO_API_KEY }}</span>
+          <span class="pl-ent">model</span>: <span class="pl-s">openai/gpt-5-4-mini</span>
+          <span class="pl-ent">prompt</span>: <span class="pl-s">&gt;-</span>
+<span class="pl-s">            Write alt text for each image above. Answer with one line per image,</span>
+<span class="pl-s">            in the form `path`: alt text, and keep each one under 125 characters.</span>
+<span class="pl-s"></span>          <span class="pl-ent">files</span>: <span class="pl-s">${{ steps.changed.outputs.images }}</span>
+
+      - <span class="pl-ent">name</span>: <span class="pl-s">Comment on the pull request</span>
+        <span class="pl-ent">if</span>: <span class="pl-s">steps.changed.outputs.images != ''</span>
+        <span class="pl-ent">env</span>:
+          <span class="pl-ent">GH_TOKEN</span>: <span class="pl-s">${{ github.token }}</span>
+          <span class="pl-ent">PR</span>: <span class="pl-s">${{ github.event.pull_request.number }}</span>
+          <span class="pl-ent">ALT_TEXT</span>: <span class="pl-s">${{ steps.alt.outputs.text }}</span>
+        <span class="pl-ent">run</span>: <span class="pl-s">|</span>
+<span class="pl-s">          printf '### Suggested alt text\n\n%s\n' "$ALT_TEXT" |</span>
+<span class="pl-s">            gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --body-file -</span></pre></div>
+<h3 dir="auto" id="make-a-release-banner-and-a-short-video">Make a release banner and a short video</h3>
+<p dir="auto">The second step turns the banner into a five-second video, and <code class="notranslate">max-cost</code> keeps it from starting if the price is above $0.20.</p>
+<div class="highlight highlight-source-yaml" dir="auto"><pre class="notranslate"><span class="pl-ent">name</span>: <span class="pl-s">Release media</span>
+
+<span class="pl-ent">on</span>:
+  <span class="pl-ent">release</span>:
+    <span class="pl-ent">types</span>: <span class="pl-s">[published]</span>
+
+<span class="pl-ent">permissions</span>:
+  <span class="pl-ent">contents</span>: <span class="pl-s">write</span>
+
+<span class="pl-ent">jobs</span>:
+  <span class="pl-ent">media</span>:
+    <span class="pl-ent">runs-on</span>: <span class="pl-s">ubuntu-latest</span>
+    <span class="pl-ent">steps</span>:
+      - <span class="pl-ent">uses</span>: <span class="pl-s">wiroai/Wiro-Action@v1</span>
+        <span class="pl-ent">id</span>: <span class="pl-s">banner</span>
+        <span class="pl-ent">with</span>:
+          <span class="pl-ent">api-key</span>: <span class="pl-s">${{ secrets.WIRO_API_KEY }}</span>
+          <span class="pl-ent">model</span>: <span class="pl-s">pruna/p-image</span>
+          <span class="pl-ent">prompt</span>: <span class="pl-s">&gt;-</span>
+<span class="pl-s">            A clean, wide banner for a software release named</span>
+<span class="pl-s">            "${{ github.event.release.name }}", abstract shapes, soft light</span>
+<span class="pl-s"></span>          <span class="pl-ent">params</span>: <span class="pl-s">|</span>
+<span class="pl-s">            aspectRatio: "16:9"</span>
+<span class="pl-s"></span>          <span class="pl-ent">download</span>: <span class="pl-c1">true</span>
+          <span class="pl-ent">download-dir</span>: <span class="pl-s">media</span>
+
+      - <span class="pl-ent">uses</span>: <span class="pl-s">wiroai/Wiro-Action@v1</span>
+        <span class="pl-ent">id</span>: <span class="pl-s">video</span>
+        <span class="pl-ent">with</span>:
+          <span class="pl-ent">api-key</span>: <span class="pl-s">${{ secrets.WIRO_API_KEY }}</span>
+          <span class="pl-ent">model</span>: <span class="pl-s">pruna/p-video-2</span>
+          <span class="pl-ent">prompt</span>: <span class="pl-s">Slow camera push in, the shapes drift and the light shifts gently</span>
+          <span class="pl-ent">params</span>: <span class="pl-s">|</span>
+<span class="pl-s">            inputImage: ${{ steps.banner.outputs.url }}</span>
+<span class="pl-s">            duration: "5"</span>
+<span class="pl-s">            resolution: 720p</span>
+<span class="pl-s"></span>          <span class="pl-ent">max-cost</span>: <span class="pl-s"><span class="pl-pds">'</span>0.20<span class="pl-pds">'</span></span>
+          <span class="pl-ent">timeout</span>: <span class="pl-c1">900</span>
+          <span class="pl-ent">download</span>: <span class="pl-c1">true</span>
+          <span class="pl-ent">download-dir</span>: <span class="pl-s">media</span>
+
+      - <span class="pl-ent">name</span>: <span class="pl-s">Attach the banner and the video to the release</span>
+        <span class="pl-ent">env</span>:
+          <span class="pl-ent">GH_TOKEN</span>: <span class="pl-s">${{ github.token }}</span>
+          <span class="pl-ent">TAG</span>: <span class="pl-s">${{ github.event.release.tag_name }}</span>
+          <span class="pl-ent">BANNER</span>: <span class="pl-s">${{ steps.banner.outputs.files }}</span>
+          <span class="pl-ent">VIDEO</span>: <span class="pl-s">${{ steps.video.outputs.files }}</span>
+        <span class="pl-ent">run</span>: <span class="pl-s">|</span>
+<span class="pl-s">          cp "$(jq -r '.[0]' &lt;&lt;&lt; "$BANNER")" release-banner.jpg</span>
+<span class="pl-s">          cp "$(jq -r '.[0]' &lt;&lt;&lt; "$VIDEO")" release-video.mp4</span>
+<span class="pl-s">          gh release upload "$TAG" release-banner.jpg release-video.mp4 --repo "$GITHUB_REPOSITORY"</span></pre></div>
+<p dir="auto">The video step in a real run:</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Action/main/.github/assets/screenshots/model-mode-log.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Action/main/.github/assets/screenshots/model-mode-log.png" alt="GitHub Actions log of the video step: the estimated cost of $0.125, the task on pruna/p-video-2 and its status, the final cost and the saved video" style="max-width: 100%;"></a></p>
+<h3 dir="auto" id="read-the-release-notes-aloud">Read the release notes aloud</h3>
+<p dir="auto">An LLM turns the notes into a short script, a voice model reads it, and the MP3 goes on the release.</p>
+<div class="highlight highlight-source-yaml" dir="auto"><pre class="notranslate"><span class="pl-ent">name</span>: <span class="pl-s">Release notes audio</span>
+
+<span class="pl-ent">on</span>:
+  <span class="pl-ent">release</span>:
+    <span class="pl-ent">types</span>: <span class="pl-s">[published]</span>
+
+<span class="pl-ent">permissions</span>:
+  <span class="pl-ent">contents</span>: <span class="pl-s">write</span>
+
+<span class="pl-ent">jobs</span>:
+  <span class="pl-ent">narrate</span>:
+    <span class="pl-ent">if</span>: <span class="pl-s">github.event.release.body != ''</span>
+    <span class="pl-ent">runs-on</span>: <span class="pl-s">ubuntu-latest</span>
+    <span class="pl-ent">steps</span>:
+      - <span class="pl-ent">uses</span>: <span class="pl-s">wiroai/Wiro-Action@v1</span>
+        <span class="pl-ent">id</span>: <span class="pl-s">script</span>
+        <span class="pl-ent">with</span>:
+          <span class="pl-ent">mode</span>: <span class="pl-s">llm</span>
+          <span class="pl-ent">api-key</span>: <span class="pl-s">${{ secrets.WIRO_API_KEY }}</span>
+          <span class="pl-ent">model</span>: <span class="pl-s">openai/gpt-5-4-mini</span>
+          <span class="pl-ent">system</span>: <span class="pl-s">&gt;-</span>
+<span class="pl-s">            You turn release notes into a script to be read aloud: plain sentences,</span>
+<span class="pl-s">            no Markdown, no links, under 120 words.</span>
+<span class="pl-s"></span>          <span class="pl-ent">prompt</span>: <span class="pl-s">${{ github.event.release.body }}</span>
+          <span class="pl-ent">params</span>: <span class="pl-s">|</span>
+<span class="pl-s">            reasoning_effort: low</span>
+<span class="pl-s"></span>
+<span class="pl-s"></span>      - <span class="pl-ent">uses</span>: <span class="pl-s">wiroai/Wiro-Action@v1</span>
+        <span class="pl-ent">id</span>: <span class="pl-s">voice</span>
+        <span class="pl-ent">with</span>:
+          <span class="pl-ent">api-key</span>: <span class="pl-s">${{ secrets.WIRO_API_KEY }}</span>
+          <span class="pl-ent">model</span>: <span class="pl-s">elevenlabs/eleven-v4-turbo</span>
+          <span class="pl-ent">prompt</span>: <span class="pl-s">${{ steps.script.outputs.text }}</span>
+          <span class="pl-ent">params</span>: <span class="pl-s">|</span>
+<span class="pl-s">            voice: alice</span>
+<span class="pl-s"></span>          <span class="pl-ent">max-cost</span>: <span class="pl-s"><span class="pl-pds">'</span>0.10<span class="pl-pds">'</span></span>
+          <span class="pl-ent">download</span>: <span class="pl-c1">true</span>
+
+      - <span class="pl-ent">name</span>: <span class="pl-s">Attach the audio to the release</span>
+        <span class="pl-ent">env</span>:
+          <span class="pl-ent">GH_TOKEN</span>: <span class="pl-s">${{ github.token }}</span>
+          <span class="pl-ent">TAG</span>: <span class="pl-s">${{ github.event.release.tag_name }}</span>
+          <span class="pl-ent">FILES</span>: <span class="pl-s">${{ steps.voice.outputs.files }}</span>
+        <span class="pl-ent">run</span>: <span class="pl-s">|</span>
+<span class="pl-s">          cp "$(jq -r '.[0]' &lt;&lt;&lt; "$FILES")" release-notes.mp3</span>
+<span class="pl-s">          gh release upload "$TAG" release-notes.mp3 --repo "$GITHUB_REPOSITORY"</span></pre></div>
+<h3 dir="auto" id="translate-the-readme-in-a-pull-request">Translate the README in a pull request</h3>
+<p dir="auto">Run it from the Actions tab and pick the language. Opening the pull request needs <strong>Settings → Actions → General → Allow GitHub Actions to create and approve pull requests</strong>.</p>
+<div class="highlight highlight-source-yaml" dir="auto"><pre class="notranslate"><span class="pl-ent">name</span>: <span class="pl-s">Translate the README</span>
+
+<span class="pl-ent">on</span>:
+  <span class="pl-ent">workflow_dispatch</span>:
+    <span class="pl-ent">inputs</span>:
+      <span class="pl-ent">language</span>:
+        <span class="pl-ent">description</span>: <span class="pl-s">The language to translate into</span>
+        <span class="pl-ent">default</span>: <span class="pl-s">Turkish</span>
+      <span class="pl-ent">code</span>:
+        <span class="pl-ent">description</span>: <span class="pl-s">The language code for the file name, as in README.tr.md</span>
+        <span class="pl-ent">default</span>: <span class="pl-s">tr</span>
+
+<span class="pl-ent">permissions</span>:
+  <span class="pl-ent">contents</span>: <span class="pl-s">write</span>
+  <span class="pl-ent">pull-requests</span>: <span class="pl-s">write</span>
+
+<span class="pl-ent">jobs</span>:
+  <span class="pl-ent">translate</span>:
+    <span class="pl-ent">runs-on</span>: <span class="pl-s">ubuntu-latest</span>
+    <span class="pl-ent">steps</span>:
+      - <span class="pl-ent">uses</span>: <span class="pl-s">actions/checkout@v7</span>
+
+      - <span class="pl-ent">uses</span>: <span class="pl-s">wiroai/Wiro-Action@v1</span>
+        <span class="pl-ent">id</span>: <span class="pl-s">translate</span>
+        <span class="pl-ent">with</span>:
+          <span class="pl-ent">mode</span>: <span class="pl-s">llm</span>
+          <span class="pl-ent">api-key</span>: <span class="pl-s">${{ secrets.WIRO_API_KEY }}</span>
+          <span class="pl-ent">model</span>: <span class="pl-s">openai/gpt-5-4-mini</span>
+          <span class="pl-ent">system</span>: <span class="pl-s">&gt;-</span>
+<span class="pl-s">            You translate Markdown documents. Keep the Markdown, code blocks, links,</span>
+<span class="pl-s">            HTML and product names as they are. Answer with the translated document only.</span>
+<span class="pl-s"></span>          <span class="pl-ent">prompt</span>: <span class="pl-s">Translate README.md into ${{ inputs.language }}.</span>
+          <span class="pl-ent">files</span>: <span class="pl-s">README.md</span>
+          <span class="pl-ent">params</span>: <span class="pl-s">|</span>
+<span class="pl-s">            reasoning_effort: low</span>
+<span class="pl-s"></span>          <span class="pl-ent">max-cost</span>: <span class="pl-s"><span class="pl-pds">'</span>0.50<span class="pl-pds">'</span></span>
+
+      - <span class="pl-ent">name</span>: <span class="pl-s">Open a pull request</span>
+        <span class="pl-ent">env</span>:
+          <span class="pl-ent">GH_TOKEN</span>: <span class="pl-s">${{ github.token }}</span>
+          <span class="pl-ent">TRANSLATION</span>: <span class="pl-s">${{ steps.translate.outputs.text }}</span>
+          <span class="pl-ent">LANGUAGE</span>: <span class="pl-s">${{ inputs.language }}</span>
+          <span class="pl-ent">CODE</span>: <span class="pl-s">${{ inputs.code }}</span>
+        <span class="pl-ent">run</span>: <span class="pl-s">|</span>
+<span class="pl-s">          branch="translate-readme-$CODE-$GITHUB_RUN_ID"</span>
+<span class="pl-s">          git switch -c "$branch"</span>
+<span class="pl-s">          printf '%s\n' "$TRANSLATION" &gt; "README.$CODE.md"</span>
+<span class="pl-s">          git config user.name 'github-actions[bot]'</span>
+<span class="pl-s">          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'</span>
+<span class="pl-s">          git add "README.$CODE.md"</span>
+<span class="pl-s">          git commit -m "docs: translate the README into $LANGUAGE"</span>
+<span class="pl-s">          git push origin "$branch"</span>
+<span class="pl-s">          gh pr create --head "$branch" --title "Translate the README into $LANGUAGE" \</span>
+<span class="pl-s">            --body "A $LANGUAGE translation of README.md, made with Wiro AI. Please read it through before merging."</span></pre></div>
+<h3 dir="auto" id="make-a-social-share-card">Make a social share card</h3>
+<div class="highlight highlight-source-yaml" dir="auto"><pre class="notranslate"><span class="pl-ent">name</span>: <span class="pl-s">Social card</span>
+
+<span class="pl-ent">on</span>:
+  <span class="pl-ent">workflow_dispatch</span>:
+    <span class="pl-ent">inputs</span>:
+      <span class="pl-ent">title</span>:
+        <span class="pl-ent">description</span>: <span class="pl-s">The headline on the card</span>
+        <span class="pl-ent">required</span>: <span class="pl-c1">true</span>
+
+<span class="pl-ent">jobs</span>:
+  <span class="pl-ent">card</span>:
+    <span class="pl-ent">runs-on</span>: <span class="pl-s">ubuntu-latest</span>
+    <span class="pl-ent">steps</span>:
+      - <span class="pl-ent">uses</span>: <span class="pl-s">wiroai/Wiro-Action@v1</span>
+        <span class="pl-ent">with</span>:
+          <span class="pl-ent">api-key</span>: <span class="pl-s">${{ secrets.WIRO_API_KEY }}</span>
+          <span class="pl-ent">model</span>: <span class="pl-s">openai/gpt-image-2</span>
+          <span class="pl-ent">prompt</span>: <span class="pl-s">&gt;-</span>
+<span class="pl-s">            A clean social media card with the headline "${{ inputs.title }}" in large,</span>
+<span class="pl-s">            bold type, plenty of white space and one simple abstract shape in a corner</span>
+<span class="pl-s"></span>          <span class="pl-ent">params</span>: <span class="pl-s">|</span>
+<span class="pl-s">            ratio: "16:9"</span>
+<span class="pl-s">            quality: medium</span>
+<span class="pl-s"></span>          <span class="pl-ent">max-cost</span>: <span class="pl-s"><span class="pl-pds">'</span>0.05<span class="pl-pds">'</span></span>
+          <span class="pl-ent">download</span>: <span class="pl-c1">true</span>
+          <span class="pl-ent">download-dir</span>: <span class="pl-s">card</span>
+
+      - <span class="pl-ent">uses</span>: <span class="pl-s">actions/upload-artifact@v7</span>
+        <span class="pl-ent">with</span>:
+          <span class="pl-ent">name</span>: <span class="pl-s">social-card</span>
+          <span class="pl-ent">path</span>: <span class="pl-s">card/</span></pre></div>
+<h3 dir="auto" id="run-one-of-your-workflows">Run one of your workflows</h3>
+<p dir="auto">Replace the link with your own workflow's, and the input names with the ones its Start node shows.</p>
+<div class="highlight highlight-source-yaml" dir="auto"><pre class="notranslate"><span class="pl-ent">name</span>: <span class="pl-s">Product video</span>
+
+<span class="pl-ent">on</span>:
+  <span class="pl-ent">workflow_dispatch</span>:
+    <span class="pl-ent">inputs</span>:
+      <span class="pl-ent">brief</span>:
+        <span class="pl-ent">description</span>: <span class="pl-s">What the video should show</span>
+        <span class="pl-ent">required</span>: <span class="pl-c1">true</span>
+
+<span class="pl-ent">jobs</span>:
+  <span class="pl-ent">video</span>:
+    <span class="pl-ent">runs-on</span>: <span class="pl-s">ubuntu-latest</span>
+    <span class="pl-ent">steps</span>:
+      - <span class="pl-ent">uses</span>: <span class="pl-s">actions/checkout@v7</span>
+
+      - <span class="pl-ent">uses</span>: <span class="pl-s">wiroai/Wiro-Action@v1</span>
+        <span class="pl-ent">with</span>:
+          <span class="pl-ent">api-key</span>: <span class="pl-s">${{ secrets.WIRO_API_KEY }}</span>
+          <span class="pl-ent">workflow</span>: <span class="pl-s">https://wiro.ai/workflows/product-ad-a1B2c</span>
+          <span class="pl-ent">params</span>: <span class="pl-s">|</span>
+<span class="pl-s">            brief: ${{ toJSON(inputs.brief) }}</span>
+<span class="pl-s"></span>          <span class="pl-ent">files</span>: <span class="pl-s">|</span>
+<span class="pl-s">            product_photo: assets/product.png</span>
+<span class="pl-s"></span>          <span class="pl-ent">max-cost</span>: <span class="pl-s"><span class="pl-pds">'</span>1.00<span class="pl-pds">'</span></span>
+          <span class="pl-ent">timeout</span>: <span class="pl-c1">1800</span>
+          <span class="pl-ent">download</span>: <span class="pl-c1">true</span>
+
+      - <span class="pl-ent">uses</span>: <span class="pl-s">actions/upload-artifact@v7</span>
+        <span class="pl-ent">with</span>:
+          <span class="pl-ent">name</span>: <span class="pl-s">product-video</span>
+          <span class="pl-ent">path</span>: <span class="pl-s">wiro-output/</span></pre></div>
+<p dir="auto"><code class="notranslate">toJSON()</code> writes free text as a quoted string, so quotes, colons and line breaks in it can't break the YAML of <code class="notranslate">params</code>.</p>
+<h2 dir="auto" id="inputs">Inputs</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Input</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">api-key</code></td>
+<td></td>
+<td><strong>Required.</strong> Your Wiro AI project API key. Keep it in a secret.</td>
+</tr>
+<tr>
+<td><code class="notranslate">api-secret</code></td>
+<td></td>
+<td>The project's API secret, for projects that use signature authentication.</td>
+</tr>
+<tr>
+<td><code class="notranslate">mode</code></td>
+<td></td>
+<td><code class="notranslate">model</code> runs a model and waits for the task. <code class="notranslate">workflow</code> runs one of your workflows. <code class="notranslate">llm</code> sends one chat request to the LLM gateway. When empty: <code class="notranslate">workflow</code> if <code class="notranslate">workflow</code> is set, otherwise <code class="notranslate">model</code>.</td>
+</tr>
+<tr>
+<td><code class="notranslate">model</code></td>
+<td></td>
+<td>model and llm modes: the model ID, <code class="notranslate">owner/model</code>, for example <code class="notranslate">pruna/p-image</code> or <code class="notranslate">openai/gpt-5-4-mini</code>.</td>
+</tr>
+<tr>
+<td><code class="notranslate">workflow</code></td>
+<td></td>
+<td>workflow mode: the workflow's link on wiro.ai, or its full slug, such as <code class="notranslate">product-ad-a1B2c</code>.</td>
+</tr>
+<tr>
+<td><code class="notranslate">prompt</code></td>
+<td></td>
+<td>llm mode: the message to send (required). model and workflow modes: sent as the <code class="notranslate">prompt</code> parameter or input.</td>
+</tr>
+<tr>
+<td><code class="notranslate">system</code></td>
+<td></td>
+<td>llm mode: the system prompt.</td>
+</tr>
+<tr>
+<td><code class="notranslate">params</code></td>
+<td></td>
+<td>A JSON or YAML mapping. model mode: the model parameters. workflow mode: the workflow inputs. llm mode: extra Chat Completions fields.</td>
+</tr>
+<tr>
+<td><code class="notranslate">files</code></td>
+<td></td>
+<td>model and workflow modes: a mapping of parameter or input name to a path, list or glob. llm mode: paths or glob patterns, one per line.</td>
+</tr>
+<tr>
+<td><code class="notranslate">max-cost</code></td>
+<td></td>
+<td>The most a run may cost, in USD, such as <code class="notranslate">0.50</code>. A run whose estimate is higher, or whose price can't be confirmed under it, does not start.</td>
+</tr>
+<tr>
+<td><code class="notranslate">timeout</code></td>
+<td><code class="notranslate">600</code></td>
+<td>Seconds to wait for the result.</td>
+</tr>
+<tr>
+<td><code class="notranslate">poll-interval</code></td>
+<td><code class="notranslate">3</code></td>
+<td>model and workflow modes: seconds between status checks.</td>
+</tr>
+<tr>
+<td><code class="notranslate">cancel-on-timeout</code></td>
+<td><code class="notranslate">true</code></td>
+<td>model mode: stop the task when <code class="notranslate">timeout</code> runs out or the workflow run is cancelled.</td>
+</tr>
+<tr>
+<td><code class="notranslate">download</code></td>
+<td><code class="notranslate">false</code></td>
+<td>model and workflow modes: download the output files.</td>
+</tr>
+<tr>
+<td><code class="notranslate">download-dir</code></td>
+<td><code class="notranslate">wiro-output</code></td>
+<td>model and workflow modes: the folder for downloaded files, relative to the workspace.</td>
+</tr>
+<tr>
+<td><code class="notranslate">summary</code></td>
+<td><code class="notranslate">true</code></td>
+<td>Write the result, with images and answers, to the job summary.</td>
+</tr>
+<tr>
+<td><code class="notranslate">api-url</code></td>
+<td><code class="notranslate">https://api.wiro.ai/v1</code></td>
+<td>The Wiro AI API base URL.</td>
+</tr>
+<tr>
+<td><code class="notranslate">llm-url</code></td>
+<td><code class="notranslate">https://llm.wiro.ai/v1</code></td>
+<td>The Wiro AI LLM gateway base URL.</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">Paths in <code class="notranslate">files</code> and <code class="notranslate">download-dir</code> are relative to the workspace. Patterns that start with <code class="notranslate">!</code> leave files out.</p>
+<h2 dir="auto" id="outputs">Outputs</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Output</th>
+<th>Mode</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">task-id</code></td>
+<td>model</td>
+<td>The Wiro AI task ID.</td>
+</tr>
+<tr>
+<td><code class="notranslate">run-token</code></td>
+<td>workflow</td>
+<td>The token of the workflow run. It is masked in the logs.</td>
+</tr>
+<tr>
+<td><code class="notranslate">url</code></td>
+<td>model, workflow</td>
+<td>The URL of the first output file.</td>
+</tr>
+<tr>
+<td><code class="notranslate">urls</code></td>
+<td>model, workflow</td>
+<td>A JSON array with the URLs of all output files.</td>
+</tr>
+<tr>
+<td><code class="notranslate">files</code></td>
+<td>model, workflow</td>
+<td>A JSON array with the downloaded file paths, relative to the workspace.</td>
+</tr>
+<tr>
+<td><code class="notranslate">outputs</code></td>
+<td>model, workflow</td>
+<td>model mode: the task's outputs as a JSON array of objects with <code class="notranslate">name</code>, <code class="notranslate">contenttype</code>, <code class="notranslate">size</code>, <code class="notranslate">url</code> and, for LLMs, <code class="notranslate">content</code>. workflow mode: a JSON object with each result of the End node, as a list of files and texts.</td>
+</tr>
+<tr>
+<td><code class="notranslate">text</code></td>
+<td>all</td>
+<td>The text answer: the reply in llm mode. In model mode, the answer of an LLM, or the text file a model returns, such as a transcript. In workflow mode, the text results.</td>
+</tr>
+<tr>
+<td><code class="notranslate">cost</code></td>
+<td>all</td>
+<td>The amount billed for the run, in USD.</td>
+</tr>
+<tr>
+<td><code class="notranslate">estimated-cost</code></td>
+<td>all</td>
+<td>The price estimated before the run, in USD; empty when it is not known before the run. In llm mode it is an upper estimate.</td>
+</tr>
+<tr>
+<td><code class="notranslate">response</code></td>
+<td>llm</td>
+<td>The full Chat Completions response as JSON, for tool calls and other details.</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">Read JSON outputs with <code class="notranslate">fromJSON()</code> in expressions, for example <code class="notranslate">fromJSON(steps.image.outputs.urls)[0]</code>, or with <code class="notranslate">jq</code> in a script.</p>
+<h2 dir="auto" id="authentication">Authentication</h2>
+<p dir="auto">For an API key only project, <code class="notranslate">api-key</code> is all you need. For a project that uses signature authentication, also set <code class="notranslate">api-secret</code>: the action signs every API request with a fresh nonce and sends <code class="notranslate">key:secret</code> to the LLM gateway. See <a href="https://wiro.ai/docs/authentication">Authentication</a> in the docs.</p>
+<h2 dir="auto" id="security">Security</h2>
+<ul dir="auto">
+<li>Keep the key in a secret. The action also masks it in the logs.</li>
+<li>Treat model output as untrusted text. Pass it to scripts through <code class="notranslate">env:</code>, as the examples do, and don't write <code class="notranslate">${{ steps.&lt;id&gt;.outputs.text }}</code> inside a <code class="notranslate">run:</code> script. See <a href="https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions">Security hardening for GitHub Actions</a>.</li>
+<li>Workflows started by pull requests from forks, or by Dependabot, don't receive repository secrets, so the action would stop there with an empty <code class="notranslate">api-key</code>. The pull request examples skip those runs with an <code class="notranslate">if:</code> condition on the job.</li>
+<li>The action prints model answers to the log with workflow commands turned off, so a line such as <code class="notranslate">::error::</code> in an answer stays plain text.</li>
+</ul>
+<h2 dir="auto" id="self-hosted-runners-behind-a-proxy">Self-hosted runners behind a proxy</h2>
+<p dir="auto">Set <code class="notranslate">NODE_USE_ENV_PROXY: 1</code> next to <code class="notranslate">HTTPS_PROXY</code> in the job's <code class="notranslate">env</code>, and Node.js sends the action's requests through the proxy. See <a href="https://nodejs.org/en/learn/http/enterprise-network-configuration">Enterprise network configuration</a> in the Node.js docs.</p>
+<h2 dir="auto" id="agent-skill">Agent skill</h2>
+<p dir="auto">This repository includes an agent skill, <code class="notranslate">wiro-github-action</code>, in <a href="https://github.com/wiroai/Wiro-Action/blob/main/skills/wiro-github-action/SKILL.md"><code class="notranslate">skills/wiro-github-action/SKILL.md</code></a>. It shows coding agents such as Claude Code and Cursor how to write workflows with this action: pick the mode and the model, read the key from a secret, set a cost limit and use the results in later steps. Add it to your agent with:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npx skills add wiroai/Wiro-Action --skill wiro-github-action</pre></div>
+<h2 dir="auto" id="development">Development</h2>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npm ci
+npm run build   <span class="pl-c"><span class="pl-c">#</span> bundles src/ into dist/index.js</span>
+npm <span class="pl-c1">test</span>        <span class="pl-c"><span class="pl-c">#</span> unit tests, and dist/index.js against a mock API</span>
+npm run lint</pre></div>
+<p dir="auto"><code class="notranslate">dist/</code> is committed, because GitHub runs the action from the repository. Run <code class="notranslate">npm run build</code> and commit <code class="notranslate">dist/</code> with every change; CI checks that it matches the source. The CI workflow also runs the action against the mock API in <code class="notranslate">test/mock-server.js</code>, and runs a live test when the repository has a <code class="notranslate">WIRO_API_KEY</code> secret.</p>
+<p dir="auto">To release, update the version in <code class="notranslate">package.json</code> and <code class="notranslate">src/version.js</code> and the <a href="https://github.com/wiroai/Wiro-Action/blob/main/CHANGELOG.md">changelog</a>, tag the commit <code class="notranslate">vX.Y.Z</code>, move the <code class="notranslate">v1</code> tag to the same commit, and publish a GitHub release for <code class="notranslate">vX.Y.Z</code> with <strong>Publish this Action to the GitHub Marketplace</strong> ticked.</p>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
+<td>Official MCP server for Wiro AI, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>Vercel AI SDK provider for chat, images, speech, transcription and video, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-llm"><code class="notranslate">@wiro-ai/wiro-llm</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Cursor, Claude Code, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills">Wiro-Skills</a></td>
+<td>Agent skills for images, image edits, video, music, speech, transcripts, 3D and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Wiro AI extension for Safari on the Mac</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Wiro AI SDK for Dart and Flutter, <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>Wiro AI SDK for React Native and Expo, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><code class="notranslate">@wiro-ai/wiro-react-native</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-Realtime">Swift-Realtime</a></td>
+<td>Realtime voice AI example for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin-Realtime</a></td>
+<td>Realtime voice AI example for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-Realtime">Dart-Realtime</a></td>
+<td>Realtime voice AI example for Flutter</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-Realtime">ReactNative-Realtime</a></td>
+<td>Realtime voice AI example for React Native</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>One Wiro AI node for n8n with a searchable model picker, <a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><code class="notranslate">@wiro-ai/n8n-nodes-wiro</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI plugins for Dify: the LLM gateway as a model provider, plus image, video, speech and music tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI">Wiro-ComfyUI</a></td>
+<td>Wiro AI nodes for ComfyUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Zed">Wiro-Zed</a></td>
+<td>Wiro AI MCP server extension for Zed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Raycast">Wiro-Raycast</a></td>
+<td>Wiro AI extension for Raycast: image and video generation, LLM chat and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress: featured images, image edits, alt text, narration and SEO suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Obsidian">Wiro-Obsidian</a></td>
+<td>Wiro AI plugin for Obsidian: images, video, speech, music, transcription and text tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Blender">Wiro-Blender</a></td>
+<td>Wiro AI add-on for Blender: text to 3D, image to 3D and textures</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Figma">Wiro-Figma</a></td>
+<td>Wiro AI plugin for Figma: images, vectors, image edits and text</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js starter for Wiro AI: Playground, image, video and audio tools, and LLM chat, ready for Vercel and Railway</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Docs">Wiro-Docs</a></td>
+<td>Source of the Wiro AI API docs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto">MIT, see <a href="https://github.com/wiroai/Wiro-Action/blob/main/LICENSE">LICENSE</a>.</p>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/wiro-mcp/">Wiro-MCP</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li><li><a href="/projects/dart-quickstart/">Dart-QuickStart</a></li><li><a href="/projects/reactnative-quickstart/">ReactNative-QuickStart</a></li><li><a href="/projects/swift-realtime/">Swift-Realtime</a></li><li><a href="/projects/kotlin-realtime/">Kotlin-Realtime</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

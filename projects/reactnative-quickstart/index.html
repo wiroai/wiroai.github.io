@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReactNative-QuickStart: Wiro AI open source</title>
+<meta name="description" content="Official React Native and Expo SDK for the Wiro AI API, on npm as @wiro-ai/wiro-react-native: run image, video, audio and LLM models from TypeScript.">
+<link rel="canonical" href="https://wiroai.github.io/projects/reactnative-quickstart/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="ReactNative-QuickStart: Wiro AI open source">
+<meta property="og:description" content="Official React Native and Expo SDK for the Wiro AI API, on npm as @wiro-ai/wiro-react-native: run image, video, audio and LLM models from TypeScript.">
+<meta property="og:url" content="https://wiroai.github.io/projects/reactnative-quickstart/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "ReactNative-QuickStart", "description": "Official React Native and Expo SDK for the Wiro AI API, on npm as @wiro-ai/wiro-react-native: run image, video, audio and LLM models from TypeScript.", "codeRepository": "https://github.com/wiroai/ReactNative-QuickStart", "url": "https://wiroai.github.io/projects/reactnative-quickstart/", "programmingLanguage": "TypeScript", "license": "https://api.github.com/licenses/mit", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#sdks">LLM gateway and SDKs</a></p>
+<section class="project-head">
+  <h1>ReactNative-QuickStart</h1>
+  <p class="lead">Official React Native and Expo SDK for the Wiro AI API, on npm as @wiro-ai/wiro-react-native: run image, video, audio and LLM models from TypeScript.</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/ReactNative-QuickStart">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai/docs/code-examples">Docs</a></p>
+</section>
+<article class="markdown">
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/ReactNative-QuickStart/main/.github/assets/wiro-logo.png"><img src="https://raw.githubusercontent.com/wiroai/ReactNative-QuickStart/main/.github/assets/wiro-logo.png" alt="Wiro AI" width="240" style="max-width: 100%;"></a>
+<h2 dir="auto" id="wiro-ai-sdk-for-react-native-and-expo">Wiro AI SDK for React Native and Expo</h2>
+<p dir="auto">Run image, video, audio and LLM models from React Native and Expo apps in TypeScript with the Wiro AI API: typed requests, live task tracking and file uploads.</p>
+<p dir="auto"><a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><img loading="lazy" src="https://camo.githubusercontent.com/899fa0cc242eca1d069247c1368dbc4897f09226ec4abafd110b8ad2ed0db42b/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f407769726f2d61692f7769726f2d72656163742d6e61746976653f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131266c6f676f3d6e706d266c6f676f436f6c6f723d7768697465" alt="npm" data-canonical-src="https://img.shields.io/npm/v/@wiro-ai/wiro-react-native?style=for-the-badge&amp;color=111111&amp;logo=npm&amp;logoColor=white" style="max-width: 100%;"></a> <a href="https://reactnative.dev"><img loading="lazy" src="https://camo.githubusercontent.com/1d46021c35caccb4f332c86930776b9ab931fcd7fc440662dc137bcd3d4a12b9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656163742532304e61746976652d302e37362532422d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131266c6f676f3d7265616374266c6f676f436f6c6f723d7768697465" alt="React Native 0.76+" data-canonical-src="https://img.shields.io/badge/React%20Native-0.76%2B-111111?style=for-the-badge&amp;color=111111&amp;logo=react&amp;logoColor=white" style="max-width: 100%;"></a> <a href="https://expo.dev"><img loading="lazy" src="https://camo.githubusercontent.com/51f1e3e3551bfdfac67dba6554d7532a9024312a1ee9abe5193e8dc717b571d3/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4578706f25323053444b2d35342532422d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131266c6f676f3d6578706f266c6f676f436f6c6f723d7768697465" alt="Expo SDK 54+" data-canonical-src="https://img.shields.io/badge/Expo%20SDK-54%2B-111111?style=for-the-badge&amp;color=111111&amp;logo=expo&amp;logoColor=white" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/ReactNative-QuickStart/actions/workflows/ci.yml"><img loading="lazy" src="https://camo.githubusercontent.com/3ce2c711a60df5ca4d25b6904925b79fb8d65cdd6e6f8f3fcfd9bd68607dbef7/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f7769726f61692f52656163744e61746976652d517569636b53746172742f63692e796d6c3f6272616e63683d6d61696e267374796c653d666f722d7468652d626164676526636f6c6f723d313131313131266c6162656c3d4349266c6f676f3d676974687562616374696f6e73266c6f676f436f6c6f723d7768697465" alt="CI" data-canonical-src="https://img.shields.io/github/actions/workflow/status/wiroai/ReactNative-QuickStart/ci.yml?branch=main&amp;style=for-the-badge&amp;color=111111&amp;label=CI&amp;logo=githubactions&amp;logoColor=white" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/ReactNative-QuickStart/blob/main/LICENSE"><img loading="lazy" src="https://camo.githubusercontent.com/9b0dcc545c9e697315b8d16f4363715f0cc54941456ba778cbc802bb0ef11275/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="License: MIT" data-canonical-src="https://img.shields.io/badge/license-MIT-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs/code-examples">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a> · <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native">npm</a></p>
+</div>
+<p dir="auto"><code class="notranslate">@wiro-ai/wiro-react-native</code> is the official TypeScript library for calling the<br>
+<a href="https://wiro.ai">Wiro AI</a> model API from React Native and Expo apps,<br>
+including Expo Go. It runs any model in the Wiro AI catalog, through typed<br>
+request factories for popular image, video and music models or through<br>
+<code class="notranslate">Wiro.model</code> with a parameter map, and follows each task by polling or over a<br>
+WebSocket. Uploads accept bytes, Blobs, streams and Expo picker URIs.</p>
+<h2 dir="auto" id="features">Features</h2>
+<ul dir="auto">
+<li>Typed request factories for popular image, video, and audio models</li>
+<li>Dynamic model requests with <code class="notranslate">Wiro.model("owner/project", parameters)</code></li>
+<li>Model search, explore, and schema validation</li>
+<li><code class="notranslate">subscribe</code> / <code class="notranslate">run</code> / <code class="notranslate">subscribeStream</code> task lifecycle APIs</li>
+<li>Automatic uploads for bytes, Blob, stream, and Expo picker URIs</li>
+<li>Polling and WebSocket task tracking</li>
+<li>Task cancel / kill</li>
+<li>Retry with exponential backoff, timeouts, and structured logging</li>
+<li>API key, HMAC signature, and proxy authentication</li>
+<li>AbortSignal cancellation and <code class="notranslate">client.close()</code> lifecycle control</li>
+</ul>
+<h2 dir="auto" id="requirements">Requirements</h2>
+<ul dir="auto">
+<li>React Native 0.76+</li>
+<li>Expo SDK 54+ (Expo Go supported)</li>
+<li><code class="notranslate">expo-file-system</code> peer dependency</li>
+<li>Node.js 22.18+ for development</li>
+<li>A <a href="https://wiro.ai/panel/project/new">Wiro AI project and API key</a></li>
+</ul>
+<h2 dir="auto" id="installation">Installation</h2>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npm install @wiro-ai/wiro-react-native</pre></div>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">yarn add @wiro-ai/wiro-react-native</pre></div>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">pnpm add @wiro-ai/wiro-react-native</pre></div>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npx expo install expo-file-system</pre></div>
+<h2 dir="auto" id="quick-start">Quick start</h2>
+<div class="highlight highlight-source-ts" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-kos">{</span>
+  <span class="pl-v">Wiro</span><span class="pl-kos">,</span>
+  <span class="pl-v">WiroClient</span><span class="pl-kos">,</span>
+  <span class="pl-v">WiroFlux2ProOutputFormat</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'@wiro-ai/wiro-react-native'</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">WiroClient</span><span class="pl-kos">(</span><span class="pl-kos">{</span> <span class="pl-c1">apiKey</span>: <span class="pl-s">'your-api-key'</span> <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-k">try</span> <span class="pl-kos">{</span>
+  <span class="pl-k">const</span> <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span><span class="pl-kos">.</span><span class="pl-en">subscribe</span><span class="pl-kos">(</span>
+    <span class="pl-v">Wiro</span><span class="pl-kos">.</span><span class="pl-en">flux2Pro</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+      <span class="pl-c1">outputFormat</span>: <span class="pl-v">WiroFlux2ProOutputFormat</span><span class="pl-kos">.</span><span class="pl-c1">png</span><span class="pl-kos">,</span>
+      <span class="pl-c1">prompt</span>: <span class="pl-s">'A cinematic mountain lake'</span><span class="pl-kos">,</span>
+    <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+  <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-s1">result</span><span class="pl-kos">.</span><span class="pl-c1">kind</span> <span class="pl-c1">===</span> <span class="pl-s">'success'</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">result</span><span class="pl-kos">.</span><span class="pl-c1">task</span><span class="pl-kos">.</span><span class="pl-c1">outputs</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-kos">]</span><span class="pl-kos">?.</span><span class="pl-c1">url</span><span class="pl-kos">?.</span><span class="pl-en">toString</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+  <span class="pl-kos">}</span> <span class="pl-k">else</span> <span class="pl-kos">{</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">'Failed:'</span><span class="pl-kos">,</span> <span class="pl-s1">result</span><span class="pl-kos">.</span><span class="pl-c1">reason</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+  <span class="pl-kos">}</span>
+<span class="pl-kos">}</span> <span class="pl-k">finally</span> <span class="pl-kos">{</span>
+  <span class="pl-s1">client</span><span class="pl-kos">.</span><span class="pl-en">close</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-kos">}</span></pre></div>
+<blockquote>
+<p dir="auto"><strong>Mobile tip:</strong> Prefer <code class="notranslate">WiroClient({ proxyUrl, headers })</code> in shipped apps so<br>
+long-lived API secrets never ship inside the binary.</p>
+</blockquote>
+<h2 dir="auto" id="authentication">Authentication</h2>
+<h3 dir="auto" id="api-key">API key</h3>
+<div class="highlight highlight-source-ts" dir="auto"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">WiroClient</span><span class="pl-kos">(</span><span class="pl-kos">{</span> <span class="pl-c1">apiKey</span>: <span class="pl-s">'your-api-key'</span> <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<h3 dir="auto" id="api-key--hmac-signature">API key + HMAC signature</h3>
+<div class="highlight highlight-source-ts" dir="auto"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">WiroClient</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">apiKey</span>: <span class="pl-s">'your-api-key'</span><span class="pl-kos">,</span>
+  <span class="pl-c1">apiSecret</span>: <span class="pl-s">'your-api-secret'</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<h3 dir="auto" id="proxy-recommended-for-production">Proxy (recommended for production)</h3>
+<div class="highlight highlight-source-ts" dir="auto"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">WiroClient</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">proxyUrl</span>: <span class="pl-s">'https://api.myapp.com/wiro/v1'</span><span class="pl-kos">,</span>
+  <span class="pl-c1">headers</span>: <span class="pl-kos">{</span>
+    <span class="pl-c1">Authorization</span>: <span class="pl-s">'Bearer app-token'</span><span class="pl-kos">,</span>
+  <span class="pl-kos">}</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<p dir="auto">Your backend attaches Wiro AI credentials server-side. The SDK never stores an<br>
+API key in proxy mode.</p>
+<h2 dir="auto" id="which-call-do-i-need">Which call do I need?</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>I want to...</th>
+<th>Call</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generate with a supported model</td>
+<td><code class="notranslate">client.subscribe(Wiro.flux2Pro(...))</code></td>
+</tr>
+<tr>
+<td>Run any other model</td>
+<td><code class="notranslate">client.subscribe(Wiro.model("owner/project", ...))</code></td>
+</tr>
+<tr>
+<td>Fire-and-forget then wait</td>
+<td><code class="notranslate">run</code> / <code class="notranslate">runModel</code>, then <code class="notranslate">waitForTask</code></td>
+</tr>
+<tr>
+<td>Stream live status updates</td>
+<td><code class="notranslate">subscribeStream(...)</code></td>
+</tr>
+<tr>
+<td>Find a model</td>
+<td><code class="notranslate">searchModels</code> / <code class="notranslate">explore</code></td>
+</tr>
+<tr>
+<td>Inspect parameters</td>
+<td><code class="notranslate">getModelSchema</code>, then <code class="notranslate">schema.validate</code></td>
+</tr>
+<tr>
+<td>Send bytes / Blob</td>
+<td><code class="notranslate">WiroFileInput.bytes(...)</code> / <code class="notranslate">.blob(...)</code></td>
+</tr>
+<tr>
+<td>Send an Expo picker URI</td>
+<td><code class="notranslate">WiroFileInput.uri(...)</code></td>
+</tr>
+<tr>
+<td>Stop work</td>
+<td><code class="notranslate">AbortSignal</code>, or <code class="notranslate">cancelTask</code> / <code class="notranslate">killTask</code></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2 dir="auto" id="typed-and-dynamic-requests">Typed and dynamic requests</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Category</th>
+<th>Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image</td>
+<td>FLUX.2 Pro, GPT Image 2, Nano Banana Pro, Seedream v4, Grok Imagine Image</td>
+</tr>
+<tr>
+<td>Video</td>
+<td>Runway Gen-4.5, Seedance 2.0, Kling V3, Veo 3.1, Hailuo 2.3 Fast, Grok Imagine Video</td>
+</tr>
+<tr>
+<td>Music</td>
+<td>Lyria 3</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<div class="highlight highlight-source-ts" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-kos">{</span>
+  <span class="pl-v">Wiro</span><span class="pl-kos">,</span>
+  <span class="pl-v">WiroFlux2ProOutputFormat</span><span class="pl-kos">,</span>
+  <span class="pl-v">WiroValue</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'@wiro-ai/wiro-react-native'</span><span class="pl-kos">;</span>
+
+<span class="pl-c">// Typed</span>
+<span class="pl-k">const</span> <span class="pl-s1">request</span> <span class="pl-c1">=</span> <span class="pl-v">Wiro</span><span class="pl-kos">.</span><span class="pl-en">flux2Pro</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">prompt</span>: <span class="pl-s">'Sunset over the bay'</span><span class="pl-kos">,</span>
+  <span class="pl-c1">outputFormat</span>: <span class="pl-v">WiroFlux2ProOutputFormat</span><span class="pl-kos">.</span><span class="pl-c1">png</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-c">// Dynamic</span>
+<span class="pl-k">const</span> <span class="pl-s1">dynamic</span> <span class="pl-c1">=</span> <span class="pl-v">Wiro</span><span class="pl-kos">.</span><span class="pl-en">model</span><span class="pl-kos">(</span><span class="pl-s">'black-forest-labs/flux-2-pro'</span><span class="pl-kos">,</span> <span class="pl-kos">{</span>
+  <span class="pl-c1">prompt</span>: <span class="pl-v">WiroValue</span><span class="pl-kos">.</span><span class="pl-en">string</span><span class="pl-kos">(</span><span class="pl-s">'Sunset over the bay'</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-c1">width</span>: <span class="pl-v">WiroValue</span><span class="pl-kos">.</span><span class="pl-en">number</span><span class="pl-kos">(</span><span class="pl-c1">1024</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-c1">height</span>: <span class="pl-v">WiroValue</span><span class="pl-kos">.</span><span class="pl-en">number</span><span class="pl-kos">(</span><span class="pl-c1">1024</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<h2 dir="auto" id="polling-and-websocket-tracking">Polling and WebSocket tracking</h2>
+<div class="highlight highlight-source-ts" dir="auto"><pre class="notranslate"><span class="pl-c">// Default: polling</span>
+<span class="pl-k">const</span> <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span><span class="pl-kos">.</span><span class="pl-en">subscribe</span><span class="pl-kos">(</span><span class="pl-s1">request</span><span class="pl-kos">,</span> <span class="pl-kos">{</span>
+  <span class="pl-en">onUpdate</span><span class="pl-kos">(</span><span class="pl-s1">update</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">update</span><span class="pl-kos">.</span><span class="pl-c1">status</span><span class="pl-kos">?.</span><span class="pl-c1">apiValue</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+  <span class="pl-kos">}</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-c">// WebSocket</span>
+<span class="pl-k">const</span> <span class="pl-s1">live</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span><span class="pl-kos">.</span><span class="pl-en">subscribe</span><span class="pl-kos">(</span><span class="pl-s1">request</span><span class="pl-kos">,</span> <span class="pl-kos">{</span>
+  <span class="pl-c1">trackingMode</span>: <span class="pl-s">'webSocket'</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-c">// Async iterable</span>
+<span class="pl-k">const</span> <span class="pl-s1">updates</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span><span class="pl-kos">.</span><span class="pl-en">subscribeStream</span><span class="pl-kos">(</span><span class="pl-s1">request</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-k">for</span> <span class="pl-k">await</span> <span class="pl-kos">(</span><span class="pl-k">const</span> <span class="pl-s1">update</span> <span class="pl-k">of</span> <span class="pl-s1">updates</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+  <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">update</span><span class="pl-kos">.</span><span class="pl-c1">status</span><span class="pl-kos">?.</span><span class="pl-c1">apiValue</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-kos">}</span></pre></div>
+<h2 dir="auto" id="uploads">Uploads</h2>
+<p dir="auto">Unresolved file inputs inside run parameters are uploaded automatically before<br>
+<code class="notranslate">/Run</code>.</p>
+<div class="highlight highlight-source-ts" dir="auto"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">image</span> <span class="pl-c1">=</span> <span class="pl-v">WiroFileInput</span><span class="pl-kos">.</span><span class="pl-en">uri</span><span class="pl-kos">(</span><span class="pl-s1">pickerAsset</span><span class="pl-kos">.</span><span class="pl-c1">uri</span><span class="pl-kos">,</span> <span class="pl-kos">{</span>
+  <span class="pl-c1">fileName</span>: <span class="pl-s1">pickerAsset</span><span class="pl-kos">.</span><span class="pl-c1">name</span> <span class="pl-c1">??</span> <span class="pl-s">'photo.jpg'</span><span class="pl-kos">,</span>
+  <span class="pl-c1">mediaType</span>: <span class="pl-s1">pickerAsset</span><span class="pl-kos">.</span><span class="pl-c1">mimeType</span> <span class="pl-c1">??</span> <span class="pl-s">'image/jpeg'</span><span class="pl-kos">,</span>
+  <span class="pl-c1">sizeBytes</span>: <span class="pl-s1">pickerAsset</span><span class="pl-kos">.</span><span class="pl-c1">size</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span><span class="pl-kos">.</span><span class="pl-en">subscribe</span><span class="pl-kos">(</span>
+  <span class="pl-v">Wiro</span><span class="pl-kos">.</span><span class="pl-en">model</span><span class="pl-kos">(</span><span class="pl-s">'owner/project'</span><span class="pl-kos">,</span> <span class="pl-kos">{</span>
+    <span class="pl-c1">image</span>: <span class="pl-v">WiroValue</span><span class="pl-kos">.</span><span class="pl-en">fileInput</span><span class="pl-kos">(</span><span class="pl-s1">image</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+<span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<p dir="auto">Manual upload helpers:</p>
+<div class="highlight highlight-source-ts" dir="auto"><pre class="notranslate"><span class="pl-k">await</span> <span class="pl-s1">client</span><span class="pl-kos">.</span><span class="pl-en">uploadFile</span><span class="pl-kos">(</span><span class="pl-s1">bytesOrBlob</span><span class="pl-kos">,</span> <span class="pl-s">'photo.png'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-k">await</span> <span class="pl-s1">client</span><span class="pl-kos">.</span><span class="pl-en">uploadFileFromUri</span><span class="pl-kos">(</span><span class="pl-s1">uri</span><span class="pl-kos">,</span> <span class="pl-kos">{</span> <span class="pl-c1">fileName</span>: <span class="pl-s">'photo.png'</span> <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-k">await</span> <span class="pl-s1">client</span><span class="pl-kos">.</span><span class="pl-en">uploadStream</span><span class="pl-kos">(</span><span class="pl-s1">stream</span><span class="pl-kos">,</span> <span class="pl-s">'video.mp4'</span><span class="pl-kos">,</span> <span class="pl-kos">{</span> contentLength <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<h2 dir="auto" id="cancellation">Cancellation</h2>
+<div class="highlight highlight-source-ts" dir="auto"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">controller</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">AbortController</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span><span class="pl-kos">.</span><span class="pl-en">subscribe</span><span class="pl-kos">(</span><span class="pl-s1">request</span><span class="pl-kos">,</span> <span class="pl-kos">{</span>
+  <span class="pl-c1">signal</span>: <span class="pl-s1">controller</span><span class="pl-kos">.</span><span class="pl-c1">signal</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-s1">controller</span><span class="pl-kos">.</span><span class="pl-en">abort</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-s1">client</span><span class="pl-kos">.</span><span class="pl-en">close</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<h2 dir="auto" id="security-guidance">Security guidance</h2>
+<ul dir="auto">
+<li>Prefer proxy mode in production builds.</li>
+<li>Never log API keys, secrets, proxy bearer tokens, or raw response bodies.</li>
+<li>Prefer <code class="notranslate">JSON.stringify(...)</code> on SDK objects; diagnostic fields such as<br>
+<code class="notranslate">task.raw</code> and <code class="notranslate">error.rawResponseBody</code> are for local debugging only.</li>
+<li>Do not put production credentials in <code class="notranslate">EXPO_PUBLIC_*</code> environment variables.</li>
+</ul>
+<h2 dir="auto" id="workspace">Workspace</h2>
+<ul dir="auto">
+<li><code class="notranslate">packages/wiro-react-native</code>: publishable <code class="notranslate">@wiro-ai/wiro-react-native</code> package</li>
+<li><code class="notranslate">apps/example</code>: Expo Go-compatible iOS and Android example</li>
+</ul>
+<p dir="auto">Package reference: <a href="https://github.com/wiroai/ReactNative-QuickStart/blob/main/packages/wiro-react-native/README.md"><code class="notranslate">packages/wiro-react-native/README.md</code></a></p>
+<h2 dir="auto" id="example-app">Example app</h2>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">corepack <span class="pl-c1">enable</span>
+pnpm install
+cp .env.example apps/example/.env</pre></div>
+<p dir="auto">Set <code class="notranslate">EXPO_PUBLIC_WIRO_API_KEY</code> in <code class="notranslate">apps/example/.env</code> for local development.<br>
+Expo reads <code class="notranslate">.env</code> files from the example app folder, not the repository root.<br>
+Then start the app:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">pnpm --filter @wiro-ai/example start</pre></div>
+<h2 dir="auto" id="agent-skill">Agent skill</h2>
+<p dir="auto">This repository includes an agent skill, <code class="notranslate">wiro-react-native</code>, in <a href="https://github.com/wiroai/ReactNative-QuickStart/blob/main/skills/wiro-react-native/SKILL.md"><code class="notranslate">skills/wiro-react-native/SKILL.md</code></a>. It shows coding agents such as Claude Code, Codex and Cursor how to use this SDK in React Native and Expo apps. Add it to your agent with:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npx skills add wiroai/ReactNative-QuickStart --skill wiro-react-native</pre></div>
+<h2 dir="auto" id="documentation">Documentation</h2>
+<ul dir="auto">
+<li>Product docs: <a href="https://wiro.ai/docs">https://wiro.ai/docs</a></li>
+<li>Available models: <a href="https://wiro.ai/models">https://wiro.ai/models</a></li>
+<li>Package guide: <a href="https://github.com/wiroai/ReactNative-QuickStart/blob/main/packages/wiro-react-native/README.md"><code class="notranslate">packages/wiro-react-native/README.md</code></a></li>
+<li>Changelog: <a href="https://github.com/wiroai/ReactNative-QuickStart/blob/main/CHANGELOG.md"><code class="notranslate">CHANGELOG.md</code></a></li>
+<li>Security policy: <a href="https://github.com/wiroai/ReactNative-QuickStart/blob/main/SECURITY.md"><code class="notranslate">SECURITY.md</code></a></li>
+<li>Contributing guide: <a href="https://github.com/wiroai/ReactNative-QuickStart/blob/main/CONTRIBUTING.md"><code class="notranslate">CONTRIBUTING.md</code></a></li>
+</ul>
+<h2 dir="auto" id="development">Development</h2>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">corepack <span class="pl-c1">enable</span>
+pnpm install
+pnpm format:check
+pnpm lint
+pnpm typecheck
+pnpm build
+pnpm <span class="pl-c1">test</span>
+pnpm test:coverage
+pnpm verify:exports</pre></div>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
+<td>Official MCP server for Wiro AI, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>Vercel AI SDK provider for chat, images, speech, transcription and video, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-llm"><code class="notranslate">@wiro-ai/wiro-llm</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Wiro AI extension for Safari on the Mac</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Cursor, Claude Code, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills">Wiro-Skills</a></td>
+<td>Agent skills for images, image edits, video, music, speech, transcripts, 3D and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Wiro AI SDK for Dart and Flutter, <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-Realtime">Swift-Realtime</a></td>
+<td>Realtime voice AI example for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin-Realtime</a></td>
+<td>Realtime voice AI example for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-Realtime">Dart-Realtime</a></td>
+<td>Realtime voice AI example for Flutter</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-Realtime">ReactNative-Realtime</a></td>
+<td>Realtime voice AI example for React Native</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>One Wiro AI node for n8n with a searchable model picker, <a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><code class="notranslate">@wiro-ai/n8n-nodes-wiro</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI plugins for Dify: the LLM gateway as a model provider, plus image, video, speech and music tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI">Wiro-ComfyUI</a></td>
+<td>Wiro AI nodes for ComfyUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Zed">Wiro-Zed</a></td>
+<td>Wiro AI MCP server extension for Zed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Action for Wiro AI models and the LLM gateway, <a href="https://github.com/marketplace/actions/wiro-ai-action">on the GitHub Marketplace</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Raycast">Wiro-Raycast</a></td>
+<td>Wiro AI extension for Raycast: image and video generation, LLM chat and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress: featured images, image edits, alt text, narration and SEO suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Obsidian">Wiro-Obsidian</a></td>
+<td>Wiro AI plugin for Obsidian: images, video, speech, music, transcription and text tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Blender">Wiro-Blender</a></td>
+<td>Wiro AI add-on for Blender: text to 3D, image to 3D and textures</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Figma">Wiro-Figma</a></td>
+<td>Wiro AI plugin for Figma: images, vectors, image edits and text</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js starter for Wiro AI: Playground, image, video and audio tools, and LLM chat, ready for Vercel and Railway</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Docs">Wiro-Docs</a></td>
+<td>Source of the Wiro AI API docs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto">MIT. See <a href="https://github.com/wiroai/ReactNative-QuickStart/blob/main/LICENSE">LICENSE</a>.</p>
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67"><img loading="lazy" src="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67" alt="Wiro AI koala mascot" width="80" data-canonical-src="https://wiro.ai/images/koala/accent-heavy-koala.png" style="max-width: 100%;"></a>
+</div>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li><li><a href="/projects/dart-quickstart/">Dart-QuickStart</a></li><li><a href="/projects/wiro-mcp/">Wiro-MCP</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/swift-realtime/">Swift-Realtime</a></li><li><a href="/projects/kotlin-realtime/">Kotlin-Realtime</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

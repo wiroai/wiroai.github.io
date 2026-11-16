@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiro-Next-Starter: Wiro AI open source</title>
+<meta name="description" content="Next.js starter for Wiro AI: a Playground for 1,000+ models, image, video and audio tools, LLM chat with the Vercel AI SDK, and run history. Deploy on Vercel or Railway.">
+<link rel="canonical" href="https://wiroai.github.io/projects/wiro-next-starter/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="Wiro-Next-Starter: Wiro AI open source">
+<meta property="og:description" content="Next.js starter for Wiro AI: a Playground for 1,000+ models, image, video and audio tools, LLM chat with the Vercel AI SDK, and run history. Deploy on Vercel or Railway.">
+<meta property="og:url" content="https://wiroai.github.io/projects/wiro-next-starter/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "Wiro-Next-Starter", "description": "Next.js starter for Wiro AI: a Playground for 1,000+ models, image, video and audio tools, LLM chat with the Vercel AI SDK, and run history. Deploy on Vercel or Railway.", "codeRepository": "https://github.com/wiroai/Wiro-Next-Starter", "url": "https://wiroai.github.io/projects/wiro-next-starter/", "programmingLanguage": "TypeScript", "license": "https://api.github.com/licenses/mit", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#templates">Templates and docs</a></p>
+<section class="project-head">
+  <h1>Wiro-Next-Starter</h1>
+  <p class="lead">Next.js starter for Wiro AI: a Playground for 1,000+ models, image, video and audio tools, LLM chat with the Vercel AI SDK, and run history. Deploy on Vercel or Railway.</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/Wiro-Next-Starter">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai">Website</a></p>
+</section>
+<article class="markdown">
+<h2 dir="auto" id="wiro-ai-nextjs-starter">Wiro AI Next.js Starter</h2>
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Next-Starter/main/.github/assets/wiro-logo.png"><img src="https://raw.githubusercontent.com/wiroai/Wiro-Next-Starter/main/.github/assets/wiro-logo.png" alt="Wiro AI" width="240" style="max-width: 100%;"></a>
+<p dir="auto">A Next.js app for the Wiro AI API: a Playground for any of the 1,000+ models, image, video and audio tools, a streaming LLM chat built with the Vercel AI SDK, and a history of your runs.</p>
+<p dir="auto"><a href="https://nextjs.org"><img loading="lazy" src="https://camo.githubusercontent.com/d1589eafafb8188c42fa2fb2f27427b1945225486accc955342f665d810f6133/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e6578742e6a732d31362d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="Next.js 16" data-canonical-src="https://img.shields.io/badge/Next.js-16-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://ai-sdk.dev"><img loading="lazy" src="https://camo.githubusercontent.com/13138900b91a176dd3a971c7e0b677453f1ac80f842cfe9ed3df6815018e22fd/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f414925323053444b2d372d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="AI SDK 7" data-canonical-src="https://img.shields.io/badge/AI%20SDK-7-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Next-Starter/actions/workflows/ci.yml"><img loading="lazy" src="https://camo.githubusercontent.com/2243f859aa7db4823d1480580384736f649bdf7e1f8eb3afd1df68a1382d5edd/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f7769726f61692f5769726f2d4e6578742d537461727465722f63692e796d6c3f6272616e63683d6d61696e267374796c653d666f722d7468652d6261646765266c6162656c3d434926636f6c6f723d313131313131" alt="CI" data-canonical-src="https://img.shields.io/github/actions/workflow/status/wiroai/Wiro-Next-Starter/ci.yml?branch=main&amp;style=for-the-badge&amp;label=CI&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Next-Starter/blob/main/LICENSE"><img loading="lazy" src="https://camo.githubusercontent.com/9b0dcc545c9e697315b8d16f4363715f0cc54941456ba778cbc802bb0ef11275/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="License: MIT" data-canonical-src="https://img.shields.io/badge/license-MIT-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a></p>
+<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67"><img loading="lazy" src="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67" alt="Wiro AI koala mascot" width="60" data-canonical-src="https://wiro.ai/images/koala/accent-heavy-koala.png" style="max-width: 100%;"></a>
+<p dir="auto"><a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwiroai%2FWiro-Next-Starter&amp;env=WIRO_API_KEY&amp;envDescription=API%20key%20of%20your%20Wiro%20AI%20project&amp;envLink=https%3A%2F%2Fwiro.ai%2Fdocs%2Fauthentication&amp;project-name=wiro-next-starter&amp;repository-name=wiro-next-starter&amp;demo-title=Wiro%20AI%20Next.js%20Starter&amp;demo-description=Run%20any%20of%20the%201%2C000%2B%20Wiro%20AI%20models%20from%20a%20Next.js%20app%3A%20Playground%2C%20image%2C%20video%20and%20audio%20tools%2C%20LLM%20chat%20and%20history%2C%20with%20prices%20shown.&amp;demo-url=https%3A%2F%2Fwiro-next-starter.vercel.app&amp;demo-image=https%3A%2F%2Fraw.githubusercontent.com%2Fwiroai%2FWiro-Next-Starter%2Fmain%2Fapp%2Fopengraph-image.png"><img loading="lazy" src="https://camo.githubusercontent.com/ff0e5692ba93a62d065d9523e5a7e15ed5e2e15a2866758b3276a4f7b77eaac6/68747470733a2f2f76657263656c2e636f6d2f627574746f6e" alt="Deploy with Vercel" data-canonical-src="https://vercel.com/button" style="max-width: 100%;"></a> <a href="https://railway.com/deploy/d9X1ON?referralCode=oJDnIx&amp;utm_medium=integration&amp;utm_source=button&amp;utm_campaign=wiro-next-starter"><img loading="lazy" src="https://camo.githubusercontent.com/fcd0a8c1c609210a5270c983fb8ada9db06629afa3a3057c9c5e530305478f2e/68747470733a2f2f7261696c7761792e636f6d2f627574746f6e2e737667" alt="Deploy on Railway" data-canonical-src="https://railway.com/button.svg" style="max-width: 100%;"></a></p>
+</div>
+<p dir="auto">This starter shows how to build on <a href="https://wiro.ai">Wiro AI</a> with the Next.js App Router. Model lists come from the Wiro AI catalog by category, each model's form is built from its own inputs, and the price of a run shows before it starts. Images, video and audio go through the Wiro AI Run API, with files uploaded to Wiro AI first and the task followed until it ends. The chat streams from the Wiro LLM gateway with the AI SDK and <a href="https://github.com/wiroai/Wiro-LLM"><code class="notranslate">@wiro-ai/wiro-llm</code></a>. Every call to Wiro AI runs in a route handler, so your API key never reaches the browser.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Next-Starter/blob/main/.github/assets/screenshot-image.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Next-Starter/main/.github/assets/screenshot-image.png" alt="The Image page with a generated image and the tools it can go to next" style="max-width: 100%;"></a></p>
+<h2 dir="auto" id="whats-inside">What's inside</h2>
+<ul dir="auto">
+<li><strong>Playground.</strong> Browse the catalog by category (text to image, editing, upscaling, background removal, video, speech, music, transcription, OCR and more) or search all of it, then run any model. The form comes from the model's schema, with its advanced settings folded away and its sample input one click away.</li>
+<li><strong>Image.</strong> Generate, Edit with a prompt, Upscale and Remove background. Each tool starts on a default model and lists every model of its category.</li>
+<li><strong>Video.</strong> Text to video and Image to video, with each stage of the task and a timer while it runs.</li>
+<li><strong>Audio.</strong> Speech in any voice and language the model offers, Music from a description, and Transcribe for audio files.</li>
+<li><strong>Chat.</strong> Every chat model on the Wiro LLM gateway, with search and prices per million tokens, streamed with <code class="notranslate">useChat</code>, with Markdown answers and the cost of each reply.</li>
+<li><strong>History.</strong> Your runs in this browser with their outputs and costs. Runs that are still going update on their own.</li>
+<li><strong>One result into the next tool.</strong> An image goes on to Edit, Upscale, Remove background or Animate in one click, and a speech file to Transcribe.</li>
+<li><strong>The price before each run,</strong> worked out from the model's price list the way Wiro AI bills it, and the billed amount after.</li>
+<li><strong>Ready to deploy.</strong> Calls only from route handlers, every request checked against the model's inputs, an optional password for the whole app and an optional price limit per run.</li>
+<li><strong>An agent skill</strong> for coding agents, with tested samples for keys, prices, tasks, webhooks and chat. See <a href="#agent-skill">Agent skill</a>.</li>
+<li>Next.js 16 with the App Router and Cache Components, React 19, TypeScript, Tailwind CSS 4, AI SDK 7, light and dark themes, ESLint, Prettier and Vitest.</li>
+</ul>
+<h2 dir="auto" id="deploy">Deploy</h2>
+<p dir="auto">You need a Wiro AI project. Create one at <a href="https://wiro.ai/panel/project/new">wiro.ai/panel/project/new</a> and copy its API key. If you choose signature authentication for the project, copy the API secret too.</p>
+<h3 dir="auto" id="deploy-with-vercel">Deploy with Vercel</h3>
+<p dir="auto">Click <strong>Deploy with Vercel</strong> above. Vercel copies this repository to your GitHub account, asks for <code class="notranslate">WIRO_API_KEY</code> and deploys the app. For a signature project, add <code class="notranslate">WIRO_API_SECRET</code> afterwards under <strong>Settings → Environment Variables</strong> and redeploy. The other settings in <a href="#environment-variables">Environment variables</a> are optional.</p>
+<h3 dir="auto" id="deploy-on-railway">Deploy on Railway</h3>
+<p dir="auto">Click <strong>Deploy on Railway</strong> above. Railway opens the template, asks for <code class="notranslate">WIRO_API_KEY</code> and deploys the app. For a signature project, fill in <code class="notranslate">WIRO_API_SECRET</code> as well. The other variables are optional (see <a href="#environment-variables">Environment variables</a>).</p>
+<p dir="auto">To deploy your own fork instead, choose <strong>New Project → Deploy from GitHub repo</strong> in Railway and pick the fork, add <code class="notranslate">WIRO_API_KEY</code> under <strong>Variables</strong>, then click <strong>Generate Domain</strong> under <strong>Settings → Networking</strong>.</p>
+<p dir="auto">Railway builds the app with Railpack, which reads <code class="notranslate">package.json</code>: it runs <code class="notranslate">npm run build</code>, starts the app with <code class="notranslate">npm start</code> and takes the Node.js version from <code class="notranslate">engines</code>. <code class="notranslate">next start</code> listens on the <code class="notranslate">PORT</code> that Railway sets, so no Railway config file is needed. If you add a healthcheck, use <code class="notranslate">/</code>.</p>
+<h3 dir="auto" id="other-hosts">Other hosts</h3>
+<p dir="auto"><code class="notranslate">npm run build</code> and <code class="notranslate">npm start</code> run the app on any host with Node.js 22 or later.</p>
+<h3 dir="auto" id="run-a-public-demo">Run a public demo</h3>
+<p dir="auto">Anyone who can open a deployment can run models with its key. For a demo that strangers can try:</p>
+<ol dir="auto">
+<li>In your Wiro AI dashboard, create a team for the demo, move a small amount to its wallet and set a team spend limit. You can also limit the models the team can run. See <a href="https://wiro.ai/docs/organizations-billing">Team billing</a>.</li>
+<li>Create a project in that team and use its API key as <code class="notranslate">WIRO_API_KEY</code>.</li>
+<li>Set <code class="notranslate">MAX_RUN_PRICE</code>, for example to <code class="notranslate">0.10</code>, so no single run costs more.</li>
+<li>Leave <code class="notranslate">BASIC_AUTH_PASSWORD</code> empty so visitors can open the app.</li>
+</ol>
+<p dir="auto">For a deployment only you use, set <code class="notranslate">BASIC_AUTH_PASSWORD</code> instead.</p>
+<h2 dir="auto" id="run-it-locally">Run it locally</h2>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">git clone https://github.com/wiroai/Wiro-Next-Starter.git
+<span class="pl-c1">cd</span> Wiro-Next-Starter
+npm install
+cp .env.example .env.local</pre></div>
+<p dir="auto">Put your key in <code class="notranslate">.env.local</code>, then start the dev server and open <a href="http://localhost:3000">http://localhost:3000</a>:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npm run dev</pre></div>
+<h2 dir="auto" id="environment-variables">Environment variables</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Required</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">WIRO_API_KEY</code></td>
+<td>Yes</td>
+<td>API key of your Wiro AI project</td>
+</tr>
+<tr>
+<td><code class="notranslate">WIRO_API_SECRET</code></td>
+<td>For signature projects</td>
+<td>API secret of the same project. Run API requests are signed with it, and the LLM gateway gets <code class="notranslate">API_KEY:API_SECRET</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">BASIC_AUTH_PASSWORD</code></td>
+<td>No</td>
+<td>When set, the browser asks for this password before it opens any page. Any user name works</td>
+</tr>
+<tr>
+<td><code class="notranslate">MAX_RUN_PRICE</code></td>
+<td>No</td>
+<td>The most one run may cost, in USD, such as <code class="notranslate">0.10</code>. Runs that cost more, or have no price set before the run, are refused</td>
+</tr>
+<tr>
+<td><code class="notranslate">MAX_UPLOAD_MB</code></td>
+<td>No</td>
+<td>The largest file the upload route takes, 25 by default. Vercel functions accept request bodies up to 4.5 MB, so use a link for big files</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">The app reads these on the server when a request comes in, so a build works without them. None of them starts with <code class="notranslate">NEXT_PUBLIC_</code>, so Next.js never sends them to the browser.</p>
+<h2 dir="auto" id="how-it-works">How it works</h2>
+<pre lang="text" class="notranslate"><code class="notranslate">Browser                           This app (route handlers)                Wiro AI
+GET  /api/models?categories=  -&gt;  catalog, cached for 10 minutes      -&gt;   POST /Tool/List
+GET  /api/models/{owner}/{id} -&gt;  inputs and price list               -&gt;   POST /Tool/Detail
+POST /api/uploads             -&gt;  store the file                      -&gt;   POST /File/Upload
+POST /api/runs                -&gt;  check the form, price, limit        -&gt;   POST /Run/{owner}/{model}
+                              &lt;-  { token, price }
+GET  /api/tasks/{token}       -&gt;  stage, outputs, text, cost          -&gt;   POST /Task/Detail
+POST /api/chat                -&gt;  streamText(wiro(model))             -&gt;   llm.wiro.ai/v1/chat/completions
+</code></pre>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Route</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">app/api/models</code></td>
+<td>Lists the models of one or more categories from the <a href="https://wiro.ai/docs/models">catalog</a>, or searches all of it. Hidden models are left out.</td>
+</tr>
+<tr>
+<td><code class="notranslate">app/api/models/[owner]/[project]</code></td>
+<td>One model's inputs and price list.</td>
+</tr>
+<tr>
+<td><code class="notranslate">app/api/uploads</code></td>
+<td>Stores a file from the browser with Wiro AI and returns its URL, which the form sends as a file input.</td>
+</tr>
+<tr>
+<td><code class="notranslate">app/api/runs</code></td>
+<td>Checks the form against the model's inputs, prices the run, applies <code class="notranslate">MAX_RUN_PRICE</code> and starts the task with <a href="https://wiro.ai/docs/run-a-model"><code class="notranslate">POST /Run</code></a>.</td>
+</tr>
+<tr>
+<td><code class="notranslate">app/api/tasks/[token]</code></td>
+<td>Reads the task with <a href="https://wiro.ai/docs/tasks"><code class="notranslate">POST /Task/Detail</code></a>: its stage, output files, text answer, time and cost.</td>
+</tr>
+<tr>
+<td><code class="notranslate">app/api/chat/models</code></td>
+<td>The chat models on the <a href="https://wiro.ai/docs/completions-api">Wiro LLM gateway</a>, with their prices.</td>
+</tr>
+<tr>
+<td><code class="notranslate">app/api/chat</code></td>
+<td>Streams a reply with <code class="notranslate">streamText</code> and <code class="notranslate">@wiro-ai/wiro-llm</code>, and adds the model and cost to the message metadata.</td>
+</tr>
+<tr>
+<td><code class="notranslate">app/api/config</code></td>
+<td>The limits the page shows before a run. It never returns the key.</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">The code behind them:</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>File</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">lib/catalog/schema.ts</code></td>
+<td>Reads a model's inputs and turns form values into Run parameters: file inputs and their URL fields, checkboxes, ranges and defaults. Runs on both sides.</td>
+</tr>
+<tr>
+<td><code class="notranslate">lib/catalog/pricing.ts</code></td>
+<td>Prices a run from the model's price list the way Wiro AI bills it: per run, per output, per character, per second of audio or video, or by run time.</td>
+</tr>
+<tr>
+<td><code class="notranslate">lib/catalog/tools.ts</code></td>
+<td>The tools of the Image, Video and Audio pages with their categories and default models, and the Playground's categories.</td>
+</tr>
+<tr>
+<td><code class="notranslate">lib/catalog/filters.ts</code></td>
+<td>Models the app never lists: uncensored and NSFW models, and live voice models that need a realtime connection.</td>
+</tr>
+<tr>
+<td><code class="notranslate">lib/wiro/</code></td>
+<td>Server only: the Run API client with request signing, the catalog cache, the gateway model list and the limits.</td>
+</tr>
+<tr>
+<td><code class="notranslate">lib/use-task-run.ts</code></td>
+<td>The React hook that starts a task and polls it.</td>
+</tr>
+<tr>
+<td><code class="notranslate">lib/history.ts</code></td>
+<td>The History page's store in <code class="notranslate">localStorage</code>.</td>
+</tr>
+<tr>
+<td><code class="notranslate">proxy.ts</code></td>
+<td>The optional password.</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">A task is finished when its status is <code class="notranslate">task_postprocess_end</code>, with <code class="notranslate">pexit</code> <code class="notranslate">"0"</code> on success, or <code class="notranslate">task_cancel</code>; see <a href="https://wiro.ai/docs/tasks">Tasks</a>. The browser only ever gets the task token, never the numeric task ID. Projects that use signature authentication send <code class="notranslate">x-nonce</code> and <code class="notranslate">x-signature</code> with every Run API request, where the signature is HMAC-SHA256 of the API secret plus the nonce, keyed with the API key; see <a href="https://wiro.ai/docs/authentication">Authentication</a>.</p>
+<h2 dir="auto" id="tools-and-default-models">Tools and default models</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Page</th>
+<th>Tool</th>
+<th>Lists the models of</th>
+<th>Starts on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image</td>
+<td>Generate</td>
+<td><code class="notranslate">text-to-image</code></td>
+<td><code class="notranslate">pruna/p-image</code></td>
+</tr>
+<tr>
+<td>Image</td>
+<td>Edit</td>
+<td><code class="notranslate">image-editing</code></td>
+<td><code class="notranslate">google/nano-banana-2</code></td>
+</tr>
+<tr>
+<td>Image</td>
+<td>Upscale</td>
+<td><code class="notranslate">upscale</code>, <code class="notranslate">restoration</code></td>
+<td><code class="notranslate">xinntao/real-esrgan</code></td>
+</tr>
+<tr>
+<td>Image</td>
+<td>Remove background</td>
+<td><code class="notranslate">background-removal</code></td>
+<td><code class="notranslate">briaai/rmbg-2-0</code></td>
+</tr>
+<tr>
+<td>Video</td>
+<td>Text to video</td>
+<td><code class="notranslate">text-to-video</code></td>
+<td><code class="notranslate">bytedance/seedance-v1-pro-fast</code></td>
+</tr>
+<tr>
+<td>Video</td>
+<td>Image to video</td>
+<td><code class="notranslate">image-to-video</code></td>
+<td><code class="notranslate">bytedance/seedance-v1-pro-fast</code></td>
+</tr>
+<tr>
+<td>Audio</td>
+<td>Speech</td>
+<td><code class="notranslate">text-to-speech</code></td>
+<td><code class="notranslate">elevenlabs/eleven-v4</code></td>
+</tr>
+<tr>
+<td>Audio</td>
+<td>Music</td>
+<td><code class="notranslate">text-to-music</code>, <code class="notranslate">music-generation</code></td>
+<td><code class="notranslate">elevenlabs/text-to-music-v2-5</code></td>
+</tr>
+<tr>
+<td>Audio</td>
+<td>Transcribe</td>
+<td><code class="notranslate">speech-to-text</code></td>
+<td><code class="notranslate">elevenlabs/speech-to-text</code></td>
+</tr>
+<tr>
+<td>Chat</td>
+<td></td>
+<td>the Wiro LLM gateway</td>
+<td><code class="notranslate">openai/gpt-5-4-nano</code></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><strong>Change model</strong> on any tool lists the other models of its categories with their prices. Links can open a tool on a model and a file: <code class="notranslate">/image?tab=edit&amp;model=openai/gpt-image-2&amp;image=https://...</code></p>
+<h3 dir="auto" id="customize">Customize</h3>
+<ul dir="auto">
+<li><strong>Add a tool:</strong> add an entry to <code class="notranslate">TOOLS</code> in <code class="notranslate">lib/catalog/tools.ts</code> with its page, Wiro categories and default model. It shows up as a tab on that page.</li>
+<li><strong>Change the Playground's categories:</strong> edit <code class="notranslate">CATEGORY_GROUPS</code> in the same file. The <a href="https://wiro.ai/models">catalog</a> shows every category.</li>
+<li><strong>Hide more models:</strong> extend <code class="notranslate">isHiddenModel</code> in <code class="notranslate">lib/catalog/filters.ts</code>.</li>
+<li><strong>Change the look:</strong> the colors are CSS variables at the top of <code class="notranslate">app/globals.css</code>, with a dark set for <code class="notranslate">prefers-color-scheme: dark</code>.</li>
+</ul>
+<h2 dir="auto" id="agent-skill">Agent skill</h2>
+<p dir="auto">The repository ships an agent skill, <a href="https://github.com/wiroai/Wiro-Next-Starter/blob/main/skills/wiro-nextjs/SKILL.md"><code class="notranslate">wiro-nextjs</code></a>, that teaches coding agents such as Claude Code, Cursor and Codex to build on Wiro AI in a Next.js app: the API key in route handlers and server actions, models and their prices from the catalog, tasks followed by polling or a webhook, file uploads, image, video and speech runs, and chat through the LLM gateway. It also maps the files of this starter. Install it in your project with:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npx skills add wiroai/Wiro-Next-Starter --skill wiro-nextjs</pre></div>
+<p dir="auto">Every code sample in the skill is also a file in <code class="notranslate">skills/wiro-nextjs/examples</code>, which <code class="notranslate">npm run typecheck</code> checks against the code of this repository, and <code class="notranslate">tests/skill.test.ts</code> keeps the two copies the same.</p>
+<h2 dir="auto" id="screenshots">Screenshots</h2>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Next-Starter/blob/main/.github/assets/screenshot-playground.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Next-Starter/main/.github/assets/screenshot-playground.png" alt="The Playground: models of a category with their prices" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Next-Starter/blob/main/.github/assets/screenshot-playground-model.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Next-Starter/main/.github/assets/screenshot-playground-model.png" alt="A model in the Playground, with the form built from its inputs" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Next-Starter/blob/main/.github/assets/screenshot-video-progress.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Next-Starter/main/.github/assets/screenshot-video-progress.png" alt="The Video page while a task runs" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Next-Starter/blob/main/.github/assets/screenshot-audio.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Next-Starter/main/.github/assets/screenshot-audio.png" alt="The Audio page with a speech result" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Next-Starter/blob/main/.github/assets/screenshot-chat.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Next-Starter/main/.github/assets/screenshot-chat.png" alt="The Chat page with a Markdown table from GPT-5.4 Nano" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Next-Starter/blob/main/.github/assets/screenshot-history.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Next-Starter/main/.github/assets/screenshot-history.png" alt="The History page with three runs and their costs" style="max-width: 100%;"></a></p>
+<h2 dir="auto" id="development">Development</h2>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npm run dev        <span class="pl-c"><span class="pl-c">#</span> dev server on http://localhost:3000</span>
+npm run check      <span class="pl-c"><span class="pl-c">#</span> format check, lint, type check and tests</span>
+npm run build      <span class="pl-c"><span class="pl-c">#</span> production build</span>
+npm start          <span class="pl-c"><span class="pl-c">#</span> serve the production build</span></pre></div>
+<p dir="auto">The tests cover the input handling and pricing, the catalog, the Run API client with request signing, task status mapping, every route handler, the password check and the code samples of the agent skill. They use a mocked <code class="notranslate">fetch</code> and make no network calls. CI runs them with the format check, lint, type check and build on Node.js 22 and 24.</p>
+<h2 dir="auto" id="costs">Costs</h2>
+<p dir="auto">Each run is billed to the Wiro AI account of the API key at the model's price, which the app shows before the run and which is listed on the model's page. Only successful tasks are billed. The app shows the billed amount under every result and chat reply, and the History page adds them up.</p>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
+<td>Official MCP server for Wiro AI, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>Vercel AI SDK provider for chat, images, speech, transcription and video, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-llm"><code class="notranslate">@wiro-ai/wiro-llm</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Cursor, Claude Code, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills">Wiro-Skills</a></td>
+<td>Agent skills for images, image edits, video, music, speech, transcripts, 3D and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Wiro AI extension for Safari on the Mac</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Wiro AI SDK for Dart and Flutter, <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>Wiro AI SDK for React Native and Expo, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><code class="notranslate">@wiro-ai/wiro-react-native</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-Realtime">Swift-Realtime</a></td>
+<td>Realtime voice AI example for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin-Realtime</a></td>
+<td>Realtime voice AI example for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-Realtime">Dart-Realtime</a></td>
+<td>Realtime voice AI example for Flutter</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-Realtime">ReactNative-Realtime</a></td>
+<td>Realtime voice AI example for React Native</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>One Wiro AI node for n8n with a searchable model picker, <a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><code class="notranslate">@wiro-ai/n8n-nodes-wiro</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI plugins for Dify: the LLM gateway as a model provider, plus image, video, speech and music tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI">Wiro-ComfyUI</a></td>
+<td>Wiro AI nodes for ComfyUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Zed">Wiro-Zed</a></td>
+<td>Wiro AI MCP server extension for Zed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Action for Wiro AI models and the LLM gateway, <a href="https://github.com/marketplace/actions/wiro-ai-action">on the GitHub Marketplace</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Raycast">Wiro-Raycast</a></td>
+<td>Wiro AI extension for Raycast: image and video generation, LLM chat and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress: featured images, image edits, alt text, narration and SEO suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Obsidian">Wiro-Obsidian</a></td>
+<td>Wiro AI plugin for Obsidian: images, video, speech, music, transcription and text tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Blender">Wiro-Blender</a></td>
+<td>Wiro AI add-on for Blender: text to 3D, image to 3D and textures</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Figma">Wiro-Figma</a></td>
+<td>Wiro AI plugin for Figma: images, vectors, image edits and text</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Docs">Wiro-Docs</a></td>
+<td>Source of the Wiro AI API docs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto">MIT, see <a href="https://github.com/wiroai/Wiro-Next-Starter/blob/main/LICENSE">LICENSE</a>.</p>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/wiro-docs/">Wiro-Docs</a></li><li><a href="/projects/wiro-mcp/">Wiro-MCP</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li><li><a href="/projects/dart-quickstart/">Dart-QuickStart</a></li><li><a href="/projects/reactnative-quickstart/">ReactNative-QuickStart</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

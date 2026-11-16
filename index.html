@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiro AI Open Source: plugins, SDKs and extensions</title>
+<meta name="description" content="29 open-source projects for Wiro AI: MCP server, coding assistant plugins, agent skills, SDKs, ComfyUI, Blender, Figma, n8n and browser extensions for 1,000+ AI models.">
+<link rel="canonical" href="https://wiroai.github.io/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="Wiro AI Open Source: plugins, SDKs and extensions">
+<meta property="og:description" content="29 open-source projects for Wiro AI: MCP server, coding assistant plugins, agent skills, SDKs, ComfyUI, Blender, Figma, n8n and browser extensions for 1,000+ AI models.">
+<meta property="og:url" content="https://wiroai.github.io/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Wiro AI Open Source", "url": "https://wiroai.github.io/", "description": "Open-source plugins, SDKs, browser extensions and agent tools for Wiro AI.", "publisher": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai", "logo": "https://wiro.ai/images/favicon/icon-512x512.png", "sameAs": ["https://x.com/wiroai", "https://www.linkedin.com/company/wiroai", "https://github.com/wiroai"]}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<section class="hero">
+  <h1>Wiro AI open source</h1>
+  <p class="lead">Plugins, SDKs, browser extensions, agent tools and example apps for <a href="https://wiro.ai">Wiro AI</a>. Each one talks to the same API, with <a href="https://wiro.ai/models">1,000+ image, video, audio, 3D and LLM models</a>.</p>
+  <p class="cta"><a class="btn" href="https://wiro.ai">Visit wiro.ai</a> <a class="btn ghost" href="https://wiro.ai/docs">Read the API docs</a> <a class="btn ghost" href="https://github.com/wiroai">Follow on GitHub</a></p>
+  <p class="count">29 public repositories</p>
+  <nav class="toc"><a href="#assistants">Coding assistants and agents</a><a href="#sdks">LLM gateway and SDKs</a><a href="#realtime">Realtime voice examples</a><a href="#creative">Creative and design tools</a><a href="#automation">Automation and no-code</a><a href="#apps">Productivity apps</a><a href="#browser">Browser extensions</a><a href="#templates">Templates and docs</a></nav>
+</section>
+<section id="assistants" class="group">
+  <h2>Coding assistants and agents</h2>
+  <p class="intro">Use Wiro AI models from Cursor, Claude Code, Codex, Gemini CLI, Zed, Hermes Agent and GitHub Actions.</p>
+  <div class="grid"><article class="card">
+  <h3><a href="/projects/wiro-mcp/">Wiro-MCP</a></h3>
+  <p>Official MCP server for Wiro AI. Search, price and run image, video, audio and LLM models from Cursor, Claude Code, Windsurf and other MCP clients.</p>
+  <p class="meta">JavaScript &middot; MIT</p>
+  <ul class="tags"><li>ai</li><li>ai-models</li><li>claude</li><li>claude-code</li><li>cursor</li></ul>
+  <p class="links"><a href="/projects/wiro-mcp/">Project page</a> <a href="https://github.com/wiroai/Wiro-MCP">GitHub</a> <a href="https://wiro.ai/docs/wiro-mcp-server">Docs</a></p>
+</article><article class="card">
+  <h3><a href="/projects/wiro-plugin/">Wiro-Plugin</a></h3>
+  <p>Wiro AI plugin for Cursor, Claude Code, Gemini CLI and Devin. Run image, video, audio and LLM models from your AI assistant.</p>
+  <p class="meta">JavaScript &middot; MIT</p>
+  <ul class="tags"><li>agent-skills</li><li>ai</li><li>claude-code</li><li>claude-code-plugin</li><li>claude-skills</li></ul>
+  <p class="links"><a href="/projects/wiro-plugin/">Project page</a> <a href="https://github.com/wiroai/Wiro-Plugin">GitHub</a> <a href="https://wiro.ai/docs/wiro-mcp-server">Docs</a></p>
+</article><article class="card">
+  <h3><a href="/projects/wiro-skills/">Wiro-Skills</a></h3>
+  <p>Agent skills for Wiro AI: images, image edits, video, music, speech, transcripts, 3D models and model search, for Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot and OpenClaw</p>
+  <p class="meta">JavaScript &middot; MIT</p>
+  <ul class="tags"><li>3d-generation</li><li>agent-skills</li><li>ai</li><li>claude-code</li><li>claude-skills</li></ul>
+  <p class="links"><a href="/projects/wiro-skills/">Project page</a> <a href="https://github.com/wiroai/Wiro-Skills">GitHub</a></p>
+</article><article class="card">
+  <h3><a href="/projects/wiro-zed/">Wiro-Zed</a></h3>
+  <p>Wiro AI MCP server for the Zed editor: search, price and run 1,000+ image, video, audio and LLM models, workflows and agents from Zed&#x27;s Agent Panel.</p>
+  <p class="meta">Rust &middot; MIT</p>
+  <ul class="tags"><li>ai</li><li>generative-ai</li><li>image-generation</li><li>llm</li><li>mcp</li></ul>
+  <p class="links"><a href="/projects/wiro-zed/">Project page</a> <a href="https://github.com/wiroai/Wiro-Zed">GitHub</a></p>
+</article><article class="card">
+  <h3><a href="/projects/wiro-hermes/">Wiro-Hermes</a></h3>
+  <p>Wiro AI as a model provider plugin for Hermes Agent: one OpenAI-compatible API and one key for GPT, Claude, Gemini, DeepSeek, GLM, Kimi and Grok models.</p>
+  <p class="meta">Python &middot; MIT</p>
+  <ul class="tags"><li>ai-gateway</li><li>hermes-agent</li><li>llm</li><li>openai-compatible</li><li>plugin</li></ul>
+  <p class="links"><a href="/projects/wiro-hermes/">Project page</a> <a href="https://github.com/wiroai/Wiro-Hermes">GitHub</a> <a href="https://wiro.ai/llm">Docs</a></p>
+</article><article class="card">
+  <h3><a href="/projects/wiro-action/">Wiro-Action</a></h3>
+  <p>GitHub Action for Wiro AI: run any of 1,000+ image, video, audio, 3D and LLM models, or ask an LLM, from your workflows.</p>
+  <p class="meta">JavaScript &middot; MIT</p>
+  <ul class="tags"><li>actions</li><li>agent-skills</li><li>ai</li><li>ai-models</li><li>ci-cd</li></ul>
+  <p class="links"><a href="/projects/wiro-action/">Project page</a> <a href="https://github.com/wiroai/Wiro-Action">GitHub</a></p>
+</article></div>
+</section><section id="sdks" class="group">
+  <h2>LLM gateway and SDKs</h2>
+  <p class="intro">Clients for the Wiro AI API and for the OpenAI and Anthropic compatible LLM gateway.</p>
+  <div class="grid"><article class="card">
+  <h3><a href="/projects/wiro-llm/">Wiro-LLM</a></h3>
+  <p>Wiro AI provider for the Vercel AI SDK, with examples for the Wiro LLM gateway (OpenAI and Anthropic compatible)</p>
+  <p class="meta">TypeScript &middot; MIT</p>
+  <ul class="tags"><li>agent-skills</li><li>ai-sdk</li><li>anthropic</li><li>claude-skills</li><li>llm</li></ul>
+  <p class="links"><a href="/projects/wiro-llm/">Project page</a> <a href="https://github.com/wiroai/Wiro-LLM">GitHub</a> <a href="https://wiro.ai/llm">Docs</a></p>
+</article><article class="card">
+  <h3><a href="/projects/swift-quickstart/">Swift-QuickStart</a></h3>
+  <p>Official Swift SDK for the Wiro AI API (WiroKit): run image, video, audio and LLM models from iOS apps with typed requests and live task tracking.</p>
+  <p class="meta">Swift &middot; MIT</p>
+  <ul class="tags"><li>agent-skills</li><li>ai</li><li>api-client</li><li>async-await</li><li>claude-skills</li></ul>
+  <p class="links"><a href="/projects/swift-quickstart/">Project page</a> <a href="https://github.com/wiroai/Swift-QuickStart">GitHub</a> <a href="https://wiro.ai/docs/code-examples">Docs</a></p>
+</article><article class="card">
+  <h3><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></h3>
+  <p>Official Kotlin SDK for the Wiro AI API (WiroKit): run image, video, audio and LLM models from Android apps with coroutines and live task tracking.</p>
+  <p class="meta">Kotlin &middot; MIT</p>
+  <ul class="tags"><li>agent-skills</li><li>ai</li><li>android</li><li>api-client</li><li>claude-skills</li></ul>
+  <p class="links"><a href="/projects/kotlin-quickstart/">Project page</a> <a href="https://github.com/wiroai/Kotlin-QuickStart">GitHub</a> <a href="https://wiro.ai/docs/code-examples">Docs</a></p>
+</article><article class="card">
+  <h3><a href="/projects/dart-quickstart/">Dart-QuickStart</a></h3>
+  <p>Official Dart and Flutter SDK for the Wiro AI API, published on pub.dev as wiro: run image, video, audio and LLM models with typed requests and live task tracking.</p>
+  <p class="meta">Dart &middot; MIT</p>
+  <ul class="tags"><li>agent-skills</li><li>ai</li><li>api-client</li><li>claude-skills</li><li>dart</li></ul>
+  <p class="links"><a href="/projects/dart-quickstart/">Project page</a> <a href="https://github.com/wiroai/Dart-QuickStart">GitHub</a> <a href="https://wiro.ai/docs/code-examples">Docs</a></p>
+</article><article class="card">
+  <h3><a href="/projects/reactnative-quickstart/">ReactNative-QuickStart</a></h3>
+  <p>Official React Native and Expo SDK for the Wiro AI API, on npm as @wiro-ai/wiro-react-native: run image, video, audio and LLM models from TypeScript.</p>
+  <p class="meta">TypeScript &middot; MIT</p>
+  <ul class="tags"><li>agent-skills</li><li>ai</li><li>android</li><li>api-client</li><li>claude-skills</li></ul>
+  <p class="links"><a href="/projects/reactnative-quickstart/">Project page</a> <a href="https://github.com/wiroai/ReactNative-QuickStart">GitHub</a> <a href="https://wiro.ai/docs/code-examples">Docs</a></p>
+</article></div>
+</section><section id="realtime" class="group">
+  <h2>Realtime voice examples</h2>
+  <p class="intro">Example apps for live voice conversation, speech-to-text and text-to-speech on iOS and Android.</p>
+  <div class="grid"><article class="card">
+  <h3><a href="/projects/swift-realtime/">Swift-Realtime</a></h3>
+  <p>Realtime voice AI example app for iOS in Swift and SwiftUI: live conversation, speech-to-text and text-to-speech with the Wiro AI API.</p>
+  <p class="meta">Swift &middot; MIT</p>
+  <ul class="tags"><li>ai</li><li>avaudioengine</li><li>example-app</li><li>generative-ai</li><li>ios</li></ul>
+  <p class="links"><a href="/projects/swift-realtime/">Project page</a> <a href="https://github.com/wiroai/Swift-Realtime">GitHub</a> <a href="https://wiro.ai/docs/realtime-voice-conversation">Docs</a></p>
+</article><article class="card">
+  <h3><a href="/projects/kotlin-realtime/">Kotlin-Realtime</a></h3>
+  <p>Realtime voice AI example app for Android in Kotlin and Jetpack Compose: live conversation, speech-to-text and text-to-speech with the Wiro AI API.</p>
+  <p class="meta">Kotlin &middot; MIT</p>
+  <ul class="tags"><li>ai</li><li>android</li><li>example-app</li><li>generative-ai</li><li>jetpack-compose</li></ul>
+  <p class="links"><a href="/projects/kotlin-realtime/">Project page</a> <a href="https://github.com/wiroai/Kotlin-Realtime">GitHub</a> <a href="https://wiro.ai/docs/realtime-voice-conversation">Docs</a></p>
+</article><article class="card">
+  <h3><a href="/projects/dart-realtime/">Dart-Realtime</a></h3>
+  <p>Realtime voice AI example app for Flutter on Android and iOS: live conversation, speech-to-text and text-to-speech with the Wiro AI API.</p>
+  <p class="meta">Dart &middot; MIT</p>
+  <ul class="tags"><li>ai</li><li>android</li><li>dart</li><li>example-app</li><li>flutter</li></ul>
+  <p class="links"><a href="/projects/dart-realtime/">Project page</a> <a href="https://github.com/wiroai/Dart-Realtime">GitHub</a> <a href="https://wiro.ai/docs/realtime-voice-conversation">Docs</a></p>
+</article><article class="card">
+  <h3><a href="/projects/reactnative-realtime/">ReactNative-Realtime</a></h3>
+  <p>Realtime voice AI example app for React Native on Android and iOS: live conversation, speech-to-text and text-to-speech with the Wiro AI API.</p>
+  <p class="meta">TypeScript &middot; MIT</p>
+  <ul class="tags"><li>ai</li><li>android</li><li>example-app</li><li>generative-ai</li><li>ios</li></ul>
+  <p class="links"><a href="/projects/reactnative-realtime/">Project page</a> <a href="https://github.com/wiroai/ReactNative-Realtime">GitHub</a> <a href="https://wiro.ai/docs/realtime-voice-conversation">Docs</a></p>
+</article></div>
+</section><section id="creative" class="group">
+  <h2>Creative and design tools</h2>
+  <p class="intro">Run Wiro AI models inside ComfyUI, Blender and Figma.</p>
+  <div class="grid"><article class="card">
+  <h3><a href="/projects/wiro-comfyui/">Wiro-ComfyUI</a></h3>
+  <p>Wiro AI nodes for ComfyUI: run 1,000+ image, video, audio and LLM models from your graphs, with native IMAGE, VIDEO and AUDIO outputs.</p>
+  <p class="meta">Python &middot; MIT</p>
+  <ul class="tags"><li>ai-api</li><li>comfyui</li><li>comfyui-custom-nodes</li><li>comfyui-nodes</li><li>generative-ai</li></ul>
+  <p class="links"><a href="/projects/wiro-comfyui/">Project page</a> <a href="https://github.com/wiroai/Wiro-ComfyUI">GitHub</a></p>
+</article><article class="card">
+  <h3><a href="/projects/wiro-blender/">Wiro-Blender</a></h3>
+  <p>Wiro AI add-on for Blender: text to 3D, image to 3D, textures and any of the 1,000+ Wiro AI models, with live model lists, a job queue and history.</p>
+  <p class="meta">Python &middot; GPL-3.0</p>
+  <ul class="tags"><li>3d</li><li>3d-generation</li><li>ai</li><li>blender</li><li>blender-addon</li></ul>
+  <p class="links"><a href="/projects/wiro-blender/">Project page</a> <a href="https://github.com/wiroai/Wiro-Blender">GitHub</a></p>
+</article><article class="card">
+  <h3><a href="/projects/wiro-figma/">Wiro-Figma</a></h3>
+  <p>Wiro AI plugin for Figma: generate images and SVG vectors, edit and upscale images, remove backgrounds, make mockups and rewrite or translate text layers with Wiro AI models.</p>
+  <p class="meta">TypeScript &middot; MIT</p>
+  <ul class="tags"><li>ai-api</li><li>ai-image-generator</li><li>background-removal</li><li>design-tools</li><li>figma</li></ul>
+  <p class="links"><a href="/projects/wiro-figma/">Project page</a> <a href="https://github.com/wiroai/Wiro-Figma">GitHub</a></p>
+</article></div>
+</section><section id="automation" class="group">
+  <h2>Automation and no-code</h2>
+  <p class="intro">Run models from n8n workflows, Dify apps and the WordPress editor.</p>
+  <div class="grid"><article class="card">
+  <h3><a href="/projects/n8n-nodes-wiro/">n8n-nodes-wiro</a></h3>
+  <p>Wiro AI node for n8n: run 1,000+ AI models for video, images, audio, text and 3D from one node</p>
+  <p class="meta">TypeScript &middot; MIT</p>
+  <ul class="tags"><li>agent-skills</li><li>ai</li><li>ai-models</li><li>automation</li><li>claude-skills</li></ul>
+  <p class="links"><a href="/projects/n8n-nodes-wiro/">Project page</a> <a href="https://github.com/wiroai/n8n-nodes-wiro">GitHub</a></p>
+</article><article class="card">
+  <h3><a href="/projects/wiro-dify-plugin/">Wiro-Dify-Plugin</a></h3>
+  <p>Wiro AI plugins for Dify. Use the Wiro AI LLM gateway as a model provider, and generate images, videos, speech and music with 1,000+ models in Dify workflows and agents.</p>
+  <p class="meta">Python &middot; MIT</p>
+  <ul class="tags"><li>ai</li><li>ai-agents</li><li>ai-models</li><li>dify</li><li>dify-plugin</li></ul>
+  <p class="links"><a href="/projects/wiro-dify-plugin/">Project page</a> <a href="https://github.com/wiroai/Wiro-Dify-Plugin">GitHub</a></p>
+</article><article class="card">
+  <h3><a href="/projects/wiro-wordpress/">Wiro-WordPress</a></h3>
+  <p>Wiro AI plugin for WordPress: featured images, image edits, upscaling, background removal, alt text, narration and SEO suggestions in the block editor, with models from a catalog of 1,000+.</p>
+  <p class="meta">PHP &middot; GPL-2.0</p>
+  <ul class="tags"><li>ai</li><li>ai-image-generator</li><li>alt-text</li><li>block-editor</li><li>featured-image</li></ul>
+  <p class="links"><a href="/projects/wiro-wordpress/">Project page</a> <a href="https://github.com/wiroai/Wiro-WordPress">GitHub</a></p>
+</article></div>
+</section><section id="apps" class="group">
+  <h2>Productivity apps</h2>
+  <p class="intro">Wiro AI in your launcher and your notes.</p>
+  <div class="grid"><article class="card">
+  <h3><a href="/projects/wiro-raycast/">Wiro-Raycast</a></h3>
+  <p>Wiro AI extension for Raycast: generate images and videos, chat with LLMs and search 1,000+ AI models from your launcher.</p>
+  <p class="meta">TypeScript &middot; MIT</p>
+  <ul class="tags"><li>ai</li><li>ai-models</li><li>generative-ai</li><li>image-generation</li><li>image-to-video</li></ul>
+  <p class="links"><a href="/projects/wiro-raycast/">Project page</a> <a href="https://github.com/wiroai/Wiro-Raycast">GitHub</a></p>
+</article><article class="card">
+  <h3><a href="/projects/wiro-obsidian/">Wiro-Obsidian</a></h3>
+  <p>Wiro AI plugin for Obsidian: generate, edit and upscale images, make videos, speech and music, transcribe voice notes, and summarize, rewrite or translate text, with models from the Wiro AI catalog of 1,000+. Results are saved to your vault and embedded in the note.</p>
+  <p class="meta">TypeScript &middot; MIT</p>
+  <ul class="tags"><li>ai-api</li><li>elevenlabs</li><li>flux</li><li>generative-ai</li><li>gpt-image</li></ul>
+  <p class="links"><a href="/projects/wiro-obsidian/">Project page</a> <a href="https://github.com/wiroai/Wiro-Obsidian">GitHub</a></p>
+</article></div>
+</section><section id="browser" class="group">
+  <h2>Browser extensions</h2>
+  <p class="intro">Right-click any image, video, audio clip, text or page to run a model.</p>
+  <div class="grid"><article class="card">
+  <h3><a href="/projects/wiro-chromium-extension/">Wiro-Chromium-Extension</a></h3>
+  <p>Wiro AI extension for Chrome, Edge, Opera, Whale and Brave: right-click any image, video, audio clip, text or page to run Wiro AI models.</p>
+  <p class="meta">TypeScript &middot; MIT</p>
+  <ul class="tags"><li>ai</li><li>ai-image-editor</li><li>browser-extension</li><li>chrome-extension</li><li>chromium</li></ul>
+  <p class="links"><a href="/projects/wiro-chromium-extension/">Project page</a> <a href="https://github.com/wiroai/Wiro-Chromium-Extension">GitHub</a></p>
+</article><article class="card">
+  <h3><a href="/projects/wiro-firefox-extension/">Wiro-Firefox-Extension</a></h3>
+  <p>Wiro AI add-on for Firefox: right-click any image, video, audio clip, text or page to run Wiro AI models in the sidebar.</p>
+  <p class="meta">TypeScript &middot; MIT</p>
+  <ul class="tags"><li>ai</li><li>ai-image-editor</li><li>browser-extension</li><li>context-menu</li><li>firefox-addon</li></ul>
+  <p class="links"><a href="/projects/wiro-firefox-extension/">Project page</a> <a href="https://github.com/wiroai/Wiro-Firefox-Extension">GitHub</a></p>
+</article><article class="card">
+  <h3><a href="/projects/wiro-safari-extension/">Wiro-Safari-Extension</a></h3>
+  <p>Wiro AI extension for Safari on the Mac: right-click any image, video, audio clip, text or page to run Wiro AI models.</p>
+  <p class="meta">TypeScript &middot; MIT</p>
+  <ul class="tags"><li>ai</li><li>ai-image-editor</li><li>browser-extension</li><li>context-menu</li><li>generative-ai</li></ul>
+  <p class="links"><a href="/projects/wiro-safari-extension/">Project page</a> <a href="https://github.com/wiroai/Wiro-Safari-Extension">GitHub</a></p>
+</article><article class="card">
+  <h3><a href="/projects/wiro-extension-core/">Wiro-Extension-Core</a></h3>
+  <p>Shared core of the Wiro AI browser extensions for Chrome, Edge, Opera, Whale, Firefox and Safari: sign-in, Wiro MCP client, action catalog, model gateway, pricing and the panel UI.</p>
+  <p class="meta">TypeScript &middot; MIT</p>
+  <ul class="tags"><li>ai</li><li>browser-extension</li><li>chrome-extension</li><li>firefox-addon</li><li>generative-ai</li></ul>
+  <p class="links"><a href="/projects/wiro-extension-core/">Project page</a> <a href="https://github.com/wiroai/Wiro-Extension-Core">GitHub</a></p>
+</article></div>
+</section><section id="templates" class="group">
+  <h2>Templates and docs</h2>
+  <p class="intro">A Next.js starter app and the source of the Wiro AI API docs.</p>
+  <div class="grid"><article class="card">
+  <h3><a href="/projects/wiro-next-starter/">Wiro-Next-Starter</a></h3>
+  <p>Next.js starter for Wiro AI: a Playground for 1,000+ models, image, video and audio tools, LLM chat with the Vercel AI SDK, and run history. Deploy on Vercel or Railway.</p>
+  <p class="meta">TypeScript &middot; MIT</p>
+  <ul class="tags"><li>agent-skills</li><li>ai-sdk</li><li>chatbot</li><li>claude-skills</li><li>generative-ai</li></ul>
+  <p class="links"><a href="/projects/wiro-next-starter/">Project page</a> <a href="https://github.com/wiroai/Wiro-Next-Starter">GitHub</a></p>
+</article><article class="card">
+  <h3><a href="/projects/wiro-docs/">Wiro-Docs</a></h3>
+  <p>Source of the Wiro AI API docs at wiro.ai/docs. Static HTML with per-page Markdown and llms.txt for models, tasks, LLM streaming, realtime voice and agents.</p>
+  <p class="meta">HTML &middot; MIT</p>
+  <ul class="tags"><li>ai</li><li>ai-agents</li><li>api-docs</li><li>api-documentation</li><li>documentation</li></ul>
+  <p class="links"><a href="/projects/wiro-docs/">Project page</a> <a href="https://github.com/wiroai/Wiro-Docs">GitHub</a> <a href="https://wiro.ai/docs">Docs</a></p>
+</article></div>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

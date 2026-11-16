@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dart-Realtime: Wiro AI open source</title>
+<meta name="description" content="Realtime voice AI example app for Flutter on Android and iOS: live conversation, speech-to-text and text-to-speech with the Wiro AI API.">
+<link rel="canonical" href="https://wiroai.github.io/projects/dart-realtime/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="Dart-Realtime: Wiro AI open source">
+<meta property="og:description" content="Realtime voice AI example app for Flutter on Android and iOS: live conversation, speech-to-text and text-to-speech with the Wiro AI API.">
+<meta property="og:url" content="https://wiroai.github.io/projects/dart-realtime/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "Dart-Realtime", "description": "Realtime voice AI example app for Flutter on Android and iOS: live conversation, speech-to-text and text-to-speech with the Wiro AI API.", "codeRepository": "https://github.com/wiroai/Dart-Realtime", "url": "https://wiroai.github.io/projects/dart-realtime/", "programmingLanguage": "Dart", "license": "https://api.github.com/licenses/mit", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#realtime">Realtime voice examples</a></p>
+<section class="project-head">
+  <h1>Dart-Realtime</h1>
+  <p class="lead">Realtime voice AI example app for Flutter on Android and iOS: live conversation, speech-to-text and text-to-speech with the Wiro AI API.</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/Dart-Realtime">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai/docs/realtime-voice-conversation">Docs</a></p>
+</section>
+<article class="markdown">
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Dart-Realtime/main/.github/assets/wiro-logo.png"><img src="https://raw.githubusercontent.com/wiroai/Dart-Realtime/main/.github/assets/wiro-logo.png" alt="Wiro AI" width="240" style="max-width: 100%;"></a>
+<h2 dir="auto" id="wiro-realtime-for-flutter-voice-ai-example-for-android-and-ios">Wiro Realtime for Flutter: Voice AI Example for Android and iOS</h2>
+<p dir="auto">Realtime voice AI for Android and iOS in Flutter and Dart: live conversation, speech-to-text and text-to-speech with the Wiro AI API.</p>
+<p dir="auto"><a href="#requirements"><img loading="lazy" src="https://camo.githubusercontent.com/f8fd12dbb39a01a6ac8cef95a5320c8dcc01334a24df567b7f24212fcc4fd7b8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f466c75747465722d416e64726f6964253230254332254237253230694f5325323031352e302532422d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131266c6f676f3d666c7574746572266c6f676f436f6c6f723d7768697465" alt="Flutter: Android and iOS 15.0+" data-canonical-src="https://img.shields.io/badge/Flutter-Android%20%C2%B7%20iOS%2015.0%2B-111111?style=for-the-badge&amp;color=111111&amp;logo=flutter&amp;logoColor=white" style="max-width: 100%;"></a> <a href="https://dart.dev"><img loading="lazy" src="https://camo.githubusercontent.com/88e83d0af7b0c7cb99830933c7f5f360f0661c9c929213240e40db0da0ea55f4/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446172742d332e31332e312532422d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131266c6f676f3d64617274266c6f676f436f6c6f723d7768697465" alt="Dart 3.13.1+" data-canonical-src="https://img.shields.io/badge/Dart-3.13.1%2B-111111?style=for-the-badge&amp;color=111111&amp;logo=dart&amp;logoColor=white" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Dart-Realtime/actions/workflows/ci.yml"><img loading="lazy" src="https://camo.githubusercontent.com/2d70d83f457c0428f569703dd5ea15e114dd7918e8d3a57533a5881b3e830d39/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f7769726f61692f446172742d5265616c74696d652f63692e796d6c3f6272616e63683d6d61696e267374796c653d666f722d7468652d626164676526636f6c6f723d313131313131266c6162656c3d4349266c6f676f3d676974687562616374696f6e73266c6f676f436f6c6f723d7768697465" alt="CI" data-canonical-src="https://img.shields.io/github/actions/workflow/status/wiroai/Dart-Realtime/ci.yml?branch=main&amp;style=for-the-badge&amp;color=111111&amp;label=CI&amp;logo=githubactions&amp;logoColor=white" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Dart-Realtime/blob/main/LICENSE"><img loading="lazy" src="https://camo.githubusercontent.com/23a01f016f1243f16ec631263a756467de28a78000548a900ce4f7b1147617d2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="License: MIT" data-canonical-src="https://img.shields.io/badge/License-MIT-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs/realtime-voice-conversation">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a></p>
+</div>
+<p dir="auto">Wiro Realtime for Flutter is the official open-source example for<br>
+building realtime voice AI into Android and iOS apps with Flutter, Dart<br>
+and the Wiro AI API. Its three tabs stream audio over WebSocket for a<br>
+live speech-to-speech conversation with barge-in, live speech-to-text<br>
+from the microphone, and text-to-speech playback. The <code class="notranslate">core/</code> layer<br>
+(auth, network, realtime, audio) has no dependency on any feature, so<br>
+you can lift it into your own app.</p>
+<p align="center" dir="auto">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Dart-Realtime/blob/main/docs/images/conversation.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Dart-Realtime/main/docs/images/conversation.png" alt="Conversation tab of the Flutter app with the GPT Realtime Mini model, the Marin voice and the session button" width="220" style="max-width: 100%;"></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Dart-Realtime/blob/main/docs/images/transcription.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Dart-Realtime/main/docs/images/transcription.png" alt="Transcription tab of the Flutter app showing a live transcript, the input level and a session timer" width="220" style="max-width: 100%;"></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Dart-Realtime/blob/main/docs/images/speech.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Dart-Realtime/main/docs/images/speech.png" alt="Speech tab of the Flutter app reading a long text prompt aloud with text-to-speech" width="220" style="max-width: 100%;"></a>
+</p>
+<h2 dir="auto" id="whats-inside">What's inside</h2>
+<p dir="auto">Three realtime audio flows, each a tab in the app, each backed by a live<br>
+Wiro AI model over one WebSocket protocol:</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Flow</th>
+<th>Model</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conversation</td>
+<td><a href="https://wiro.ai/models/openai/gpt-realtime-mini"><code class="notranslate">openai/gpt-realtime-mini</code></a></td>
+<td>Full-duplex voice chat with barge-in</td>
+</tr>
+<tr>
+<td>Transcription</td>
+<td><a href="https://wiro.ai/models/mistralai/voxtral-mini-4b-realtime-2602"><code class="notranslate">mistralai/voxtral-mini-4b-realtime-2602</code></a></td>
+<td>Live speech-to-text as you talk</td>
+</tr>
+<tr>
+<td>Speech</td>
+<td><a href="https://wiro.ai/models/openmoss/moss-tts-realtime"><code class="notranslate">openmoss/moss-tts-realtime</code></a> or <a href="https://wiro.ai/models/openbmb/voxcpm2"><code class="notranslate">openbmb/voxcpm2</code></a></td>
+<td>Streaming text-to-speech playback</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2 dir="auto" id="features">Features</h2>
+<ul dir="auto">
+<li>Live speech-to-speech conversation with voice activity detection,<br>
+barge-in, and a noise gate</li>
+<li>Realtime microphone transcription with streaming partial results</li>
+<li>Streaming text-to-speech with bounded PCM playback</li>
+<li>One native audio graph for capture and playback, so the OS echo<br>
+canceller (AEC) actually works (see<br>
+<a href="https://github.com/wiroai/Dart-Realtime/blob/main/packages/wiro_voice_engine"><code class="notranslate">packages/wiro_voice_engine</code></a>)</li>
+<li>Signed REST Run requests and the full Wiro AI realtime WebSocket<br>
+protocol</li>
+<li>Bounded capture/playback queues, safe PCM overflow shedding, audio<br>
+route and interruption handling</li>
+<li>Cross-feature guard so two tabs never hold the microphone at once</li>
+<li>Automatic reconnect to the same task on socket drops, with a bounded<br>
+restart budget</li>
+<li>Session lifecycle fully covered by tests, so no device is needed to<br>
+verify the plumbing</li>
+</ul>
+<h2 dir="auto" id="requirements">Requirements</h2>
+<ul dir="auto">
+<li>Flutter stable with Dart <code class="notranslate">3.13.1</code> or newer</li>
+<li>A <strong>physical</strong> Android or iOS device (simulators have no usable<br>
+microphone path)</li>
+<li>A <a href="https://wiro.ai/panel/project/new">Wiro AI project and API key</a></li>
+</ul>
+<p dir="auto">The iOS project uses Swift Package Manager: there is no Podfile and no<br>
+CocoaPods setup to run. Use a Flutter version with SPM support enabled.<br>
+The project ships without a signing team: open <code class="notranslate">ios/Runner.xcworkspace</code><br>
+once and pick yours under <strong>Runner → Signing &amp; Capabilities</strong> before the<br>
+first device run.</p>
+<h2 dir="auto" id="run">Run</h2>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">flutter pub get
+flutter run --dart-define=WIRO_API_KEY=YOUR_API_KEY</pre></div>
+<p dir="auto">For signature-based Wiro AI projects, also pass the secret:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">flutter run \
+  --dart-define=WIRO_API_KEY=YOUR_API_KEY \
+  --dart-define=WIRO_API_SECRET=YOUR_API_SECRET</pre></div>
+<p dir="auto">Leave <code class="notranslate">WIRO_API_SECRET</code> out for API-key-only projects. The app fails<br>
+before <code class="notranslate">runApp</code> when <code class="notranslate">WIRO_API_KEY</code> is missing.</p>
+<blockquote>
+<p dir="auto"><strong>Credentials warning:</strong> values supplied through <code class="notranslate">--dart-define</code> are<br>
+compiled into the binary and are for local development only. Never<br>
+distribute builds containing real credentials: production apps should<br>
+authenticate through a controlled backend or a short-lived credential<br>
+flow.</p>
+</blockquote>
+<h2 dir="auto" id="make-it-yours">Make it yours</h2>
+<p dir="auto"><a href="https://github.com/wiroai/Dart-Realtime/blob/main/lib/app/config/conversation_config.dart"><code class="notranslate">lib/app/config/conversation_config.dart</code></a><br>
+holds the persona, the voice, the model, and the session time limit.<br>
+Editing that one file is the whole of turning this example into a<br>
+product.</p>
+<div class="highlight highlight-source-dart" dir="auto"><pre class="notranslate"><span class="pl-k">static</span> <span class="pl-k">const</span> <span class="pl-c1">String</span> persona <span class="pl-k">=</span> <span class="pl-s">'...who the assistant is...'</span>;
+<span class="pl-k">static</span> <span class="pl-k">const</span> <span class="pl-c1">String</span> voice <span class="pl-k">=</span> <span class="pl-s">'marin'</span>;
+<span class="pl-k">static</span> <span class="pl-k">const</span> <span class="pl-c1">Duration</span> maxSessionDuration <span class="pl-k">=</span> <span class="pl-c1">Duration</span>(minutes<span class="pl-k">:</span> <span class="pl-c1">10</span>);</pre></div>
+<p dir="auto">Common changes:</p>
+<ul dir="auto">
+<li><strong>Give the assistant a job</strong>: rewrite <code class="notranslate">persona</code>.</li>
+<li><strong>Change the voice</strong>: set <code class="notranslate">voice</code> to any option the model catalog<br>
+lists.</li>
+<li><strong>Tune the engineering parameters</strong>: <code class="notranslate">parameters</code> overrides the<br>
+catalog defaults for turn detection, audio formats, and rates.</li>
+<li><strong>Ship only the conversation</strong>: delete<br>
+<code class="notranslate">lib/features/speech_to_text/</code> and <code class="notranslate">lib/features/text_to_speech/</code><br>
+(plus their <code class="notranslate">test/features/</code> folders), then remove the two<br>
+<code class="notranslate">NavigationDestination</code>s from<br>
+<code class="notranslate">lib/features/realtime_home/view/realtime_home_view.dart</code>. <code class="notranslate">core/</code> is<br>
+untouched.</li>
+</ul>
+<h2 dir="auto" id="how-a-conversation-runs">How a conversation runs</h2>
+<pre lang="text" class="notranslate"><code class="notranslate">REST:      https://api.wiro.ai/v1
+WebSocket: wss://socket.wiro.ai/v1
+Run:       POST /Run/{owner}/{model}
+</code></pre>
+<ol dir="auto">
+<li><code class="notranslate">POST /Run/{owner}/{model}</code> returns a task id and a task token.</li>
+<li>A WebSocket opens and subscribes with<br>
+<code class="notranslate">{ "type": "task_info", "tasktoken": "..." }</code>.</li>
+<li>After <code class="notranslate">task_stream_ready</code>, 20 ms PCM chunks stream up as<br>
+<code class="notranslate">UTF8(tasktoken + "|") + pcm_bytes</code>; audio and transcripts stream<br>
+back.</li>
+<li><code class="notranslate">task_session_end</code> closes the session. The app sends it on leave<br>
+or when <code class="notranslate">maxSessionDuration</code> runs out.</li>
+</ol>
+<p dir="auto">Audio is signed 16-bit PCM, 24 kHz, mono, little-endian on both sides.</p>
+<p dir="auto">Authentication is <code class="notranslate">x-api-key</code> alone, or <code class="notranslate">x-api-key</code> + <code class="notranslate">x-nonce</code> +<br>
+<code class="notranslate">x-signature</code> where the signature is<br>
+<code class="notranslate">HMAC-SHA256(key = API_KEY, message = API_SECRET + NONCE)</code>.</p>
+<h2 dir="auto" id="project-layout">Project layout</h2>
+<pre lang="text" class="notranslate"><code class="notranslate">lib/
+ app/       shell, theme, layout tokens, config, shared widgets
+ core/      reusable Wiro AI plumbing: auth, network, realtime, audio
+ features/  one folder per tab: view/, view_model/, service/
+packages/
+ wiro_voice_engine/  native AEC audio bridge (AVAudioEngine / AudioRecord)
+</code></pre>
+<p dir="auto"><code class="notranslate">core/</code> has no dependency on any feature and covers the whole Wiro AI<br>
+integration, so it is the part worth lifting into your own app.</p>
+<h2 dir="auto" id="tests">Tests</h2>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">flutter analyze
+flutter <span class="pl-c1">test</span></pre></div>
+<p dir="auto">Tests mirror <code class="notranslate">lib/</code> and ship fakes for audio, network, and the socket,<br>
+so the entire session lifecycle runs without a device. CI runs the same<br>
+two commands, plus <code class="notranslate">flutter analyze</code> for <code class="notranslate">packages/wiro_voice_engine</code>,<br>
+on pushes to <code class="notranslate">main</code> and on pull requests.</p>
+<h2 dir="auto" id="contributing">Contributing</h2>
+<p dir="auto">Read <a href="https://github.com/wiroai/Dart-Realtime/blob/main/CONTRIBUTING.md"><code class="notranslate">CONTRIBUTING.md</code></a> before opening a pull request.<br>
+To report a security problem, follow <a href="https://github.com/wiroai/Dart-Realtime/blob/main/SECURITY.md"><code class="notranslate">SECURITY.md</code></a><br>
+instead of opening a public issue.</p>
+<h2 dir="auto" id="documentation">Documentation</h2>
+<ul dir="auto">
+<li><a href="https://wiro.ai/docs/realtime-voice-conversation">Realtime voice guide</a></li>
+<li><a href="https://wiro.ai/docs">Wiro AI documentation</a></li>
+<li><a href="https://wiro.ai/models">Available models</a></li>
+<li>Same example on other platforms:<br>
+<a href="https://github.com/wiroai/Swift-Realtime">Swift</a> ·<br>
+<a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin</a> ·<br>
+<a href="https://github.com/wiroai/ReactNative-Realtime">React Native</a></li>
+<li><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a>:<br>
+Wiro AI SDK for Dart and Flutter, published as <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></li>
+</ul>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
+<td>Official MCP server for Wiro AI, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>Vercel AI SDK provider for chat, images, speech, transcription and video, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-llm"><code class="notranslate">@wiro-ai/wiro-llm</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Wiro AI extension for Safari on the Mac</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Cursor, Claude Code, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills">Wiro-Skills</a></td>
+<td>Agent skills for images, image edits, video, music, speech, transcripts, 3D and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Wiro AI SDK for Dart and Flutter, <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>Wiro AI SDK for React Native and Expo, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><code class="notranslate">@wiro-ai/wiro-react-native</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-Realtime">Swift-Realtime</a></td>
+<td>Realtime voice AI example for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin-Realtime</a></td>
+<td>Realtime voice AI example for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-Realtime">ReactNative-Realtime</a></td>
+<td>Realtime voice AI example for React Native</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>One Wiro AI node for n8n with a searchable model picker, <a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><code class="notranslate">@wiro-ai/n8n-nodes-wiro</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI plugins for Dify: the LLM gateway as a model provider, plus image, video, speech and music tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI">Wiro-ComfyUI</a></td>
+<td>Wiro AI nodes for ComfyUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Zed">Wiro-Zed</a></td>
+<td>Wiro AI MCP server extension for Zed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Action for Wiro AI models and the LLM gateway, <a href="https://github.com/marketplace/actions/wiro-ai-action">on the GitHub Marketplace</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Raycast">Wiro-Raycast</a></td>
+<td>Wiro AI extension for Raycast: image and video generation, LLM chat and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress: featured images, image edits, alt text, narration and SEO suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Obsidian">Wiro-Obsidian</a></td>
+<td>Wiro AI plugin for Obsidian: images, video, speech, music, transcription and text tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Blender">Wiro-Blender</a></td>
+<td>Wiro AI add-on for Blender: text to 3D, image to 3D and textures</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Figma">Wiro-Figma</a></td>
+<td>Wiro AI plugin for Figma: images, vectors, image edits and text</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js starter for Wiro AI: Playground, image, video and audio tools, and LLM chat, ready for Vercel and Railway</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Docs">Wiro-Docs</a></td>
+<td>Source of the Wiro AI API docs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto"><a href="https://github.com/wiroai/Dart-Realtime/blob/main/LICENSE">MIT</a></p>
+<hr>
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67"><img loading="lazy" src="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67" alt="Wiro AI koala mascot" width="80" data-canonical-src="https://wiro.ai/images/koala/accent-heavy-koala.png" style="max-width: 100%;"></a>
+<p dir="auto"><strong>Built by the Wiro AI team</strong></p>
+<p dir="auto"><a href="https://wiro.ai">wiro.ai</a> · <a href="https://github.com/wiroai">GitHub @wiroai</a></p>
+</div>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/swift-realtime/">Swift-Realtime</a></li><li><a href="/projects/kotlin-realtime/">Kotlin-Realtime</a></li><li><a href="/projects/reactnative-realtime/">ReactNative-Realtime</a></li><li><a href="/projects/wiro-mcp/">Wiro-MCP</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

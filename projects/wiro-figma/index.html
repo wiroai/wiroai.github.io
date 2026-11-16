@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiro-Figma: Wiro AI open source</title>
+<meta name="description" content="Wiro AI plugin for Figma: generate images and SVG vectors, edit and upscale images, remove backgrounds, make mockups and rewrite or translate text layers with Wiro AI models.">
+<link rel="canonical" href="https://wiroai.github.io/projects/wiro-figma/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="Wiro-Figma: Wiro AI open source">
+<meta property="og:description" content="Wiro AI plugin for Figma: generate images and SVG vectors, edit and upscale images, remove backgrounds, make mockups and rewrite or translate text layers with Wiro AI models.">
+<meta property="og:url" content="https://wiroai.github.io/projects/wiro-figma/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "Wiro-Figma", "description": "Wiro AI plugin for Figma: generate images and SVG vectors, edit and upscale images, remove backgrounds, make mockups and rewrite or translate text layers with Wiro AI models.", "codeRepository": "https://github.com/wiroai/Wiro-Figma", "url": "https://wiroai.github.io/projects/wiro-figma/", "programmingLanguage": "TypeScript", "license": "https://api.github.com/licenses/mit", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#creative">Creative and design tools</a></p>
+<section class="project-head">
+  <h1>Wiro-Figma</h1>
+  <p class="lead">Wiro AI plugin for Figma: generate images and SVG vectors, edit and upscale images, remove backgrounds, make mockups and rewrite or translate text layers with Wiro AI models.</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/Wiro-Figma">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai">Website</a></p>
+</section>
+<article class="markdown">
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Figma/main/.github/assets/wiro-logo.png"><img src="https://raw.githubusercontent.com/wiroai/Wiro-Figma/main/.github/assets/wiro-logo.png" alt="Wiro AI" width="240" style="max-width: 100%;"></a>
+<h2 dir="auto" id="wiro-ai-image-generator-for-figma">Wiro AI Image Generator for Figma</h2>
+<p dir="auto">Generate images and vectors, edit and upscale pictures, remove backgrounds, make mockups and rewrite or translate text in Figma with Wiro AI models.</p>
+<p dir="auto"><a href="#install"><img loading="lazy" src="https://camo.githubusercontent.com/f1b68696865332afc5b9dbbb145f47ee79ed60de17a12aae2ad10c3e189c111e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4669676d612d706c7567696e2d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="Figma plugin" data-canonical-src="https://img.shields.io/badge/Figma-plugin-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Figma/actions/workflows/ci.yml"><img loading="lazy" src="https://camo.githubusercontent.com/1a4235227275d0c71d8c8b814edf04b2da18d5c109137aa72092d594af2fe0eb/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f7769726f61692f5769726f2d4669676d612f63692e796d6c3f6272616e63683d6d61696e267374796c653d666f722d7468652d6261646765266c6162656c3d434926636f6c6f723d313131313131" alt="CI" data-canonical-src="https://img.shields.io/github/actions/workflow/status/wiroai/Wiro-Figma/ci.yml?branch=main&amp;style=for-the-badge&amp;label=CI&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Figma/blob/main/LICENSE"><img loading="lazy" src="https://camo.githubusercontent.com/9b0dcc545c9e697315b8d16f4363715f0cc54941456ba778cbc802bb0ef11275/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="License: MIT" data-canonical-src="https://img.shields.io/badge/license-MIT-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a></p>
+<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67"><img loading="lazy" src="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67" alt="Wiro AI koala mascot" width="60" data-canonical-src="https://wiro.ai/images/koala/accent-heavy-koala.png" style="max-width: 100%;"></a>
+</div>
+<p dir="auto">Select layers, pick what to do and choose a model. The plugin runs it on <a href="https://wiro.ai/docs/run-a-model">Wiro AI</a> and puts the result back into your file: images as fills or as new layers beside the source, vectors as editable layers and text straight into your text layers. Each model shows its own settings and its price before you run it, and the Models tab runs any model of a category with a form built from its schema.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Figma/blob/main/docs/screenshots/create.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Figma/main/docs/screenshots/create.png" alt="The Create tab filling a 16:9 frame with an image from Nano Banana 2" style="max-width: 100%;"></a></p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Run any model</th>
+<th>History</th>
+<th>Light and dark</th>
+<th>Connect with a key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Figma/blob/main/docs/screenshots/panel-models.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Figma/main/docs/screenshots/panel-models.png" alt="The Models tab with a form built from the model's settings" style="max-width: 100%;"></a></td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Figma/blob/main/docs/screenshots/panel-history.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Figma/main/docs/screenshots/panel-history.png" alt="Recent results and the project's latest Wiro AI tasks" style="max-width: 100%;"></a></td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Figma/blob/main/docs/screenshots/panel-dark.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Figma/main/docs/screenshots/panel-dark.png" alt="The plugin in Figma's dark theme" style="max-width: 100%;"></a></td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Figma/blob/main/docs/screenshots/panel-connect.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Figma/main/docs/screenshots/panel-connect.png" alt="The Connect screen asking for a Wiro AI API key" style="max-width: 100%;"></a></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2 dir="auto" id="what-it-does">What it does</h2>
+<p dir="auto">The panel has five tabs: <strong>Create</strong>, <strong>Edit</strong>, <strong>Text</strong>, <strong>Models</strong> and <strong>History</strong>.</p>
+<h3 dir="auto" id="create">Create</h3>
+<ul dir="auto">
+<li><strong>Image.</strong> Write a prompt and pick a model. The image fills the selected frames, shapes, text layers, components or instances. With nothing selected, it lands in a new rectangle in the middle of your view.</li>
+<li><strong>Matches the shape.</strong> The <strong>Match selection</strong> ratio picks the model's ratio closest to the selected layer, so a 1920 × 1080 frame gets 16:9 and a 1080 × 1350 post gets 4:5 or the nearest ratio the model offers. Models that take an exact size, such as FLUX.2 Pro, get a width and height with the layer's shape.</li>
+<li><strong>Fills many layers at once.</strong> With several layers selected, one run fills them in order: layer one gets image one, layer two gets image two. Turn on <strong>One image per layer</strong> and each layer gets its own run in its own shape, three at a time.</li>
+<li><strong>Vector.</strong> Describe an icon or illustration and it comes back as SVG, added as editable vector layers beside the selected layer or in the middle of your view. It uses GPT Image 2.6 Flare Custom or GPT Image 2.6 Sunburst Custom with SVG output.</li>
+</ul>
+<p dir="auto">The image model list starts with popular models (Nano Banana Pro, Nano Banana 2, GPT Image 2, Seedream 4.5, FLUX.2 Pro, Reve Create, Grok Imagine, Qwen Image 3.0 Pro and P-Image), followed by the rest of the text-to-image models in the <a href="https://wiro.ai/models">Wiro AI catalog</a>. Search finds any of them by name.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Figma/blob/main/docs/screenshots/vector.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Figma/main/docs/screenshots/vector.png" alt="A vector icon placed beside the selected card" style="max-width: 100%;"></a></p>
+<h3 dir="auto" id="edit">Edit</h3>
+<p dir="auto">Select a layer and pick an action. A layer with an image fill sends its original image; any other layer, such as a frame with a design in it, is sent as a PNG of what it shows.</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Action</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Edit</strong></td>
+<td>Changes the image with a prompt, for example "put the bottle on a wet black stone, keep the label as it is".</td>
+</tr>
+<tr>
+<td><strong>Variations</strong></td>
+<td>Makes 1 to 4 new versions of the image.</td>
+</tr>
+<tr>
+<td><strong>Style</strong></td>
+<td>Redraws the image as watercolor, flat illustration, 3D render, line art, pixel art, oil painting, pencil sketch, clay, isometric or risograph. Select a second layer to use its style instead.</td>
+</tr>
+<tr>
+<td><strong>Upscale</strong></td>
+<td>Makes the image larger and sharper, with Real-ESRGAN by default.</td>
+</tr>
+<tr>
+<td><strong>Remove background</strong></td>
+<td>Cuts out the subject on a transparent background, with BRIA RMBG 2.0 by default.</td>
+</tr>
+<tr>
+<td><strong>Mockup</strong></td>
+<td>Puts a design or logo on a product photo: t-shirt, mug, phone screen, laptop screen, poster, tote bag, packaging, billboard, business card or cap.</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">Each result either replaces the image in the layer or goes beside it as a new layer named after the source, such as "Photo, Watercolor" or "Mug mockup". Edit, Upscale and Remove background replace by default; Variations, Style and Mockup go beside. The prompt-based actions start on Nano Banana 2 and list the other image editing models in the catalog.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Figma/blob/main/docs/screenshots/edit.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Figma/main/docs/screenshots/edit.png" alt="Style and Mockup results placed beside the source photo" style="max-width: 100%;"></a></p>
+<h3 dir="auto" id="text">Text</h3>
+<p dir="auto">Select text layers, or frames that contain them, and pick an action. Each layer gets its own run, and the new text goes into the layer.</p>
+<ul dir="auto">
+<li><strong>Rewrite</strong> in a tone: clearer, friendlier, more formal, more persuasive, simpler, or grammar fixes only. You can add your own instruction.</li>
+<li><strong>Shorten</strong> a bit, to half the length, to one line or to a few words.</li>
+<li><strong>Translate</strong> into 29 languages, including Spanish, French, German, Japanese, Chinese, Arabic and Turkish.</li>
+</ul>
+<p dir="auto">The panel lists what changed, and Undo in Figma brings the old text back. A layer whose font is not installed is left as it was and named in the result. Text actions start on GPT-5.4 Nano and can use any chat model in the catalog.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Figma/blob/main/docs/screenshots/text.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Figma/main/docs/screenshots/text.png" alt="Two text layers translated into Spanish" style="max-width: 100%;"></a></p>
+<h3 dir="auto" id="models">Models</h3>
+<p dir="auto">Run any model of a category with all of its settings. Pick a category (text to image, edit with a prompt, image to image, upscale, remove background, restore photos, describe images, read text in images, translate or chat models), then a model, and the panel builds the form from the model's schema. Image inputs take a selected layer or a link, and <strong>Use selected text</strong> fills the prompt from your text layers. Images and vectors go on the canvas, text answers can be copied or added as a text layer, and other files, such as video or audio, open as links.</p>
+<h3 dir="auto" id="history">History</h3>
+<p dir="auto"><strong>Recent</strong> keeps your last 24 results. Click one to place it again in the current selection, without a new run. <strong>Your Wiro AI tasks</strong> lists images and vectors from the project's latest tasks, made in any app, and places them the same way.</p>
+<h3 dir="auto" id="everywhere">Everywhere</h3>
+<ul dir="auto">
+<li><strong>Shows the price first.</strong> Every action shows its price in one line before it runs, and what the task cost after. See <a href="#pricing">Pricing</a>.</li>
+<li><strong>Picks up where it left off.</strong> If you close the plugin while runs are going, their results are waiting the next time you open it (within a day).</li>
+<li><strong>Fits Figma's image rules.</strong> WebP and other formats are turned into PNG, and images larger than 4096 px on a side are scaled down to fit, so 4K outputs still go in.</li>
+<li><strong>Follows your theme.</strong> The panel uses Figma's light or dark colors.</li>
+</ul>
+<h2 dir="auto" id="install">Install</h2>
+<ol dir="auto">
+<li>
+<p dir="auto">Install the <a href="https://www.figma.com/downloads/">Figma desktop app</a> and <a href="https://nodejs.org">Node.js</a> 22 or later.</p>
+</li>
+<li>
+<p dir="auto">Clone this repository and build the plugin:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">git clone https://github.com/wiroai/Wiro-Figma.git
+<span class="pl-c1">cd</span> Wiro-Figma
+npm ci
+npm run build</pre></div>
+</li>
+<li>
+<p dir="auto">In the Figma desktop app, open a design file and use the main menu: <strong>Plugins → Development → Import plugin from manifest…</strong>, then pick <code class="notranslate">manifest.json</code> from the cloned folder.</p>
+</li>
+<li>
+<p dir="auto">Run it from <strong>Plugins → Development → Wiro AI Image Generator</strong>.</p>
+</li>
+</ol>
+<h2 dir="auto" id="get-an-api-key">Get an API key</h2>
+<p dir="auto">Create a project at <a href="https://wiro.ai/panel/project/new">wiro.ai/panel/project/new</a> and copy its API key. Paste it into the plugin's Connect screen. If the project uses signature-based authentication, paste its API secret too; projects set to API Key Only need just the key. Your projects and keys are listed at <a href="https://wiro.ai/panel/project">wiro.ai/panel/project</a>.</p>
+<p dir="auto">The key is checked with a free call before it is saved. To change or remove it later, open the gear icon in the plugin.</p>
+<h2 dir="auto" id="use-it">Use it</h2>
+<ol dir="auto">
+<li>Select the layers you want to work with, or nothing for a new layer.</li>
+<li>Pick a tab, an action and a model.</li>
+<li>Write a prompt where the action asks for one. <strong>Cmd+Enter</strong> (or <strong>Ctrl+Enter</strong>) starts the run.</li>
+<li>Adjust the model's settings if you like; changes are remembered per model. <strong>Fill</strong> crops an image to cover the layer, <strong>Fit</strong> shows all of it.</li>
+<li>Click the run button. <strong>Cancel</strong> stops the task on Wiro AI too.</li>
+</ol>
+<h2 dir="auto" id="how-it-works">How it works</h2>
+<ul dir="auto">
+<li>The plugin talks to the hosted Wiro AI MCP endpoint at <code class="notranslate">https://mcp.wiro.ai/v1</code> with the project key as a Bearer token. A run is one <code class="notranslate">run_model</code> call that returns at once with a task token, followed by <code class="notranslate">wait_for_task</code> until the task ends. A failed wait is tried again; the run itself is never sent twice. Model lists come from <code class="notranslate">search_models</code>, forms and price tables from <code class="notranslate">get_model_schema</code>, the key check from <code class="notranslate">get_account</code> and History from <code class="notranslate">list_tasks</code>. Cancel uses <code class="notranslate">kill_task</code>.</li>
+<li>Selected images go to the model inside the request as data URIs, PNG or JPEG of at most 2048 px on the longer side. Text actions run the catalog's chat models as Wiro AI tasks through the same endpoint, with the layer's text in the prompt.</li>
+<li>Results are downloaded from <code class="notranslate">https://cdn1.wiro.ai</code> in the plugin's window. Images are turned into PNG or JPEG of at most 4096 px when needed and created with <code class="notranslate">figma.createImage</code>, SVGs become layers with <code class="notranslate">figma.createNodeFromSvg</code>, and text goes in after <code class="notranslate">figma.loadFontAsync</code>.</li>
+<li>Network access in <a href="https://github.com/wiroai/Wiro-Figma/blob/main/manifest.json"><code class="notranslate">manifest.json</code></a> is limited to those two hosts. The plugin loads no remote code; its interface is built into <code class="notranslate">dist/ui.html</code>.</li>
+<li>It uses <code class="notranslate">documentAccess: "dynamic-page"</code> and the async node APIs, and is linted with Figma's <a href="https://github.com/figma/eslint-plugin-figma-plugins"><code class="notranslate">@figma/eslint-plugin-figma-plugins</code></a> rules. Undo in Figma takes back what the plugin changed.</li>
+<li>Each layer the plugin adds or fills keeps a small note in its plugin data: the model, the image URL and the task ID.</li>
+</ul>
+<h2 dir="auto" id="privacy">Privacy</h2>
+<p dir="auto">The plugin stores four things in Figma's <code class="notranslate">clientStorage</code> on your computer: the API key (and secret), your model choices and settings, the list of recent results and the tokens of runs that are still going. It sends Wiro AI what a run needs: your prompt and settings, the selected image for Edit actions and image inputs, and the text of the selected text layers for Text actions. It reads nothing else from your file than the selected layers. Nothing is sent to anyone else. See the Wiro AI <a href="https://wiro.ai/agreement/privacy-policy">privacy policy</a> and <a href="https://wiro.ai/agreement/terms-of-service">terms of service</a>.</p>
+<h2 dir="auto" id="pricing">Pricing</h2>
+<p dir="auto">Each run is billed to your Wiro AI account at the model's price. The panel shows the price in one line before you run: the exact amount when the model's price table covers your settings (for example $0.067 for one 1K image from Nano Banana 2), multiplied by the images and runs, or the catalog price otherwise. Chat models are billed by usage, which comes to a fraction of a cent for a text layer. After each run the panel shows what it cost. Placing a recent image or a task from History again is free. Add funds at <a href="https://wiro.ai/panel/billing">wiro.ai/panel/billing</a>.</p>
+<h2 dir="auto" id="development">Development</h2>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npm ci
+npm run watch      <span class="pl-c"><span class="pl-c">#</span> rebuilds dist/ on every change; reload the plugin in Figma</span>
+npm <span class="pl-c1">test</span>           <span class="pl-c"><span class="pl-c">#</span> unit tests</span>
+npm run all        <span class="pl-c"><span class="pl-c">#</span> formatting, lint, type check, tests, build and the plugin check</span></pre></div>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Path</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">src/code.ts</code>, <code class="notranslate">src/main/</code></td>
+<td>The main thread: selection, placement, image export, text layers and client storage</td>
+</tr>
+<tr>
+<td><code class="notranslate">src/ui/</code></td>
+<td>The panel (Preact): actions, forms built from model schemas, prices, the Wiro AI client</td>
+</tr>
+<tr>
+<td><code class="notranslate">src/shared/</code></td>
+<td>Message types and geometry used by both sides</td>
+</tr>
+<tr>
+<td><code class="notranslate">scripts/build.mjs</code></td>
+<td>Builds <code class="notranslate">dist/code.js</code> and a self-contained <code class="notranslate">dist/ui.html</code> with esbuild</td>
+</tr>
+<tr>
+<td><code class="notranslate">scripts/check-plugin.mjs</code></td>
+<td>Checks the manifest and the build: required fields, network access, inline UI</td>
+</tr>
+<tr>
+<td><code class="notranslate">test/</code></td>
+<td>Unit tests, live tests and a browser harness</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><code class="notranslate">npm run harness</code> builds the plugin and serves a test page at <code class="notranslate">http://127.0.0.1:5178</code>. It runs <code class="notranslate">dist/code.js</code> against a stand-in for the Figma plugin API and shows <code class="notranslate">dist/ui.html</code> in a sandboxed iframe with the same network rules as the manifest. With <code class="notranslate">WIRO_API_KEY</code> set, the panel starts connected.</p>
+<p dir="auto"><code class="notranslate">npm run test:live</code> runs the model list, two image runs, a background removal and a text rewrite against the live API when <code class="notranslate">WIRO_API_KEY</code> is set (and <code class="notranslate">WIRO_API_SECRET</code> for signature-based projects). A full run costs a few cents.</p>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
+<td>Official MCP server for Wiro AI, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Cursor, Claude Code, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills">Wiro-Skills</a></td>
+<td>Agent skills for images, image edits, video, music, speech, transcripts, 3D and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>Vercel AI SDK provider for chat, images, speech, transcription and video, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-llm"><code class="notranslate">@wiro-ai/wiro-llm</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Wiro AI extension for Safari on the Mac</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Wiro AI SDK for Dart and Flutter, <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>Wiro AI SDK for React Native and Expo, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><code class="notranslate">@wiro-ai/wiro-react-native</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-Realtime">Swift-Realtime</a></td>
+<td>Realtime voice AI example for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin-Realtime</a></td>
+<td>Realtime voice AI example for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-Realtime">Dart-Realtime</a></td>
+<td>Realtime voice AI example for Flutter</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-Realtime">ReactNative-Realtime</a></td>
+<td>Realtime voice AI example for React Native</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>One Wiro AI node for n8n with a searchable model picker, <a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><code class="notranslate">@wiro-ai/n8n-nodes-wiro</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI plugins for Dify: the LLM gateway as a model provider, plus image, video, speech and music tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI">Wiro-ComfyUI</a></td>
+<td>Wiro AI nodes for ComfyUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Zed">Wiro-Zed</a></td>
+<td>Wiro AI MCP server extension for Zed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Action for Wiro AI models and the LLM gateway, <a href="https://github.com/marketplace/actions/wiro-ai-action">on the GitHub Marketplace</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Raycast">Wiro-Raycast</a></td>
+<td>Wiro AI extension for Raycast: image and video generation, LLM chat and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress: featured images, image edits, alt text, narration and SEO suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Obsidian">Wiro-Obsidian</a></td>
+<td>Wiro AI plugin for Obsidian: images, video, speech, music, transcription and text tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Blender">Wiro-Blender</a></td>
+<td>Wiro AI add-on for Blender: text to 3D, image to 3D and textures</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js starter for Wiro AI: Playground, image, video and audio tools, and LLM chat, ready for Vercel and Railway</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Docs">Wiro-Docs</a></td>
+<td>Source of the Wiro AI API docs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto">MIT, see <a href="https://github.com/wiroai/Wiro-Figma/blob/main/LICENSE">LICENSE</a>.</p>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/wiro-comfyui/">Wiro-ComfyUI</a></li><li><a href="/projects/wiro-blender/">Wiro-Blender</a></li><li><a href="/projects/wiro-mcp/">Wiro-MCP</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li><li><a href="/projects/dart-quickstart/">Dart-QuickStart</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

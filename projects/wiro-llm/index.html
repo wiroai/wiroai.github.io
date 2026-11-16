@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiro-LLM: Wiro AI open source</title>
+<meta name="description" content="Wiro AI provider for the Vercel AI SDK, with examples for the Wiro LLM gateway (OpenAI and Anthropic compatible)">
+<link rel="canonical" href="https://wiroai.github.io/projects/wiro-llm/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="Wiro-LLM: Wiro AI open source">
+<meta property="og:description" content="Wiro AI provider for the Vercel AI SDK, with examples for the Wiro LLM gateway (OpenAI and Anthropic compatible)">
+<meta property="og:url" content="https://wiroai.github.io/projects/wiro-llm/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "Wiro-LLM", "description": "Wiro AI provider for the Vercel AI SDK, with examples for the Wiro LLM gateway (OpenAI and Anthropic compatible)", "codeRepository": "https://github.com/wiroai/Wiro-LLM", "url": "https://wiroai.github.io/projects/wiro-llm/", "programmingLanguage": "TypeScript", "license": "https://api.github.com/licenses/mit", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#sdks">LLM gateway and SDKs</a></p>
+<section class="project-head">
+  <h1>Wiro-LLM</h1>
+  <p class="lead">Wiro AI provider for the Vercel AI SDK, with examples for the Wiro LLM gateway (OpenAI and Anthropic compatible)</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/Wiro-LLM">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai/llm">Docs</a></p>
+</section>
+<article class="markdown">
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Plugin/main/.github/assets/wiro-logo.png"><img src="https://raw.githubusercontent.com/wiroai/Wiro-Plugin/main/.github/assets/wiro-logo.png" alt="Wiro AI" width="240" style="max-width: 100%;"></a>
+<h2 dir="auto" id="wiro-ai-provider-for-the-ai-sdk">Wiro AI provider for the AI SDK</h2>
+<p dir="auto">Use Wiro AI models from the Vercel AI SDK: chat on the Wiro LLM gateway, plus image, speech, transcription and video models, and see what each call cost.</p>
+<p dir="auto"><a href="https://www.npmjs.com/package/@wiro-ai/wiro-llm"><img loading="lazy" src="https://camo.githubusercontent.com/8a38c5c07a80734e0e298441dee81577625a899defc715ba93c082e71aab75dc/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f407769726f2d61692f7769726f2d6c6c6d3f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="npm" data-canonical-src="https://img.shields.io/npm/v/@wiro-ai/wiro-llm?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://ai-sdk.dev"><img loading="lazy" src="https://camo.githubusercontent.com/13138900b91a176dd3a971c7e0b677453f1ac80f842cfe9ed3df6815018e22fd/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f414925323053444b2d372d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="AI SDK 7" data-canonical-src="https://img.shields.io/badge/AI%20SDK-7-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="#install"><img loading="lazy" src="https://camo.githubusercontent.com/e816183a4ab2bd1e60259a64a2498a6db47209a98caab848d906d3a25a240d3d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e6f64652e6a732d32322532422d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="Node.js 22+" data-canonical-src="https://img.shields.io/badge/Node.js-22%2B-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-LLM/blob/main/LICENSE"><img loading="lazy" src="https://camo.githubusercontent.com/9b0dcc545c9e697315b8d16f4363715f0cc54941456ba778cbc802bb0ef11275/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="License: MIT" data-canonical-src="https://img.shields.io/badge/license-MIT-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/llm">LLM gateway</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a></p>
+</div>
+<p dir="auto">Wiro AI runs 1,000+ AI models behind one API and one project key. <code class="notranslate">@wiro-ai/wiro-llm</code> brings them into the <a href="https://ai-sdk.dev">AI SDK</a>:</p>
+<ul dir="auto">
+<li><strong>Chat</strong> on the <a href="https://wiro.ai/llm">Wiro LLM gateway</a>, with models from OpenAI, Anthropic, Google, xAI, DeepSeek, Qwen and others: <code class="notranslate">generateText</code> and <code class="notranslate">streamText</code> with tools, structured output and reasoning settings.</li>
+<li><strong>Images</strong> with <code class="notranslate">generateImage</code>: text to image, and image editing from your own pictures.</li>
+<li><strong>Speech</strong> with <code class="notranslate">generateSpeech</code>: text-to-speech models and their voices.</li>
+<li><strong>Transcription</strong> with <code class="notranslate">transcribe</code>: speech-to-text models, with timings when the model gives them.</li>
+<li><strong>Video</strong> with <code class="notranslate">experimental_generateVideo</code>: text to video, or video from a start image.</li>
+</ul>
+<p dir="auto">Chat calls go to the gateway's OpenAI-compatible endpoint, <code class="notranslate">https://llm.wiro.ai/v1</code>. Image, speech, transcription and video calls go to the Wiro <a href="https://wiro.ai/docs/run-a-model">Run API</a>: the provider starts a task, waits for it and downloads the result. Every result tells you what the call cost, in <code class="notranslate">providerMetadata.wiro</code>, and calls are paid from your Wiro wallet.</p>
+<h2 dir="auto" id="install">Install</h2>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npm install @wiro-ai/wiro-llm ai zod</pre></div>
+<p dir="auto">The package needs Node.js 22 or later, the same as AI SDK 7. <code class="notranslate">zod</code> is used for tool inputs and structured output.</p>
+<p dir="auto">Create a project at <a href="https://wiro.ai/panel/project/new">wiro.ai/panel/project/new</a> and put its credential in <code class="notranslate">WIRO_API_KEY</code>: the API key for an API Key Only project, or <code class="notranslate">API_KEY:API_SECRET</code> (both values joined with a colon) for a Signature project. For a Signature project, image, speech, transcription and video calls sign every request with the secret, and the secret itself is never sent. Call Wiro from server code so the key never reaches a browser.</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate"><span class="pl-k">export</span> WIRO_API_KEY=your-api-key</pre></div>
+<h2 dir="auto" id="quick-start">Quick start</h2>
+<div class="highlight highlight-source-js" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">wiro</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'@wiro-ai/wiro-llm'</span><span class="pl-kos">;</span>
+<span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">generateText</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'ai'</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-kos">{</span> text <span class="pl-kos">}</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-en">generateText</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">model</span>: <span class="pl-en">wiro</span><span class="pl-kos">(</span><span class="pl-s">'openai/gpt-5-4-nano'</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-c1">prompt</span>: <span class="pl-s">'Explain what an API gateway does in one sentence.'</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">text</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<p dir="auto"><code class="notranslate">wiro(modelId)</code>, <code class="notranslate">wiro.chatModel(modelId)</code> and <code class="notranslate">wiro.languageModel(modelId)</code> return the same chat model. On reasoning models, <code class="notranslate">maxOutputTokens</code> covers the reasoning as well as the answer, so leave room if you set it. If a reply comes back empty with <code class="notranslate">finishReason</code> <code class="notranslate">length</code>, raise it or lower the reasoning effort.</p>
+<h3 dir="auto" id="settings">Settings</h3>
+<p dir="auto"><code class="notranslate">createWiro()</code> makes a provider with your own settings. The default <code class="notranslate">wiro</code> instance is <code class="notranslate">createWiro()</code> with no options.</p>
+<div class="highlight highlight-source-js" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">createWiro</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'@wiro-ai/wiro-llm'</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">wiro</span> <span class="pl-c1">=</span> <span class="pl-en">createWiro</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">apiKey</span>: <span class="pl-s1">process</span><span class="pl-kos">.</span><span class="pl-c1">env</span><span class="pl-kos">.</span><span class="pl-c1">MY_WIRO_KEY</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">apiKey</code></td>
+<td><code class="notranslate">WIRO_API_KEY</code></td>
+<td>Your project credential. Use <code class="notranslate">API_KEY:API_SECRET</code> for a Signature project.</td>
+</tr>
+<tr>
+<td><code class="notranslate">baseURL</code></td>
+<td><code class="notranslate">https://llm.wiro.ai/v1</code></td>
+<td>The LLM gateway URL, for chat models.</td>
+</tr>
+<tr>
+<td><code class="notranslate">runBaseURL</code></td>
+<td><code class="notranslate">https://api.wiro.ai/v1</code></td>
+<td>The Run API URL, for image, speech, transcription and video models.</td>
+</tr>
+<tr>
+<td><code class="notranslate">poll</code></td>
+<td>see <a href="#tasks-costs-and-errors">Tasks</a></td>
+<td>How image, speech and transcription calls wait for their task: <code class="notranslate">intervalMs</code> between checks and <code class="notranslate">timeoutMs</code> in all.</td>
+</tr>
+<tr>
+<td><code class="notranslate">headers</code></td>
+<td>none</td>
+<td>Extra headers to send with every request.</td>
+</tr>
+<tr>
+<td><code class="notranslate">fetch</code></td>
+<td><code class="notranslate">globalThis.fetch</code></td>
+<td>Your own fetch function, for example to log requests or in tests.</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">The key is read when a request is made, so importing <code class="notranslate">wiro</code> before <code class="notranslate">WIRO_API_KEY</code> is set is fine.</p>
+<h2 dir="auto" id="streaming">Streaming</h2>
+<div class="highlight highlight-source-js" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">streamText</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'ai'</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-en">streamText</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">model</span>: <span class="pl-en">wiro</span><span class="pl-kos">(</span><span class="pl-s">'deepseek/v4-1-flash'</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-c1">prompt</span>: <span class="pl-s">'Write a two-line poem about routing requests.'</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-k">for</span> <span class="pl-k">await</span> <span class="pl-kos">(</span><span class="pl-k">const</span> <span class="pl-s1">part</span> <span class="pl-k">of</span> <span class="pl-s1">result</span><span class="pl-kos">.</span><span class="pl-c1">textStream</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+  <span class="pl-s1">process</span><span class="pl-kos">.</span><span class="pl-c1">stdout</span><span class="pl-kos">.</span><span class="pl-en">write</span><span class="pl-kos">(</span><span class="pl-s1">part</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-kos">}</span>
+
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-k">await</span> <span class="pl-s1">result</span><span class="pl-kos">.</span><span class="pl-c1">usage</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<p dir="auto">When a model thinks before it answers, its reasoning comes separately in <code class="notranslate">reasoningText</code>, and the token counts arrive at the end of the stream.</p>
+<h2 dir="auto" id="tools">Tools</h2>
+<p dir="auto">The model calls a tool, the AI SDK runs <code class="notranslate">execute</code> and sends the result back, and the model writes the answer. <code class="notranslate">stopWhen</code> caps the number of steps.</p>
+<div class="highlight highlight-source-js" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">generateText</span><span class="pl-kos">,</span> <span class="pl-s1">isStepCount</span><span class="pl-kos">,</span> <span class="pl-s1">tool</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'ai'</span><span class="pl-kos">;</span>
+<span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">z</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'zod'</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-kos">{</span> text <span class="pl-kos">}</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-en">generateText</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">model</span>: <span class="pl-en">wiro</span><span class="pl-kos">(</span><span class="pl-s">'openai/gpt-5-4-nano'</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-c1">tools</span>: <span class="pl-kos">{</span>
+    <span class="pl-c1">getWeather</span>: <span class="pl-en">tool</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+      <span class="pl-c1">description</span>: <span class="pl-s">'Get the current weather for a city'</span><span class="pl-kos">,</span>
+      <span class="pl-c1">inputSchema</span>: <span class="pl-s1">z</span><span class="pl-kos">.</span><span class="pl-en">object</span><span class="pl-kos">(</span><span class="pl-kos">{</span> <span class="pl-c1">city</span>: <span class="pl-s1">z</span><span class="pl-kos">.</span><span class="pl-en">string</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+      <span class="pl-en">execute</span>: <span class="pl-k">async</span> <span class="pl-kos">(</span><span class="pl-kos">{</span> city <span class="pl-kos">}</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">(</span><span class="pl-kos">{</span> city<span class="pl-kos">,</span> <span class="pl-c1">temperatureC</span>: <span class="pl-c1">21</span> <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+    <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-kos">}</span><span class="pl-kos">,</span>
+  <span class="pl-c1">stopWhen</span>: <span class="pl-en">isStepCount</span><span class="pl-kos">(</span><span class="pl-c1">3</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-c1">prompt</span>: <span class="pl-s">'What is the weather in Istanbul right now?'</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<h2 dir="auto" id="structured-output">Structured output</h2>
+<div class="highlight highlight-source-js" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">generateText</span><span class="pl-kos">,</span> <span class="pl-v">Output</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'ai'</span><span class="pl-kos">;</span>
+<span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">z</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'zod'</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-kos">{</span> output <span class="pl-kos">}</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-en">generateText</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">model</span>: <span class="pl-en">wiro</span><span class="pl-kos">(</span><span class="pl-s">'openai/gpt-5-4-nano'</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-c1">output</span>: <span class="pl-v">Output</span><span class="pl-kos">.</span><span class="pl-en">object</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+    <span class="pl-c1">schema</span>: <span class="pl-s1">z</span><span class="pl-kos">.</span><span class="pl-en">object</span><span class="pl-kos">(</span><span class="pl-kos">{</span> <span class="pl-c1">name</span>: <span class="pl-s1">z</span><span class="pl-kos">.</span><span class="pl-en">string</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">,</span> <span class="pl-c1">country</span>: <span class="pl-s1">z</span><span class="pl-kos">.</span><span class="pl-en">string</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">,</span> <span class="pl-c1">population</span>: <span class="pl-s1">z</span><span class="pl-kos">.</span><span class="pl-en">number</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-c1">prompt</span>: <span class="pl-s">'Give me the largest city in Turkey.'</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<p dir="auto">The schema goes to the model as <code class="notranslate">response_format</code> of type <code class="notranslate">json_schema</code>. <a href="https://wiro.ai/docs/completions-api"><code class="notranslate">GET /v1/models</code></a> lists the structured output modes of each model under <code class="notranslate">capabilities.structured_output_modes</code>.</p>
+<h2 dir="auto" id="reasoning-effort">Reasoning effort</h2>
+<p dir="auto"><code class="notranslate">providerOptions.wiro.reasoningEffort</code> is sent as <code class="notranslate">reasoning_effort</code>:</p>
+<div class="highlight highlight-source-js" dir="auto"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-kos">{</span> text <span class="pl-kos">}</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-en">generateText</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">model</span>: <span class="pl-en">wiro</span><span class="pl-kos">(</span><span class="pl-s">'openai/gpt-5-4-nano'</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-c1">providerOptions</span>: <span class="pl-kos">{</span> <span class="pl-c1">wiro</span>: <span class="pl-kos">{</span> <span class="pl-c1">reasoningEffort</span>: <span class="pl-s">'low'</span> <span class="pl-kos">}</span> <span class="pl-kos">}</span><span class="pl-kos">,</span>
+  <span class="pl-c1">prompt</span>: <span class="pl-s">'Is 97 a prime number? Answer yes or no.'</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<p dir="auto">Use it with models that list <code class="notranslate">reasoning_effort</code> in their <code class="notranslate">supported_parameters</code>. The AI SDK's own <code class="notranslate">reasoning</code> option, such as <code class="notranslate">reasoning: 'low'</code>, sends the same field. Keys under <code class="notranslate">providerOptions.wiro</code> that the AI SDK does not know, such as <code class="notranslate">parallel_tool_calls: false</code>, are added to the request body as they are.</p>
+<h2 dir="auto" id="cost">Cost</h2>
+<p dir="auto">Each response carries the amount the call was billed, in USD, and the provider puts it in <code class="notranslate">providerMetadata.wiro.cost</code>:</p>
+<div class="highlight highlight-source-js" dir="auto"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-en">generateText</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">model</span>: <span class="pl-en">wiro</span><span class="pl-kos">(</span><span class="pl-s">'openai/gpt-5-4-nano'</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-c1">prompt</span>: <span class="pl-s">'Explain what an API gateway does in one sentence.'</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">result</span><span class="pl-kos">.</span><span class="pl-c1">providerMetadata</span><span class="pl-kos">?.</span><span class="pl-c1">wiro</span><span class="pl-kos">?.</span><span class="pl-c1">cost</span><span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// for example 0.0000482</span></pre></div>
+<p dir="auto">With <code class="notranslate">streamText</code>, read it once the stream has finished: <code class="notranslate">(await result.providerMetadata)?.wiro?.cost</code>.</p>
+<p dir="auto">A call with tools can take several steps, and each step is a request with its own cost. Add them up for the total:</p>
+<div class="highlight highlight-source-js" dir="auto"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">total</span> <span class="pl-c1">=</span> <span class="pl-s1">result</span><span class="pl-kos">.</span><span class="pl-c1">steps</span><span class="pl-kos">.</span><span class="pl-en">reduce</span><span class="pl-kos">(</span>
+  <span class="pl-kos">(</span><span class="pl-s1">sum</span><span class="pl-kos">,</span> <span class="pl-s1">step</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-s1">sum</span> <span class="pl-c1">+</span> <span class="pl-v">Number</span><span class="pl-kos">(</span><span class="pl-s1">step</span><span class="pl-kos">.</span><span class="pl-c1">providerMetadata</span><span class="pl-kos">?.</span><span class="pl-c1">wiro</span><span class="pl-kos">?.</span><span class="pl-c1">cost</span> <span class="pl-c1">??</span> <span class="pl-c1">0</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-c1">0</span><span class="pl-kos">,</span>
+<span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<h2 dir="auto" id="images">Images</h2>
+<div class="highlight highlight-source-js" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">writeFile</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'node:fs/promises'</span><span class="pl-kos">;</span>
+<span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">wiro</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'@wiro-ai/wiro-llm'</span><span class="pl-kos">;</span>
+<span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">generateImage</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'ai'</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-kos">{</span> image<span class="pl-kos">,</span> providerMetadata <span class="pl-kos">}</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-en">generateImage</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">model</span>: <span class="pl-s1">wiro</span><span class="pl-kos">.</span><span class="pl-en">image</span><span class="pl-kos">(</span><span class="pl-s">'pruna/p-image'</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-c1">prompt</span>: <span class="pl-s">'A red lighthouse on a rocky coast at dusk, warm light in the windows'</span><span class="pl-kos">,</span>
+  <span class="pl-c1">aspectRatio</span>: <span class="pl-s">'16:9'</span><span class="pl-kos">,</span>
+  <span class="pl-c1">seed</span>: <span class="pl-c1">42</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-k">await</span> <span class="pl-en">writeFile</span><span class="pl-kos">(</span><span class="pl-s">`lighthouse.<span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">image</span><span class="pl-kos">.</span><span class="pl-c1">mediaType</span><span class="pl-kos">.</span><span class="pl-en">split</span><span class="pl-kos">(</span><span class="pl-s">'/'</span><span class="pl-kos">)</span><span class="pl-kos">[</span><span class="pl-c1">1</span><span class="pl-kos">]</span><span class="pl-kos">}</span></span>`</span><span class="pl-kos">,</span> <span class="pl-s1">image</span><span class="pl-kos">.</span><span class="pl-c1">uint8Array</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">providerMetadata</span><span class="pl-kos">.</span><span class="pl-c1">wiro</span><span class="pl-kos">.</span><span class="pl-c1">images</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-kos">]</span><span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// { taskId, cost, url, mediaType }</span></pre></div>
+<p dir="auto"><code class="notranslate">wiro.image(modelId)</code> and <code class="notranslate">wiro.imageModel(modelId)</code> return the same image model. Models name their settings in different ways, such as <code class="notranslate">aspectRatio</code> or <code class="notranslate">ratio</code>, <code class="notranslate">samples</code> or <code class="notranslate">maxImages</code>, <code class="notranslate">width</code> and <code class="notranslate">height</code> or <code class="notranslate">resolution</code>. The provider reads each model's settings from Wiro once and sends <code class="notranslate">n</code>, <code class="notranslate">size</code>, <code class="notranslate">aspectRatio</code> and <code class="notranslate">seed</code> in the form that model takes: a size becomes a width and height, or an aspect ratio and the closest resolution, and an aspect ratio becomes a width and height on models that take those. A value the model does not offer comes back as a warning in <code class="notranslate">warnings</code>, and the model's default is used instead.</p>
+<p dir="auto">With <code class="notranslate">n</code> above 1, a model with an image count setting makes all the images in one task, and other models get one task per image.</p>
+<h3 dir="auto" id="image-editing">Image editing</h3>
+<p dir="auto">Pass your pictures in <code class="notranslate">prompt.images</code> to a model that takes input images, such as <code class="notranslate">google/nano-banana</code>, <code class="notranslate">openai/gpt-image-2</code> or <code class="notranslate">wiro/flux-2-dev</code>:</p>
+<div class="highlight highlight-source-js" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">readFile</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'node:fs/promises'</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-kos">{</span> image <span class="pl-kos">}</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-en">generateImage</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">model</span>: <span class="pl-s1">wiro</span><span class="pl-kos">.</span><span class="pl-en">image</span><span class="pl-kos">(</span><span class="pl-s">'google/nano-banana'</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-c1">prompt</span>: <span class="pl-kos">{</span>
+    <span class="pl-c1">text</span>: <span class="pl-s">'Turn this photo into a soft watercolor painting'</span><span class="pl-kos">,</span>
+    <span class="pl-c1">images</span>: <span class="pl-kos">[</span><span class="pl-k">await</span> <span class="pl-en">readFile</span><span class="pl-kos">(</span><span class="pl-s">'photo.jpg'</span><span class="pl-kos">)</span><span class="pl-kos">]</span><span class="pl-kos">,</span>
+  <span class="pl-kos">}</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<p dir="auto">Images can be bytes, base64 text or URLs. Bytes are uploaded with the run, and URLs go to Wiro as they are, so they must be public. <code class="notranslate">prompt.mask</code> goes to models that take a mask, and a model without a prompt, such as <code class="notranslate">wiro/remove-background</code>, takes <code class="notranslate">prompt: { images: [...] }</code> alone.</p>
+<h3 dir="auto" id="model-settings">Model settings</h3>
+<p dir="auto">Every model has settings of its own, listed on its page in the <a href="https://wiro.ai/models">model catalog</a>. Pass them in <code class="notranslate">providerOptions.wiro</code>; they go to the model as they are and win over the settings the provider fills in:</p>
+<div class="highlight highlight-source-js" dir="auto"><pre class="notranslate"><span class="pl-k">await</span> <span class="pl-en">generateImage</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">model</span>: <span class="pl-s1">wiro</span><span class="pl-kos">.</span><span class="pl-en">image</span><span class="pl-kos">(</span><span class="pl-s">'openai/gpt-image-2'</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-c1">prompt</span>: <span class="pl-s">'A product photo of a ceramic mug on a linen tablecloth'</span><span class="pl-kos">,</span>
+  <span class="pl-c1">aspectRatio</span>: <span class="pl-s">'3:2'</span><span class="pl-kos">,</span>
+  <span class="pl-c1">providerOptions</span>: <span class="pl-kos">{</span> <span class="pl-c1">wiro</span>: <span class="pl-kos">{</span> <span class="pl-c1">quality</span>: <span class="pl-s">'high'</span><span class="pl-kos">,</span> <span class="pl-c1">resolution</span>: <span class="pl-s">'2k'</span> <span class="pl-kos">}</span> <span class="pl-kos">}</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<p dir="auto">Required settings you leave out get the default the model shows in the catalog. <a href="https://wiro.ai/docs/model-parameters">Model parameters</a> explains the setting types.</p>
+<h2 dir="auto" id="speech">Speech</h2>
+<div class="highlight highlight-source-js" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">writeFile</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'node:fs/promises'</span><span class="pl-kos">;</span>
+<span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">wiro</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'@wiro-ai/wiro-llm'</span><span class="pl-kos">;</span>
+<span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">generateSpeech</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'ai'</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-kos">{</span> audio<span class="pl-kos">,</span> providerMetadata <span class="pl-kos">}</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-en">generateSpeech</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">model</span>: <span class="pl-s1">wiro</span><span class="pl-kos">.</span><span class="pl-en">speech</span><span class="pl-kos">(</span><span class="pl-s">'elevenlabs/eleven-v4-turbo'</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-c1">text</span>: <span class="pl-s">'Hello from Wiro AI. This sentence was turned into speech.'</span><span class="pl-kos">,</span>
+  <span class="pl-c1">voice</span>: <span class="pl-s">'alice'</span><span class="pl-kos">,</span>
+  <span class="pl-c1">language</span>: <span class="pl-s">'en'</span><span class="pl-kos">,</span>
+  <span class="pl-c1">outputFormat</span>: <span class="pl-s">'mp3'</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-k">await</span> <span class="pl-en">writeFile</span><span class="pl-kos">(</span><span class="pl-s">'hello.mp3'</span><span class="pl-kos">,</span> <span class="pl-s1">audio</span><span class="pl-kos">.</span><span class="pl-c1">uint8Array</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">providerMetadata</span><span class="pl-kos">.</span><span class="pl-c1">wiro</span><span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// { taskId, cost, elapsedSeconds, url, mediaType }</span></pre></div>
+<p dir="auto"><code class="notranslate">voice</code> matches a model's voices by ID or by name, so <code class="notranslate">nova</code> picks <code class="notranslate">af_nova</code> on <code class="notranslate">wiro/kokoro-tts</code>. <code class="notranslate">language</code> takes ISO 639-1 codes such as <code class="notranslate">en</code> or <code class="notranslate">tr</code> and matches them to the model's own language list, whether it holds codes, names or letters. <code class="notranslate">outputFormat</code> picks the model's format of that kind (<code class="notranslate">mp3</code> gives <code class="notranslate">mp3_44100_128</code> on ElevenLabs models), and <code class="notranslate">instructions</code> and <code class="notranslate">speed</code> go to models that have them.</p>
+<h2 dir="auto" id="transcription">Transcription</h2>
+<div class="highlight highlight-source-js" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">readFile</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'node:fs/promises'</span><span class="pl-kos">;</span>
+<span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">wiro</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'@wiro-ai/wiro-llm'</span><span class="pl-kos">;</span>
+<span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">transcribe</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'ai'</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-kos">{</span> text<span class="pl-kos">,</span> segments<span class="pl-kos">,</span> providerMetadata <span class="pl-kos">}</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-en">transcribe</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">model</span>: <span class="pl-s1">wiro</span><span class="pl-kos">.</span><span class="pl-en">transcription</span><span class="pl-kos">(</span><span class="pl-s">'openai/whisper-large-v3'</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-c1">audio</span>: <span class="pl-k">await</span> <span class="pl-en">readFile</span><span class="pl-kos">(</span><span class="pl-s">'meeting.mp3'</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">text</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">segments</span><span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// [{ text, startSecond, endSecond }, ...]</span></pre></div>
+<p dir="auto">Audio can be bytes, base64 text or a URL. A public URL goes straight to Wiro, which downloads it, so a long recording never passes through your server:</p>
+<div class="highlight highlight-source-js" dir="auto"><pre class="notranslate"><span class="pl-k">await</span> <span class="pl-en">transcribe</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">model</span>: <span class="pl-s1">wiro</span><span class="pl-kos">.</span><span class="pl-en">transcription</span><span class="pl-kos">(</span><span class="pl-s">'elevenlabs/speech-to-text'</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-c1">audio</span>: <span class="pl-k">new</span> <span class="pl-c1">URL</span><span class="pl-kos">(</span><span class="pl-s">'https://example.com/interview.mp3'</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<p dir="auto"><code class="notranslate">segments</code> holds the timings a model writes, and <code class="notranslate">timestampGranularities: ['segment']</code> turns them on for models with a timestamp setting, such as <code class="notranslate">nvidia/parakeet-tdt-0-6b-v3</code>. Language and speaker settings go in <code class="notranslate">providerOptions.wiro</code>, for example <code class="notranslate">{ language: 'English', numSpeakers: 2 }</code> on <code class="notranslate">openai/whisper-large-v3</code>.</p>
+<h2 dir="auto" id="video">Video</h2>
+<div class="highlight highlight-source-js" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">writeFile</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'node:fs/promises'</span><span class="pl-kos">;</span>
+<span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">wiro</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'@wiro-ai/wiro-llm'</span><span class="pl-kos">;</span>
+<span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">experimental_generateVideo</span> <span class="pl-k">as</span> <span class="pl-s1">generateVideo</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'ai'</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-kos">{</span> video<span class="pl-kos">,</span> providerMetadata <span class="pl-kos">}</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-en">generateVideo</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">model</span>: <span class="pl-s1">wiro</span><span class="pl-kos">.</span><span class="pl-en">video</span><span class="pl-kos">(</span><span class="pl-s">'bytedance/seedance-v1-pro-fast'</span><span class="pl-kos">)</span><span class="pl-kos">,</span>
+  <span class="pl-c1">prompt</span>: <span class="pl-s">'A paper boat drifting on a calm pond, soft morning light'</span><span class="pl-kos">,</span>
+  <span class="pl-c1">resolution</span>: <span class="pl-s">'864x480'</span><span class="pl-kos">,</span>
+  <span class="pl-c1">duration</span>: <span class="pl-c1">5</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-k">await</span> <span class="pl-en">writeFile</span><span class="pl-kos">(</span><span class="pl-s">'boat.mp4'</span><span class="pl-kos">,</span> <span class="pl-s1">video</span><span class="pl-kos">.</span><span class="pl-c1">uint8Array</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">providerMetadata</span><span class="pl-kos">.</span><span class="pl-c1">wiro</span><span class="pl-kos">.</span><span class="pl-c1">videos</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-kos">]</span><span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// { taskId, cost, url, mediaType }</span></pre></div>
+<p dir="auto">A start image goes in <code class="notranslate">prompt: { image, text }</code>, and <code class="notranslate">frameImages</code> with a <code class="notranslate">last_frame</code> sets the end frame on models that take one. <code class="notranslate">aspectRatio</code>, <code class="notranslate">resolution</code>, <code class="notranslate">duration</code>, <code class="notranslate">fps</code>, <code class="notranslate">seed</code> and <code class="notranslate">generateAudio</code> go to the model's matching settings: <code class="notranslate">1280x720</code> becomes <code class="notranslate">720p</code>, and a duration the model does not offer becomes the closest one it does, with a warning. <code class="notranslate">inputReferences</code> go to models that take reference images or videos.</p>
+<p dir="auto">Video calls use the AI SDK's start and status flow. <code class="notranslate">poll</code> sets how often the SDK checks the task and how long it waits (every 5 seconds, up to 10 minutes, by default). With <code class="notranslate">webhook</code>, Wiro posts to your URL when the video is done, and the SDK waits for that instead of checking. To start a video in one process and collect it in another, use <code class="notranslate">experimental_startVideo</code> and <code class="notranslate">experimental_getVideoStatus</code>:</p>
+<div class="highlight highlight-source-js" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-kos">{</span>
+  <span class="pl-s1">experimental_getVideoStatus</span> <span class="pl-k">as</span> <span class="pl-s1">getVideoStatus</span><span class="pl-kos">,</span>
+  <span class="pl-s1">experimental_startVideo</span> <span class="pl-k">as</span> <span class="pl-s1">startVideo</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'ai'</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">model</span> <span class="pl-c1">=</span> <span class="pl-s1">wiro</span><span class="pl-kos">.</span><span class="pl-en">video</span><span class="pl-kos">(</span><span class="pl-s">'klingai/kling-v2-5-turbo'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-k">const</span> <span class="pl-kos">{</span> operation <span class="pl-kos">}</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-en">startVideo</span><span class="pl-kos">(</span><span class="pl-kos">{</span> model<span class="pl-kos">,</span> <span class="pl-c1">prompt</span>: <span class="pl-s">'A fox walking through fresh snow'</span> <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-c">// Store `operation` ({ taskId, taskToken }) and check it later:</span>
+<span class="pl-k">const</span> <span class="pl-s1">status</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-en">getVideoStatus</span><span class="pl-kos">(</span><span class="pl-s1">model</span><span class="pl-kos">,</span> <span class="pl-kos">{</span> operation <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-s1">status</span><span class="pl-kos">.</span><span class="pl-c1">status</span> <span class="pl-c1">===</span> <span class="pl-s">'completed'</span><span class="pl-kos">)</span> <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">status</span><span class="pl-kos">.</span><span class="pl-c1">videos</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-kos">]</span><span class="pl-kos">.</span><span class="pl-c1">url</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<h2 dir="auto" id="tasks-costs-and-errors">Tasks, costs and errors</h2>
+<p dir="auto">Image, speech, transcription and video calls run as Wiro tasks, and each result names its task and what it cost, in USD:</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Call</th>
+<th>Task and cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">generateImage</code></td>
+<td><code class="notranslate">providerMetadata.wiro.images[i]</code> has <code class="notranslate">taskId</code>, <code class="notranslate">cost</code> (the image's share of its task), <code class="notranslate">url</code> and <code class="notranslate">mediaType</code>. <code class="notranslate">calls[i].providerMetadata.wiro</code> has each task's <code class="notranslate">taskId</code>, <code class="notranslate">cost</code> and <code class="notranslate">elapsedSeconds</code>.</td>
+</tr>
+<tr>
+<td><code class="notranslate">generateSpeech</code></td>
+<td><code class="notranslate">providerMetadata.wiro</code> has <code class="notranslate">taskId</code>, <code class="notranslate">cost</code>, <code class="notranslate">elapsedSeconds</code>, <code class="notranslate">url</code> and <code class="notranslate">mediaType</code>.</td>
+</tr>
+<tr>
+<td><code class="notranslate">transcribe</code></td>
+<td><code class="notranslate">providerMetadata.wiro</code> has <code class="notranslate">taskId</code>, <code class="notranslate">cost</code> and <code class="notranslate">elapsedSeconds</code>.</td>
+</tr>
+<tr>
+<td><code class="notranslate">experimental_generateVideo</code></td>
+<td><code class="notranslate">providerMetadata.wiro.videos[i]</code> has <code class="notranslate">taskId</code>, <code class="notranslate">cost</code>, <code class="notranslate">url</code> and <code class="notranslate">mediaType</code>.</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><code class="notranslate">url</code> is the file on Wiro's CDN, so you can hand a result to another model, such as an image to a video model, without uploading it again.</p>
+<p dir="auto">The provider checks a task every 2 seconds at first, then less often, and waits up to 10 minutes. <code class="notranslate">createWiro({ poll: { intervalMs, timeoutMs } })</code> changes both for image, speech and transcription calls. <code class="notranslate">abortSignal</code> ends the wait.</p>
+<p dir="auto">A task that ends without a result throws a <code class="notranslate">WiroTaskError</code> with the <code class="notranslate">taskId</code> and a <code class="notranslate">reason</code>: <code class="notranslate">failed</code>, <code class="notranslate">cancelled</code>, <code class="notranslate">timeout</code>, <code class="notranslate">no-output</code>, <code class="notranslate">status</code> or <code class="notranslate">download</code>. A run Wiro refuses, such as one without the prompt a model requires, throws an <code class="notranslate">APICallError</code> with Wiro's reason.</p>
+<div class="highlight highlight-source-js" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-v">WiroTaskError</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'@wiro-ai/wiro-llm'</span><span class="pl-kos">;</span>
+
+<span class="pl-k">try</span> <span class="pl-kos">{</span>
+  <span class="pl-k">await</span> <span class="pl-en">generateImage</span><span class="pl-kos">(</span><span class="pl-kos">{</span> <span class="pl-c1">model</span>: <span class="pl-s1">wiro</span><span class="pl-kos">.</span><span class="pl-en">image</span><span class="pl-kos">(</span><span class="pl-s">'pruna/p-image'</span><span class="pl-kos">)</span><span class="pl-kos">,</span> <span class="pl-c1">prompt</span>: <span class="pl-s">'A red lighthouse'</span> <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-kos">}</span> <span class="pl-k">catch</span> <span class="pl-kos">(</span><span class="pl-s1">error</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+  <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-v">WiroTaskError</span><span class="pl-kos">.</span><span class="pl-en">isInstance</span><span class="pl-kos">(</span><span class="pl-s1">error</span><span class="pl-kos">)</span><span class="pl-kos">)</span> <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">error</span><span class="pl-kos">.</span><span class="pl-c1">reason</span><span class="pl-kos">,</span> <span class="pl-s1">error</span><span class="pl-kos">.</span><span class="pl-c1">taskId</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+  <span class="pl-k">else</span> <span class="pl-k">throw</span> <span class="pl-s1">error</span><span class="pl-kos">;</span>
+<span class="pl-kos">}</span></pre></div>
+<h2 dir="auto" id="models">Models</h2>
+<p dir="auto">Model IDs are lowercase <code class="notranslate">owner/model</code>, such as <code class="notranslate">openai/gpt-6-sol</code>, <code class="notranslate">claude/sonnet-5</code>, <code class="notranslate">google/gemini-3-pro</code>, <code class="notranslate">xai/grok-4-5</code>, <code class="notranslate">deepseek/v4-pro</code> or <code class="notranslate">qwen/qwen3-32b</code>. The <code class="notranslate">WiroChatModelId</code> type lists the models the gateway served when this version was published, so your editor can complete them, and any other ID works as well. Browse them in the <a href="https://wiro.ai/models?categories=llm-tool-call">model catalog</a> or with <code class="notranslate">GET https://llm.wiro.ai/v1/models</code>, which also shows each model's tools, modalities and limits.</p>
+<p dir="auto">Image, speech, transcription and video models use the IDs of the <a href="https://wiro.ai/models">model catalog</a>: browse <a href="https://wiro.ai/models?categories=text-to-image">text to image</a>, <a href="https://wiro.ai/models?categories=image-to-image">image editing</a>, <a href="https://wiro.ai/models?categories=text-to-speech">text to speech</a>, <a href="https://wiro.ai/models?categories=speech-to-text">speech to text</a>, <a href="https://wiro.ai/models?categories=text-to-video">text to video</a> and <a href="https://wiro.ai/models?categories=image-to-video">image to video</a>. <code class="notranslate">WiroImageModelId</code>, <code class="notranslate">WiroSpeechModelId</code>, <code class="notranslate">WiroTranscriptionModelId</code> and <code class="notranslate">WiroVideoModelId</code> list the catalog's models for autocomplete, and new models work without an update.</p>
+<h2 dir="auto" id="responses-and-messages-routes">Responses and Messages routes</h2>
+<p dir="auto">Besides Chat Completions, which this package uses, the gateway serves OpenAI Responses at <code class="notranslate">/v1/responses</code> and Anthropic Messages at <code class="notranslate">/v1/messages</code>. The AI SDK's own providers reach them with the same base URL and key:</p>
+<div class="highlight highlight-source-js" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">createAnthropic</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'@ai-sdk/anthropic'</span><span class="pl-kos">;</span>
+<span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">createOpenAI</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'@ai-sdk/openai'</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">openai</span> <span class="pl-c1">=</span> <span class="pl-en">createOpenAI</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">baseURL</span>: <span class="pl-s">'https://llm.wiro.ai/v1'</span><span class="pl-kos">,</span>
+  <span class="pl-c1">apiKey</span>: <span class="pl-s1">process</span><span class="pl-kos">.</span><span class="pl-c1">env</span><span class="pl-kos">.</span><span class="pl-c1">WIRO_API_KEY</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">anthropic</span> <span class="pl-c1">=</span> <span class="pl-en">createAnthropic</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">baseURL</span>: <span class="pl-s">'https://llm.wiro.ai/v1'</span><span class="pl-kos">,</span>
+  <span class="pl-c1">apiKey</span>: <span class="pl-s1">process</span><span class="pl-kos">.</span><span class="pl-c1">env</span><span class="pl-kos">.</span><span class="pl-c1">WIRO_API_KEY</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">viaResponses</span> <span class="pl-c1">=</span> <span class="pl-s1">openai</span><span class="pl-kos">.</span><span class="pl-en">responses</span><span class="pl-kos">(</span><span class="pl-s">'openai/gpt-5-4-nano'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-k">const</span> <span class="pl-s1">viaMessages</span> <span class="pl-c1">=</span> <span class="pl-s1">anthropic</span><span class="pl-kos">(</span><span class="pl-s">'claude/sonnet-5'</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<p dir="auto"><code class="notranslate">@ai-sdk/anthropic</code> caps the output at 4,096 tokens for model IDs it does not know, so pass <code class="notranslate">maxOutputTokens</code> for longer answers.</p>
+<h2 dir="auto" id="examples">Examples</h2>
+<p dir="auto"><a href="https://github.com/wiroai/Wiro-LLM/blob/main/examples"><code class="notranslate">examples/</code></a> has a short, runnable file for each part of this package, and for the other SDKs the gateway works with:</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>File</th>
+<th>Shows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM/blob/main/examples/ai-sdk.mjs"><code class="notranslate">ai-sdk.mjs</code></a></td>
+<td>This package with <code class="notranslate">generateText</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM/blob/main/examples/image.mjs"><code class="notranslate">image.mjs</code></a></td>
+<td><code class="notranslate">generateImage</code> with an aspect ratio and a seed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM/blob/main/examples/image-edit.mjs"><code class="notranslate">image-edit.mjs</code></a></td>
+<td>Image editing from a local picture</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM/blob/main/examples/speech.mjs"><code class="notranslate">speech.mjs</code></a></td>
+<td><code class="notranslate">generateSpeech</code> with a voice and a language</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM/blob/main/examples/transcription.mjs"><code class="notranslate">transcription.mjs</code></a></td>
+<td><code class="notranslate">transcribe</code> with timings</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM/blob/main/examples/video.mjs"><code class="notranslate">video.mjs</code></a></td>
+<td><code class="notranslate">experimental_generateVideo</code> from text, or from a start image</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM/blob/main/examples/openai-sdk.mjs"><code class="notranslate">openai-sdk.mjs</code></a></td>
+<td>The OpenAI SDK for JavaScript</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM/blob/main/examples/openai_sdk.py"><code class="notranslate">openai_sdk.py</code></a></td>
+<td>The OpenAI SDK for Python</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM/blob/main/examples/anthropic-sdk.mjs"><code class="notranslate">anthropic-sdk.mjs</code></a></td>
+<td>The Anthropic SDK for JavaScript, on the Messages route</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM/blob/main/examples/langchain.mjs"><code class="notranslate">langchain.mjs</code></a></td>
+<td>LangChain's <code class="notranslate">ChatOpenAI</code> with <code class="notranslate">configuration.baseURL</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM/blob/main/examples/llamaindex_llm.py"><code class="notranslate">llamaindex_llm.py</code></a></td>
+<td>LlamaIndex's <code class="notranslate">OpenAILike</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM/blob/main/examples/pydantic_ai_agent.py"><code class="notranslate">pydantic_ai_agent.py</code></a></td>
+<td>Pydantic AI with its OpenAI provider and <code class="notranslate">base_url</code></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">Each file starts with the commands to install and run it. <code class="notranslate">npm install</code> in <code class="notranslate">examples/</code> installs everything the JavaScript ones need.</p>
+<h2 dir="auto" id="documentation">Documentation</h2>
+<ul dir="auto">
+<li><a href="https://wiro.ai/docs/completions-api">Direct LLM Gateway</a>: routes, authentication, model discovery, usage and errors</li>
+<li><a href="https://wiro.ai/docs/completions-api#llm-setup-ai-sdk">AI SDK setup</a>: the same setup with <code class="notranslate">@ai-sdk/openai-compatible</code></li>
+<li><a href="https://wiro.ai/docs/run-a-model">Run a model</a> and <a href="https://wiro.ai/docs/tasks">Tasks</a>: the Run API behind image, speech, transcription and video calls</li>
+<li><a href="https://ai-sdk.dev/docs/introduction">AI SDK documentation</a>: <code class="notranslate">generateText</code> and <code class="notranslate">streamText</code>, plus <a href="https://ai-sdk.dev/docs/ai-sdk-core/image-generation">image generation</a>, <a href="https://ai-sdk.dev/docs/ai-sdk-core/speech">speech</a>, <a href="https://ai-sdk.dev/docs/ai-sdk-core/transcription">transcription</a> and <a href="https://ai-sdk.dev/docs/ai-sdk-core/video-generation">video generation</a></li>
+</ul>
+<h2 dir="auto" id="agent-skill">Agent skill</h2>
+<p dir="auto">This repository includes an agent skill, <code class="notranslate">wiro-llm</code>, in <a href="https://github.com/wiroai/Wiro-LLM/blob/main/skills/wiro-llm/SKILL.md"><code class="notranslate">skills/wiro-llm/SKILL.md</code></a>. It shows coding agents such as Claude Code and Cursor how to call the Wiro LLM gateway: pick a model, use it from the OpenAI, Anthropic or AI SDK clients, and read what each call cost. Add it to your agent with:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npx skills add wiroai/Wiro-LLM --skill wiro-llm</pre></div>
+<h2 dir="auto" id="development">Development</h2>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npm install
+npm run lint
+npm run typecheck
+npm <span class="pl-c1">test</span>
+npm run build</pre></div>
+<p dir="auto">The tests use a mocked <code class="notranslate">fetch</code> and make no network calls. Two scripts check the built package against the live API, billed to the project behind <code class="notranslate">WIRO_API_KEY</code>, and are not part of CI. <code class="notranslate">scripts/smoke.mjs</code> makes five small chat calls on <code class="notranslate">openai/gpt-5-4-nano</code>, and <code class="notranslate">scripts/smoke-media.mjs</code> runs one image, one speech, one transcription and one video task on low-cost models:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npm run build
+WIRO_API_KEY=your-api-key npm run smoke
+WIRO_API_KEY=your-api-key npm run smoke:media</pre></div>
+<p dir="auto"><code class="notranslate">node scripts/update-media-model-ids.mjs</code> refreshes the image, speech, transcription and video model ID lists from the public catalog.</p>
+<h2 dir="auto" id="support-terms-and-privacy">Support, terms and privacy</h2>
+<p dir="auto">Email <a href="mailto:support@wiro.ai">support@wiro.ai</a> or open an issue in this repository. Use of Wiro AI through this package is covered by the Wiro AI <a href="https://wiro.ai/agreement/terms-of-service">Terms of Service</a> and <a href="https://wiro.ai/agreement/privacy-policy">Privacy Policy</a>.</p>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Cursor, Claude Code, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills">Wiro-Skills</a></td>
+<td>Agent skills for images, image edits, video, music, speech, transcripts, 3D and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
+<td>Official MCP server for Wiro AI, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Wiro AI extension for Safari on the Mac</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Wiro AI SDK for Dart and Flutter, <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>Wiro AI SDK for React Native and Expo, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><code class="notranslate">@wiro-ai/wiro-react-native</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-Realtime">Swift-Realtime</a></td>
+<td>Realtime voice AI example for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin-Realtime</a></td>
+<td>Realtime voice AI example for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-Realtime">Dart-Realtime</a></td>
+<td>Realtime voice AI example for Flutter</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-Realtime">ReactNative-Realtime</a></td>
+<td>Realtime voice AI example for React Native</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>One Wiro AI node for n8n with a searchable model picker, <a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><code class="notranslate">@wiro-ai/n8n-nodes-wiro</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI plugins for Dify: the LLM gateway as a model provider, plus image, video, speech and music tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI">Wiro-ComfyUI</a></td>
+<td>Wiro AI nodes for ComfyUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Zed">Wiro-Zed</a></td>
+<td>Wiro AI MCP server extension for Zed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Action for Wiro AI models and the LLM gateway, <a href="https://github.com/marketplace/actions/wiro-ai-action">on the GitHub Marketplace</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Raycast">Wiro-Raycast</a></td>
+<td>Wiro AI extension for Raycast: image and video generation, LLM chat and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress: featured images, image edits, alt text, narration and SEO suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Obsidian">Wiro-Obsidian</a></td>
+<td>Wiro AI plugin for Obsidian: images, video, speech, music, transcription and text tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Blender">Wiro-Blender</a></td>
+<td>Wiro AI add-on for Blender: text to 3D, image to 3D and textures</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Figma">Wiro-Figma</a></td>
+<td>Wiro AI plugin for Figma: images, vectors, image edits and text</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js starter for Wiro AI: Playground, image, video and audio tools, and LLM chat, ready for Vercel and Railway</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Docs">Wiro-Docs</a></td>
+<td>Source of the Wiro AI API docs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto">MIT, see <a href="https://github.com/wiroai/Wiro-LLM/blob/main/LICENSE">LICENSE</a>.</p>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li><li><a href="/projects/dart-quickstart/">Dart-QuickStart</a></li><li><a href="/projects/reactnative-quickstart/">ReactNative-QuickStart</a></li><li><a href="/projects/wiro-mcp/">Wiro-MCP</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/swift-realtime/">Swift-Realtime</a></li><li><a href="/projects/kotlin-realtime/">Kotlin-Realtime</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

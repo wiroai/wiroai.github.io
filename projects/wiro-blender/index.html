@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiro-Blender: Wiro AI open source</title>
+<meta name="description" content="Wiro AI add-on for Blender: text to 3D, image to 3D, textures and any of the 1,000+ Wiro AI models, with live model lists, a job queue and history.">
+<link rel="canonical" href="https://wiroai.github.io/projects/wiro-blender/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="Wiro-Blender: Wiro AI open source">
+<meta property="og:description" content="Wiro AI add-on for Blender: text to 3D, image to 3D, textures and any of the 1,000+ Wiro AI models, with live model lists, a job queue and history.">
+<meta property="og:url" content="https://wiroai.github.io/projects/wiro-blender/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "Wiro-Blender", "description": "Wiro AI add-on for Blender: text to 3D, image to 3D, textures and any of the 1,000+ Wiro AI models, with live model lists, a job queue and history.", "codeRepository": "https://github.com/wiroai/Wiro-Blender", "url": "https://wiroai.github.io/projects/wiro-blender/", "programmingLanguage": "Python", "license": "https://api.github.com/licenses/gpl-3.0", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#creative">Creative and design tools</a></p>
+<section class="project-head">
+  <h1>Wiro-Blender</h1>
+  <p class="lead">Wiro AI add-on for Blender: text to 3D, image to 3D, textures and any of the 1,000+ Wiro AI models, with live model lists, a job queue and history.</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/Wiro-Blender">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai">Website</a></p>
+</section>
+<article class="markdown">
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Blender/main/.github/assets/wiro-logo.png"><img src="https://raw.githubusercontent.com/wiroai/Wiro-Blender/main/.github/assets/wiro-logo.png" alt="Wiro AI" width="240" style="max-width: 100%;"></a>
+<h2 dir="auto" id="wiro-ai-3d-generator-for-blender">Wiro AI 3D Generator for Blender</h2>
+<p dir="auto">Text to 3D, image to 3D, textures and any of the 1,000+ Wiro AI models in the 3D Viewport sidebar, with the results brought into your scene.</p>
+<p dir="auto"><a href="#install"><img loading="lazy" src="https://camo.githubusercontent.com/bc399ad1ac5319a4e655251fd8a2922d48da0c399021b7e63dabf2681c57c893/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f426c656e6465722d342e322532422d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="Blender 4.2+" data-canonical-src="https://img.shields.io/badge/Blender-4.2%2B-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Blender/actions/workflows/ci.yml"><img loading="lazy" src="https://camo.githubusercontent.com/bcdea221311912b2cd4aa43b376b9bc11ce7b3ee16f4c628967bfe3ada7877c3/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f7769726f61692f5769726f2d426c656e6465722f63692e796d6c3f6272616e63683d6d61696e267374796c653d666f722d7468652d626164676526636f6c6f723d313131313131266c6162656c3d4349" alt="CI" data-canonical-src="https://img.shields.io/github/actions/workflow/status/wiroai/Wiro-Blender/ci.yml?branch=main&amp;style=for-the-badge&amp;color=111111&amp;label=CI" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Blender/releases/latest"><img loading="lazy" src="https://camo.githubusercontent.com/7018b9ecd1f1b89bb035425e3845f4712731f3846d779f1208d0977acfa0c5b7/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f762f72656c656173652f7769726f61692f5769726f2d426c656e6465723f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="Release" data-canonical-src="https://img.shields.io/github/v/release/wiroai/Wiro-Blender?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Blender/blob/main/LICENSE"><img loading="lazy" src="https://camo.githubusercontent.com/8b44a61e25d23c7b90dcdaef32ae4a4ec19d7e5e29e44d5362d64fad7300f276/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d47504c2d2d332e302d2d6f722d2d6c617465722d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="License: GPL-3.0-or-later" data-canonical-src="https://img.shields.io/badge/license-GPL--3.0--or--later-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a></p>
+</div>
+<p dir="auto">The add-on adds a <strong>Wiro AI</strong> tab to the sidebar of the 3D Viewport. Describe an object or pick pictures of it and get a textured 3D model at the 3D cursor. Put a texture on the selected objects from a prompt, or change the texture a model already has. Search the Wiro AI catalog and run any model with a form built from its settings. The models run on <a href="https://wiro.ai">Wiro AI</a>, so nothing runs on your GPU, and the add-on needs no extra Python packages.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Blender/blob/main/docs/screenshots/text-to-3d.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Blender/main/docs/screenshots/text-to-3d.png" alt="Text to 3D: Nano Banana 2.1 drew a red rotary telephone, the background was removed, and Trellis-2 built the mesh" style="max-width: 100%;"></a></p>
+<h2 dir="auto" id="what-it-does">What it does</h2>
+<ul dir="auto">
+<li><strong>Text to 3D.</strong> An image model draws a reference picture of your prompt, one whole object on a plain background. The background can be removed with a background removal model, then a 3D model builds the mesh from the picture.</li>
+<li><strong>Image to 3D.</strong> Upload a PNG, JPEG or WebP picture of one object, or pick an image that is already in the .blend file. A model that takes several pictures gets several: HY-World 2.0 rebuilds a scene from a few photos and comes in as a colored point cloud.</li>
+<li><strong>Textures.</strong> Make a tileable texture from a prompt and put it on the selected objects as a material: the image model makes the base color, and the material derives a bump and a roughness from it. UV mapping or box projection, with tiling, bump and roughness settings.</li>
+<li><strong>Edit Texture.</strong> Change the base color texture of the active object with a prompt, for example to repaint a generated model. The texture keeps its UV layout.</li>
+<li><strong>Run Any Model.</strong> Search the catalog, pick a model, and fill in a form built from its settings. Pictures come in as images or textured planes, 3D files as objects, audio as sounds, video as movie clips and LLM answers as text blocks.</li>
+<li><strong>Live model lists.</strong> Each picker lists a Wiro AI category, so models that join the catalog show up without an add-on update. Each panel shows the price per run for the current settings before you press the button, and the header shows your wallet balance once it has been read.</li>
+<li><strong>Queue.</strong> Start several jobs; two run at the same time by default and the rest wait. Each one has a progress bar, the step the model reports and a Cancel button that stops the task on Wiro AI.</li>
+<li><strong>Import options.</strong> Place models at the 3D cursor or the world origin, put the origin at the bottom center or the bounds center, scale them or fit them to a size, collect them in a Wiro AI collection, and drop the empty parent a file brings.</li>
+<li><strong>History.</strong> Every finished run is kept with its files, prompt and cost: import a model again, apply a texture again, reuse a prompt or send a reference picture to Image to 3D.</li>
+<li><strong>Scripting.</strong> In background mode (<code class="notranslate">blender -b</code>), the operators wait for the models, print their progress and bring the results in.</li>
+</ul>
+<h2 dir="auto" id="install">Install</h2>
+<p dir="auto"><strong>From the Wiro AI extension repository</strong>, so Blender shows new versions as updates:</p>
+<ol dir="auto">
+<li>
+<p dir="auto">In Blender 4.2 or later, open <strong>Edit &gt; Preferences &gt; Get Extensions</strong>.</p>
+</li>
+<li>
+<p dir="auto">Open the <strong>Repositories</strong> menu at the top right, click <strong>+</strong> and choose <strong>Add Remote Repository</strong>. Enter this URL and click <strong>Create</strong>:</p>
+<pre class="notranslate"><code class="notranslate">https://wiroai.github.io/Wiro-Blender/index.json
+</code></pre>
+</li>
+<li>
+<p dir="auto">Search for <strong>Wiro AI</strong> in <strong>Get Extensions</strong> and click <strong>Install</strong>. New versions appear under <strong>Check for Updates</strong> in the same menu.</p>
+</li>
+</ol>
+<p dir="auto"><strong>From a file:</strong> download <code class="notranslate">wiro_ai-1.1.0.zip</code> from the <a href="https://github.com/wiroai/Wiro-Blender/releases/latest">latest release</a> and drag it into Blender, or choose <strong>Install from Disk</strong> in the menu at the top right of <strong>Get Extensions</strong>.</p>
+<p dir="auto">The models run online, so <strong>Allow Online Access</strong> has to be on (<strong>Edit &gt; Preferences &gt; System &gt; Network</strong>). The panel tells you when it is off.</p>
+<h2 dir="auto" id="set-your-api-key">Set your API key</h2>
+<p dir="auto">Create a project at <a href="https://wiro.ai/panel/project/new">wiro.ai/panel/project/new</a> and copy its API key. Then open <strong>Edit &gt; Preferences &gt; Add-ons &gt; Wiro AI 3D Generator</strong> and paste it into <strong>API key</strong>. If the project uses signature-based authentication, paste the API secret too. <strong>Check API Key</strong> asks Wiro AI whether the key works and reads your wallet balance, which is free.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Blender/blob/main/docs/screenshots/preferences.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Blender/main/docs/screenshots/preferences.png" alt="The add-on preferences: API key, API secret, the folder for generated files and how many jobs run at once" style="max-width: 100%;"></a></p>
+<p dir="auto">The key stays in Blender's preferences, never in your .blend files, and it is only sent to <code class="notranslate">api.wiro.ai</code>. You can also set <code class="notranslate">WIRO_API_KEY</code> (and <code class="notranslate">WIRO_API_SECRET</code>) in the environment before you start Blender. The add-on uses them when the preferences are empty.</p>
+<p dir="auto"><strong>Save files to</strong> sets where generated files go. A path that starts with <code class="notranslate">//</code> is relative to the open .blend file. Left empty, files go to the add-on's own folder in your Blender user directory. <strong>Jobs at Once</strong> sets how many jobs run at the same time.</p>
+<h2 dir="auto" id="the-panels">The panels</h2>
+<p dir="auto">Press <strong>N</strong> in the 3D Viewport to open the sidebar and click the <strong>Wiro AI</strong> tab.</p>
+<h3 dir="auto" id="3d-model">3D Model</h3>
+<p dir="auto">Choose <strong>Text to 3D</strong> or <strong>Image to 3D</strong>. For Text to 3D, write a prompt, for example <em>a red vintage rotary telephone</em>, and pick the image model. <strong>Frame for 3D</strong> (on by default) adds a short instruction that asks for one whole object, centered on a plain background, which is what image-to-3D models work best with. <strong>Remove Background</strong> adds a background removal step before the 3D model. Then pick the 3D model and press <strong>Generate 3D Model</strong>. Each model shows its own settings, with the ones that matter most in Blender up front and the rest under <strong>More Options</strong>.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Blender/blob/main/docs/screenshots/multi-image.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Blender/main/docs/screenshots/multi-image.png" alt="Image to 3D with HY-World 2.0: two pictures in, a colored point cloud out" style="max-width: 100%;"></a></p>
+<h3 dir="auto" id="texture">Texture</h3>
+<p dir="auto"><strong>New Texture</strong> makes a texture from a prompt, for example <em>mossy cobblestone</em>, and puts it on every selected object. <strong>Tileable</strong> asks for a seamless texture. Under <strong>Material</strong> you set the mapping (Auto uses the UV map when there is one and box projection otherwise), the tiling, the bump strength and the base roughness, and whether the new material replaces the old ones.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Blender/blob/main/docs/screenshots/texture.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Blender/main/docs/screenshots/texture.png" alt="New Texture: a tileable mossy cobblestone texture on a cube" style="max-width: 100%;"></a></p>
+<p dir="auto"><strong>Edit Texture</strong> sends the base color texture of the active object to an image editing model with your prompt and puts the result in its place. The material is copied first if other objects share it, and Undo brings the old texture back.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Blender/blob/main/docs/screenshots/edit-texture.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Blender/main/docs/screenshots/edit-texture.png" alt="Edit Texture: the telephone repainted emerald green, with the dial and the chrome parts kept" style="max-width: 100%;"></a></p>
+<h3 dir="auto" id="run-any-model">Run Any Model</h3>
+<p dir="auto">Type a few words, pick a category if you like and press the arrow. Pick a model from the list and its settings appear as a form; required settings have a star. Long prompts and JSON can come from a text block in the Text Editor. File settings take local files, https URLs or images from the .blend file.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Blender/blob/main/docs/screenshots/run-any-model.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Blender/main/docs/screenshots/run-any-model.png" alt="Run Any Model: the search list, the form of an LLM, and its answer in a text block" style="max-width: 100%;"></a></p>
+<h3 dir="auto" id="queue-and-history">Queue and History</h3>
+<p dir="auto">The Queue panel lists running and waiting jobs with their progress, the step the model reports and a preview of the latest picture, so you can, for example, send one picture to several 3D models and compare what comes back. The History panel keeps every finished run, newest first, with what it made, how long it took and what it cost.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Blender/blob/main/docs/screenshots/queue.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Blender/main/docs/screenshots/queue.png" alt="The Queue panel: Trellis-2 and Pixal3D build a mesh from the same picture at the same time" style="max-width: 100%;"></a></p>
+<h2 dir="auto" id="models">Models</h2>
+<p dir="auto">The pickers list the Wiro AI catalog by category, so this table is the starting point rather than the full list.</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Panel</th>
+<th>Category</th>
+<th>Starts with</th>
+<th>Also listed today</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3D Model</td>
+<td>3D generation</td>
+<td><a href="https://wiro.ai/models/microsoft/trellis-2">Trellis-2</a> (Microsoft)</td>
+<td><a href="https://wiro.ai/models/tencentarc/pixal3d">Pixal3D</a>, <a href="https://wiro.ai/models/tencent/hunyuan3d-2-1">Hunyuan3D-2.1</a>, <a href="https://wiro.ai/models/tencent/hy-world-2-0-world-reconstruction">HY-World 2.0</a> for several pictures</td>
+</tr>
+<tr>
+<td>Reference picture, New Texture</td>
+<td>Text to image</td>
+<td><a href="https://wiro.ai/models/google/nano-banana-2-1">Nano Banana 2.1</a> (Google)</td>
+<td><a href="https://wiro.ai/models/openai/gpt-image-2-6-flare">GPT Image 2.6 Flare</a> and more than 30 others</td>
+</tr>
+<tr>
+<td>Edit Texture</td>
+<td>Image editing</td>
+<td><a href="https://wiro.ai/models/google/nano-banana-2-1">Nano Banana 2.1</a> (Google)</td>
+<td><a href="https://wiro.ai/models/openai/gpt-image-2-6-flare">GPT Image 2.6 Flare</a> and more than 30 others</td>
+</tr>
+<tr>
+<td>Remove Background</td>
+<td>Background removal</td>
+<td><a href="https://wiro.ai/models/wiro/remove-background">Remove Background</a> (Wiro)</td>
+<td><a href="https://wiro.ai/models/briaai/rmbg-2-0">RMBG 2.0</a>, <a href="https://wiro.ai/models/zhengpeng7/birefnet">BiRefNet</a>, <a href="https://wiro.ai/models/ideogram/remove-background">Ideogram Remove Background</a></td>
+</tr>
+<tr>
+<td>Run Any Model</td>
+<td>Every category</td>
+<td></td>
+<td>1,000+ models for images, video, audio, 3D and LLMs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">For the 3D models the panel starts with settings that suit Blender: a 200,000 face limit and 2048 pixel textures for Trellis-2 and Pixal3D, and a 200,000 face limit for Hunyuan3D-2.1. <strong>Reset Settings</strong> under <strong>More Options</strong> puts a model's settings back.</p>
+<h2 dir="auto" id="scripting">Scripting</h2>
+<p dir="auto">The panel settings live on the scene as <code class="notranslate">bpy.context.scene.wiro_ai</code>, so a script can set them and call the operators. Models are picked by their slug:</p>
+<div class="highlight highlight-source-python" dir="auto"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">bpy</span>
+
+<span class="pl-s1">settings</span> <span class="pl-c1">=</span> <span class="pl-s1">bpy</span>.<span class="pl-c1">context</span>.<span class="pl-c1">scene</span>.<span class="pl-c1">wiro_ai</span>
+<span class="pl-s1">settings</span>.<span class="pl-c1">mode</span> <span class="pl-c1">=</span> <span class="pl-s">"TEXT"</span>  <span class="pl-c"># or "IMAGE", with settings.images</span>
+<span class="pl-s1">settings</span>.<span class="pl-c1">prompt</span> <span class="pl-c1">=</span> <span class="pl-s">"a ceramic teapot with a blue floral pattern"</span>
+<span class="pl-s1">settings</span>.<span class="pl-c1">reference_model</span> <span class="pl-c1">=</span> <span class="pl-s">"google/nano-banana-2-1"</span>
+<span class="pl-s1">settings</span>.<span class="pl-c1">mesh_model</span> <span class="pl-c1">=</span> <span class="pl-s">"microsoft/trellis-2"</span>
+<span class="pl-s1">settings</span>.<span class="pl-c1">use_cutout</span> <span class="pl-c1">=</span> <span class="pl-c1">True</span>
+<span class="pl-s1">bpy</span>.<span class="pl-c1">ops</span>.<span class="pl-c1">wiro_ai</span>.<span class="pl-c1">generate</span>()
+
+<span class="pl-s1">settings</span>.<span class="pl-c1">texture_prompt</span> <span class="pl-c1">=</span> <span class="pl-s">"polished walnut wood"</span>
+<span class="pl-s1">bpy</span>.<span class="pl-c1">ops</span>.<span class="pl-c1">wiro_ai</span>.<span class="pl-c1">generate_texture</span>()  <span class="pl-c"># on the selected objects</span>
+<span class="pl-s1">bpy</span>.<span class="pl-c1">ops</span>.<span class="pl-c1">wm</span>.<span class="pl-c1">save_as_mainfile</span>(<span class="pl-s1">filepath</span><span class="pl-c1">=</span><span class="pl-s">"teapot.blend"</span>)</pre></div>
+<p dir="auto">In background mode each operator returns once its result is in the scene. <code class="notranslate">--online-mode</code> allows network access for that run:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">WIRO_API_KEY=your-api-key blender --background --online-mode --python teapot.py</pre></div>
+<h2 dir="auto" id="how-it-works">How it works</h2>
+<ul dir="auto">
+<li>Each run is a <code class="notranslate">POST /v1/Run/{owner}/{model}</code> request with multipart form data (<a href="https://wiro.ai/docs/run-a-model">Run a Model</a>). A step passes the URL of its result to the next one: the reference picture to the background removal model, the cutout to the 3D model.</li>
+<li>The add-on polls <code class="notranslate">Task/Detail</code> every 3 seconds until the task reaches <code class="notranslate">task_postprocess_end</code>, checks the exit code and downloads the outputs (<a href="https://wiro.ai/docs/tasks">Tasks</a>). When a model returns a textured and an untextured GLB, the textured one is imported.</li>
+<li>Model lists come from <code class="notranslate">Tool/List</code> by category and model settings from <code class="notranslate">Tool/Detail</code>. Both are public, so the add-on reads them without your key and caches them; a copy ships with the add-on for the first start and for offline use. The price before a run follows the model's price list the way Wiro AI bills it.</li>
+<li>The network work runs on background threads. A timer on Blender's main thread redraws the panels and brings results into the scene, so the interface stays responsive.</li>
+<li>Runs start only when you press a run button. While Allow Online Access is off nothing is sent at all. Output files are downloaded without your key, and the history file never holds it.</li>
+</ul>
+<p dir="auto">The extension asks Blender for two permissions: <strong>network</strong>, to send prompts and files to Wiro AI and download the results, and <strong>files</strong>, to read input files and save the results.</p>
+<pre class="notranslate"><code class="notranslate">wiro_ai/            the extension, packaged with "blender --command extension build"
+  api.py            Wiro AI REST client, standard library only
+  schema.py         a model's settings from Tool/Detail, and the Run fields
+  pricing.py        the price of a run for given settings
+  catalog.py        model lists by category, cached, with the shipped copy in data/
+  pipeline.py       jobs: one or more model runs in a row, on a worker thread
+  runtime.py        queue, timer, history and catalog refreshes on the main thread
+  forms.py          settings forms built from schemas, and the model pickers
+  importer.py       3D files, point clouds, pictures, sound, video and text
+  materials.py      textures as materials, and texture edits
+  operators.py      the operators behind the buttons
+  ui.py             the sidebar panels
+tests/              unit tests and the scripts that run inside Blender
+scripts/            update_catalog.py refreshes the shipped catalog copy
+</code></pre>
+<h2 dir="auto" id="development">Development</h2>
+<p dir="auto">Unit tests and lint run without Blender:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">pip install ruff pytest
+ruff check <span class="pl-c1">.</span> <span class="pl-k">&amp;&amp;</span> ruff format --check <span class="pl-c1">.</span>
+python -m pytest</pre></div>
+<p dir="auto">Validate and build the package with Blender 4.2 or later:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">blender --command extension validate wiro_ai
+mkdir -p dist
+blender --command extension build --source-dir wiro_ai --output-dir dist</pre></div>
+<p dir="auto">The smoke test installs the package and runs every panel through its real operator against a fake Wiro AI API, without network access:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">blender --command extension install-file -r user_default dist/wiro_ai-1.1.0.zip
+blender --background --factory-startup --python-exit-code 1 --python tests/blender/smoke_test.py -- tests/fixtures/cube.glb</pre></div>
+<p dir="auto"><code class="notranslate">tests/blender/live_test.py</code> makes real runs and is billed to the key's wallet, so it stays out of CI. CI runs lint and the unit tests on Python 3.11 and 3.13, and the manifest check, build and smoke test on Blender 4.2.23 and 5.3.0. <code class="notranslate">python scripts/update_catalog.py</code> refreshes <code class="notranslate">wiro_ai/data/catalog.json</code> from the public catalog.</p>
+<p dir="auto">Pushing a tag such as <code class="notranslate">v1.1.0</code> runs the Release workflow: it builds the package with Blender, attaches it to the GitHub release and publishes the extension repository (<code class="notranslate">index.json</code> and an <code class="notranslate">index.html</code> page) on GitHub Pages.</p>
+<h2 dir="auto" id="pricing">Pricing</h2>
+<p dir="auto">Each run is billed to the Wiro AI wallet of the API key's project at the model's price. Every panel shows the price for its current settings above its button, and the History panel shows what each finished run cost. Some examples:</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Model</th>
+<th>Price per run</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trellis-2</td>
+<td>$0.25 at 512, $0.30 at 1024, $0.35 at 1536</td>
+</tr>
+<tr>
+<td>Pixal3D</td>
+<td>$0.30 at 1024, $0.42 at 1536</td>
+</tr>
+<tr>
+<td>Hunyuan3D-2.1</td>
+<td>$0.90 with textures, $0.30 without</td>
+</tr>
+<tr>
+<td>HY-World 2.0</td>
+<td>by run time, a few cents for a few pictures</td>
+</tr>
+<tr>
+<td>Nano Banana 2.1 (reference picture, texture, texture edit)</td>
+<td>$0.0336 at 1K</td>
+</tr>
+<tr>
+<td>Remove Background</td>
+<td>by run time, about a tenth of a cent</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">A Text to 3D run costs the picture plus the 3D model, for example $0.3342 for Nano Banana 2.1, Remove Background and Trellis-2 at 1024. The model pages on wiro.ai list the current prices.</p>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
+<td>Official MCP server for Wiro AI, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Cursor, Claude Code, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills">Wiro-Skills</a></td>
+<td>Agent skills for images, image edits, video, music, speech, transcripts, 3D and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>Vercel AI SDK provider for chat, images, speech, transcription and video, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-llm"><code class="notranslate">@wiro-ai/wiro-llm</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI">Wiro-ComfyUI</a></td>
+<td>Wiro AI nodes for ComfyUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI model provider and media tools for Dify</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Zed">Wiro-Zed</a></td>
+<td>Wiro AI MCP server for the Zed editor</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Raycast">Wiro-Raycast</a></td>
+<td>Wiro AI extension for Raycast</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Action for Wiro AI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js starter for Wiro AI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress: featured images, image edits, alt text, narration and SEO suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Obsidian">Wiro-Obsidian</a></td>
+<td>Wiro AI plugin for Obsidian: images, video, speech, music, transcription and text tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Figma">Wiro-Figma</a></td>
+<td>Wiro AI plugin for Figma: images, vectors, image edits and text</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>One Wiro AI node for n8n with a searchable model picker, <a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><code class="notranslate">@wiro-ai/n8n-nodes-wiro</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera, Whale and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Wiro AI extension for Safari on the Mac</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Wiro AI SDK for Dart and Flutter, <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>Wiro AI SDK for React Native and Expo, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><code class="notranslate">@wiro-ai/wiro-react-native</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-Realtime">Swift-Realtime</a></td>
+<td>Realtime voice AI example for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin-Realtime</a></td>
+<td>Realtime voice AI example for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-Realtime">Dart-Realtime</a></td>
+<td>Realtime voice AI example for Flutter</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-Realtime">ReactNative-Realtime</a></td>
+<td>Realtime voice AI example for React Native</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Docs">Wiro-Docs</a></td>
+<td>Source of the Wiro AI API docs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto">GPL-3.0-or-later, see <a href="https://github.com/wiroai/Wiro-Blender/blob/main/LICENSE">LICENSE</a>. Blender is a trademark of the Blender Foundation; this add-on is made by Wiro AI and is not affiliated with or endorsed by the Blender Foundation.</p>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/wiro-comfyui/">Wiro-ComfyUI</a></li><li><a href="/projects/wiro-figma/">Wiro-Figma</a></li><li><a href="/projects/wiro-mcp/">Wiro-MCP</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li><li><a href="/projects/dart-quickstart/">Dart-QuickStart</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

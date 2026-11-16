@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiro-Zed: Wiro AI open source</title>
+<meta name="description" content="Wiro AI MCP server for the Zed editor: search, price and run 1,000+ image, video, audio and LLM models, workflows and agents from Zed&#x27;s Agent Panel.">
+<link rel="canonical" href="https://wiroai.github.io/projects/wiro-zed/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="Wiro-Zed: Wiro AI open source">
+<meta property="og:description" content="Wiro AI MCP server for the Zed editor: search, price and run 1,000+ image, video, audio and LLM models, workflows and agents from Zed&#x27;s Agent Panel.">
+<meta property="og:url" content="https://wiroai.github.io/projects/wiro-zed/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "Wiro-Zed", "description": "Wiro AI MCP server for the Zed editor: search, price and run 1,000+ image, video, audio and LLM models, workflows and agents from Zed's Agent Panel.", "codeRepository": "https://github.com/wiroai/Wiro-Zed", "url": "https://wiroai.github.io/projects/wiro-zed/", "programmingLanguage": "Rust", "license": "https://api.github.com/licenses/mit", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#assistants">Coding assistants and agents</a></p>
+<section class="project-head">
+  <h1>Wiro-Zed</h1>
+  <p class="lead">Wiro AI MCP server for the Zed editor: search, price and run 1,000+ image, video, audio and LLM models, workflows and agents from Zed&#x27;s Agent Panel.</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/Wiro-Zed">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai">Website</a></p>
+</section>
+<article class="markdown">
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Zed/blob/main/.github/assets/wiro-icon.png"><img src="https://raw.githubusercontent.com/wiroai/Wiro-Zed/main/.github/assets/wiro-icon.png" alt="Wiro AI" width="96" style="max-width: 100%;"></a>
+<h2 dir="auto" id="wiro-ai-mcp-server-for-zed">Wiro AI MCP Server for Zed</h2>
+<p dir="auto">Use Wiro AI from Zed's Agent Panel: search 1,000+ image, video, audio and LLM models, check their prices and run them, build and run workflows, and talk to Studio and your own agents.</p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs/wiro-mcp-server">MCP docs</a> · <a href="https://wiro.ai/panel">Dashboard</a></p>
+</div>
+<p dir="auto">This <a href="https://zed.dev">Zed</a> extension adds the official <a href="https://github.com/wiroai/Wiro-MCP">Wiro AI MCP server</a> to Zed. Zed downloads the server, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code></a>, from npm and runs it with the Node.js runtime it manages itself, so there is nothing else to install. Each time the server starts, the extension checks npm for a newer version.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Zed/blob/main/docs/screenshots/agent-panel-model-run.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Zed/main/docs/screenshots/agent-panel-model-run.png" alt="Zed's Agent Panel running a Wiro AI image model and showing the result" style="max-width: 100%;"></a></p>
+<h2 dir="auto" id="install">Install</h2>
+<ol dir="auto">
+<li>In Zed, open the command palette, run <code class="notranslate">zed: extensions</code>, search for <strong>Wiro AI MCP Server</strong> and click <strong>Install</strong>. You can also open <strong>Settings → AI → MCP Servers</strong>, click <strong>Add Server</strong> and choose <strong>Install from Extensions</strong>.</li>
+<li>Zed opens a configuration window. Put your project's API key in <code class="notranslate">wiro_api_key</code>, and its API secret in <code class="notranslate">wiro_api_secret</code> if the project uses signature-based authentication. Then click <strong>Configure Server</strong>.</li>
+<li>In <strong>Settings → AI → MCP Servers</strong>, the dot next to <strong>Wiro AI</strong> turns green when the server is running. If it does not, its tooltip says why, and <code class="notranslate">zed: open log</code> shows more detail.</li>
+</ol>
+<h2 dir="auto" id="get-an-api-key">Get an API key</h2>
+<p dir="auto">Sign up at <a href="https://wiro.ai">wiro.ai</a> and create a project at <a href="https://wiro.ai/panel/project/new">wiro.ai/panel/project/new</a>. Your projects and their keys are listed at <a href="https://wiro.ai/panel/project">wiro.ai/panel/project</a>.</p>
+<p dir="auto">You choose the authentication type when you create the project:</p>
+<ul dir="auto">
+<li><strong>Signature-based</strong>: set both <code class="notranslate">wiro_api_key</code> and <code class="notranslate">wiro_api_secret</code>.</li>
+<li><strong>API Key Only</strong>: set <code class="notranslate">wiro_api_key</code> and leave <code class="notranslate">wiro_api_secret</code> empty.</li>
+</ul>
+<h2 dir="auto" id="settings">Settings</h2>
+<p dir="auto">The configuration window saves your settings in Zed's <code class="notranslate">settings.json</code>. To change them later, run <code class="notranslate">zed: open settings file</code> and edit the <code class="notranslate">mcp-server-wiro</code> entry:</p>
+<div class="highlight highlight-source-json" dir="auto"><pre class="notranslate">{
+  <span class="pl-ent">"context_servers"</span>: {
+    <span class="pl-ent">"mcp-server-wiro"</span>: {
+      <span class="pl-ent">"settings"</span>: {
+        <span class="pl-ent">"wiro_api_key"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-key<span class="pl-pds">"</span></span>,
+        <span class="pl-ent">"wiro_api_secret"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-secret<span class="pl-pds">"</span></span>,
+        <span class="pl-ent">"toolsets"</span>: [<span class="pl-s"><span class="pl-pds">"</span>models<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>workflows<span class="pl-pds">"</span></span>]
+      }
+    }
+  }
+}</pre></div>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Setting</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">wiro_api_key</code></td>
+<td>Yes</td>
+<td>API key of your Wiro AI project</td>
+</tr>
+<tr>
+<td><code class="notranslate">wiro_api_secret</code></td>
+<td>For signature-based projects</td>
+<td>API secret of the same project</td>
+</tr>
+<tr>
+<td><code class="notranslate">toolsets</code></td>
+<td>No</td>
+<td>Tool groups to load: any of <code class="notranslate">models</code>, <code class="notranslate">workflows</code> and <code class="notranslate">agents</code>. All groups load when it is left out</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2 dir="auto" id="tools">Tools</h2>
+<p dir="auto">With all groups loaded, the server gives the Agent Panel 50 tools:</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Group</th>
+<th>Tools</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Always loaded</td>
+<td><code class="notranslate">get_account</code>, <code class="notranslate">get_playbook</code>, <code class="notranslate">search_docs</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">models</code></td>
+<td><code class="notranslate">search_models</code>, <code class="notranslate">get_model_schema</code>, <code class="notranslate">recommend_model</code>, <code class="notranslate">explore</code>, <code class="notranslate">run_model</code>, <code class="notranslate">wait_for_task</code>, <code class="notranslate">get_task</code>, <code class="notranslate">list_tasks</code>, <code class="notranslate">get_task_price</code>, <code class="notranslate">cancel_task</code>, <code class="notranslate">kill_task</code>, <code class="notranslate">upload_file</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">workflows</code></td>
+<td><code class="notranslate">list_workflows</code>, <code class="notranslate">get_workflow</code>, <code class="notranslate">create_workflow</code>, <code class="notranslate">update_workflow</code>, <code class="notranslate">clone_workflow</code>, <code class="notranslate">delete_workflow</code>, <code class="notranslate">run_workflow</code>, <code class="notranslate">wait_for_workflow_run</code>, <code class="notranslate">resume_workflow_run</code>, <code class="notranslate">list_workflow_runs</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">agents</code></td>
+<td><code class="notranslate">list_agent_templates</code>, <code class="notranslate">get_agent_template</code>, <code class="notranslate">list_agent_skills</code>, <code class="notranslate">deploy_agent</code>, <code class="notranslate">list_my_agents</code>, <code class="notranslate">get_my_agent</code>, <code class="notranslate">control_agent</code>, <code class="notranslate">update_agent</code>, <code class="notranslate">apply_agent_skills</code>, <code class="notranslate">set_agent_credentials</code>, <code class="notranslate">connect_agent_oauth</code>, <code class="notranslate">disconnect_agent_oauth</code>, <code class="notranslate">manage_agent_custom_skill</code>, <code class="notranslate">manage_agent_billing</code>, <code class="notranslate">get_agent_activity</code>, <code class="notranslate">delete_agent</code>, <code class="notranslate">list_projects</code>, <code class="notranslate">bind_agent_project</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">workflows</code> or <code class="notranslate">agents</code></td>
+<td><code class="notranslate">send_agent_message</code>, <code class="notranslate">get_agent_message</code>, <code class="notranslate">get_agent_conversation</code>, <code class="notranslate">cancel_agent_message</code>, <code class="notranslate">delete_agent_session</code>, <code class="notranslate">list_studio_results</code>, <code class="notranslate">save_workflow_from_agent</code></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><code class="notranslate">workflows</code> also loads the model tools a workflow needs: <code class="notranslate">search_models</code>, <code class="notranslate">get_model_schema</code>, <code class="notranslate">recommend_model</code> and <code class="notranslate">upload_file</code>. What each tool does is described in the <a href="https://github.com/wiroai/Wiro-MCP#available-tools">Wiro MCP server README</a>. The server also offers four MCP prompts: <code class="notranslate">build_workflow</code>, <code class="notranslate">deploy_agent</code>, <code class="notranslate">create_with_studio</code> and <code class="notranslate">talk_to_my_agent</code>.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Zed/blob/main/docs/screenshots/agent-panel-tools.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Zed/main/docs/screenshots/agent-panel-tools.png" alt="Wiro AI model tools in the Configure MCP Tools list of Zed's Agent Panel" style="max-width: 100%;"></a></p>
+<h2 dir="auto" id="try-it">Try it</h2>
+<p dir="auto">Open the Agent Panel and ask, for example:</p>
+<ul dir="auto">
+<li><em>"Find three text-to-image models on Wiro AI and compare their prices"</em></li>
+<li><em>"Show me the parameters for google/veo3-1"</em></li>
+<li><em>"Generate a photorealistic image of a mountain lake at sunset"</em></li>
+<li><em>"Build a workflow that turns a product photo into a short ad video"</em></li>
+<li><em>"Which agent templates can manage Instagram? What does each plan cost?"</em></li>
+</ul>
+<p dir="auto">Searching models and reading their parameters and prices is free. Running a model or a workflow, and messages to Studio or the Workflow Agent, are charged to the project's wallet. Messages to your own agents use the agent's credits. Tools with a known price, such as deploying an agent or buying credits, show the price first and act only after you confirm. Zed also asks you to approve each tool call unless you change its <a href="https://zed.dev/docs/ai/tool-permissions">tool permissions</a>.</p>
+<h2 dir="auto" id="hosted-server">Hosted server</h2>
+<p dir="auto">Zed can also connect to the hosted Wiro AI MCP server at <code class="notranslate">https://mcp.wiro.ai/v1</code> without this extension: add it as a remote server in <strong>Settings → AI → MCP Servers</strong> and sign in with your Wiro AI account when Zed asks. See the <a href="https://wiro.ai/docs/wiro-mcp-server">MCP docs</a> for details.</p>
+<h2 dir="auto" id="development">Development</h2>
+<ol dir="auto">
+<li>Install Rust with <a href="https://www.rust-lang.org/tools/install">rustup</a>.</li>
+<li>Clone this repository.</li>
+<li>In Zed, run <code class="notranslate">zed: install dev extension</code> and pick the cloned folder.</li>
+</ol>
+<p dir="auto"><code class="notranslate">cargo test</code> runs the unit tests.</p>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
+<td>Official Wiro AI MCP server, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Cursor, Claude Code, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills">Wiro-Skills</a></td>
+<td>Agent skills for images, image edits, video, music, speech, transcripts, 3D and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>Vercel AI SDK provider for chat, images, speech, transcription and video, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-llm"><code class="notranslate">@wiro-ai/wiro-llm</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Wiro AI extension for Safari on the Mac</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Wiro AI SDK for Dart and Flutter, <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>Wiro AI SDK for React Native and Expo, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><code class="notranslate">@wiro-ai/wiro-react-native</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-Realtime">Swift-Realtime</a></td>
+<td>Realtime voice AI example for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin-Realtime</a></td>
+<td>Realtime voice AI example for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-Realtime">Dart-Realtime</a></td>
+<td>Realtime voice AI example for Flutter</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-Realtime">ReactNative-Realtime</a></td>
+<td>Realtime voice AI example for React Native</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>One Wiro AI node for n8n with a searchable model picker, <a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><code class="notranslate">@wiro-ai/n8n-nodes-wiro</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI plugins for Dify: the LLM gateway as a model provider, plus image, video, speech and music tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI">Wiro-ComfyUI</a></td>
+<td>Wiro AI nodes for ComfyUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Action for Wiro AI models and the LLM gateway, <a href="https://github.com/marketplace/actions/wiro-ai-action">on the GitHub Marketplace</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Raycast">Wiro-Raycast</a></td>
+<td>Wiro AI extension for Raycast: image and video generation, LLM chat and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress: featured images, image edits, alt text, narration and SEO suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Obsidian">Wiro-Obsidian</a></td>
+<td>Wiro AI plugin for Obsidian: images, video, speech, music, transcription and text tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Blender">Wiro-Blender</a></td>
+<td>Wiro AI add-on for Blender: text to 3D, image to 3D and textures</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Figma">Wiro-Figma</a></td>
+<td>Wiro AI plugin for Figma: images, vectors, image edits and text</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js starter for Wiro AI: Playground, image, video and audio tools, and LLM chat, ready for Vercel and Railway</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Docs">Wiro-Docs</a></td>
+<td>Source of the Wiro AI API docs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto">MIT, see <a href="https://github.com/wiroai/Wiro-Zed/blob/main/LICENSE">LICENSE</a>.</p>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/wiro-mcp/">Wiro-MCP</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li><li><a href="/projects/dart-quickstart/">Dart-QuickStart</a></li><li><a href="/projects/reactnative-quickstart/">ReactNative-QuickStart</a></li><li><a href="/projects/swift-realtime/">Swift-Realtime</a></li><li><a href="/projects/kotlin-realtime/">Kotlin-Realtime</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

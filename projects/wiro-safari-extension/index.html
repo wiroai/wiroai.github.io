@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiro-Safari-Extension: Wiro AI open source</title>
+<meta name="description" content="Wiro AI extension for Safari on the Mac: right-click any image, video, audio clip, text or page to run Wiro AI models.">
+<link rel="canonical" href="https://wiroai.github.io/projects/wiro-safari-extension/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="Wiro-Safari-Extension: Wiro AI open source">
+<meta property="og:description" content="Wiro AI extension for Safari on the Mac: right-click any image, video, audio clip, text or page to run Wiro AI models.">
+<meta property="og:url" content="https://wiroai.github.io/projects/wiro-safari-extension/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "Wiro-Safari-Extension", "description": "Wiro AI extension for Safari on the Mac: right-click any image, video, audio clip, text or page to run Wiro AI models.", "codeRepository": "https://github.com/wiroai/Wiro-Safari-Extension", "url": "https://wiroai.github.io/projects/wiro-safari-extension/", "programmingLanguage": "TypeScript", "license": "https://api.github.com/licenses/mit", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#browser">Browser extensions</a></p>
+<section class="project-head">
+  <h1>Wiro-Safari-Extension</h1>
+  <p class="lead">Wiro AI extension for Safari on the Mac: right-click any image, video, audio clip, text or page to run Wiro AI models.</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/Wiro-Safari-Extension">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai">Website</a></p>
+</section>
+<article class="markdown">
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/wiroai/Wiro-Safari-Extension/main/.github/assets/wiro-logo.png"><img src="https://raw.githubusercontent.com/wiroai/Wiro-Safari-Extension/main/.github/assets/wiro-logo.png" alt="Wiro AI" width="240" style="max-width: 100%;"></a>
+<h2 dir="auto" id="wiro-ai-extension-for-safari-on-the-mac">Wiro AI Extension for Safari on the Mac</h2>
+<p dir="auto">Right-click any image, video, audio clip, text or page in Safari to run Wiro AI models: make a video, edit or upscale an image, restore a photo, read text aloud, transcribe, translate and more, with the price shown before every run.</p>
+<p dir="auto"><a href="https://github.com/wiroai/Wiro-Safari-Extension/blob/main/manifest.json"><img loading="lazy" src="https://camo.githubusercontent.com/2c7629c45757658d4560837f0a4250dbe1f31df130df6026096e430213697d74/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d616e69666573742d56332d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="Manifest V3" data-canonical-src="https://img.shields.io/badge/Manifest-V3-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="#build"><img loading="lazy" src="https://camo.githubusercontent.com/374c8bcab2abab14741aed9493854004a74b618a29aa1ad6473a6ff380ae3b55/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5361666172692d31362e342532422532306f6e2532306d61634f532d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="Safari 16.4+ on macOS" data-canonical-src="https://img.shields.io/badge/Safari-16.4%2B%20on%20macOS-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Safari-Extension/blob/main/tsconfig.json"><img loading="lazy" src="https://camo.githubusercontent.com/9072f21c1334a7d6c2dbed432de2c2dbde32ad6db27420ecf38fd2ae31236d0c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f547970655363726970742d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="TypeScript" data-canonical-src="https://img.shields.io/badge/TypeScript-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://github.com/wiroai/Wiro-Safari-Extension/blob/main/LICENSE"><img loading="lazy" src="https://camo.githubusercontent.com/9b0dcc545c9e697315b8d16f4363715f0cc54941456ba778cbc802bb0ef11275/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="License: MIT" data-canonical-src="https://img.shields.io/badge/license-MIT-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a></p>
+<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67"><img loading="lazy" src="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67" alt="Wiro AI koala mascot" width="60" data-canonical-src="https://wiro.ai/images/koala/accent-heavy-koala.png" style="max-width: 100%;"></a>
+</div>
+<p dir="auto">Wiro puts its AI models one right-click away. Pick what you want done with an image, a video, an audio clip, selected text or the page, choose a model from the live Wiro catalog, and the result comes back in the Wiro panel. You sign in with your Wiro account, runs are paid from your Wiro wallet, and the panel shows the price before you start.</p>
+<p align="center" dir="auto">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Safari-Extension/blob/main/.github/assets/screenshots/01-photo-to-video.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Safari-Extension/main/.github/assets/screenshots/01-photo-to-video.png" alt="The Wiro panel turning a photo of a dog into a video" width="49%" style="max-width: 100%;"></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Safari-Extension/blob/main/.github/assets/screenshots/02-page-to-video.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Safari-Extension/main/.github/assets/screenshots/02-page-to-video.png" alt="The Wiro panel sending a page to Wiro Studio to make a video" width="49%" style="max-width: 100%;"></a>
+</p>
+<p align="center" dir="auto">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Safari-Extension/blob/main/.github/assets/screenshots/03-brief-to-image.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Safari-Extension/main/.github/assets/screenshots/03-brief-to-image.png" alt="The Wiro panel turning selected text into a magazine cover image" width="49%" style="max-width: 100%;"></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Safari-Extension/blob/main/.github/assets/screenshots/04-edit-video.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Safari-Extension/main/.github/assets/screenshots/04-edit-video.png" alt="The Wiro panel editing a bike video so the trail is covered in snow" width="49%" style="max-width: 100%;"></a>
+</p>
+<p align="center" dir="auto">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Safari-Extension/blob/main/.github/assets/screenshots/05-models.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Safari-Extension/main/.github/assets/screenshots/05-models.png" alt="The models made for a job, sorted by price, popularity or date" width="49%" style="max-width: 100%;"></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Safari-Extension/blob/main/.github/assets/screenshots/06-song.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Safari-Extension/main/.github/assets/screenshots/06-song.png" alt="The Wiro panel turning selected lines into a song" width="49%" style="max-width: 100%;"></a>
+</p>
+<p align="center" dir="auto">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Safari-Extension/blob/main/.github/assets/screenshots/07-read-aloud.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Safari-Extension/main/.github/assets/screenshots/07-read-aloud.png" alt="The Wiro panel reading selected text aloud in a chosen voice" width="49%" style="max-width: 100%;"></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Safari-Extension/blob/main/.github/assets/screenshots/08-every-action.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Safari-Extension/main/.github/assets/screenshots/08-every-action.png" alt="Every Wiro action for an image, one right-click away" width="49%" style="max-width: 100%;"></a>
+</p>
+<p align="center" dir="auto">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Safari-Extension/blob/main/.github/assets/screenshots/09-translate.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Safari-Extension/main/.github/assets/screenshots/09-translate.png" alt="The Wiro panel translating selected Spanish text into English" width="49%" style="max-width: 100%;"></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Safari-Extension/blob/main/.github/assets/screenshots/10-price.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Safari-Extension/main/.github/assets/screenshots/10-price.png" alt="The Wiro panel showing the price of an image edit before the run" width="49%" style="max-width: 100%;"></a>
+</p>
+<h2 dir="auto" id="what-you-can-do">What you can do</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Right-click on</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>An image</td>
+<td>make a video, edit with a prompt, upscale, restore an old photo, remove the background, blur faces, find objects, make a 3D model, ask about it, extract or translate its text, make a product ad, add effects, make a song from it, make it talk, try clothes on</td>
+</tr>
+<tr>
+<td>A video</td>
+<td>edit with a prompt, upscale, add music, ask about it</td>
+</tr>
+<tr>
+<td>An audio clip</td>
+<td>transcribe it, change the voice</td>
+</tr>
+<tr>
+<td>Selected text</td>
+<td>generate an image or a video, read it aloud, turn it into a song, translate it, summarize it</td>
+</tr>
+<tr>
+<td>A page</td>
+<td>turn it into a video with Wiro Studio, ask about it</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">Each action lists the Wiro models made for it, so new models show up without an update. Sort them by price, popularity or date and pick one; the panel asks only for what that model needs.</p>
+<h2 dir="auto" id="how-safari-differs">How Safari differs</h2>
+<ul dir="auto">
+<li><strong>No side panel.</strong> The toolbar button opens the panel as a popup. A right-click opens the panel in a tab (a second click reuses that tab), because Safari's popup closes as soon as focus moves.</li>
+<li><strong>No identity API.</strong> Apple's guidance is to start the OAuth flow in a new tab. The sign-in opens wiro.ai in a tab; wiro.ai sends the browser back to <code class="notranslate">https://wiro.ai/extension/callback</code>; the callback content script hands that address to the background, which checks it and trades the one-time code for tokens (PKCE, the verifier never leaves the extension), then closes the tab. The panel follows the sign-in through storage.</li>
+<li><strong>On the Mac.</strong> Safari on iOS has no right-click menus for extensions.</li>
+</ul>
+<h2 dir="auto" id="install">Install</h2>
+<p dir="auto">The Mac App Store link will appear here once the app is live. In Chrome, Brave, Vivaldi or Arc, install Wiro AI from the <a href="https://chromewebstore.google.com/detail/wiro-ai-tools-for-images/cehkhdmppbnfeahegjjkdhangjelehab">Chrome Web Store</a>; in Whale, from the <a href="https://store.whale.naver.com/detail/elgobhnkemhlhfakdmpijbknhehnkgle">Naver Whale Store</a>; in Firefox, from <a href="https://addons.mozilla.org/firefox/addon/wiro-ai/">Firefox Add-ons</a>.</p>
+<h2 dir="auto" id="build">Build</h2>
+<p dir="auto">Requirements: macOS with Xcode, Node.js 22 or newer and npm 10 or newer.</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">git clone --recurse-submodules https://github.com/wiroai/Wiro-Safari-Extension.git
+<span class="pl-c1">cd</span> Wiro-Safari-Extension
+npm install
+(cd core <span class="pl-k">&amp;&amp;</span> npm install)
+npm run typecheck
+npm run build
+npm run xcode</pre></div>
+<p dir="auto"><code class="notranslate">npm run xcode</code> builds the app without signing, as a compile check. To run it, open <code class="notranslate">xcode/Wiro/Wiro.xcodeproj</code>, choose your team under Signing &amp; Capabilities for both targets, and run the Wiro scheme. Then turn the extension on in Safari Settings &gt; Extensions. A build signed only for development needs Develop &gt; Allow Unsigned Extensions (show the Develop menu under Settings &gt; Advanced).</p>
+<p dir="auto">After a core change: <code class="notranslate">git -C core pull origin main</code>, rebuild, and commit the new <code class="notranslate">core</code> pointer. After adding a file to <code class="notranslate">dist/</code>, add it to the extension target in Xcode as well.</p>
+<h2 dir="auto" id="how-it-is-built">How it is built</h2>
+<p dir="auto">The shared code (sign-in, MCP client, actions, model gateway, pricing and the panel UI) lives in <a href="https://github.com/wiroai/Wiro-Extension-Core">Wiro-Extension-Core</a>, included here as the <code class="notranslate">core/</code> submodule. This repo adds the Safari parts:</p>
+<ul dir="auto">
+<li><code class="notranslate">src/platform.ts</code>: storage and tabs for the core.</li>
+<li><code class="notranslate">src/background.ts</code>: the background page (non-persistent; Safari did not always start a service worker at launch, and it keeps no right-click menus across a restart). It builds the right-click menus each time it starts, opens the panel for a click and finishes the sign-in.</li>
+<li><code class="notranslate">src/callback.ts</code>: a content script that runs only on <code class="notranslate">https://wiro.ai/extension/callback</code>.</li>
+<li><code class="notranslate">src/panel.ts</code>, <code class="notranslate">public/panel.html</code>: the panel, shown as the toolbar popup and in a tab.</li>
+<li><code class="notranslate">manifest.json</code>: Manifest V3 for Safari 16.4 and later.</li>
+<li><code class="notranslate">xcode/Wiro/</code>: the macOS app that carries the extension, made with <code class="notranslate">xcrun safari-web-extension-converter</code>. Its extension target points at the files in <code class="notranslate">dist/</code>.</li>
+</ul>
+<h2 dir="auto" id="mac-app-store">Mac App Store</h2>
+<p dir="auto">Shipping the app on the Mac App Store needs an Apple Developer Program membership. In Xcode, choose Product &gt; Archive, then upload to App Store Connect. The bundle identifiers are <code class="notranslate">ai.wiro.safari</code> (app) and <code class="notranslate">ai.wiro.safari.Extension</code> (extension).</p>
+<h2 dir="auto" id="permissions">Permissions</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Permission</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">contextMenus</code></td>
+<td>the Wiro entries in the right-click menu</td>
+</tr>
+<tr>
+<td><code class="notranslate">storage</code></td>
+<td>the sign-in tokens, the tray, run history and the last model picked per action</td>
+</tr>
+<tr>
+<td>content script on <code class="notranslate">https://wiro.ai/extension/callback*</code></td>
+<td>finishing the sign-in</td>
+</tr>
+<tr>
+<td>website access (<code class="notranslate">&lt;all_urls&gt;</code>)</td>
+<td>Safari shows an extension's right-click items only on websites it may use. The Sign in button asks for every website once (Always Allow on Every Website); the panel offers the same button until it is granted. The extension still reads only what you right-click.</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">The extension reads only what a right-click hands it (the item's address, the selected text or the page address) and sends it to Wiro when you start a run. See the <a href="https://wiro.ai/agreement/privacy-policy">Wiro privacy policy</a>.</p>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera, Whale and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Extension-Core">Wiro-Extension-Core</a></td>
+<td>Shared core of the Wiro AI browser extensions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
+<td>Official MCP server for Wiro AI, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Cursor, Claude Code, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills">Wiro-Skills</a></td>
+<td>Agent skills for images, image edits, video, music, speech, transcripts, 3D and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>Vercel AI SDK provider for chat, images, speech, transcription and video</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Wiro AI SDK for Dart and Flutter, <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>Wiro AI SDK for React Native and Expo, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><code class="notranslate">@wiro-ai/wiro-react-native</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-Realtime">Swift-Realtime</a></td>
+<td>Realtime voice AI example for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-Realtime">Kotlin-Realtime</a></td>
+<td>Realtime voice AI example for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-Realtime">Dart-Realtime</a></td>
+<td>Realtime voice AI example for Flutter</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-Realtime">ReactNative-Realtime</a></td>
+<td>Realtime voice AI example for React Native</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>One Wiro AI node for n8n with a searchable model picker, <a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><code class="notranslate">@wiro-ai/n8n-nodes-wiro</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI plugins for Dify: the LLM gateway as a model provider, plus image, video, speech and music tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI">Wiro-ComfyUI</a></td>
+<td>Wiro AI nodes for ComfyUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Zed">Wiro-Zed</a></td>
+<td>Wiro AI MCP server extension for Zed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Action for Wiro AI models and the LLM gateway, <a href="https://github.com/marketplace/actions/wiro-ai-action">on the GitHub Marketplace</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Raycast">Wiro-Raycast</a></td>
+<td>Wiro AI extension for Raycast: image and video generation, LLM chat and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress: featured images, image edits, alt text, narration and SEO suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Obsidian">Wiro-Obsidian</a></td>
+<td>Wiro AI plugin for Obsidian: images, video, speech, music, transcription and text tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Blender">Wiro-Blender</a></td>
+<td>Wiro AI add-on for Blender: text to 3D, image to 3D and textures</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Figma">Wiro-Figma</a></td>
+<td>Wiro AI plugin for Figma: images, vectors, image edits and text</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js starter for Wiro AI: Playground, image, video and audio tools, and LLM chat, ready for Vercel and Railway</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Docs">Wiro-Docs</a></td>
+<td>Source of the Wiro AI API docs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto">MIT, see <a href="https://github.com/wiroai/Wiro-Safari-Extension/blob/main/LICENSE">LICENSE</a>.</p>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/wiro-chromium-extension/">Wiro-Chromium-Extension</a></li><li><a href="/projects/wiro-firefox-extension/">Wiro-Firefox-Extension</a></li><li><a href="/projects/wiro-extension-core/">Wiro-Extension-Core</a></li><li><a href="/projects/wiro-mcp/">Wiro-MCP</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>

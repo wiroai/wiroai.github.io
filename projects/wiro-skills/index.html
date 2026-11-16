@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiro-Skills: Wiro AI open source</title>
+<meta name="description" content="Agent skills for Wiro AI: images, image edits, video, music, speech, transcripts, 3D models and model search, for Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot and OpenClaw">
+<link rel="canonical" href="https://wiroai.github.io/projects/wiro-skills/">
+<link rel="icon" type="image/png" href="/assets/wiro-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wiro AI Open Source">
+<meta property="og:title" content="Wiro-Skills: Wiro AI open source">
+<meta property="og:description" content="Agent skills for Wiro AI: images, image edits, video, music, speech, transcripts, 3D models and model search, for Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot and OpenClaw">
+<meta property="og:url" content="https://wiroai.github.io/projects/wiro-skills/">
+<meta property="og:image" content="https://wiro.ai/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wiroai">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "Wiro-Skills", "description": "Agent skills for Wiro AI: images, image edits, video, music, speech, transcripts, 3D models and model search, for Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot and OpenClaw", "codeRepository": "https://github.com/wiroai/Wiro-Skills", "url": "https://wiroai.github.io/projects/wiro-skills/", "programmingLanguage": "JavaScript", "license": "https://api.github.com/licenses/mit", "author": {"@type": "Organization", "name": "Wiro AI", "url": "https://wiro.ai"}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/"><img src="/assets/wiro-icon.png" alt="" width="32" height="32"><span>Wiro AI <em>Open Source</em></span></a>
+    <nav><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://github.com/wiroai">GitHub</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumbs"><a href="/">Wiro AI open source</a> / <a href="/#assistants">Coding assistants and agents</a></p>
+<section class="project-head">
+  <h1>Wiro-Skills</h1>
+  <p class="lead">Agent skills for Wiro AI: images, image edits, video, music, speech, transcripts, 3D models and model search, for Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot and OpenClaw</p>
+  <p class="cta"><a class="btn" href="https://github.com/wiroai/Wiro-Skills">View on GitHub</a> <a class="btn ghost" href="https://wiro.ai">Website</a></p>
+</section>
+<article class="markdown">
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Skills/blob/main/.github/assets/wiro-logo.png"><img src="https://raw.githubusercontent.com/wiroai/Wiro-Skills/main/.github/assets/wiro-logo.png" alt="Wiro AI" width="240" style="max-width: 100%;"></a>
+<h2 dir="auto" id="wiro-ai-skills">Wiro AI skills</h2>
+<p dir="auto">Agent skills that make images, image edits, videos, music, voice-overs, transcripts and 3D models with Wiro AI, and find the right model and price in a catalog of 1,000+ models.</p>
+<p dir="auto"><a href="https://github.com/wiroai/Wiro-Skills/blob/main/LICENSE"><img loading="lazy" src="https://camo.githubusercontent.com/9b0dcc545c9e697315b8d16f4363715f0cc54941456ba778cbc802bb0ef11275/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="License: MIT" data-canonical-src="https://img.shields.io/badge/license-MIT-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="#install"><img loading="lazy" src="https://camo.githubusercontent.com/9eced8700687997651dda3e461cd4eb3a1635e13f9a0d098bb88fec0a9149d7e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6167656e742d736b696c6c732d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="Agent Skills" data-canonical-src="https://img.shields.io/badge/agent-skills-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a> <a href="https://wiro.ai/docs/wiro-mcp-server"><img loading="lazy" src="https://camo.githubusercontent.com/4bf0f99d2a681ff4aabe5ae792c470d6a7f3238cec2786a1939799137a0c5cb9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d43502d73747265616d61626c65253230485454502d3131313131313f7374796c653d666f722d7468652d626164676526636f6c6f723d313131313131" alt="MCP: streamable HTTP" data-canonical-src="https://img.shields.io/badge/MCP-streamable%20HTTP-111111?style=for-the-badge&amp;color=111111" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs/wiro-mcp-server">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a></p>
+</div>
+<p dir="auto">Each skill is a <code class="notranslate">SKILL.md</code> file that shows your agent how to do one job with the tools of the hosted Wiro MCP server: pick a fitting model from the catalog, tell you the price before it runs, run it and hand you the files. They work in Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot, OpenClaw and the many other agents that read skills.</p>
+<h2 dir="auto" id="skills">Skills</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Skill</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills/blob/main/skills/wiro-image/SKILL.md"><code class="notranslate">wiro-image</code></a></td>
+<td>Generates images from a prompt</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills/blob/main/skills/wiro-edit-image/SKILL.md"><code class="notranslate">wiro-edit-image</code></a></td>
+<td>Edits an image: a new style, things added or removed, the background removed, or a sharper, larger version</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills/blob/main/skills/wiro-video/SKILL.md"><code class="notranslate">wiro-video</code></a></td>
+<td>Makes a video from text, or animates a start image</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills/blob/main/skills/wiro-music/SKILL.md"><code class="notranslate">wiro-music</code></a></td>
+<td>Makes an instrumental track or a song with lyrics</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills/blob/main/skills/wiro-speech/SKILL.md"><code class="notranslate">wiro-speech</code></a></td>
+<td>Turns text into natural speech or a voice-over</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills/blob/main/skills/wiro-transcribe/SKILL.md"><code class="notranslate">wiro-transcribe</code></a></td>
+<td>Turns audio or video into text, captions or subtitles</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills/blob/main/skills/wiro-3d/SKILL.md"><code class="notranslate">wiro-3d</code></a></td>
+<td>Turns a photo or a description into a 3D model file</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Skills/blob/main/skills/wiro-models/SKILL.md"><code class="notranslate">wiro-models</code></a></td>
+<td>Searches and compares models, their inputs and their prices, without running anything</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2 dir="auto" id="see-it-run">See it run</h2>
+<p dir="auto">Claude Code with the <code class="notranslate">wiro-image</code> skill: it picks a model from the catalog, checks the price against the budget, runs it and saves the file into the project.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Skills/blob/main/docs/screenshots/claude-code-wiro-image.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Skills/main/docs/screenshots/claude-code-wiro-image.png" alt="Claude Code loading the wiro-image skill: it asks for a model recommendation, searches the catalog, reads the schema of Flux Fast Text to Image, says about $0.017 per run fits the 5 cent budget, runs it for $0.0096 and saves public/hero-lighthouse-cliff-dawn.png" width="820" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Skills/blob/main/docs/screenshots/lighthouse-dawn.jpg"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Skills/main/docs/screenshots/lighthouse-dawn.jpg" alt="The image it made: a flat illustration of a lighthouse on a cliff at dawn" width="420" style="max-width: 100%;"></a></p>
+<p dir="auto">Then <code class="notranslate">wiro-edit-image</code> turns the same picture into a night scene:</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Skills/blob/main/docs/screenshots/claude-code-wiro-edit-image.png"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Skills/main/docs/screenshots/claude-code-wiro-edit-image.png" alt="Claude Code loading the wiro-edit-image skill: it searches the image editing models, reads google/nano-banana, says the edit costs about $0.039, runs it and saves public/hero-lighthouse-cliff-night.png next to the original" width="820" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/wiroai/Wiro-Skills/blob/main/docs/screenshots/lighthouse-night.jpg"><img loading="lazy" src="https://raw.githubusercontent.com/wiroai/Wiro-Skills/main/docs/screenshots/lighthouse-night.jpg" alt="The edited image: the same lighthouse at night with its beam on and stars in the sky" width="420" style="max-width: 100%;"></a></p>
+<p dir="auto">Both are real runs; long tool output is shortened.</p>
+<h2 dir="auto" id="install">Install</h2>
+<p dir="auto">With <a href="https://skills.sh">skills.sh</a>, for Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot and other agents:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npx skills add wiroai/Wiro-Skills</pre></div>
+<p dir="auto">The command asks which skills to add and for which agents. To add one skill:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">npx skills add wiroai/Wiro-Skills --skill wiro-image</pre></div>
+<p dir="auto">With <a href="https://clawhub.ai/wiroai">ClawHub</a>, for OpenClaw:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">openclaw skills install @wiroai/wiro-image</pre></div>
+<p dir="auto">You can also copy a folder from <code class="notranslate">skills/</code> into your agent's skills folder, such as <code class="notranslate">.claude/skills/</code> for Claude Code.</p>
+<h2 dir="auto" id="connect-the-wiro-mcp-server">Connect the Wiro MCP server</h2>
+<p dir="auto">The skills use the tools of the hosted Wiro MCP server at <code class="notranslate">https://mcp.wiro.ai/v1</code>. Add it once.</p>
+<p dir="auto">In Claude Code:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">claude mcp add --transport http wiro https://mcp.wiro.ai/v1</pre></div>
+<p dir="auto">Then open <code class="notranslate">/mcp</code>, select <code class="notranslate">wiro</code> and choose Authenticate. The Wiro sign-in page opens in your browser: sign in or create an account, pick a project and click Allow. The project you pick decides which wallet pays for runs.</p>
+<p dir="auto">Any other client that supports remote MCP servers can connect to the same URL. Clients with MCP sign-in (OAuth) open the Wiro sign-in page. Others can send an <code class="notranslate">Authorization: Bearer &lt;API key&gt;</code> header; for a project that uses signature-based auth, send <code class="notranslate">API_KEY:API_SECRET</code>. Setup guides for more clients are in the <a href="https://wiro.ai/docs/wiro-mcp-server">Wiro MCP docs</a>.</p>
+<p dir="auto">The <a href="https://github.com/wiroai/Wiro-Plugin">Wiro AI plugin</a> adds the server for you in Claude Code, Cursor, Gemini CLI, Devin, Antigravity and Kiro, together with slash commands that do the same jobs as these skills.</p>
+<h2 dir="auto" id="how-they-work">How they work</h2>
+<ul dir="auto">
+<li>The skill searches the catalog and reads the model's inputs and price first. These calls are free.</li>
+<li>Before a paid run, it writes one line with the model, the settings that change the price and the expected cost, and names one or two alternatives. It goes ahead when you asked for exactly that and the estimate is 1 USD or less. Otherwise it asks first.</li>
+<li>It waits for the task to finish, shows images inline when it can, gives a link to every file and reports the cost.</li>
+<li>It saves files into your project only when you ask, and never overwrites a file that is already there.</li>
+</ul>
+<h2 dir="auto" id="try-it">Try it</h2>
+<ul dir="auto">
+<li>"Make three square images of a lighthouse at dawn, in watercolor"</li>
+<li>"Remove the background from this product photo and make it 2K"</li>
+<li>"Animate hero.png into a five second clip with slow camera motion"</li>
+<li>"Make a calm 30 second piano track for a product video"</li>
+<li>"Read this paragraph aloud in a warm voice and save it to public/audio/"</li>
+<li>"Transcribe meeting.mp4 with timestamps as an SRT file"</li>
+<li>"Turn this photo of a chair into a GLB"</li>
+<li>"Which text to video models on Wiro have sound, and what does each cost?"</li>
+</ul>
+<h2 dir="auto" id="pricing">Pricing</h2>
+<p dir="auto">The skills and the connection are free. Each model run is paid from your Wiro wallet at the model's listed price, and the skill tells you the expected cost before each run.</p>
+<h2 dir="auto" id="how-this-repository-is-built">How this repository is built</h2>
+<p dir="auto">The skills come from the same sources as the slash commands of the Wiro AI plugin: <code class="notranslate">src/commands/</code> and <code class="notranslate">src/partials/</code> in <a href="https://github.com/wiroai/Wiro-Plugin">wiroai/Wiro-Plugin</a>. To change a skill, edit its source there, then run this next to a checkout of Wiro-Plugin:</p>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">node scripts/build.mjs --plugin ../Wiro-Plugin</pre></div>
+<p dir="auto">CI fails when the skills here differ from those sources.</p>
+<h2 dir="auto" id="more-wiro-ai-skills">More Wiro AI skills</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Skill</th>
+<th>Repository</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">wiro-ai</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI from code: find a model, check its price, run it, get the result and call LLMs</td>
+</tr>
+<tr>
+<td><code class="notranslate">wiro-media-assets</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Images, social cards, icons, short videos, voice-overs and 3D models for a project, placed where its framework expects them</td>
+</tr>
+<tr>
+<td><code class="notranslate">wiro-workflows</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Workflows: design, save, run, test and repair them</td>
+</tr>
+<tr>
+<td><code class="notranslate">wiro-agents</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI agents: plans and prices, deploying, messages and scheduled tasks</td>
+</tr>
+<tr>
+<td><code class="notranslate">wiro-realtime-voice</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Live voice conversation, streaming text to speech and speech to text</td>
+</tr>
+<tr>
+<td><code class="notranslate">wiro-llm</code></td>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>The Wiro LLM gateway with OpenAI- and Anthropic-compatible APIs</td>
+</tr>
+<tr>
+<td><code class="notranslate">wiro-flutter</code></td>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Flutter and Dart apps on the Wiro AI SDK</td>
+</tr>
+<tr>
+<td><code class="notranslate">wiro-react-native</code></td>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>React Native and Expo apps on the Wiro AI SDK</td>
+</tr>
+<tr>
+<td><code class="notranslate">wiro-swift</code></td>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>iOS and SwiftUI apps on WiroKit</td>
+</tr>
+<tr>
+<td><code class="notranslate">wiro-kotlin</code></td>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>Android and Kotlin apps on WiroKit</td>
+</tr>
+<tr>
+<td><code class="notranslate">wiro-n8n</code></td>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>The Wiro AI node in n8n workflows</td>
+</tr>
+<tr>
+<td><code class="notranslate">wiro-github-action</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Actions workflows that call Wiro AI</td>
+</tr>
+<tr>
+<td><code class="notranslate">wiro-nextjs</code></td>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js App Router features on Wiro AI</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2 dir="auto" id="support-terms-and-privacy">Support, terms and privacy</h2>
+<p dir="auto">Email <a href="mailto:support@wiro.ai">support@wiro.ai</a> or open an issue in this repository. Use of Wiro AI through these skills is covered by the Wiro AI <a href="https://wiro.ai/agreement/terms-of-service">Terms of Service</a> and <a href="https://wiro.ai/agreement/privacy-policy">Privacy Policy</a>.</p>
+<h2 dir="auto" id="more-from-wiro-ai">More from Wiro AI</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Repository</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
+<td>Wiro AI plugin for Claude Code, Cursor, Gemini CLI, Devin, Antigravity and Kiro</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
+<td>Official MCP server for Wiro AI, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-LLM">Wiro-LLM</a></td>
+<td>Vercel AI SDK provider for chat, images, speech, transcription and video, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-llm"><code class="notranslate">@wiro-ai/wiro-llm</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Chromium-Extension">Wiro-Chromium-Extension</a></td>
+<td>Wiro AI extension for Chrome, Edge, Opera and Brave</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Firefox-Extension">Wiro-Firefox-Extension</a></td>
+<td>Wiro AI add-on for Firefox</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Safari-Extension">Wiro-Safari-Extension</a></td>
+<td>Wiro AI extension for Safari on the Mac</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Swift-QuickStart">Swift-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for iOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Kotlin-QuickStart">Kotlin-QuickStart</a></td>
+<td>WiroKit, the Wiro AI SDK for Android</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Dart-QuickStart">Dart-QuickStart</a></td>
+<td>Wiro AI SDK for Dart and Flutter, <a href="https://pub.dev/packages/wiro"><code class="notranslate">wiro</code> on pub.dev</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/ReactNative-QuickStart">ReactNative-QuickStart</a></td>
+<td>Wiro AI SDK for React Native and Expo, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-react-native"><code class="notranslate">@wiro-ai/wiro-react-native</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/n8n-nodes-wiro">n8n-nodes-wiro</a></td>
+<td>One Wiro AI node for n8n with a searchable model picker, <a href="https://www.npmjs.com/package/@wiro-ai/n8n-nodes-wiro"><code class="notranslate">@wiro-ai/n8n-nodes-wiro</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Dify-Plugin">Wiro-Dify-Plugin</a></td>
+<td>Wiro AI plugins for Dify: the LLM gateway as a model provider, plus image, video, speech and music tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-ComfyUI">Wiro-ComfyUI</a></td>
+<td>Wiro AI nodes for ComfyUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Hermes">Wiro-Hermes</a></td>
+<td>Wiro AI plugins for Hermes Agent: image, video, audio and 3D tools, plus the LLM gateway as a model provider</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Zed">Wiro-Zed</a></td>
+<td>Wiro AI MCP server extension for Zed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Action">Wiro-Action</a></td>
+<td>GitHub Action for Wiro AI models and the LLM gateway, <a href="https://github.com/marketplace/actions/wiro-ai-action">on the GitHub Marketplace</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Raycast">Wiro-Raycast</a></td>
+<td>Wiro AI extension for Raycast: image and video generation, LLM chat and model search</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-WordPress">Wiro-WordPress</a></td>
+<td>Wiro AI plugin for WordPress: featured images, image edits, alt text, narration and SEO suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Obsidian">Wiro-Obsidian</a></td>
+<td>Wiro AI plugin for Obsidian: images, video, speech, music, transcription and text tools</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Blender">Wiro-Blender</a></td>
+<td>Wiro AI add-on for Blender: text to 3D, image to 3D and textures</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Figma">Wiro-Figma</a></td>
+<td>Wiro AI plugin for Figma: images, vectors, image edits and text</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Next-Starter">Wiro-Next-Starter</a></td>
+<td>Next.js starter for Wiro AI: Playground, image, video and audio tools, and LLM chat, ready for Vercel and Railway</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Docs">Wiro-Docs</a></td>
+<td>Source of the Wiro AI API docs</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs">Docs</a> · <a href="https://x.com/wiroai">X</a></p>
+<h2 dir="auto" id="license">License</h2>
+<p dir="auto">MIT, see <a href="https://github.com/wiroai/Wiro-Skills/blob/main/LICENSE">LICENSE</a>.</p>
+</article>
+<aside class="more">
+  <h2>More open-source projects from Wiro AI</h2>
+  <ul><li><a href="/projects/wiro-mcp/">Wiro-MCP</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li><li><a href="/projects/dart-quickstart/">Dart-QuickStart</a></li><li><a href="/projects/reactnative-quickstart/">ReactNative-QuickStart</a></li><li><a href="/projects/swift-realtime/">Swift-Realtime</a></li><li><a href="/projects/kotlin-realtime/">Kotlin-Realtime</a></li></ul>
+  <p><a href="/">See all 29 projects</a></p>
+</aside>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-links"><a href="https://wiro.ai">Wiro AI</a><a href="https://wiro.ai/models">Models</a><a href="https://wiro.ai/workflows">Workflows</a><a href="https://wiro.ai/agents">Agents</a><a href="https://wiro.ai/docs/wiro-mcp-server">MCP server</a><a href="https://wiro.ai/llm">LLM gateway</a><a href="https://wiro.ai/browser-extension">Browser extension</a><a href="https://wiro.ai/integrations">Integrations</a><a href="https://wiro.ai/product/pricing">Pricing</a><a href="https://wiro.ai/docs">Docs</a><a href="https://wiro.ai/blog">Blog</a><a href="https://x.com/wiroai">X</a><a href="https://www.linkedin.com/company/wiroai">LinkedIn</a><a href="https://github.com/wiroai">GitHub</a></p>
+    <p>&copy; 2026 Wiro AI Inc. &middot; San Francisco, CA &middot; <a href="mailto:support@wiro.ai">support@wiro.ai</a></p>
+  </div>
+</footer>
+</body>
+</html>
