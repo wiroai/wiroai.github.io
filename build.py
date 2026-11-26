@@ -23,8 +23,9 @@ OG_IMAGE = "https://wiro.ai/images/og/default.jpg"
 # Repositories in display order, grouped. A public repo missing here lands in "More projects".
 GROUPS = [
     ("assistants", "Coding assistants and agents",
-     "Use Wiro AI models from Cursor, Claude Code, Codex, Gemini CLI, Zed, Hermes Agent and GitHub Actions.",
-     ["Wiro-MCP", "Wiro-Plugin", "Wiro-Skills", "Wiro-Zed", "Wiro-Hermes", "Wiro-Action"]),
+     "Use Wiro AI models from Cursor, Claude Code, Codex, Gemini CLI, Zed, Hermes Agent and GitHub Actions, "
+     "and connect any MCP client to 45 services such as Gmail, Shopify, YouTube and Notion.",
+     ["Wiro-MCP", "Wiro-Agent-Connectors", "Wiro-Plugin", "Wiro-Skills", "Wiro-Zed", "Wiro-Hermes", "Wiro-Action"]),
     ("sdks", "LLM gateway and SDKs",
      "Clients for the Wiro AI API and for the OpenAI and Anthropic compatible LLM gateway.",
      ["Wiro-LLM", "Swift-QuickStart", "Kotlin-QuickStart", "Dart-QuickStart", "ReactNative-QuickStart"]),

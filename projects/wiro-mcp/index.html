@@ -41,11 +41,12 @@
 <p dir="auto"><a href="https://wiro.ai">Website</a> · <a href="https://wiro.ai/models">Models</a> · <a href="https://wiro.ai/docs/wiro-mcp-server">Docs</a> · <a href="https://wiro.ai/panel">Dashboard</a></p>
 <a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67"><img loading="lazy" src="https://camo.githubusercontent.com/2cdb68cf22da49334870e60185100f32bbb59a55eed68458643b856812daf255/68747470733a2f2f7769726f2e61692f696d616765732f6b6f616c612f616363656e742d68656176792d6b6f616c612e706e67" alt="Wiro AI koala mascot" width="60" data-canonical-src="https://wiro.ai/images/koala/accent-heavy-koala.png" style="max-width: 100%;"></a>
 </div>
-<p dir="auto"><code class="notranslate">@wiro-ai/wiro-mcp</code> is a TypeScript <a href="https://modelcontextprotocol.io/">Model Context Protocol</a> server that runs locally over stdio, with <code class="notranslate">npx</code> or <a href="#docker">Docker</a>. Its tools are grouped in three sets:</p>
+<p dir="auto"><code class="notranslate">@wiro-ai/wiro-mcp</code> is a TypeScript <a href="https://modelcontextprotocol.io/">Model Context Protocol</a> server that runs locally over stdio, with <code class="notranslate">npx</code> or <a href="#docker">Docker</a>. Its tools are grouped in four sets:</p>
 <ul dir="auto">
 <li><strong>Models</strong>: search the Wiro AI model catalog, read a model's parameters and price, run it and wait for the result, upload input files and browse past tasks.</li>
 <li><strong>Workflows</strong>: build multi-step workflows that chain models, run them, resume failed runs, browse the public gallery, and design workflows together with the Workflow Agent.</li>
-<li><strong>Agents</strong>: talk to Studio, the creative agent that runs models for you, and deploy, configure, run and message your own agents built from templates or from scratch.</li>
+<li><strong>Agents</strong>: talk to Studio, the creative agent that runs models for you, and deploy, configure, run and message your own agents built from templates or from scratch, with the outside services they work with connected as connectors.</li>
+<li><strong>Controls</strong>: see and change your workspace's Spend Limits and Model Access rules, the caps on what it spends and the rules on which models it runs, always after a change summary you confirm.</li>
 </ul>
 <p dir="auto">Playbooks explain each job step by step, so the assistant knows the order of calls, what costs money and what needs your approval. The hosted server at <code class="notranslate">https://mcp.wiro.ai/v1</code> serves the same tools with nothing to install.</p>
 <h2 dir="auto" id="quick-start">Quick Start</h2>
@@ -60,7 +61,7 @@ installation.</p>
   <span class="pl-ent">"mcpServers"</span>: {
     <span class="pl-ent">"wiro"</span>: {
       <span class="pl-ent">"command"</span>: <span class="pl-s"><span class="pl-pds">"</span>npx<span class="pl-pds">"</span></span>,
-      <span class="pl-ent">"args"</span>: [<span class="pl-s"><span class="pl-pds">"</span>-y<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>@wiro-ai/wiro-mcp<span class="pl-pds">"</span></span>],
+      <span class="pl-ent">"args"</span>: [<span class="pl-s"><span class="pl-pds">"</span>-y<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>@wiro-ai/wiro-mcp@latest<span class="pl-pds">"</span></span>],
       <span class="pl-ent">"env"</span>: {
         <span class="pl-ent">"WIRO_API_KEY"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-key<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"WIRO_API_SECRET"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-secret<span class="pl-pds">"</span></span>
@@ -69,7 +70,7 @@ installation.</p>
   }
 }</pre></div>
 <p dir="auto"><strong>Claude Code:</strong></p>
-<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">claude mcp add wiro -- npx -y @wiro-ai/wiro-mcp</pre></div>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate">claude mcp add wiro -- npx -y @wiro-ai/wiro-mcp@latest</pre></div>
 <p dir="auto">Then set environment variables <code class="notranslate">WIRO_API_KEY</code> and <code class="notranslate">WIRO_API_SECRET</code>.</p>
 <p dir="auto"><strong>Claude Desktop</strong>: add to <code class="notranslate">claude_desktop_config.json</code>:</p>
 <div class="highlight highlight-source-json" dir="auto"><pre class="notranslate">{
@@ -77,7 +78,7 @@ installation.</p>
     <span class="pl-ent">"wiro"</span>: {
       <span class="pl-ent">"type"</span>: <span class="pl-s"><span class="pl-pds">"</span>stdio<span class="pl-pds">"</span></span>,
       <span class="pl-ent">"command"</span>: <span class="pl-s"><span class="pl-pds">"</span>npx<span class="pl-pds">"</span></span>,
-      <span class="pl-ent">"args"</span>: [<span class="pl-s"><span class="pl-pds">"</span>-y<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>@wiro-ai/wiro-mcp<span class="pl-pds">"</span></span>],
+      <span class="pl-ent">"args"</span>: [<span class="pl-s"><span class="pl-pds">"</span>-y<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>@wiro-ai/wiro-mcp@latest<span class="pl-pds">"</span></span>],
       <span class="pl-ent">"env"</span>: {
         <span class="pl-ent">"WIRO_API_KEY"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-key<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"WIRO_API_SECRET"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-secret<span class="pl-pds">"</span></span>
@@ -90,7 +91,7 @@ installation.</p>
   <span class="pl-ent">"mcpServers"</span>: {
     <span class="pl-ent">"wiro"</span>: {
       <span class="pl-ent">"command"</span>: <span class="pl-s"><span class="pl-pds">"</span>npx<span class="pl-pds">"</span></span>,
-      <span class="pl-ent">"args"</span>: [<span class="pl-s"><span class="pl-pds">"</span>-y<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>@wiro-ai/wiro-mcp<span class="pl-pds">"</span></span>],
+      <span class="pl-ent">"args"</span>: [<span class="pl-s"><span class="pl-pds">"</span>-y<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>@wiro-ai/wiro-mcp@latest<span class="pl-pds">"</span></span>],
       <span class="pl-ent">"env"</span>: {
         <span class="pl-ent">"WIRO_API_KEY"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-key<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"WIRO_API_SECRET"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-secret<span class="pl-pds">"</span></span>
@@ -151,6 +152,13 @@ probe command, use <code class="notranslate">openclaw mcp show wiro</code>, rest
 <li><em>"Which agent templates can manage Instagram? What does each plan cost?"</em></li>
 <li><em>"Deploy the Instagram manager agent on the Starter plan and tell me what it still needs"</em></li>
 <li><em>"Tell my support agent to summarise today's tickets"</em></li>
+</ul>
+<p dir="auto"><strong>Controls</strong></p>
+<ul dir="auto">
+<li><em>"Cap our whole team at $500 a month"</em></li>
+<li><em>"Stop Jane from using video models"</em></li>
+<li><em>"Why was my last run refused, and what would allow it?"</em></li>
+<li><em>"What did we spend this month, and who spent it?"</em></li>
 </ul>
 <h2 dir="auto" id="docker">Docker</h2>
 <p dir="auto">Every release is also published on Docker Hub as<br>
@@ -363,10 +371,15 @@ under another name can be read and deleted, and to go on with it you start a new
 <td><code class="notranslate">list_studio_results</code></td>
 <td>List the images, videos and other results Studio generated for you</td>
 </tr>
+<tr>
+<td><code class="notranslate">answer_agent_approval</code></td>
+<td>Answer an action one of your agents asked to run, such as publishing a post: allow it once, always allow it (agent admins), or decline it. Shows the exact request first, then asks for your confirmation</td>
+</tr>
 </tbody>
 </table></markdown-accessiblity-table>
 <p dir="auto"><strong>Studio</strong> is Wiro's creative agent: it picks and runs models for you and charges<br>
-your wallet after each reply. Your own agents run on a monthly plan with credits.</p>
+your wallet after each reply. Your own agents run on a monthly plan that includes its own price<br>
+in AI usage each month; after that, they use your Wiro balance.</p>
 <markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
@@ -381,11 +394,15 @@ your wallet after each reply. Your own agents run on a monthly plan with credits
 </tr>
 <tr>
 <td><code class="notranslate">get_agent_template</code></td>
-<td>Read a template's skills, plans, and the accounts and keys it needs</td>
+<td>Read a template's skills, plans, the connectors it suggests and the keys it needs</td>
 </tr>
 <tr>
 <td><code class="notranslate">list_agent_skills</code></td>
-<td>Browse the skills an agent can have, and what each one needs to work</td>
+<td>Browse the skills an agent can have, what each one needs to work and the connectors it works with</td>
+</tr>
+<tr>
+<td><code class="notranslate">list_agent_connectors</code></td>
+<td>Browse the connectors an agent can connect (ad accounts, stores, social accounts, mailboxes, data sources), what each one needs and the tools it gives the agent; with an agent, its connections</td>
 </tr>
 <tr>
 <td><code class="notranslate">deploy_agent</code></td>
@@ -393,11 +410,11 @@ your wallet after each reply. Your own agents run on a monthly plan with credits
 </tr>
 <tr>
 <td><code class="notranslate">list_my_agents</code></td>
-<td>List your agents with their status, plan and credits</td>
+<td>List your agents with their status, plan, included AI usage and what they spent this month</td>
 </tr>
 <tr>
 <td><code class="notranslate">get_my_agent</code></td>
-<td>Read one agent's setup, plan and credits; can wait until it is running</td>
+<td>Read one agent's setup, plan, AI usage in dollars and the balance after it; can wait until it is running</td>
 </tr>
 <tr>
 <td><code class="notranslate">control_agent</code></td>
@@ -413,15 +430,27 @@ your wallet after each reply. Your own agents run on a monthly plan with credits
 </tr>
 <tr>
 <td><code class="notranslate">set_agent_credentials</code></td>
-<td>Save the keys, tokens and settings an agent's skills and channels need, such as a Telegram bot token or a Gmail app password</td>
+<td>Save an agent's chat channel keys (such as a Telegram bot token), Twilio Voice and settings</td>
 </tr>
 <tr>
-<td><code class="notranslate">connect_agent_oauth</code></td>
-<td>Connect sign-in accounts such as HubSpot or X for the services an agent's skills use; you approve the connection in your browser. Some services need your own app keys or a token first</td>
+<td><code class="notranslate">connect_agent_connector</code></td>
+<td>Connect a connector to an agent: save its keys, or start its sign-in, which you approve in your browser. The Wiro AI Models connector (<code class="notranslate">wiro</code>), the agent's model and task tools, runs with the agent's own Wiro project: connecting it binds that project to the agent, after showing the project, what it replaces and its wallet</td>
 </tr>
 <tr>
-<td><code class="notranslate">disconnect_agent_oauth</code></td>
-<td>Disconnect a connected account, after your confirmation</td>
+<td><code class="notranslate">set_agent_connector_accounts</code></td>
+<td>Choose the accounts a connected connector may act on, such as its ad accounts, pages or channels, or the advertisers a TikTok Ads sign-in reaches</td>
+</tr>
+<tr>
+<td><code class="notranslate">disconnect_agent_connector</code></td>
+<td>Disconnect a connector from an agent, after your confirmation</td>
+</tr>
+<tr>
+<td><code class="notranslate">get_agent_connector_permissions</code></td>
+<td>Read what an agent may do with a connector without asking: each group of actions (Read-only, Create and send, Change and delete) and each action in Chat and Autopilot, and the approvals still waiting</td>
+</tr>
+<tr>
+<td><code class="notranslate">set_agent_connector_permissions</code></td>
+<td>Change a connector's permissions for a group or one action; shows what changes for the agent, then asks for your confirmation</td>
 </tr>
 <tr>
 <td><code class="notranslate">list_projects</code></td>
@@ -429,19 +458,19 @@ your wallet after each reply. Your own agents run on a monthly plan with credits
 </tr>
 <tr>
 <td><code class="notranslate">bind_agent_project</code></td>
-<td>Connect an agent to a Wiro project so it can run models, with no key in the chat; shows the project first, then asks for your confirmation</td>
+<td>Set the Wiro project an agent's video and voice skills run models with, with no key in the chat; shows the project first, then asks for your confirmation. The agent's model tools come from the Wiro AI Models connector (<code class="notranslate">wiro</code>), which runs with this same project and is connected with <code class="notranslate">connect_agent_connector</code></td>
 </tr>
 <tr>
 <td><code class="notranslate">manage_agent_custom_skill</code></td>
-<td>Add, edit, schedule, restore or remove an agent's own instructions and scheduled tasks; turning off its approval policy or changing its rules needs your confirmation</td>
+<td>Add, edit, schedule, restore or remove an agent's own instructions and scheduled tasks; turning off its approval policy or changing its rules needs your confirmation. A scheduled task that comes with the agent's template keeps the template's text: its schedule and on/off switch can change</td>
 </tr>
 <tr>
 <td><code class="notranslate">manage_agent_billing</code></td>
-<td>Subscribe, move to another plan, cancel, renew or buy extra credits from your wallet, after your confirmation</td>
+<td>Subscribe, move to another plan, cancel or renew, paid from your Wiro balance, after your confirmation</td>
 </tr>
 <tr>
 <td><code class="notranslate">get_agent_activity</code></td>
-<td>Read an agent's credit usage and activity logs, including who changed what on it</td>
+<td>Read what an agent spent and its ledger in dollars, and its activity logs, including who changed what on it</td>
 </tr>
 <tr>
 <td><code class="notranslate">delete_agent</code></td>
@@ -449,6 +478,88 @@ your wallet after each reply. Your own agents run on a monthly plan with credits
 </tr>
 </tbody>
 </table></markdown-accessiblity-table>
+<p dir="auto">A connector connects with a key typed on its Connect card, a sign-in you approve in your<br>
+browser, or a Wiro project. The Wiro AI Models connector (<code class="notranslate">wiro</code>) gives the agent only Wiro's<br>
+model, task and file upload tools, plus read-only docs search and playbooks. It always runs<br>
+with the agent's own Wiro project, so its calls count as the agent's own: the agent's spend<br>
+limits and Model Access rules apply, and account, agent and billing calls are refused.<br>
+Connecting it binds the project to the agent, as <code class="notranslate">bind_agent_project</code> does: a new project<br>
+turns on the scheduled tasks and custom skills that need one. While it is connected, binding<br>
+another project moves its tools there too.<br>
+Where a connector has account choices, the agent acts only on the accounts you choose, also<br>
+for a connector served by the service itself, such as TikTok Ads and its advertisers.<br>
+When an agent proposes a connection in its chat, a key goes in with <code class="notranslate">connect_agent_connector</code>,<br>
+never in a message, and a sign-in or a Wiro project is never connected by a reply.</p>
+<p dir="auto">Each connected connector's actions fall into three groups: Read-only, Create and send, and<br>
+Change and delete. Each group, and each action, has a permission in two columns: Chat, when<br>
+someone is talking to the agent (the Wiro web chat, a message sent with an API key or from this<br>
+server, or a Telegram, Slack or Discord chat), and Autopilot, its scheduled tasks and the work<br>
+before and after a voice call. Any other work it does on its own, such as sub-agents and work in<br>
+the background, takes the stricter of the two for each action. Allow runs the action, Ask waits<br>
+for a person's approval, and Block never runs it.<br>
+By default, read-only actions run, and Create and send and Change and delete ask in chat and run<br>
+in scheduled tasks. An action that asks does not run: the reply lists it under <code class="notranslate">approvals</code><br>
+with its exact request, and <code class="notranslate">answer_agent_approval</code> answers it once you have decided. A reply of<br>
+only yes, always or no sent with <code class="notranslate">send_agent_message</code> while a card waits is answered by Wiro, not<br>
+the agent: the first yes gets Wiro's listing of the exact request, and only a later yes allows it<br>
+once; always from there allows it once. A yes or no typed in the agent's chat answers a card too.<br>
+After an approval the agent goes on in a new turn of the same chat, and its answer is that<br>
+session's next message. A card waits 24 hours. Approval cards that a scheduled task asked for are<br>
+in your chat on wiro.ai, or in the agent's <code class="notranslate">approvals</code> session, and<br>
+<code class="notranslate">get_agent_connector_permissions</code> lists them. A card asked in a Telegram, Slack or Discord chat<br>
+is answered there, by a reply in that chat; <code class="notranslate">answer_agent_approval</code> cannot answer it.</p>
+<h3 dir="auto" id="controls">Controls</h3>
+<p dir="auto">Spend Limits cap what a workspace spends in a month or a day, in USD, and Model Access<br>
+rules allow or block models by category or one by one. Each covers the whole wallet, one<br>
+team member, one API key, one way in (the dashboard, the API, MCP, the LLM gateway, the<br>
+browser extensions, agents, Studio, the Workflow Agent or workflows) or one agent, and every<br>
+limit and rule that applies to a run must allow it. Work they refuse never runs and is never<br>
+charged: error code 93 for a spend limit, 92 for a Model Access rule. Studio's and the<br>
+Workflow Agent's chat model follows your rules too, like the models Studio runs, and an<br>
+agent's own rule also covers the chat model it answers with and its built-in voice. This<br>
+server names itself to Wiro, so the models a local install runs count as MCP, like the<br>
+hosted server's. Messages to Studio and the Workflow Agent count as Studio and the Workflow<br>
+Agent, with the models Studio runs for them, and workflow runs as workflows, whichever way<br>
+they come in.</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>Tool</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">get_controls</code></td>
+<td>Show the workspace's spend limits with what each used, what running work holds, what is left and when it resets (UTC), its Model Access rules in plain words, who changed each limit and rule last, which of them cover this connection's own runs, and this month's or today's spending by way in, member, API key and agent</td>
+</tr>
+<tr>
+<td><code class="notranslate">check_model_access</code></td>
+<td>Check how the rules decide one model for one run, rule by rule, and get the change summary that would allow it; nothing runs</td>
+</tr>
+<tr>
+<td><code class="notranslate">manage_spend_limit</code></td>
+<td>Set, raise, lower or remove a monthly or daily spend limit, or change only its alert, after your confirmation</td>
+</tr>
+<tr>
+<td><code class="notranslate">manage_model_access</code></td>
+<td>Update, replace or remove a Model Access rule, after your confirmation</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p dir="auto">Only the account owner, a team admin or the organization's owner can change them; other<br>
+team members can read them. Calls act as the person who created the connected project, so<br>
+with a team, connect a project you created as an admin. Every change shows a summary first<br>
+(what it covers, the value before and after, what was spent this period) and is made only<br>
+when the summary's own call is repeated with <code class="notranslate">confirm: true</code>. A confirm saves only the change<br>
+its summary showed: if the limit or rule changed in between, or the call asks for something<br>
+else, nothing is saved and you get a new summary. A Model Access summary also warns when a<br>
+wider rule still blocks a model the change allows.</p>
+<p dir="auto">When a spend limit or a Model Access rule refuses a <code class="notranslate">run_model</code> run or a <code class="notranslate">send_agent_message</code><br>
+message, the tool error also carries Wiro's own error items in <code class="notranslate">_meta["ai.wiro/errors"]</code>,<br>
+such as <code class="notranslate">[{ "code": 93, "message": "..." }]</code> (92 for Model Access), with Wiro's sentence and<br>
+none of the server's note for the assistant. An app can tell the refusal by its code and show<br>
+people Wiro's sentence.</p>
 <h3 dir="auto" id="account-and-guides">Account and guides</h3>
 <markdown-accessiblity-table><table role="table">
 <thead>
@@ -460,11 +571,11 @@ your wallet after each reply. Your own agents run on a monthly plan with credits
 <tbody>
 <tr>
 <td><code class="notranslate">get_account</code></td>
-<td>Show which workspace the connected project belongs to, its wallet balance and, when you ask, the wallet's recent transactions</td>
+<td>Show which workspace the connected project belongs to, its wallet balance, its spend limits and, when you ask, the wallet's recent transactions</td>
 </tr>
 <tr>
 <td><code class="notranslate">get_playbook</code></td>
-<td>Step-by-step guides: getting started, models, workflows, workflow graphs, the Workflow Agent, Studio, agents and billing</td>
+<td>Step-by-step guides: getting started, models, workflows, workflow graphs, the Workflow Agent, Studio, agents, billing and controls</td>
 </tr>
 <tr>
 <td><code class="notranslate">search_docs</code></td>
@@ -477,8 +588,8 @@ your wallet after each reply. Your own agents run on a monthly plan with credits
 they appear as ready-made commands.</p>
 <h3 dir="auto" id="choosing-tool-groups">Choosing tool groups</h3>
 <p dir="auto">All groups are on by default. Some clients work best with fewer tools; set<br>
-<code class="notranslate">WIRO_TOOLSETS</code> to a comma-separated list of <code class="notranslate">models</code>, <code class="notranslate">workflows</code> and <code class="notranslate">agents</code><br>
-to load only those. <code class="notranslate">get_account</code>, <code class="notranslate">get_playbook</code> and <code class="notranslate">search_docs</code> are always<br>
+<code class="notranslate">WIRO_TOOLSETS</code> to a comma-separated list of <code class="notranslate">models</code>, <code class="notranslate">workflows</code>, <code class="notranslate">agents</code><br>
+and <code class="notranslate">controls</code> to load only those. <code class="notranslate">get_account</code>, <code class="notranslate">get_playbook</code> and <code class="notranslate">search_docs</code> are always<br>
 available, and <code class="notranslate">workflows</code> also brings the model search tools it needs. The<br>
 conversation tools for Studio and the Workflow Agent, with<br>
 <code class="notranslate">save_workflow_from_agent</code>, come with either <code class="notranslate">workflows</code> or <code class="notranslate">agents</code>, and each<br>
@@ -490,23 +601,31 @@ group that is not loaded, the server instructions tell the assistant to say so.<
 }</pre></div>
 <h3 dir="auto" id="paid-and-irreversible-actions">Paid and irreversible actions</h3>
 <p dir="auto">Running a model or workflow, sending a message to Studio or the Workflow Agent,<br>
-and messages to your own agents (which use the agent's credits) cost money. Agent<br>
-plans, moves to a larger plan and credit packs are charged to your wallet, so<br>
-those tools first return the price (for a move inside a billing period, the<br>
+and messages to your own agents (which use the AI usage their plan includes, then<br>
+your Wiro balance) cost money. Agent plans and moves to a larger plan are charged<br>
+to your Wiro balance, never by card: its deposits, store revenue and coupon credit<br>
+that is not limited to certain models count toward a plan, the automatic renewal<br>
+included, and toward an agent's AI usage after what its plan includes. Those tools<br>
+first return the price (for a move inside a billing period, the<br>
 amount Wiro works out for the time left) and only act when called again with<br>
 <code class="notranslate">confirm: true</code> and <code class="notranslate">confirm_charge_usd</code>, the approved amount, after you agree.<br>
 If the price changed in between, nothing is charged and you get a new quote.<br>
-Turning an agent's skills on or off costs nothing, since every plan includes<br>
-every skill. A move to a smaller plan starts with the next renewal, with<br>
-nothing charged or refunded, and waits for <code class="notranslate">confirm: true</code> too. Deleting a<br>
-workflow, an agent, a conversation or an account connection also waits for<br>
-<code class="notranslate">confirm: true</code>,<br>
-and so do connecting an agent to a Wiro project with <code class="notranslate">bind_agent_project</code> and<br>
+Turning an agent's skills on or off costs nothing, and so does connecting its<br>
+connectors, since every plan includes every skill and connector. A move to a smaller plan<br>
+starts with the next renewal, with nothing charged or refunded, and waits for<br>
+<code class="notranslate">confirm: true</code> too. Deleting a workflow, an agent, a conversation or a<br>
+connector connection also waits for <code class="notranslate">confirm: true</code>, and so do replacing a<br>
+working connector connection, connecting an agent or a connector to a Wiro<br>
+project with <code class="notranslate">bind_agent_project</code> or <code class="notranslate">connect_agent_connector</code>, and<br>
 replacing a workflow's steps with <code class="notranslate">update_workflow</code> or<br>
 <code class="notranslate">save_workflow_from_agent</code>: you see a summary of the change first, with the old<br>
-and new value of each step input that changes. No tool adds<br>
-funds or takes a card payment: funds are added in the Wiro dashboard, and an<br>
-agent plan paid by card moves to a larger plan or is topped up there. The connected project<br>
+and new value of each step input that changes. Changing a spend limit or a Model<br>
+Access rule also waits for <code class="notranslate">confirm: true</code>: you see the old and new values and<br>
+what was spent this period first. Answering an agent's approval card and changing<br>
+a connector's permissions wait for <code class="notranslate">confirm: true</code> too: you see the exact request, or<br>
+what changes for the agent, first. No tool adds<br>
+funds or takes a card payment: funds are added in the Wiro dashboard, and a<br>
+charge your balance cannot cover says how much to add, with nothing charged. The connected project<br>
 decides the workspace: a personal project uses your personal wallet, a team<br>
 project uses the team wallet.</p>
 <h3 dir="auto" id="llm-friendly-responses">LLM-friendly responses</h3>
@@ -571,14 +690,18 @@ text outputs and step errors show the same way, each under a fixed label. A save
 workflow's title, description and input list are shown as data too, in every<br>
 result, since an agent or another person can have written them.</p>
 <p dir="auto">Task responses use the stable states <code class="notranslate">submitted</code>, <code class="notranslate">running</code>, <code class="notranslate">completed</code>,<br>
-<code class="notranslate">failed</code>, and <code class="notranslate">cancelled</code>. When more work is required, the response includes an<br>
-executable <code class="notranslate">nextAction</code>:</p>
+<code class="notranslate">failed</code>, and <code class="notranslate">cancelled</code>. A task's <code class="notranslate">status</code> is Wiro's status code, for<br>
+programs, and <code class="notranslate">statusText</code> is the same status in words, such as <code class="notranslate">Completed</code>,<br>
+<code class="notranslate">Failed</code> or <code class="notranslate">Running: producing output</code>, as the text's Status line says it: an<br>
+assistant tells a person the words. When more work is required, the response<br>
+includes an executable <code class="notranslate">nextAction</code>:</p>
 <div class="highlight highlight-source-json" dir="auto"><pre class="notranslate">{
   <span class="pl-ent">"state"</span>: <span class="pl-s"><span class="pl-pds">"</span>running<span class="pl-pds">"</span></span>,
   <span class="pl-ent">"task"</span>: {
     <span class="pl-ent">"id"</span>: <span class="pl-s"><span class="pl-pds">"</span>123<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"token"</span>: <span class="pl-s"><span class="pl-pds">"</span>task-token<span class="pl-pds">"</span></span>,
-    <span class="pl-ent">"status"</span>: <span class="pl-s"><span class="pl-pds">"</span>task_start<span class="pl-pds">"</span></span>
+    <span class="pl-ent">"status"</span>: <span class="pl-s"><span class="pl-pds">"</span>task_start<span class="pl-pds">"</span></span>,
+    <span class="pl-ent">"statusText"</span>: <span class="pl-s"><span class="pl-pds">"</span>Running<span class="pl-pds">"</span></span>
   },
   <span class="pl-ent">"outputs"</span>: [],
   <span class="pl-ent">"nextAction"</span>: {
@@ -596,7 +719,9 @@ executable <code class="notranslate">nextAction</code>:</p>
 <p dir="auto">Workflow Agent chain:<br>
 <code class="notranslate">send_agent_message (agent "workflow-agent") → get_agent_message → save_workflow_from_agent → run_workflow</code></p>
 <p dir="auto">Agent chain:<br>
-<code class="notranslate">list_agent_templates → get_agent_template → deploy_agent → set_agent_credentials / connect_agent_oauth / bind_agent_project → control_agent → send_agent_message</code></p>
+<code class="notranslate">list_agent_templates → get_agent_template → deploy_agent → list_agent_connectors → connect_agent_connector / set_agent_credentials / bind_agent_project → control_agent → send_agent_message</code></p>
+<p dir="auto">Controls chain:<br>
+<code class="notranslate">get_controls → manage_spend_limit or manage_model_access (change summary) → its nextAction, with confirm: true</code></p>
 <h2 dir="auto" id="hosted-mcp-server">Hosted MCP Server</h2>
 <p dir="auto">Wiro AI also hosts the same tools at <code class="notranslate">https://mcp.wiro.ai/v1</code> over streamable HTTP, so nothing has to be installed locally. Send your credentials in the <code class="notranslate">Authorization</code> header as shown under <a href="#authentication">Authentication</a>. The <a href="https://wiro.ai/docs/wiro-mcp-server">MCP Server documentation</a> has setup instructions for each client.</p>
 <h3 dir="auto" id="install-as-a-plugin">Install as a plugin</h3>
@@ -611,9 +736,10 @@ executable <code class="notranslate">nextAction</code>:</p>
 <li><a href="https://wiro.ai/docs/tasks">Tasks</a>: task lifecycle, statuses, determining success</li>
 <li><a href="https://wiro.ai/docs/concurrency-limits">Concurrency Limits</a>: concurrent task limits based on balance</li>
 <li><a href="https://wiro.ai/docs/error-reference">Error Reference</a>: error codes and handling</li>
-<li><a href="https://wiro.ai/docs/agent-overview">Agents Overview</a>: templates, plans, credits and the agent lifecycle</li>
+<li><a href="https://wiro.ai/docs/agent-overview">Agents Overview</a>: templates, plans and the AI usage they include, and the agent lifecycle</li>
 <li><a href="https://wiro.ai/docs/agent-builder">Agent Builder</a>: build an agent from skills instead of a template</li>
-<li><a href="https://wiro.ai/docs/agent-skills">Agent Skills</a> and <a href="https://wiro.ai/docs/agent-credentials">Agent Credentials</a>: what each skill needs and how accounts are connected</li>
+<li><a href="https://wiro.ai/docs/agent-connectors">Agent Connectors</a>: the connector catalog, connecting with keys or a sign-in, account choices and disconnecting</li>
+<li><a href="https://wiro.ai/docs/agent-skills">Agent Skills</a> and <a href="https://wiro.ai/docs/agent-credentials">Agent Credentials</a>: what each skill needs, chat channels and the Wiro project</li>
 <li><a href="https://wiro.ai/docs/agent-messaging">Agent Messaging</a>: conversations, sessions and replies</li>
 </ul>
 <h2 dir="auto" id="using-as-a-library">Using as a Library</h2>
@@ -705,7 +831,7 @@ executable <code class="notranslate">nextAction</code>:</p>
 <tr>
 <td><code class="notranslate">WIRO_TOOLSETS</code></td>
 <td>No</td>
-<td>Comma-separated tool groups to load: <code class="notranslate">models</code>, <code class="notranslate">workflows</code>, <code class="notranslate">agents</code> (default: all)</td>
+<td>Comma-separated tool groups to load: <code class="notranslate">models</code>, <code class="notranslate">workflows</code>, <code class="notranslate">agents</code>, <code class="notranslate">controls</code> (default: all)</td>
 </tr>
 </tbody>
 </table></markdown-accessiblity-table>
@@ -838,8 +964,8 @@ executable <code class="notranslate">nextAction</code>:</p>
 </article>
 <aside class="more">
   <h2>More open-source projects from Wiro AI</h2>
-  <ul><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li><li><a href="/projects/dart-quickstart/">Dart-QuickStart</a></li><li><a href="/projects/reactnative-quickstart/">ReactNative-QuickStart</a></li><li><a href="/projects/swift-realtime/">Swift-Realtime</a></li><li><a href="/projects/kotlin-realtime/">Kotlin-Realtime</a></li></ul>
-  <p><a href="/">See all 29 projects</a></p>
+  <ul><li><a href="/projects/wiro-agent-connectors/">Wiro-Agent-Connectors</a></li><li><a href="/projects/wiro-plugin/">Wiro-Plugin</a></li><li><a href="/projects/wiro-skills/">Wiro-Skills</a></li><li><a href="/projects/wiro-zed/">Wiro-Zed</a></li><li><a href="/projects/wiro-hermes/">Wiro-Hermes</a></li><li><a href="/projects/wiro-action/">Wiro-Action</a></li><li><a href="/projects/wiro-llm/">Wiro-LLM</a></li><li><a href="/projects/swift-quickstart/">Swift-QuickStart</a></li><li><a href="/projects/kotlin-quickstart/">Kotlin-QuickStart</a></li><li><a href="/projects/dart-quickstart/">Dart-QuickStart</a></li><li><a href="/projects/reactnative-quickstart/">ReactNative-QuickStart</a></li><li><a href="/projects/swift-realtime/">Swift-Realtime</a></li></ul>
+  <p><a href="/">See all 30 projects</a></p>
 </aside>
 </main>
 <footer class="foot">
