@@ -56,18 +56,17 @@
 </ul>
 <h2 dir="auto" id="settings">Settings</h2>
 <p dir="auto">The configuration window saves your settings in Zed's <code class="notranslate">settings.json</code>. To change them later, run <code class="notranslate">zed: open settings file</code> and edit the <code class="notranslate">mcp-server-wiro</code> entry:</p>
-<pre lang="json" class="notranslate"><code class="notranslate">{
-  "context_servers": {
-    "mcp-server-wiro": {
-      "settings": {
-        "wiro_api_key": "your-api-key",
-        "wiro_api_secret": "your-api-secret",
-        "toolsets": ["models", "workflows"]
+<div class="highlight highlight-source-json" dir="auto"><pre class="notranslate">{
+  <span class="pl-ent">"context_servers"</span>: {
+    <span class="pl-ent">"mcp-server-wiro"</span>: {
+      <span class="pl-ent">"settings"</span>: {
+        <span class="pl-ent">"wiro_api_key"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-key<span class="pl-pds">"</span></span>,
+        <span class="pl-ent">"wiro_api_secret"</span>: <span class="pl-s"><span class="pl-pds">"</span>your-api-secret<span class="pl-pds">"</span></span>,
+        <span class="pl-ent">"toolsets"</span>: [<span class="pl-s"><span class="pl-pds">"</span>models<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>workflows<span class="pl-pds">"</span></span>]
       }
     }
   }
-}
-</code></pre>
+}</pre></div>
 <markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
@@ -159,6 +158,10 @@
 <tr>
 <td><a href="https://github.com/wiroai/Wiro-MCP">Wiro-MCP</a></td>
 <td>Official Wiro AI MCP server, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-mcp"><code class="notranslate">@wiro-ai/wiro-mcp</code> on npm</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wiroai/Wiro-Agent-Connectors">Wiro-Agent-Connectors</a></td>
+<td>MCP connectors for Gmail, Shopify, YouTube, Notion and other services without an official MCP server, <a href="https://www.npmjs.com/package/@wiro-ai/wiro-agent-connectors"><code class="notranslate">@wiro-ai/wiro-agent-connectors</code> on npm</a></td>
 </tr>
 <tr>
 <td><a href="https://github.com/wiroai/Wiro-Plugin">Wiro-Plugin</a></td>
